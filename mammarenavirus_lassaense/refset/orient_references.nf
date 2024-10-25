@@ -1,43 +1,54 @@
 nextflow.enable.dsl = 2
 
 
-include { minimap; get_orientations; orient_reads; output } from '../shared/processes.nf'
+include {
+    get_id_lists;
+    extract_sequences;
+    minimap as minimap_refseqs;
+    get_orientations;
+    orient_reads;
+    output
+} from '../shared/processes.nf'
 
 
-process extract_sequences {
-    input:
-        tuple val(segment_info), path('sequences.fasta')
-    output:
-        tuple val(segment_info.alias), path("refs.fasta"), path("queries.fasta")
-    """
-    for id in ${segment_info['seqs'].join(' ')}
-    do
-        echo \$id >> seq_ids_queries.txt
-    done
-    seqtk subseq sequences.fasta seq_ids_queries.txt > queries.fasta
-    for id in ${segment_info['refs'].join(' ')}
-    do
-        echo \$id >> seq_ids_refs.txt
-    done
-    seqtk subseq sequences.fasta seq_ids_refs.txt > refs.fasta
-    """
+workflow orient_references {
+    take:
+        segment_info
+        sequences
+    main:
+        id_lists = segment_info | get_id_lists
+        sequences = id_lists.combine(sequences) | extract_sequences
+        orientations = sequences | minimap_refseqs | get_orientations
+        oriented = orientations | join(sequences | map{segment, refs, queries -> [segment, queries]}, by: 0) | orient_reads
+        // some output formatting
+        query_ids = id_lists | map {segment, ref_ids, query_ids -> [segment, query_ids]}
+        write_this = Channel.empty()
+        | mix(
+            orientations | map {segment, forward_ids, reverse_ids, unmapped_ids -> [unmapped_ids, "ref", "unampped_${segment}.txt"]},
+            query_ids | map {segment, query_ids -> [query_ids, "ref", "ids_${segment}.txt"]},
+            oriented | map {segment, oriented -> [oriented, "ref", "oriented_${segment}.fasta"]}
+        )
+    emit:
+        id_lists = query_ids
+        oriented_seqs = oriented
+        write_this = write_this
 }
 
 
 workflow {
-    segment_info = Channel.from(params.segments).combine(Channel.of(params.fasta))
 
-    sequences = segment_info | extract_sequences
-    mapped = sequences | minimap
-    orientations = mapped | get_orientations
-    oriented_reads = orientations | join(sequences | map{alias, refs, queries -> [alias, queries]}, by: 0) | orient_reads
+    segment_info = Channel.from(params.segments)
+    sequences = Channel.of(params.fasta)
+
+    // part one: organize the references
+    oriented_refs = orient_references(segment_info, sequences)
+
+    // part two: organize all reads
+    
 
     Channel.empty()
     | mix(
-        orientations | map {alias, forward_ids, reverse_ids, unmapped_ids -> [unmapped_ids, '.', "unmapped_${alias}.txt"]},
-        orientations | map {alias, forward_ids, reverse_ids, unmapped_ids -> [forward_ids, '.', "forward_ids_${alias}.txt"]},
-        orientations | map {alias, forward_ids, reverse_ids, unmapped_ids -> [reverse_ids, '.', "reverse_ids_${alias}.txt"]},
-        oriented_reads | map {alias, oriented -> [oriented, '.', "oriented_${alias}.fasta"]}
+        oriented_refs.write_this
     )
     | output
 }

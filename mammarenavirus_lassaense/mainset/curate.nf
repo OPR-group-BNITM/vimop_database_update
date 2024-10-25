@@ -1,74 +1,107 @@
 nextflow.enable.dsl = 2
 
 
-include minimap, get_orientations, orient_reads from '../shared/processes.nf'
+include { 
+    minimap;
+    get_orientations;
+    orient_reads;
+    output;
+    seq_lengths as seq_lengths_references;
+    seq_lengths as seq_lengths_queries;
+    n_share;
+    edit_distances;
+    merge_orientations;
+    concat_fasta
+} from '../shared/processes.nf'
 
 
-process filter_short_seqs {
+process collect_seq_and_map_stats {
     input:
-        tuple path('seqs.fasta'), val(minlen)
+        tuple path('orientations.tsv'),
+            path('n_share.tsv'),
+            path('seq_lengths.tsv'),
+            path('seq_lengths_targets.tsv'),
+            path('edit_distances.tsv')
     output:
-        tuple path('passed.fasta'), path('failed.txt')
+        path('collected_stats.tsv')
     """
-    seqtk comp data/refseqs/oriented_L.fasta | awk '{print \$1 " " \$2}' > lengths.txt
-    awk '\$2 < ${minlen} {print \$1}' lengths.txt > failed.txt  
-    awk '\$2 >= ${minlen} {print \$1}' lengths.txt > passed.txt
-    seqtk subseq seqs.fasta passed.txt > passed.fasta
+    #!/usr/bin/env python
+
+    import pandas as pd
+
+    def tsv(fname, *col_names):
+        return pd.read_csv(fname, sep='\\t', header=None, names=col_names)
+
+    n_share = tsv('n_share.tsv', 'Sequence', 'N_share')
+    seq_lengths = tsv('seq_lengths.tsv', 'Sequence', 'Length')
+    seq_lengths_targets = tsv('seq_lengths_targets.tsv', 'Reference', 'ReferenceLength')
+    orientations = tsv('orientations.tsv', 'Sequence', 'Orientation')
+    targets_and_distances = tsv('edit_distances.tsv', 'Sequence', 'Reference', 'EditDistance')
+
+    merged_df = (
+        n_share
+        .merge(seq_lengths, on='Sequence', how='outer')
+        .merge(orientations, on='Sequence', how='outer')
+        .merge(targets_and_distances, on='Sequence', how='outer')
+        .merge(seq_lengths_targets, on='Reference', how='outer')
+    )
+    merged_df.to_csv('collected_stats.tsv', sep='\\t', index=False)
     """
 }
 
-process filter_n_share {
-    input:
-        tuple path('seqs.fasta'), val(max_n_share)
-    output:
-        tuple path('passed.fasta'), path('failed.txt')
-    """
-    seqtk comp data/refseqs/oriented_L.fasta | awk '{print \$1 " " \$9/\$2}' > n_share.txt
-    awk '\$2 > ${max_n_share} {print \$1}' n_share.txt > failed.txt
-    awk '\$2 =< ${max_n_share} {print \$1}' n_share.txt > passed.txt
-    seqtk subseq seqs.fasta passed.txt > passed.fasta
-    """
-}
-
-process minimap {
-    // same as orient_references.nf
-    input:
-        tuple val(alias), path('refs.fasta'), path('queries.fasta')
-    output:
-        tuple val(alias), path('mapped.sam')
-    """
-    minimap2 --secondary=no --eqx -x map-ont -a refs.fasta queries.fasta > mapped.sam
-    """
-}
-
-process get_orientations {
-    // same as orient_references.nf
-    input:
-        tuple val(alias), path('mapped.sam')
-    output:
-        tuple val(alias), path('forward_mapped_ids.txt'), path('reverse_mapped_ids.txt'), path('unmapped_ids.txt') 
-    """
-    samtools view -F 16 mapped.sam | awk '{print \$1}' > forward_mapped_ids.txt
-    samtools view -f 16 mapped.sam | awk '{print \$1}' > reverse_mapped_ids.txt
-    samtools view -f 4 mapped.sam | awk '{print \$1}' > unmapped_ids.txt
-    """
-}
-
-process filter_aligned {
-    input:
-        tuple
-    output:
-        tuple
-    """ TODO (three filtering steps?)
-    - get unaligned
-    - get badly aligned
-      - fixed threshold (e.g. 60 or 70 %) or/AND dynamic (e.g. 2 times std-dev of error rate)
-      - make a plot and show it!
-    - get too short compared to ref (in %?)
-    """
-}
-
-// TODO: mapping quality filters
+// TODO Filters
+// - absolute read length
+// - N share
+// - un-aligned
+//
+// - length with respect to reference
+// - absolute edit distance (normalized by length)
+//
+// - edit distance based on error distribution 
+//
 // - on whole distribution (e.g. 2 times stddev)
 // - against hard cutoff (e.g. 60% min similarity)
 
+workflow {
+
+    input_genomes = Channel.of(params.raw_seqs)
+    references_concatenated = Channel.from(params.refseqs) | map {entry -> entry.fasta} | collect | concat_fasta
+
+    // TODO: get refence segments to later sort by segment
+
+    lengths_references = seq_lengths_references(references_concatenated)
+    lengths_queries = seq_lengths_queries(input_genomes)
+    n_shares = n_share(input_genomes)
+
+    alignments = references_concatenated | map {refs -> ['all', refs, params.raw_seqs]} | minimap
+    edists = alignments | map {alias, align -> align} | edit_distances
+    
+    orientations = alignments | get_orientations
+    
+    merged_orientations = orientations
+    | map {alias, fwd_id, rev_ids, unmapped -> [fwd_id, rev_ids, unmapped]}
+    | merge_orientations
+
+    collected_stats = merged_orientations
+    | combine(n_shares)
+    | combine(lengths_queries)
+    | combine(lengths_references)
+    | combine(edists)
+    | collect_seq_and_map_stats
+
+    Channel.empty()
+    | mix(
+        lengths_references,
+        lengths_queries,
+        n_shares,
+        alignments | map {alias, align -> align},
+        edists,
+        merged_orientations,
+        collected_stats,
+        orientations | map {alias, fwd_id, rev_ids, unmapped -> unmapped},
+        orientations | map {alias, fwd_id, rev_ids, unmapped -> rev_ids},
+        orientations | map {alias, fwd_id, rev_ids, unmapped -> fwd_id}
+    )
+    | map {stats -> [stats, '.', null]}
+    | output
+}

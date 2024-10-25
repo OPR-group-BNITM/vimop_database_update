@@ -1,25 +1,53 @@
 nextflow.enable.dsl = 2
 
 
+process get_id_lists {
+    input:
+        val(segment_info)
+    output:
+        tuple val(segment_info.alias), path('ref_ids.txt'), path('query_ids.txt')
+    """
+    for id in ${segment_info['seqs'].join(' ')}
+    do
+        echo \$id >> query_ids.txt
+    done
+    for id in ${segment_info['refs'].join(' ')}
+    do
+        echo \$id >> ref_ids.txt
+    done
+    """
+}
+
+process extract_sequences {
+    input:
+        tuple val(segment), path('ref_ids.txt'), path('query_ids.txt'), path("sequences.fasta")
+    output:
+        tuple val(segment), path("refs.fasta"), path("queries.fasta")
+    """
+    seqtk subseq sequences.fasta query_ids.txt > queries.fasta
+    seqtk subseq sequences.fasta ref_ids.txt > refs.fasta
+    """
+}
+
+
 process minimap {
     input:
         tuple val(alias), path('refs.fasta'), path('queries.fasta')
     output:
         tuple val(alias), path('mapped.sam')
     """
-    minimap2 --secondary=no --eqx -x map-ont -a refs.fasta queries.fasta > mapped.sam
+    minimap2 -k ${params.minimap.kmer_length} -w ${params.minimap.window_size} -p ${params.minimap.p} --secondary=no --eqx -x map-ont -a refs.fasta queries.fasta > mapped.sam
     """
 }
-
 
 process get_orientations {
     input:
         tuple val(alias), path('mapped.sam')
     output:
-        tuple val(alias), path('forward_mapped_ids.txt'), path('reverse_mapped_ids.txt'), path('unmapped_ids.txt') 
+        tuple val(alias), path('forward_mapped_ids.txt'), path('reverse_mapped_ids.txt'), path('unmapped_ids.txt')
     """
-    samtools view -F 16 mapped.sam | awk '{print \$1}' > forward_mapped_ids.txt
-    samtools view -f 16 mapped.sam | awk '{print \$1}' > reverse_mapped_ids.txt
+    samtools view -F 16 -F 4 mapped.sam | awk '{print \$1}' > forward_mapped_ids.txt
+    samtools view -f 16 -F 4 mapped.sam | awk '{print \$1}' > reverse_mapped_ids.txt
     samtools view -f 4 mapped.sam | awk '{print \$1}' > unmapped_ids.txt
     """
 }
@@ -69,6 +97,57 @@ process orient_reads {
     """
 }
 
+process seq_lengths {
+    input:
+        path('seqs.fasta')
+    output:
+        path('seq_lengths.tsv')
+    """
+    seqtk comp seqs.fasta | awk '{print \$1"\t"\$2}' > seq_lengths.tsv 
+    """
+}
+
+process n_share {
+    input:
+        path('seqs.fasta')
+    output:
+        path('n_share.tsv')
+    """
+    seqtk comp seqs.fasta | awk '{print \$1"\t"\$9/\$2}' > n_share.tsv
+    """
+}
+
+process edit_distances {
+    input:
+        path('mapped.sam')
+    output:
+        path('edit_distances.tsv')
+    """
+    samtools view -F 4 mapped.sam | awk '{for(i=12;i<=NF;i++) if(\$i ~ /^NM:i:/) print \$1"\t"\$3"\t"substr(\$i, 6)}' > edit_distances.tsv
+    """
+}
+
+process merge_orientations {
+    input:
+        tuple path('forward_mapped_ids.txt'), path('reverse_mapped_ids.txt'), path('unmapped_ids.txt')
+    output:
+        path('orientations.tsv')
+    """
+    awk '{print \$1"\t""forward"}' forward_mapped_ids.txt > orientations.tsv
+    awk '{print \$1"\t""reverse"}' reverse_mapped_ids.txt >> orientations.tsv
+    awk '{print \$1"\t""unmapped"}' unmapped_ids.txt >> orientations.tsv
+    """
+}
+
+process concat_fasta {
+    input:
+        path('in_*.fasta')
+    output:
+        path('concat.fasta')
+    """
+    cat in_*.fasta > concat.fasta
+    """
+}
 
 process output {
     // publish inputs to output directory
