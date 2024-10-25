@@ -1,6 +1,8 @@
 nextflow.enable.dsl = 2
 
 
+// TODO: delete this !!!
+
 include { 
     minimap;
     get_orientations;
@@ -15,63 +17,16 @@ include {
 } from '../shared/processes.nf'
 
 
-process collect_seq_and_map_stats {
-    input:
-        tuple path('orientations.tsv'),
-            path('n_share.tsv'),
-            path('seq_lengths.tsv'),
-            path('seq_lengths_targets.tsv'),
-            path('edit_distances.tsv')
-    output:
-        path('collected_stats.tsv')
-    """
-    #!/usr/bin/env python
-
-    import pandas as pd
-
-    def tsv(fname, *col_names):
-        return pd.read_csv(fname, sep='\\t', header=None, names=col_names)
-
-    n_share = tsv('n_share.tsv', 'Sequence', 'N_share')
-    seq_lengths = tsv('seq_lengths.tsv', 'Sequence', 'Length')
-    seq_lengths_targets = tsv('seq_lengths_targets.tsv', 'Reference', 'ReferenceLength')
-    orientations = tsv('orientations.tsv', 'Sequence', 'Orientation')
-    targets_and_distances = tsv('edit_distances.tsv', 'Sequence', 'Reference', 'EditDistance')
-
-    merged_df = (
-        n_share
-        .merge(seq_lengths, on='Sequence', how='outer')
-        .merge(orientations, on='Sequence', how='outer')
-        .merge(targets_and_distances, on='Sequence', how='outer')
-        .merge(seq_lengths_targets, on='Reference', how='outer')
-    )
-    merged_df.to_csv('collected_stats.tsv', sep='\\t', index=False)
-    """
-}
-
-// TODO Filters
-// - absolute read length
-// - N share
-// - un-aligned
-//
-// - length with respect to reference
-// - absolute edit distance (normalized by length)
-//
-// - edit distance based on error distribution 
-//
-// - on whole distribution (e.g. 2 times stddev)
-// - against hard cutoff (e.g. 60% min similarity)
-
 workflow {
 
     input_genomes = Channel.of(params.raw_seqs)
     references_concatenated = Channel.from(params.refseqs) | map {entry -> entry.fasta} | collect | concat_fasta
 
-    // TODO: get refence segments to later sort by segment
-
     lengths_references = seq_lengths_references(references_concatenated)
     lengths_queries = seq_lengths_queries(input_genomes)
     n_shares = n_share(input_genomes)
+
+    // TODO: move this to the new combined script!
 
     alignments = references_concatenated | map {refs -> ['all', refs, params.raw_seqs]} | minimap
     edists = alignments | map {alias, align -> align} | edit_distances

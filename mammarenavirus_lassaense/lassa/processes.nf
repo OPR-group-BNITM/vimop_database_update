@@ -29,7 +29,6 @@ process extract_sequences {
     """
 }
 
-
 process minimap {
     input:
         tuple val(alias), path('refs.fasta'), path('queries.fasta')
@@ -146,6 +145,40 @@ process concat_fasta {
         path('concat.fasta')
     """
     cat in_*.fasta > concat.fasta
+    """
+}
+
+process collect_seq_and_map_stats {
+    input:
+        tuple path('orientations.tsv'),
+            path('n_share.tsv'),
+            path('seq_lengths.tsv'),
+            path('seq_lengths_targets.tsv'),
+            path('edit_distances.tsv')
+    output:
+        path('collected_stats.tsv')
+    """
+    #!/usr/bin/env python
+
+    import pandas as pd
+
+    def tsv(fname, *col_names):
+        return pd.read_csv(fname, sep='\\t', header=None, names=col_names)
+
+    n_share = tsv('n_share.tsv', 'Sequence', 'N_share')
+    seq_lengths = tsv('seq_lengths.tsv', 'Sequence', 'Length')
+    seq_lengths_targets = tsv('seq_lengths_targets.tsv', 'Reference', 'ReferenceLength')
+    orientations = tsv('orientations.tsv', 'Sequence', 'Orientation')
+    targets_and_distances = tsv('edit_distances.tsv', 'Sequence', 'Reference', 'EditDistance')
+
+    merged_df = (
+        n_share
+        .merge(seq_lengths, on='Sequence', how='outer')
+        .merge(orientations, on='Sequence', how='outer')
+        .merge(targets_and_distances, on='Sequence', how='outer')
+        .merge(seq_lengths_targets, on='Reference', how='outer')
+    )
+    merged_df.to_csv('collected_stats.tsv', sep='\\t', index=False)
     """
 }
 
