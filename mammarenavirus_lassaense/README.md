@@ -21,8 +21,10 @@ TODO
 
 ## TODO
 
-- 1. merge refset and mainset nextflow pipelines
-- 2. write a file reference_id -> segment
+- orient the sequences and add segment information to output file
+- filter the sequences in notebook and create final fasta (add forward and reverse tags to fasta headers + orient the sequences)
+
+- CD-hit in the main workflow?
 
 - MSA?
     - add msa for the referece sequences?

@@ -92,7 +92,6 @@ workflow {
     oriented_refs = orient_references(segment_info, sequences)
 
     // part two: organize all reads and get the comparisons and statistics
-    // TODO: export to sub-workflow!
     refs_concat = oriented_refs.oriented_seqs
     | map {segment, oriented_fasta -> oriented_fasta}
     | collect
