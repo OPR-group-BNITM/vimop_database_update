@@ -20,6 +20,8 @@ include {
     edit_distances;
     merge_orientations;
     collect_seq_and_map_stats;
+    add_col;
+    concat_tsv;
     // finally
     output
 } from './processes.nf'
@@ -31,7 +33,7 @@ workflow orient_references {
         sequences
     main:
         id_lists = segment_info | get_id_lists
-        sequences = id_lists.combine(sequences) | extract_sequences
+        sequences = id_lists.combine([sequences]) | extract_sequences
         orientations = sequences | minimap_refseqs | get_orientations_refs
         oriented = orientations | join(sequences | map{segment, refs, queries -> [segment, queries]}, by: 0) | orient_refs
         // some output formatting
@@ -53,6 +55,7 @@ workflow compare_genomes_to_references {
     take:
         refseqs
         sequences
+        segment_table
     main:
         lengths_references = seq_lengths_references(refseqs)
         lengths_queries = seq_lengths_queries(sequences)
@@ -72,6 +75,7 @@ workflow compare_genomes_to_references {
         | combine(lengths_queries)
         | combine(lengths_references)
         | combine(edists)
+        | combine(segment_table)
         | collect_seq_and_map_stats
 
         write_this = Channel.empty()
@@ -86,10 +90,9 @@ workflow compare_genomes_to_references {
 workflow {
 
     segment_info = Channel.from(params.segments)
-    sequences = Channel.of(params.fasta)
 
     // part one: organize the references
-    oriented_refs = orient_references(segment_info, sequences)
+    oriented_refs = orient_references(segment_info, params.fasta_refs)
 
     // part two: organize all reads and get the comparisons and statistics
     refs_concat = oriented_refs.oriented_seqs
@@ -97,9 +100,9 @@ workflow {
     | collect
     | concat_fasta
 
-    // Todo: merge id lists and add segment info
+    segment_table = oriented_refs.id_lists | add_col | collect | concat_tsv
 
-    oriented_seqs = compare_genomes_to_references(refs_concat, params.fasta)
+    oriented_seqs = compare_genomes_to_references(refs_concat, params.fasta_seqs, segment_table)
 
     Channel.empty()
     | mix(

@@ -18,6 +18,26 @@ process get_id_lists {
     """
 }
 
+process add_col {
+    input:
+        tuple val(col_val), path('input_table_to_extend.tsv')
+    output:
+        path('table_out.tsv')
+    """
+    awk '{print \$0"\\t${col_val}"}' input_table_to_extend.tsv > table_out.tsv
+    """
+}
+
+process concat_tsv {
+    input:
+        path('in_*.tsv')
+    output:
+        path('out.tsv')
+    """
+    cat in_*.tsv > out.tsv
+    """
+} 
+
 process extract_sequences {
     input:
         tuple val(segment), path('ref_ids.txt'), path('query_ids.txt'), path("sequences.fasta")
@@ -154,7 +174,8 @@ process collect_seq_and_map_stats {
             path('n_share.tsv'),
             path('seq_lengths.tsv'),
             path('seq_lengths_targets.tsv'),
-            path('edit_distances.tsv')
+            path('edit_distances.tsv'),
+            path('segment_table.tsv')
     output:
         path('collected_stats.tsv')
     """
@@ -170,6 +191,7 @@ process collect_seq_and_map_stats {
     seq_lengths_targets = tsv('seq_lengths_targets.tsv', 'Reference', 'ReferenceLength')
     orientations = tsv('orientations.tsv', 'Sequence', 'Orientation')
     targets_and_distances = tsv('edit_distances.tsv', 'Sequence', 'Reference', 'EditDistance')
+    segments = tsv('segment_table.tsv', 'Reference', 'Segment')
 
     merged_df = (
         n_share
@@ -177,6 +199,7 @@ process collect_seq_and_map_stats {
         .merge(orientations, on='Sequence', how='outer')
         .merge(targets_and_distances, on='Sequence', how='outer')
         .merge(seq_lengths_targets, on='Reference', how='outer')
+        .merge(segments, on='Reference', how='outer')
     )
     merged_df.to_csv('collected_stats.tsv', sep='\\t', index=False)
     """

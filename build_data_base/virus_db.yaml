@@ -1,0 +1,14 @@
+output_directory: 'data/db'
+curated:
+  LASV:
+    organisms:
+    - 'mammarenavirus lassaense'
+    segments:
+    - segment: 'S'
+      file: '../mammarenavirus_lassaense/data/lassa/filtered/filtered_segment_S.fasta'
+      msa: null
+    - segment: 'L'
+      file: '../mammarenavirus_lassaense/data/lassa/filtered/filtered_segment_L.fasta'
+      msa: null
+rest:
+  fasta: '/Volumes/DataCurate/CurationDatasets/NCBI_all/ncbi_all_NoCovid_20241026.fasta'
