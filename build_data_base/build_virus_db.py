@@ -13,8 +13,9 @@ from Bio.SeqRecord import SeqRecord
 
 
 def run_sub(cmd):
+    print(' '.join(cmd))
     try:
-        subprocess.run(cmd, shell=True, check=True, capture_output=True, text=True)
+        subprocess.run(cmd, shell=False, check=True, capture_output=True, text=True)
     except subprocess.CalledProcessError as e:
         print(f"Command '{e.cmd}' failed with return code {e.returncode}")
         print("Standard Output:\n", e.stdout)
@@ -126,7 +127,7 @@ def main():
             'segments': sorted(msa_paths.keys()),
             'msa': msa_paths,
             'fasta': pstr(path_fasta_concat),
-            'minimap2_index': fname_mmi,
+            'minimap2_index': pstr(fname_mmi),
         }
 
     path_config_out = outpath / 'db.yaml'

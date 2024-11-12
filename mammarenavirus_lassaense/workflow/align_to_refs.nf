@@ -12,13 +12,10 @@ include {
     concat_fasta;
     // second part
     minimap as minimap_all;
-    get_orientations as get_orientations_all;
-    orient_reads;
+    sam_info;
     seq_lengths as seq_lengths_references;
     seq_lengths as seq_lengths_queries;
     n_share;
-    edit_distances;
-    merge_orientations;
     collect_seq_and_map_stats;
     add_col;
     concat_tsv;
@@ -30,12 +27,12 @@ include {
 workflow orient_references {
     take:
         segment_info
-        sequences
+        fasta_refs
     main:
         id_lists = segment_info | get_id_lists
-        sequences = id_lists.combine([sequences]) | extract_sequences
-        orientations = sequences | minimap_refseqs | get_orientations_refs
-        oriented = orientations | join(sequences | map{segment, refs, queries -> [segment, queries]}, by: 0) | orient_refs
+        sequences_segment = id_lists.combine([fasta_refs]) | extract_sequences
+        orientations = sequences_segment | minimap_refseqs | get_orientations_refs
+        oriented = orientations | join(sequences_segment | map{segment, refs, queries -> [segment, queries]}, by: 0) | orient_refs
         // some output formatting
         query_ids = id_lists | map {segment, ref_ids, query_ids -> [segment, query_ids]}
         write_this = Channel.empty()
@@ -61,25 +58,19 @@ workflow compare_genomes_to_references {
         lengths_queries = seq_lengths_queries(sequences)
         n_shares = n_share(sequences)
 
-        alignments = refseqs | map {refs -> ['all', refs, sequences]} | minimap_all
-        edists = alignments | map {alias, align -> align} | edit_distances
-        
-        orientations = alignments | get_orientations_all
-        
-        merged_orientations = orientations
-        | map {alias, fwd_id, rev_ids, unmapped -> [fwd_id, rev_ids, unmapped]}
-        | merge_orientations
+        alignments = refseqs | map {refs -> ['all', refs, sequences]} | minimap_all        
+        align_stats = alignments | map {alias, align -> [align]} | sam_info
 
-        collected_stats = merged_orientations
+        collected_stats = align_stats
         | combine(n_shares)
         | combine(lengths_queries)
         | combine(lengths_references)
-        | combine(edists)
         | combine(segment_table)
         | collect_seq_and_map_stats
 
         write_this = Channel.empty()
         | mix(
+            alignments | map {alias, align -> [align, 'all/alignments', "${alias}.sam"]},
             collected_stats | map {stats -> [stats, 'all', null]}
         )
     emit:

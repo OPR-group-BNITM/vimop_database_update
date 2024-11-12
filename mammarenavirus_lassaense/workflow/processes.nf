@@ -65,8 +65,9 @@ process get_orientations {
     output:
         tuple val(alias), path('forward_mapped_ids.txt'), path('reverse_mapped_ids.txt'), path('unmapped_ids.txt')
     """
-    samtools view -F 16 -F 4 mapped.sam | awk '{print \$1}' > forward_mapped_ids.txt
-    samtools view -f 16 -F 4 mapped.sam | awk '{print \$1}' > reverse_mapped_ids.txt
+    # -F 2308 removes unmapped reads (4), secondary alignments (256) and supplementary alignments (2048) 
+    samtools view -F 16 -F 2308 mapped.sam | awk '{print \$1}' > forward_mapped_ids.txt
+    samtools view -f 16 -F 2308 mapped.sam | awk '{print \$1}' > reverse_mapped_ids.txt
     samtools view -f 4 mapped.sam | awk '{print \$1}' > unmapped_ids.txt
     """
 }
@@ -136,25 +137,42 @@ process n_share {
     """
 }
 
-process edit_distances {
+process sam_info {
     input:
         path('mapped.sam')
     output:
-        path('edit_distances.tsv')
+        path('samstats.tsv')
     """
-    samtools view -F 4 mapped.sam | awk '{for(i=12;i<=NF;i++) if(\$i ~ /^NM:i:/) print \$1"\t"\$3"\t"substr(\$i, 6)}' > edit_distances.tsv
-    """
-}
-
-process merge_orientations {
-    input:
-        tuple path('forward_mapped_ids.txt'), path('reverse_mapped_ids.txt'), path('unmapped_ids.txt')
-    output:
-        path('orientations.tsv')
-    """
-    awk '{print \$1"\t""forward"}' forward_mapped_ids.txt > orientations.tsv
-    awk '{print \$1"\t""reverse"}' reverse_mapped_ids.txt >> orientations.tsv
-    awk '{print \$1"\t""unmapped"}' unmapped_ids.txt >> orientations.tsv
+    #!/usr/bin/env python
+    import pysam
+    import csv
+    with pysam.AlignmentFile("mapped.sam", "r") as samfile, open("samstats.tsv", "w", newline="") as outfile:
+        writer = csv.writer(outfile, delimiter="\\t")
+        writer.writerow([
+            "Sequence",
+            "Reference",
+            "IsForward", 
+            "ReferenceStart",
+            "ReferenceEnd", 
+            "QueryStart",
+            "QueryEnd", 
+            "EditDistance",
+            "IsSupplementaryAlignment"
+        ])
+        for read in samfile.fetch():
+            if read.is_unmapped:
+                continue
+            writer.writerow([
+                read.query_name,
+                samfile.get_reference_name(read.reference_id),
+                not read.is_reverse, 
+                read.reference_start,
+                read.reference_end, 
+                read.query_alignment_start,
+                read.query_alignment_end, 
+                dict(read.tags).get('NM'),
+                read.is_supplementary
+            ])
     """
 }
 
@@ -170,11 +188,10 @@ process concat_fasta {
 
 process collect_seq_and_map_stats {
     input:
-        tuple path('orientations.tsv'),
+        tuple path('samstats.tsv'),
             path('n_share.tsv'),
             path('seq_lengths.tsv'),
             path('seq_lengths_targets.tsv'),
-            path('edit_distances.tsv'),
             path('segment_table.tsv')
     output:
         path('collected_stats.tsv')
@@ -186,18 +203,16 @@ process collect_seq_and_map_stats {
     def tsv(fname, *col_names):
         return pd.read_csv(fname, sep='\\t', header=None, names=col_names)
 
+    samstats = pd.read_csv('samstats.tsv', sep='\\t')
     n_share = tsv('n_share.tsv', 'Sequence', 'N_share')
     seq_lengths = tsv('seq_lengths.tsv', 'Sequence', 'Length')
     seq_lengths_targets = tsv('seq_lengths_targets.tsv', 'Reference', 'ReferenceLength')
-    orientations = tsv('orientations.tsv', 'Sequence', 'Orientation')
-    targets_and_distances = tsv('edit_distances.tsv', 'Sequence', 'Reference', 'EditDistance')
     segments = tsv('segment_table.tsv', 'Reference', 'Segment')
 
     merged_df = (
-        n_share
+        samstats
+        .merge(n_share, on='Sequence', how='outer')
         .merge(seq_lengths, on='Sequence', how='outer')
-        .merge(orientations, on='Sequence', how='outer')
-        .merge(targets_and_distances, on='Sequence', how='outer')
         .merge(seq_lengths_targets, on='Reference', how='outer')
         .merge(segments, on='Reference', how='outer')
     )
