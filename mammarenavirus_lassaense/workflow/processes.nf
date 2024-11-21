@@ -200,14 +200,25 @@ process collect_seq_and_map_stats {
 
     import pandas as pd
 
-    def tsv(fname, *col_names):
-        return pd.read_csv(fname, sep='\\t', header=None, names=col_names)
+    def tsv(fname, **cols_dtypes):
+        return pd.read_csv(fname, sep='\\t', header=None, names=list(cols_dtypes), dtype=cols_dtypes)
 
-    samstats = pd.read_csv('samstats.tsv', sep='\\t')
-    n_share = tsv('n_share.tsv', 'Sequence', 'N_share')
-    seq_lengths = tsv('seq_lengths.tsv', 'Sequence', 'Length')
-    seq_lengths_targets = tsv('seq_lengths_targets.tsv', 'Reference', 'ReferenceLength')
-    segments = tsv('segment_table.tsv', 'Reference', 'Segment')
+    dtypes_samstats = {
+        'Sequence': 'str',
+        'Reference': 'str',
+        'IsForward': 'bool',
+        'ReferenceStart': 'int',
+        'ReferenceEnd': 'int',
+        'QueryStart': 'int',
+        'QueryEnd': 'int',
+        'EditDistance': 'int',
+        'IsSupplementaryAlignment': 'bool',
+    }
+    samstats = pd.read_csv('samstats.tsv', sep='\\t', dtype=dtypes_samstats)
+    n_share = tsv('n_share.tsv', Sequence='str', N_share='float')
+    seq_lengths = tsv('seq_lengths.tsv', Sequence='str', Length='int')
+    seq_lengths_targets = tsv('seq_lengths_targets.tsv', Reference='str', ReferenceLength='int')
+    segments = tsv('segment_table.tsv', Reference='str', Segment='str')
 
     merged_df = (
         samstats
@@ -216,6 +227,15 @@ process collect_seq_and_map_stats {
         .merge(seq_lengths_targets, on='Reference', how='outer')
         .merge(segments, on='Reference', how='outer')
     )
+    int_cols = [
+        'ReferenceStart', 
+        'ReferenceEnd', 
+        'QueryStart', 
+        'QueryEnd', 
+        'EditDistance', 
+        'Length',
+        'ReferenceLength'
+    ]
     merged_df.to_csv('collected_stats.tsv', sep='\\t', index=False)
     """
 }

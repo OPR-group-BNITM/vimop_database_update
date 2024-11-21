@@ -34,3 +34,5 @@ TODO
         - do pairwise assignments change with the msa creation?
 
 - add test for integrity of the input data (e.g. formatting of the fasta header)
+
+- take supplementary alignments into account. What if there is some wrong orientation?

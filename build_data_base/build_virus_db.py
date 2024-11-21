@@ -2,6 +2,8 @@
 Merge curated and non-curated content to build a complete database
 """
 
+# TODO: gzip fasta files?
+
 import yaml
 import argparse
 import pathlib
@@ -101,10 +103,10 @@ def main():
         '-blastdb_version', '5'
     ])
 
-    fname_all_filter = minimap2_index(all_fasta, outpath)
+    #fname_all_filter = minimap2_index(all_fasta, outpath)
     out_config['all'] = {
         'fasta': pstr(all_fasta),
-        'minimap2_index': pstr(fname_all_filter),
+        # 'minimap2_index': pstr(fname_all_filter),
         'blast_db': blast_db_prefix,
     }
 
@@ -113,11 +115,12 @@ def main():
         fasta_files = [segment_info['file'] for segment_info in dataset_info['segments']]
         path_fasta_concat = outpath / f'{dataset_name}.fasta'
         cat(fasta_files, path_fasta_concat)
-        fname_mmi = minimap2_index(path_fasta_concat, outpath)
+        # fname_mmi = minimap2_index(path_fasta_concat, outpath)
         msa_paths = {}
         for segment_info in dataset_info['segments']:
             if segment_info['msa'] is not None:
-                msa_path = outpath / f'{dataset_name}.msa.fasta'
+                segment_name = segment_info['segment']
+                msa_path = outpath / f'{dataset_name}.{segment_name}.msa.fasta'
                 msa_paths[segment_info['segment']] = pstr(msa_path)
                 shutil.copyfile(segment_info['msa'], msa_path)
             else:
@@ -127,7 +130,7 @@ def main():
             'segments': sorted(msa_paths.keys()),
             'msa': msa_paths,
             'fasta': pstr(path_fasta_concat),
-            'minimap2_index': pstr(fname_mmi),
+            # 'minimap2_index': pstr(fname_mmi),
         }
 
     path_config_out = outpath / 'db.yaml'

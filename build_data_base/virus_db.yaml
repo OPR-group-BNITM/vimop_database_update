@@ -5,10 +5,10 @@ curated:
     - 'mammarenavirus lassaense'
     segments:
     - segment: 'S'
-      file: '../mammarenavirus_lassaense/data/lassa/filtered/filtered_segment_S.fasta'
-      msa: null
+      file: '../mammarenavirus_lassaense/data/lassa/filtered/clustered/S_0.99.fasta'
+      msa: '../mammarenavirus_lassaense/data/lassa/filtered/clustered/S_0.99.msa.fasta'
     - segment: 'L'
-      file: '../mammarenavirus_lassaense/data/lassa/filtered/filtered_segment_L.fasta'
-      msa: null
+      file: '../mammarenavirus_lassaense/data/lassa/filtered/clustered/L_0.99.fasta'
+      msa: '../mammarenavirus_lassaense/data/lassa/filtered/clustered/L_0.99.msa.fasta'
 rest:
   fasta: '/Volumes/DataCurate/CurationDatasets/NCBI_all/ncbi_all_NoCovid_20241026.fasta'

@@ -7,7 +7,7 @@ mkdir -p "$outdir"
 for segment in S L
 do
     fname_in="../data/lassa/filtered/filtered_segment_${segment}.fasta"
-    for thresh in all 0.99
+    for thresh in 0.99
     do
         fname_clust="$outdir/${segment}_${thresh}.fasta"
         fname_msa="$outdir/${segment}_${thresh}.msa.fasta"
