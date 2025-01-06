@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-fname_sequences="path_to_fasta_file_with_all_sequence_to_filter"
+fname_sequences="/Volumes/DataCurate/CurationDatasets/Dengue/dengue_ncbi_20240105.fasta"
 fname_stats="data/all/collected_stats.tsv"
 outdir="data/filtered"
 

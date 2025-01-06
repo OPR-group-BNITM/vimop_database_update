@@ -2,4 +2,4 @@
 
 set -x
 
-nextflow ../shared/workflow/align_to_refs.nf -c align_orient.nextflow.config -with-conda
+nextflow ../../shared/workflow/align_to_refs.nf -c align_orient.nextflow.config -with-conda

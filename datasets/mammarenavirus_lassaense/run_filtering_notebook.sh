@@ -6,7 +6,7 @@ fname_sequences="/Volumes/DataCurate/CurationDatasets/Lassa/lassa_ncbi_20241024.
 outdir="data/lassa/filtered"
 
 
-papermill ../shared/filter.ipynb lassa_filter.ipynb \
+papermill ../../shared/filter.ipynb lassa_filter.ipynb \
     -p fname_stats "$fname_stats" \
     -p fname_sequences "$fname_sequences" \
     -p outdir "$outdir"

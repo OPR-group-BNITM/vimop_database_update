@@ -37,7 +37,7 @@ workflow orient_references {
         query_ids = id_lists | map {segment, ref_ids, query_ids -> [segment, query_ids]}
         write_this = Channel.empty()
         | mix(
-            orientations | map {segment, forward_ids, reverse_ids, unmapped_ids -> [unmapped_ids, "ref", "unampped_${segment}.txt"]},
+            orientations | map {segment, forward_ids, reverse_ids, unmapped_ids -> [unmapped_ids, "ref", "unmapped_${segment}.txt"]},
             query_ids | map {segment, query_ids -> [query_ids, "ref", "ids_${segment}.txt"]},
             oriented | map {segment, oriented -> [oriented, "ref", "oriented_${segment}.fasta"]}
         )
