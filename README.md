@@ -18,6 +18,7 @@ Each data set should have an own readme which documents the data set and it's cr
 | Emesvirus zinderi                  | MS2          | 329852    |
 | Yellow fever virus                 | YFV          | 11089     |
 | West nile virus                    | WNV          | 11082     |
+| Orthonairovirus hazaraense         | HAZV         | 3052519   |
 
 
 - missing: 

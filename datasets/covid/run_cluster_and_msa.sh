@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -x
-
 datadir="data/filtered"
 outdir="data/clustered"
 thresh=0.98
