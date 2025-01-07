@@ -8,23 +8,23 @@
 
 set -x
 
+threads=16
+
 usage() {
-    echo "Usage: $0 {ALIGN|FILTER|MSA|ALL}"
+    echo "Usage: $0 {ALIGN|FILTER|MSA|ALL} casename"
     exit 1
 }
 
-if [ $# -lt 1 ]; then
+if [ $# -lt 2 ]; then
     usage
 fi
 option=$1
+casename=$2
 
 if [[ "$option" != "ALIGN" && "$option" != "FILTER" && "$option" != "MSA" && "$option" != "ALL" ]]; then
     echo "Invalid option: $option"
     usage
 fi
-
-threads=16
-casename=covid
 
 source /opt/conda/etc/profile.d/conda.sh
 export PATH="/opt/conda/bin:$PATH"
@@ -39,6 +39,7 @@ fi
 fname_sequences=$(grep -E "fasta_seqs=" "$fname_config" | awk -F= '{print $2}' | tr -d "'" | tr -d '"')
 datadir=$(grep -E "out_dir=" "$fname_config" | awk -F= '{print $2}' | tr -d "'" | tr -d '"')
 
+dir_notebook="$datadir/notebook"
 dir_filt="$datadir/filtered"
 dir_clust="$datadir/clustered"
 
@@ -49,13 +50,19 @@ if [[ "$option" == "FILTER" || "$option" == "ALL" ]]; then
 
     fname_stats="$datadir/all/collected_stats.tsv"
 
-    papermill $VIRUS_DATASET_CURATION_SRC/shared/filter.ipynb filtering.ipynb \
+    papermill $VIRUS_DATASET_CURATION_SRC/shared/filter.ipynb $dir_notebook/filtering.ipynb \
         -p fname_stats "$fname_stats" \
         -p fname_sequences "$fname_sequences" \
         -p outdir "$dir_filt"
+
+    jupyter nbconvert --to html  $dir_notebook/lassa_filter.ipynb
 fi
 
 if [[ "$option" == "MSA" || "$option" == "ALL" ]]; then
+
+    conda activate msa
+    echo "Running script in conda environment: $(conda info --envs | grep '*' | awk '{print $1}')"
+
     thresh=0.98
     $VIRUS_DATASET_CURATION_SRC/shared/cluster_and_msa.sh $dir_clust $thresh $dir_filt/*.fasta
 fi
