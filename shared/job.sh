@@ -33,6 +33,7 @@ VIRUS_DATASET_CURATION_SRC=/data/home/nils.petersen/dev/VirusDatasetCuration
 fname_config=$VIRUS_DATASET_CURATION_SRC/datasets/$casename/align_orient.nextflow.config
 
 if [[ "$option" == "ALIGN" || "$option" == "ALL" ]]; then
+    conda activate alignorient
     nextflow $VIRUS_DATASET_CURATION_SRC/shared/workflow/align_to_refs.nf -c $fname_config -with-conda
 fi
 
