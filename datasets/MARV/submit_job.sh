@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-casename=dummy # replace (e.g. with 'covid')
+casename=MARV
 container_name=nextflow
 
 sbatch --container=$HOME/containers/${container_name} \

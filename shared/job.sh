@@ -33,7 +33,7 @@ VIRUS_DATASET_CURATION_SRC=/data/home/nils.petersen/dev/VirusDatasetCuration
 fname_config=$VIRUS_DATASET_CURATION_SRC/datasets/$casename/align_orient.nextflow.config
 
 if [[ "$option" == "ALIGN" || "$option" == "ALL" ]]; then
-    conda activate alignorient
+    conda activate aligner
     nextflow $VIRUS_DATASET_CURATION_SRC/shared/workflow/align_to_refs.nf -c $fname_config -with-conda
 fi
 
@@ -49,6 +49,8 @@ if [[ "$option" == "FILTER" || "$option" == "ALL" ]]; then
     conda activate jupyter
     echo "Running script in conda environment: $(conda info --envs | grep '*' | awk '{print $1}')"
 
+    mkdir -p $dir_notebook
+
     fname_stats="$datadir/all/collected_stats.tsv"
 
     papermill $VIRUS_DATASET_CURATION_SRC/shared/filter.ipynb $dir_notebook/filtering.ipynb \
@@ -56,7 +58,7 @@ if [[ "$option" == "FILTER" || "$option" == "ALL" ]]; then
         -p fname_sequences "$fname_sequences" \
         -p outdir "$dir_filt"
 
-    jupyter nbconvert --to html  $dir_notebook/lassa_filter.ipynb
+    jupyter nbconvert --to html  $dir_notebook/filter.ipynb
 fi
 
 if [[ "$option" == "MSA" || "$option" == "ALL" ]]; then
@@ -65,5 +67,5 @@ if [[ "$option" == "MSA" || "$option" == "ALL" ]]; then
     echo "Running script in conda environment: $(conda info --envs | grep '*' | awk '{print $1}')"
 
     thresh=0.98
-    $VIRUS_DATASET_CURATION_SRC/shared/cluster_and_msa.sh $dir_clust $thresh $dir_filt/*.fasta
+    $VIRUS_DATASET_CURATION_SRC/shared/cluster_and_msa.sh $dir_clust $thresh $threads $dir_filt/*.fasta
 fi

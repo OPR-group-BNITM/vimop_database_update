@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-casename=dummy # replace (e.g. with 'covid')
+casename=LASV
 container_name=nextflow
 
 sbatch --container=$HOME/containers/${container_name} \
     --job-name=$casename \
-    ../../shared/job.sh ALL $casename
+    "../../shared/job.sh ALL $casename"

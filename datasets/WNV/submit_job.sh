@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-casename=dummy # replace (e.g. with 'covid')
+casename=WNV
 container_name=nextflow
 
 sbatch --container=$HOME/containers/${container_name} \

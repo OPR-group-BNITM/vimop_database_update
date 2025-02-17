@@ -1,14 +1,125 @@
-output_directory: 'data/db'
+output_directory: '/data2/le-petersen/shared_data/db_draft/virus'
 curated:
-  LASV:
+  covid:
+    name: Severe acute respiratory syndrome coronavirus 2
     organisms:
-    - 'mammarenavirus lassaense'
+    - Severe acute respiratory syndrome coronavirus 2
     segments:
-    - segment: 'S'
-      file: '../mammarenavirus_lassaense/data/lassa/filtered/clustered/S_0.99.fasta'
-      msa: '../mammarenavirus_lassaense/data/lassa/filtered/clustered/S_0.99.msa.fasta'
-    - segment: 'L'
-      file: '../mammarenavirus_lassaense/data/lassa/filtered/clustered/L_0.99.fasta'
-      msa: '../mammarenavirus_lassaense/data/lassa/filtered/clustered/L_0.99.msa.fasta'
+    - segment: Unsegmented
+      file: '/data2/le-petersen/nils/curated_virus_reference_datasets/covid/clustered/Unsegmented.clust_0.98.fasta'
+      msa: null
+  DENV:
+    name: Orthoflavivirus denguei
+    organisms:
+    - Orthoflavivirus denguei
+    segments:
+    - segment: Unsegmented
+      file: '/data2/le-petersen/nils/curated_virus_reference_datasets/DENV/clustered/Unsegmented.clust_0.98.fasta'
+      msa: '/data2/le-petersen/nils/curated_virus_reference_datasets/DENV/clustered/Unsegmented.clust_0.98.muscle.fasta'
+  EBOV:
+    name: Orthoebolavirus
+    organisms:
+    - Orthoebolavirus bombaliense
+    - Orthoebolavirus bundibugyoense
+    - Orthoebolavirus restonense
+    - Orthoebolavirus sudanense
+    - Orthoebolavirus taiense
+    - Orthoebolavirus zairense
+    segments:
+    - segment: Unsegmented
+      file: '/data2/le-petersen/nils/curated_virus_reference_datasets/EBOV/clustered/Unsegmented.clust_0.98.fasta'
+      msa: '/data2/le-petersen/nils/curated_virus_reference_datasets/EBOV/clustered/Unsegmented.clust_0.98.muscle.fasta'
+  HAZV:
+    name: Orthonairovirus hazaraense
+    organisms:
+    - Orthonairovirus hazaraense
+    segments:
+    - segment: L
+      file: '/data2/le-petersen/nils/curated_virus_reference_datasets/HAZV/clustered/L.clust_0.98.fasta'
+      msa: '/data2/le-petersen/nils/curated_virus_reference_datasets/HAZV/clustered/L.clust_0.98.muscle.fasta'
+    - segment: M
+      file: '/data2/le-petersen/nils/curated_virus_reference_datasets/HAZV/clustered/M.clust_0.98.fasta'
+      msa: '/data2/le-petersen/nils/curated_virus_reference_datasets/HAZV/clustered/M.clust_0.98.muscle.fasta'
+    - segment: S
+      file: '/data2/le-petersen/nils/curated_virus_reference_datasets/HAZV/clustered/S.clust_0.98.fasta'
+      msa: '/data2/le-petersen/nils/curated_virus_reference_datasets/HAZV/clustered/S.clust_0.98.muscle.fasta'
+  JUNV:
+    name: Mammarenavirus juninense
+    organisms:
+    - Mammarenavirus juninense
+    segments:
+    - segment: L
+      file: '/data2/le-petersen/nils/curated_virus_reference_datasets/JUNV/clustered/L.clust_0.98.fasta'
+      msa: '/data2/le-petersen/nils/curated_virus_reference_datasets/JUNV/clustered/L.clust_0.98.muscle.fasta'
+    - segment: S
+      file: '/data2/le-petersen/nils/curated_virus_reference_datasets/JUNV/clustered/S.clust_0.98.fasta'
+      msa: '/data2/le-petersen/nils/curated_virus_reference_datasets/JUNV/clustered/S.clust_0.98.muscle.fasta'
+  LASV:
+    name: Mammarenavirus lassaense
+    organisms:
+    - Mammarenavirus lassaense
+    segments:
+    - segment: L
+      file: '/data2/le-petersen/nils/curated_virus_reference_datasets/LASV/clustered/L.clust_0.98.fasta'
+      msa: null
+    - segment: S
+      file: '/data2/le-petersen/nils/curated_virus_reference_datasets/LASV/clustered/S.clust_0.98.fasta'
+      msa: null
+  LCMV:
+    name: Mammarenavirus choriomeningitidis
+    organisms:
+    - Mammarenavirus choriomeningitidis
+    segments:
+    - segment: L
+      file: '/data2/le-petersen/nils/curated_virus_reference_datasets/LCMV/clustered/L.clust_0.98.fasta'
+      msa: '/data2/le-petersen/nils/curated_virus_reference_datasets/LCMV/clustered/L.clust_0.98.muscle.fasta'
+    - segment: S
+      file: '/data2/le-petersen/nils/curated_virus_reference_datasets/LCMV/clustered/S.clust_0.98.fasta'
+      msa: '/data2/le-petersen/nils/curated_virus_reference_datasets/LCMV/clustered/S.clust_0.98.muscle.fasta'
+  MARV:
+    name: Orthomarburgvirus
+    organisms:
+    - Orthomarburgvirus marburgense
+    segments:
+    - segment: Unsegmented
+      file: '/data2/le-petersen/nils/curated_virus_reference_datasets/MARV/clustered/Unsegmented.clust_0.98.fasta'
+      msa: '/data2/le-petersen/nils/curated_virus_reference_datasets/MARV/clustered/Unsegmented.clust_0.98.muscle.fasta'
+  MS2:
+    name: Emesvirus zinderi
+    organisms:
+    - Emesvirus zinderi
+    segments:
+    - segment: Unsegmented
+      file: '/data2/le-petersen/nils/curated_virus_reference_datasets/MS2/clustered/Unsegmented.clust_0.98.fasta'
+      msa: '/data2/le-petersen/nils/curated_virus_reference_datasets/MS2/clustered/Unsegmented.clust_0.98.muscle.fasta'
+  WNV:
+    name: Orthoflavivirus nilense
+    organisms:
+    - Orthoflavivirus nilense
+    segments:
+    - segment: Unsegmented
+      file: '/data2/le-petersen/nils/curated_virus_reference_datasets/WNV/clustered/Unsegmented.clust_0.98.fasta'
+      msa: '/data2/le-petersen/nils/curated_virus_reference_datasets/WNV/clustered/Unsegmented.clust_0.98.muscle.fasta'
+  YFV:
+    name: Orthoflavivirus flavi
+    organisms:
+    - Orthoflavivirus flavi
+    segments:
+    - segment: Unsegmented
+      file: '/data2/le-petersen/nils/curated_virus_reference_datasets/YFV/clustered/Unsegmented.clust_0.98.fasta'
+      msa: '/data2/le-petersen/nils/curated_virus_reference_datasets/YFV/clustered/Unsegmented.clust_0.98.muscle.fasta'
+  ZIKA:
+    name: Orthoflavivirus zikaense
+    organisms:
+    - Orthoflavivirus zikaense
+    segments:
+    - segment: Unsegmented
+      file: '/data2/le-petersen/nils/curated_virus_reference_datasets/ZIKA/clustered/Unsegmented.clust_0.98.fasta'
+      msa: '/data2/le-petersen/nils/curated_virus_reference_datasets/ZIKA/clustered/Unsegmented.clust_0.98.muscle.fasta'
+filters:
+  ARENA: '/data2/le-petersen/nils/CurationDatasets/Arena/arenaviridae_ncbi_20250105.fasta'
+  NAIRO: '/data2/le-petersen/nils/CurationDatasets/Nairo/nairoviridae_ncbi_20250105.fasta'
+  FILO: '/data2/le-petersen/nils/CurationDatasets/Filo/filoviridae_ncbi_20250105.fasta'
+  HANTA: '/data2/le-petersen/nils/CurationDatasets/Hanta/hantaviridae_ncbi_20250105.fasta'
 rest:
-  fasta: '/Volumes/DataCurate/CurationDatasets/NCBI_all/ncbi_all_NoCovid_20241026.fasta'
+  fasta: '/data2/le-petersen/nils/CurationDatasets/NCBI_all/ncbi_all_NoCovid_20241026.fasta'

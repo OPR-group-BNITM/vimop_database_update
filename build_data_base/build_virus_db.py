@@ -48,6 +48,10 @@ def main():
         'config',
         help='Config file in yaml format.'
     )
+    parser.add_argument(
+        'output_version',
+        help='Version to write to the output config.'
+    )
     args = parser.parse_args()
 
     with open(args.config) as f_config:
@@ -91,7 +95,8 @@ def main():
     out_config = {}
 
     # create the blast index
-    blast_db_path = outpath / 'blast_db'
+    subdir_blast = 'blast_db'
+    blast_db_path = outpath / subdir_blast
     blast_db_path.mkdir(exist_ok=True, parents=True)
     blast_db_prefix = pstr(blast_db_path / 'ALL')
     run_sub([
@@ -105,9 +110,9 @@ def main():
 
     #fname_all_filter = minimap2_index(all_fasta, outpath)
     out_config['all'] = {
-        'fasta': pstr(all_fasta),
+        'fasta': all_fasta.name,
         # 'minimap2_index': pstr(fname_all_filter),
-        'blast_db': blast_db_prefix,
+        'blast_db': subdir_blast,
     }
 
     out_config['curated'] = {}
@@ -121,17 +126,26 @@ def main():
             if segment_info['msa'] is not None:
                 segment_name = segment_info['segment']
                 msa_path = outpath / f'{dataset_name}.{segment_name}.msa.fasta'
-                msa_paths[segment_info['segment']] = pstr(msa_path)
+                msa_paths[segment_info['segment']] = msa_path.name
                 shutil.copyfile(segment_info['msa'], msa_path)
             else:
                 msa_paths[segment_info['segment']] = None
         out_config['curated'][dataset_name] = {
+            'name': dataset_info['name'],
             'organisms': dataset_info['organisms'],
             'segments': sorted(msa_paths.keys()),
             'msa': msa_paths,
-            'fasta': pstr(path_fasta_concat),
+            'fasta': path_fasta_concat.name,
             # 'minimap2_index': pstr(fname_mmi),
         }
+
+    out_config['filters'] = {}
+    for filter_name, fname_filter_in in config['filters'].items():
+        filter_path = outpath / f'{filter_name}.fasta'
+        out_config['filters'][filter_name] = filter_path.name
+        shutil.copyfile(fname_filter_in, filter_path)
+
+    out_config['version'] = args.output_version
 
     path_config_out = outpath / 'db.yaml'
     with path_config_out.open(mode='w') as f_config_out:
