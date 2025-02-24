@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -c 16 # number of cores
-#SBATCH --mem 64000 # memory pool for all cores
+#SBATCH --mem 128000 # memory pool for all cores
 #SBATCH -o /data2/le-petersen/nils/slurmout/slurm.%N.%j.out # STDOUT
 #SBATCH -e /data2/le-petersen/nils/slurmout/slurm.%N.%j.err # STDERR
 #SBATCH --mail-type=ALL
