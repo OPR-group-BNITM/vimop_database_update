@@ -1,11 +1,8 @@
 import argparse
 from Bio import Entrez
-#import xml.etree.ElementTree as ET
 
 # Set your email here
-#Entrez.email = "your_email@example.com"
-
-# Replace XXXX with your taxon ID
+Entrez.email = 'nils.petersen@bnitm.de'
 
 
 def fetch_organism_names(taxon_id):
