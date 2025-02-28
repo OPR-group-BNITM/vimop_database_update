@@ -20,6 +20,10 @@ include {
     collect_seq_and_map_stats;
     segment_table_add_columns;
     concat_tsv;
+    concat_fasta_nolabel;
+    mark_sequences_to_filter;
+    orient_and_filter_fasta;
+    cdhit;
     // finally
     output
 } from './lib/processes.nf'
@@ -102,16 +106,24 @@ workflow compare_genomes_to_references {
         | join(segment_table, by: 0)
         | collect_seq_and_map_stats
 
-        // TODO
-        // - filter the sequences
-        // - 
+        filtering_stats = collected_stats
+        | mark_sequences_to_filter
+
+        sequences = input
+        | map { meta -> [meta.label, meta.fasta_all] }
+
+        filtered_sequences = filtering_stats
+        | join(sequences, by: 0)
+        | orient_and_filter_fasta
 
         write_this = Channel.empty()
         | mix(
             alignments | map {label, align -> [align, "${label}/all/alignments", "${label}.sam"]},
-            collected_stats | map {label, stats -> [stats, "${label}/all", "all_stats.tsv"]}
+            filtering_stats | map {label, stats -> [stats, "${label}/all", "stats.tsv"]},
+            filtered_sequences | map {label, fasta -> [fasta, "${label}/all", "${label}_filtered.fasta"]}
         )
     emit:
+        filtered_sequences = filtered_sequences
         write_this = write_this
 }
 
@@ -171,11 +183,28 @@ workflow {
     }
     | compare_genomes_to_references
 
+    // clustering
+    clustered = oriented_seqs.filtered_sequences
+    | cdhit
+
+    // merging
+    nogroup = sequences_per_group
+    | filter { label, fasta -> label == "NOGROUP"}
+    | map { label, fasta -> fasta }
+
+    fasta_all = clustered
+    | map { label, fasta -> fasta }
+    | mix(nogroup)
+    | collect
+    | concat_fasta_nolabel
+
     Channel.empty()
     | mix(
-        (sequences_per_group | map {label, fasta -> [fasta, "sequences", null]}),
+        (sequences_per_group | map {label, fasta -> [fasta, "${label}/all", "${label}.fasta"]}),
         oriented_refs.write_this,
-        oriented_seqs.write_this
+        oriented_seqs.write_this,
+        (clustered | map { label, fasta -> [fasta, "sequences", "${label}.clustered.fasta"] }),
+        (fasta_all | map { fasta -> [fasta, "sequences", "ALL.fasta"] })
     )
     | output
 }

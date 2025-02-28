@@ -141,8 +141,17 @@ process concat_tsv {
     """
     cat in_*.tsv > out.tsv
     """
-} 
+}
 
+process concat_fasta_nolabel {
+    input:
+        path('*.fasta')
+    output:
+        path('out.fasta')
+    """
+    cat *.fasta > out.fasta
+    """
+} 
 
 process seq_lengths {
     input:
@@ -173,21 +182,28 @@ process sam_info {
     #!/usr/bin/env python
     import pysam
     import pandas as pd
+
+    def cast_int(val):
+        try:
+            return int(val)
+        except TypeError:
+            return -1
+
     with pysam.AlignmentFile("mapped.sam", "r") as samfile:
         data = [
             {
                 'Sequence': read.query_name,
                 'Reference': samfile.get_reference_name(read.reference_id),
                 'IsForward': not read.is_reverse, 
-                'ReferenceStart': int(read.reference_start),
-                'ReferenceEnd': int(read.reference_end),
-                'QueryStart': int(read.query_alignment_start),
-                'QueryEnd': int(read.query_alignment_end),
-                'EditDistance': dict(read.tags).get('NM'),
+                'ReferenceStart': cast_int(read.reference_start),
+                'ReferenceEnd': cast_int(read.reference_end),
+                'QueryStart': cast_int(read.query_alignment_start),
+                'QueryEnd': cast_int(read.query_alignment_end),
+                'EditDistance': cast_int(dict(read.tags).get('NM')),
                 'IsSupplementaryAlignment': read.is_supplementary,  
             }
             for read in samfile.fetch()
-            if not read.is_unmapped
+            if not read.is_supplementary and not read.is_secondary
         ]
     columns = [
         "Sequence",
@@ -247,7 +263,7 @@ process collect_seq_and_map_stats {
     n_share = tsv('n_share.tsv', Sequence='str', N_share='float')
     seq_lengths = tsv('seq_lengths.tsv', Sequence='str', Length='int')
     seq_lengths_targets = tsv('seq_lengths_targets.tsv', Reference='str', ReferenceLength='int')
-    segments = tsv('segment_table.tsv', Reference='str', Segment='str')
+    segments = tsv('segment_table.tsv', Reference='str', Label='str', Segment='str')
 
     merged_df = (
         samstats
@@ -257,6 +273,84 @@ process collect_seq_and_map_stats {
         .merge(segments, on='Reference', how='outer')
     )
     merged_df.to_csv('collected_stats.tsv', sep='\\t', index=False)
+    """
+}
+
+
+process mark_sequences_to_filter {
+    input:
+        tuple val(label), path('collected_stats.tsv')
+    output:
+        tuple val(label), path('collected_stats_filtered.tsv')
+    """
+    #!/usr/bin/env python3
+    import pandas as pd
+    seqstats = pd.read_csv('collected_stats.tsv', sep='\\t')
+    seqstats['RelativeLength'] = seqstats['Length'] / seqstats['ReferenceLength']
+
+    unmapped = seqstats['ReferenceStart'] == -1
+    too_many_N = seqstats['N_share'] > ${params.filter_max_n_share}
+    too_short = seqstats['RelativeLength'] < ${params.filter_min_relative_length}
+
+    seqstats['FilteringStatus'] = 'Ok'
+
+    seqstats['FilteringStatus'][too_short] = 'TooShort'
+    seqstats['FilteringStatus'][unmapped] = 'Unmapped'
+    seqstats['FilteringStatus'][too_many_N] = 'TooManyN'
+
+    seqstats.to_csv('collected_stats_filtered.tsv', sep='\\t')
+    """
+}
+
+
+process orient_and_filter_fasta {
+    input:
+        tuple val(label), path('collected_stats_filtered.tsv'), path('sequences.fasta')
+    output:
+        tuple val(label), path("${label}.filtered.fasta")
+    """
+    #!/usr/bin/env python3
+
+    import os
+    import pandas as pd
+    from Bio import SeqIO
+    from Bio.SeqRecord import SeqRecord
+
+    df = pd.read_csv('collected_stats_filtered.tsv', sep='\\t')
+    df_filtered_final = df[df['FilteringStatus'] == 'Ok']
+
+    segment_and_orientation = {
+        row['Sequence']: (row['IsForward'], row['Segment'])
+        for _, row in df_filtered_final.iterrows()
+    }
+
+    with open('${label}.filtered.fasta', 'w') as f_out:
+        for record in SeqIO.parse('sequences.fasta', 'fasta'):
+            if record.id not in segment_and_orientation:
+                continue
+            is_forward, segment = segment_and_orientation[record.id]
+            if is_forward is None:
+                raise RuntimeError(f"Invalid orientation {is_forward}")
+            orientation = 'forward' if is_forward else 'reverse'
+            new_record = SeqRecord(
+                seq=record.seq if is_forward else record.seq.reverse_complement(),
+                id=record.id,
+                name=record.name,
+                description=f'{record.description}|{orientation}|{segment}'
+            )
+            SeqIO.write(new_record, f_out, 'fasta')
+    """
+}
+
+
+process cdhit {
+    input:
+        tuple val(label), path(fasta)
+    output:
+        tuple val(label), path("${label}.clustered.fasta")
+    cpus 4
+    """
+    cd-hit-est -i ${fasta} -o ${label}.clustered.fasta -c ${params.cdhit_threshold} -T ${task.cpus}
     """
 }
 
