@@ -123,21 +123,21 @@ process orient_reads {
 }
 
 
-process add_col {
+process segment_table_add_columns {
     input:
-        tuple val(col_val), path('input_table_to_extend.tsv')
+        tuple val(label), val(segment), path('input_table_to_extend.tsv')
     output:
-        path('table_out.tsv')
+        tuple val(label), path('table_out.tsv')
     """
-    awk '{print \$0"\\t${col_val}"}' input_table_to_extend.tsv > table_out.tsv
+    awk -v label="${label}" -v segment="${segment}" '{print \$0"\\t"label"\\t"segment}' input_table_to_extend.tsv > table_out.tsv
     """
 }
 
 process concat_tsv {
     input:
-        path('in_*.tsv')
+        tuple val(label), path('in_*.tsv')
     output:
-        path('out.tsv')
+        tuple val(label), path('out.tsv')
     """
     cat in_*.tsv > out.tsv
     """
@@ -146,9 +146,9 @@ process concat_tsv {
 
 process seq_lengths {
     input:
-        path('seqs.fasta')
+        tuple val(label), path('seqs.fasta')
     output:
-        path('seq_lengths.tsv')
+        tuple val(label), path('seq_lengths.tsv')
     """
     seqtk comp seqs.fasta | awk '{print \$1"\t"\$2}' > seq_lengths.tsv 
     """
@@ -156,9 +156,9 @@ process seq_lengths {
 
 process n_share {
     input:
-        path('seqs.fasta')
+        tuple val(label), path('seqs.fasta')
     output:
-        path('n_share.tsv')
+        tuple val(label), path('n_share.tsv')
     """
     seqtk comp seqs.fasta | awk '{print \$1"\t"\$9/\$2}' > n_share.tsv
     """
@@ -166,48 +166,49 @@ process n_share {
 
 process sam_info {
     input:
-        path('mapped.sam')
+        tuple val(meta), path('mapped.sam')
     output:
-        path('samstats.tsv')
+        tuple val(meta), path('stats.tsv')
     """
     #!/usr/bin/env python
     import pysam
-    import csv
-    with pysam.AlignmentFile("mapped.sam", "r") as samfile, open("samstats.tsv", "w", newline="") as outfile:
-        writer = csv.writer(outfile, delimiter="\\t")
-        writer.writerow([
-            "Sequence",
-            "Reference",
-            "IsForward", 
-            "ReferenceStart",
-            "ReferenceEnd", 
-            "QueryStart",
-            "QueryEnd", 
-            "EditDistance",
-            "IsSupplementaryAlignment"
-        ])
-        for read in samfile.fetch():
-            if read.is_unmapped:
-                continue
-            writer.writerow([
-                read.query_name,
-                samfile.get_reference_name(read.reference_id),
-                not read.is_reverse, 
-                read.reference_start,
-                read.reference_end, 
-                read.query_alignment_start,
-                read.query_alignment_end, 
-                dict(read.tags).get('NM'),
-                read.is_supplementary
-            ])
+    import pandas as pd
+    with pysam.AlignmentFile("mapped.sam", "r") as samfile:
+        data = [
+            {
+                'Sequence': read.query_name,
+                'Reference': samfile.get_reference_name(read.reference_id),
+                'IsForward': not read.is_reverse, 
+                'ReferenceStart': int(read.reference_start),
+                'ReferenceEnd': int(read.reference_end),
+                'QueryStart': int(read.query_alignment_start),
+                'QueryEnd': int(read.query_alignment_end),
+                'EditDistance': dict(read.tags).get('NM'),
+                'IsSupplementaryAlignment': read.is_supplementary,  
+            }
+            for read in samfile.fetch()
+            if not read.is_unmapped
+        ]
+    columns = [
+        "Sequence",
+        "Reference",
+        "IsForward", 
+        "ReferenceStart",
+        "ReferenceEnd", 
+        "QueryStart",
+        "QueryEnd", 
+        "EditDistance",
+        "IsSupplementaryAlignment"
+    ]
+    pd.DataFrame(data, columns=columns).to_csv('stats.tsv', sep='\\t')
     """
 }
 
 process concat_fasta {
     input:
-        path('in_*.fasta')
+        tuple val(label), path('in_*.fasta')
     output:
-        path('concat.fasta')
+        tuple val(label), path('concat.fasta')
     """
     cat in_*.fasta > concat.fasta
     """
@@ -215,13 +216,14 @@ process concat_fasta {
 
 process collect_seq_and_map_stats {
     input:
-        tuple path('samstats.tsv'),
+        tuple val(label),
+            path('samstats.tsv'),
             path('n_share.tsv'),
             path('seq_lengths.tsv'),
             path('seq_lengths_targets.tsv'),
             path('segment_table.tsv')
     output:
-        path('collected_stats.tsv')
+        tuple val(label), path('collected_stats.tsv')
     """
     #!/usr/bin/env python
 
@@ -254,15 +256,6 @@ process collect_seq_and_map_stats {
         .merge(seq_lengths_targets, on='Reference', how='outer')
         .merge(segments, on='Reference', how='outer')
     )
-    int_cols = [
-        'ReferenceStart', 
-        'ReferenceEnd', 
-        'QueryStart', 
-        'QueryEnd', 
-        'EditDistance', 
-        'Length',
-        'ReferenceLength'
-    ]
     merged_df.to_csv('collected_stats.tsv', sep='\\t', index=False)
     """
 }

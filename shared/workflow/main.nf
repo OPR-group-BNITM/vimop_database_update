@@ -18,7 +18,7 @@ include {
     seq_lengths as seq_lengths_queries;
     n_share;
     collect_seq_and_map_stats;
-    add_col;
+    segment_table_add_columns;
     concat_tsv;
     // finally
     output
@@ -31,8 +31,6 @@ workflow orient_references {
         // contains label (e.g. LASV), segment (e.g. L), main_ref and other_refs,
         // sequence_file
     main:
-
-        segment_info | view { println "DEBUG: sequences_dict" + it }
 
         id_lists = segment_info
         | get_id_lists
@@ -73,28 +71,45 @@ workflow orient_references {
 
 workflow compare_genomes_to_references {
     take:
-        refseqs
-        sequences
-        segment_table
+        input  // holds label, fasta_ref, segment_table, fasta_all 
     main:
-        lengths_references = seq_lengths_references(refseqs)
-        lengths_queries = seq_lengths_queries(sequences)
-        n_shares = n_share(sequences)
+        lengths_references = input
+        | map { meta -> [meta.label, meta.fasta_ref] }
+        | seq_lengths_references
+        
+        lengths_queries = input
+        | map { meta -> [meta.label, meta.fasta_all] }
+        | seq_lengths_queries
 
-        alignments = refseqs | map {refs -> ['all', refs, sequences]} | minimap_all        
-        align_stats = alignments | map {alias, align -> [align]} | sam_info
+        n_shares = input
+        | map { meta -> [meta.label, meta.fasta_all] }
+        | n_share
+
+        alignments = input
+        | map { meta -> [meta.label, meta.fasta_ref, meta.fasta_all] }
+        | minimap_all
+
+        align_stats = alignments
+        | sam_info
+
+        segment_table = input
+        | map {meta -> [meta.label, meta.segment_table]} 
 
         collected_stats = align_stats
-        | combine(n_shares)
-        | combine(lengths_queries)
-        | combine(lengths_references)
-        | combine(segment_table)
+        | join(n_shares, by: 0)
+        | join(lengths_queries, by: 0)
+        | join(lengths_references, by: 0)
+        | join(segment_table, by: 0)
         | collect_seq_and_map_stats
+
+        // TODO
+        // - filter the sequences
+        // - 
 
         write_this = Channel.empty()
         | mix(
-            alignments | map {alias, align -> [align, 'all/alignments', "${alias}.sam"]},
-            collected_stats | map {stats -> [stats, 'all', null]}
+            alignments | map {label, align -> [align, "${label}/all/alignments", "${label}.sam"]},
+            collected_stats | map {label, stats -> [stats, "${label}/all", "all_stats.tsv"]}
         )
     emit:
         write_this = write_this
@@ -117,7 +132,7 @@ def createFastaDict(List<String> filePaths) {
 workflow {
 
     sequences_per_group = Channel.of(params.taxa_config)
-    | map {fasta -> [fasta, params.fasta_sequences]}
+    | map { fasta -> [fasta, params.fasta_sequences] }
     | get_sequence_sets_for_curation
     | flatten  // Ensure individual files are passed
     | map { file -> 
@@ -133,25 +148,34 @@ workflow {
     | map { meta, label, fasta -> meta + ['fasta': fasta] }
     | orient_references
 
+    // part two: organize all reads and get the comparisons and statistics
+    refs_concat = oriented_refs.oriented_seqs
+    | map { meta, oriented_fasta -> [meta.label, oriented_fasta] }
+    | groupTuple(by: 0)
+    | concat_fasta
 
-    // // part two: organize all reads and get the comparisons and statistics
-    // refs_concat = oriented_refs.oriented_seqs
-    // | map {segment, oriented_fasta -> oriented_fasta}
-    // | collect  // groupby!
-    // | concat_fasta
+    segment_table = oriented_refs.id_lists
+    | map { meta, query_ids -> [meta.label, meta.segment, query_ids]}
+    | segment_table_add_columns
+    | groupTuple(by: 0)
+    | concat_tsv
 
-    // segment_table = oriented_refs.id_lists
-    // | add_col
-    // | collect
-    // | concat_tsv
-
-    // oriented_seqs = compare_genomes_to_references(refs_concat, params.fasta_seqs, segment_table)
+    oriented_seqs = refs_concat
+    | join(segment_table, by: 0)
+    | join(sequences_per_group, by: 0)
+    | map { label, fasta_ref, segment_table, fasta_all ->
+        ['label': label,
+         'fasta_ref': fasta_ref,
+         'segment_table': segment_table,
+         'fasta_all': fasta_all]
+    }
+    | compare_genomes_to_references
 
     Channel.empty()
     | mix(
         (sequences_per_group | map {label, fasta -> [fasta, "sequences", null]}),
-        oriented_refs.write_this
-        // oriented_seqs.write_this
+        oriented_refs.write_this,
+        oriented_seqs.write_this
     )
     | output
 }
