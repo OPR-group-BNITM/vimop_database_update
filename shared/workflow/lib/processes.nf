@@ -1,69 +1,74 @@
 nextflow.enable.dsl = 2
 
 
+process get_sequence_sets_for_curation {
+    input:
+        tuple path('groups.yaml'), path('sequences.fasta')
+    output:
+        path("*.fasta")
+    """
+    sort_ids_to_groups.py --taxgroups groups.yaml --sequences sequences.fasta --outdir out --category curated
+
+    samtools faidx sequences.fasta
+
+    for fname_ids in out/*.txt
+    do
+        bname=\$(basename \$fname_ids)
+        fname_out="\${bname%.txt}.fasta" # Remove .txt extension
+        seqtk subseq sequences.fasta \$fname_ids > \$fname_out
+
+        #xargs -a \$fname_ids -n 100 samtools faidx sequences.fasta > \$fname_out
+    done
+    """
+}
+
+
 process get_id_lists {
     input:
         val(segment_info)
     output:
-        tuple val(segment_info.alias), path('ref_ids.txt'), path('query_ids.txt')
+        tuple val(segment_info), path('ref_ids.txt'), path('query_ids.txt')
     """
-    for id in ${segment_info['seqs'].join(' ')}
+    for id in ${segment_info.reference_info.refs.join(' ')}
     do
         echo \$id >> query_ids.txt
     done
-    for id in ${segment_info['refs'].join(' ')}
+    for id in ${segment_info.reference_info.seqs.join(' ')}
     do
         echo \$id >> ref_ids.txt
     done
     """
 }
 
-process add_col {
-    input:
-        tuple val(col_val), path('input_table_to_extend.tsv')
-    output:
-        path('table_out.tsv')
-    """
-    awk '{print \$0"\\t${col_val}"}' input_table_to_extend.tsv > table_out.tsv
-    """
-}
-
-process concat_tsv {
-    input:
-        path('in_*.tsv')
-    output:
-        path('out.tsv')
-    """
-    cat in_*.tsv > out.tsv
-    """
-} 
 
 process extract_sequences {
     input:
-        tuple val(segment), path('ref_ids.txt'), path('query_ids.txt'), path("sequences.fasta")
+        tuple val(segment_info), path('ref_ids.txt'), path('query_ids.txt'), path("sequences.fasta")
     output:
-        tuple val(segment), path("refs.fasta"), path("queries.fasta")
+        tuple val(segment_info), path("refs.fasta"), path("queries.fasta")
     """
     seqtk subseq sequences.fasta query_ids.txt > queries.fasta
     seqtk subseq sequences.fasta ref_ids.txt > refs.fasta
     """
 }
 
+
 process minimap {
     input:
-        tuple val(alias), path('refs.fasta'), path('queries.fasta')
+        tuple val(meta), path('refs.fasta'), path('queries.fasta')
     output:
-        tuple val(alias), path('mapped.sam')
+        tuple val(meta), path('mapped.sam')
     """
     minimap2 -k ${params.minimap.kmer_length} -w ${params.minimap.window_size} -p ${params.minimap.p} --secondary=no --eqx -x map-ont -a refs.fasta queries.fasta > mapped.sam
     """
 }
 
+
 process get_orientations {
     input:
-        tuple val(alias), path('mapped.sam')
+        tuple val(meta), path('mapped.sam')
     output:
-        tuple val(alias), path('forward_mapped_ids.txt'), path('reverse_mapped_ids.txt'), path('unmapped_ids.txt')
+        tuple val(meta), path('forward_mapped_ids.txt'), path('reverse_mapped_ids.txt'), path('unmapped_ids.txt')
     """
     # -F 2308 removes unmapped reads (4), secondary alignments (256) and supplementary alignments (2048) 
     samtools view -F 16 -F 2308 mapped.sam | awk '{print \$1}' > forward_mapped_ids.txt
@@ -74,13 +79,13 @@ process get_orientations {
 
 process orient_reads {
     input:
-        tuple val(alias),
+        tuple val(meta),
             path('forward_mapped_ids.txt'),
             path('reverse_mapped_ids.txt'),
             path('unmapped_ids.txt'),
             path('seqs.fasta')
     output:
-        tuple val(alias), path('oriented.fasta')
+        tuple val(meta), path('oriented.fasta')
     """
     #!/usr/bin/env python
 
@@ -116,6 +121,28 @@ process orient_reads {
             SeqIO.write(new_record, out_fasta, "fasta")
     """
 }
+
+
+process add_col {
+    input:
+        tuple val(col_val), path('input_table_to_extend.tsv')
+    output:
+        path('table_out.tsv')
+    """
+    awk '{print \$0"\\t${col_val}"}' input_table_to_extend.tsv > table_out.tsv
+    """
+}
+
+process concat_tsv {
+    input:
+        path('in_*.tsv')
+    output:
+        path('out.tsv')
+    """
+    cat in_*.tsv > out.tsv
+    """
+} 
+
 
 process seq_lengths {
     input:

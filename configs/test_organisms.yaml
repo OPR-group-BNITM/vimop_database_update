@@ -1,0 +1,28 @@
+curated:
+
+  LASV:
+    taxa:
+    - taxid: 3052310
+      name: Mammarenavirus lassense
+      organisms:
+      - Mammarenavirus lassaense
+      - Lassa virus Josiah
+      - Lassa virus GA391
+
+  MARV:
+    taxa:
+    - taxid: 3044783
+      name: Orthomarburgvirus
+      organisms:
+      - Orthomarburgvirus marburgense
+      - Orthomarburgvirus
+      - Marburg virus - Angola
+      - Marburg virus - Uganda
+      - Lake Victoria marburgvirus - Leiden
+      - Lake Victoria marburgvirus - Ozolin
+      - Lake Victoria marburgvirus - Ci67
+      - Lake Victoria marburgvirus - DRC1999
+      - Lake Victoria marburgvirus - Angola2005
+      - Ravn virus - Ravn, Kenya, 1987
+      - Lake Victoria marburgvirus - Popp
+      - Marburg virus - Musoke, Kenya, 1980

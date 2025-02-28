@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import os
 import argparse
 import yaml
@@ -18,7 +19,7 @@ def main():
     category = args.category  # curated or filter
 
     with open(fname_groups) as f_in:
-        groups = yaml.safe_load(f_in).items()
+        groups = yaml.safe_load(f_in)
 
     # build a dictionary organism name -> groupkey
     # (e.g. mammarenavirus lassaense -> LASV)
@@ -42,15 +43,14 @@ def main():
     # Extract the sequence IDs and write them to files
     os.makedirs(dir_out, exist_ok=True)
     outfiles = {
-        groupkey: open(os.path.join(dir_out, f'{groupkey}.ids.txt'), 'w')
+        groupkey: open(os.path.join(dir_out, f'{groupkey}.txt'), 'w')
         for groupkey in list(groups[category]) + ['NOGROUP']
     }
 
-    for seq in SeqIO.parse(fname_seqs):
+    for seq in SeqIO.parse(fname_seqs, 'fasta'):
         organism = seq.description.rsplit('|', 1)[1].strip()
-        if organism in organism_to_group:
-            for groupkey in organism_to_group.get(organism, ['NOGROUP']):
-                outfiles[groupkey].write(seq.id)
+        for groupkey in organism_to_group.get(organism, ['NOGROUP']):
+            outfiles[groupkey].write(seq.id + '\n')
 
     for f_out in outfiles.values():
         f_out.close()
