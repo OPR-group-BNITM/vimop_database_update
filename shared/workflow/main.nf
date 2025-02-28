@@ -1,5 +1,5 @@
 nextflow.enable.dsl = 2
-
+import ReferenceConfigs
 
 include {
     get_sequence_sets_for_curation;
@@ -29,25 +29,34 @@ workflow orient_references {
     take:
         segment_info
         // contains label (e.g. LASV), segment (e.g. L), main_ref and other_refs,
-        // sequence_file, sequence_index_file
+        // sequence_file
     main:
+
+        segment_info | view { println "DEBUG: sequences_dict" + it }
+
         id_lists = segment_info
         | get_id_lists
 
-        sequences_segment = id_lists.combine([segment_info.fasta])
+        sequences_segment = id_lists
+        | map {meta, refs, queries -> [meta, refs, queries, meta.fasta]}
         | extract_sequences
 
         orientations = sequences_segment
         | minimap_refseqs
         | get_orientations_refs
 
+        query_sequences = sequences_segment
+        | map { meta, refs, queries -> [meta.label, meta.segment, queries] }
+
         oriented = orientations
-        | join(sequences_segment | map{segment, refs, queries -> [segment, queries]}, by: 0)
+        | map { meta, fwd, rev, unmapped -> [meta.label, meta.segment, meta, fwd, rev, unmapped] }
+        | join(query_sequences, by: [0, 1])
+        | map {label, segment, meta, fwd, rev, unmapped, queries -> [meta, fwd, rev, unmapped, queries]}        
         | orient_refs
 
         // some output formatting
         query_ids = id_lists
-        | map {segment, ref_ids, query_ids -> [segment, query_ids]}
+        | map {meta, ref_ids, query_ids -> [meta, query_ids]}
 
         write_this = Channel.empty()
         | mix(
@@ -92,43 +101,38 @@ workflow compare_genomes_to_references {
 }
 
 
+def createFastaDict(List<String> filePaths) {
+    def result = [:] // Initialize empty map
+    filePaths.each { path ->
+        def file = new File(path) // Create File object
+        def label = file.name.replace('.fasta', '') // Remove ".fasta" extension
+        result[label] = path // Store filename as string
+    }
+    return result
+}
+
+
+//TODO: add a check to make sure configs for extracting reads and curation of the sequences match
+
 workflow {
 
     sequences_per_group = Channel.of(params.taxa_config)
     | map {fasta -> [fasta, params.fasta_sequences]}
     | get_sequence_sets_for_curation
-    | flatten()  // Ensure individual files are passed
+    | flatten  // Ensure individual files are passed
     | map { file -> 
         def label = file.baseName.replace('.fasta', '') // Extract identifier
         return tuple(label, file)
     }
 
-    sequences_dict = sequences_per_group
-    | map {label, fasta -> fasta}
-    | flatten()  // Ensure individual files are passed
-    | reduce([:]) { acc, file ->
-        def label = file.baseName.replace('.fasta', '') // Extract identifier
-        acc[label] = file
-        return acc
-    }
+    ref_conf = new ReferenceConfigs(params.reference_config)
+    
+    oriented_refs = Channel.from(ref_conf.getRefs())
+    | combine(sequences_per_group)
+    | filter { meta, label, fasta -> meta.label == label }
+    | map { meta, label, fasta -> meta + ['fasta': fasta] }
+    | orient_references
 
-    // TODO
-    // - get the info for the groups
-    // - merge the sequences per group
-
-    // map sequences per group -> config[label].ref, config[label].
-
-    // LASV:
-    // segments:
-    // S:
-    //   refs:
-    //     - NC_004296.1
-    //   seqs:
-
-    //segment_info = Channel.from(params.segments)
-
-    // // part one: organize the references
-    // oriented_refs = orient_references(segment_info, params.fasta_refs)
 
     // // part two: organize all reads and get the comparisons and statistics
     // refs_concat = oriented_refs.oriented_seqs
@@ -145,8 +149,8 @@ workflow {
 
     Channel.empty()
     | mix(
-        sequences_per_group | map {label, fasta -> [fasta, "sequences", null]}
-        // oriented_refs.write_this,
+        (sequences_per_group | map {label, fasta -> [fasta, "sequences", null]}),
+        oriented_refs.write_this
         // oriented_seqs.write_this
     )
     | output

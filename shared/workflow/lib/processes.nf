@@ -29,13 +29,13 @@ process get_id_lists {
     output:
         tuple val(segment_info), path('ref_ids.txt'), path('query_ids.txt')
     """
-    for id in ${segment_info.reference_info.refs.join(' ')}
-    do
-        echo \$id >> query_ids.txt
-    done
-    for id in ${segment_info.reference_info.seqs.join(' ')}
+    for id in ${segment_info.refs.join(' ')}
     do
         echo \$id >> ref_ids.txt
+    done
+    for id in ${segment_info.seqs.join(' ')}
+    do
+        echo \$id >> query_ids.txt
     done
     """
 }
