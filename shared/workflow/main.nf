@@ -23,6 +23,7 @@ include {
     concat_fasta_nolabel;
     mark_sequences_to_filter;
     orient_and_filter_fasta;
+    add_unknown_segment_info;
     cdhit;
     // finally
     output
@@ -191,6 +192,7 @@ workflow {
     nogroup = sequences_per_group
     | filter { label, fasta -> label == "NOGROUP"}
     | map { label, fasta -> fasta }
+    | add_unknown_segment_info
 
     fasta_all = clustered
     | map { label, fasta -> fasta }

@@ -354,6 +354,28 @@ process cdhit {
     """
 }
 
+process add_unknown_segment_info {
+    input:
+        path('in.nogroup.fasta')
+    output:
+        path('out.nogroup.fasta')
+
+    """
+    #!/usr/bin/env python3
+    from Bio import SeqIO
+    from Bio.SeqRecord import SeqRecord
+    with open('out.nogroup.fasta', 'w') as f_out:
+        for seq in SeqIO.parse('in.nogroup.fasta', 'fasta'):
+            new_record = SeqRecord(
+                id=seq.id,
+                name=seq.name,
+                description=seq.description + '|Unknown|Unknown',
+                seq=seq.seq,
+            )
+            SeqIO.write(new_record, f_out, 'fasta')
+    """
+}
+
 process output {
     // publish inputs to output directory
     cpus 1
