@@ -2,7 +2,8 @@ nextflow.enable.dsl = 2
 import ReferenceConfigs
 
 include {
-    get_sequence_sets_for_curation;
+    get_curation_sequences;
+    get_filter_sequences;
     // reference orientation
     minimap as minimap_refseqs;
     orient_reads as orient_refs;
@@ -25,6 +26,7 @@ include {
     orient_and_filter_fasta;
     add_unknown_segment_info;
     cdhit;
+    build_blast_db;
     // finally
     output
 } from './lib/processes.nf'
@@ -63,9 +65,9 @@ workflow orient_references {
 
         write_this = Channel.empty()
         | mix(
-            orientations | map {meta, forward_ids, reverse_ids, unmapped_ids -> [unmapped_ids, "${meta.label}/ref", "unmapped_${meta.segment}.txt"]},
-            query_ids | map {meta, query_ids -> [query_ids, "${meta.label}/ref", "ids_${meta.segment}.txt"]},
-            oriented | map {meta, oriented -> [oriented, "${meta.label}/ref", "oriented_${meta.segment}.fasta"]}
+            orientations | map {meta, forward_ids, reverse_ids, unmapped_ids -> [unmapped_ids, "ref/${meta.label}", "unmapped_${meta.segment}.txt"]},
+            query_ids | map {meta, query_ids -> [query_ids, "ref/${meta.label}", "ids_${meta.segment}.txt"]},
+            oriented | map {meta, oriented -> [oriented, "ref/${meta.label}", "oriented_${meta.segment}.fasta"]}
         )
     emit:
         id_lists = query_ids
@@ -119,9 +121,9 @@ workflow compare_genomes_to_references {
 
         write_this = Channel.empty()
         | mix(
-            alignments | map {label, align -> [align, "${label}/all/alignments", "${label}.sam"]},
-            filtering_stats | map {label, stats -> [stats, "${label}/all", "stats.tsv"]},
-            filtered_sequences | map {label, fasta -> [fasta, "${label}/all", "${label}_filtered.fasta"]}
+            alignments | map {label, align -> [align, "alignments", "${label}.sam"]},
+            filtering_stats | map {label, stats -> [stats, "stats", "${label}.stats.tsv"]},
+            filtered_sequences | map {label, fasta -> [fasta, "sequences", "${label}.filtered.fasta"]}
         )
     emit:
         filtered_sequences = filtered_sequences
@@ -140,13 +142,14 @@ def createFastaDict(List<String> filePaths) {
 }
 
 
-//TODO: add a check to make sure configs for extracting reads and curation of the sequences match
+// TODO: add download of organism names to the tax ids
+// TODO: add a check to make sure configs for extracting reads and curation of the sequences match
 
 workflow {
 
     sequences_per_group = Channel.of(params.taxa_config)
     | map { fasta -> [fasta, params.fasta_sequences] }
-    | get_sequence_sets_for_curation
+    | get_curation_sequences
     | flatten  // Ensure individual files are passed
     | map { file -> 
         def label = file.baseName.replace('.fasta', '') // Extract identifier
@@ -200,13 +203,34 @@ workflow {
     | collect
     | concat_fasta_nolabel
 
+    // extract the family-filters
+    family_filters = Channel.of(params.taxa_config)
+    | combine(fasta_all)
+    | get_filter_sequences
+    | flatten
+
+    blast_db = fasta_all
+    | build_blast_db
+
+    // TODO:
+    // 1. ) create a config for the database
+    // include
+    // - input: clustered files, config with organisms
+    // - version
+    // - key -> file
+    // - name (from config)
+    // - viruses that do occur in the clustered data-set
+    // - blast_db path
+
     Channel.empty()
     | mix(
-        (sequences_per_group | map {label, fasta -> [fasta, "${label}/all", "${label}.fasta"]}),
+        (sequences_per_group | map {label, fasta -> [fasta, "sequences", "${label}.all.fasta"]}),
         oriented_refs.write_this,
         oriented_seqs.write_this,
-        (clustered | map { label, fasta -> [fasta, "sequences", "${label}.clustered.fasta"] }),
-        (fasta_all | map { fasta -> [fasta, "sequences", "ALL.fasta"] })
+        (clustered | map { label, fasta -> [fasta, "db", "${label}.fasta"] }),
+        (fasta_all | map { fasta -> [fasta, "db", "ALL.fasta"] }),
+        (family_filters | map { fasta -> [fasta, "db", null] }),
+        (blast_db  | map { blast_dir -> [blast_dir, "db", "blast_db"] })
     )
     | output
 }

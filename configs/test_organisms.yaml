@@ -26,3 +26,88 @@ curated:
       - Ravn virus - Ravn, Kenya, 1987
       - Lake Victoria marburgvirus - Popp
       - Marburg virus - Musoke, Kenya, 1980
+
+filters:
+
+  FILO:
+    taxa:
+    - taxid: 11266
+      name: Filoviridae
+      organisms:
+      - Nyctinomops bat filovirus
+      - Mink stool-associated filovirus
+      - Slender scalyhead filovirus
+      - Scaly rockcod filovirus
+      - Thamnovirus thamnaconi
+      - Striavirus antennarii
+      - Orthomarburgvirus marburgense
+      - Orthoebolavirus zairense
+      - Orthoebolavirus taiense
+      - Orthoebolavirus sudanense
+      - Orthoebolavirus restonense
+      - Orthoebolavirus bundibugyoense
+      - Orthoebolavirus bombaliense
+      - Dianlovirus menglaense
+      - Cuevavirus lloviuense
+      - Orthomarburgvirus
+      - Orthoebolavirus
+      - Loetschberg virus
+      - Thamnovirus percae
+      - Thamnovirus kanderense
+      - Tapjovirus bothropis
+      - Oblavirus percae
+      - Tapjovirus
+      - Oblavirus
+      - Kander virus
+      - Tapajos virus
+      - John dory filovirus FL11
+      - Blue spotted goatfish filovirus FL3
+      - Filoviridae sp.
+      - Dianlovirus
+      - Oberland virus
+      - Fiwi virus
+      - Thamnovirus
+      - Striavirus
+      - Wenling thamnaconus septentrionalis filovirus
+      - Wenling frogfish filovirus
+      - Bombali virus
+      - Zaire ebolavirus Makona
+      - Marburg virus - Angola
+      - Marburg virus - Uganda
+      - Bat filovirus
+      - Ebola virus
+      - Cuevavirus
+      - Sudan ebolavirus - Nakisamata
+      - Lake Victoria marburgvirus - Leiden
+      - unclassified Filoviridae
+      - Bundibugyo virus
+      - Lake Victoria marburgvirus - Ozolin
+      - Lake Victoria marburgvirus - Ci67
+      - Ebola virus Yambio0403
+      - Ebola virus Yambio0402
+      - Ebola virus Yambio0401
+      - Sudan ebolavirus - Uganda (2000)
+      - Reston ebolavirus - Reston (1989)
+      - Lake Victoria marburgvirus - DRC1999
+      - Lake Victoria marburgvirus - Angola2005
+      - Ravn virus - Ravn, Kenya, 1987
+      - unclassified Ebolavirus
+      - Ebola virus sp.
+      - Tai Forest ebolavirus
+      - Sudan ebolavirus
+      - Reston ebolavirus
+      - Zaire ebolavirus
+      - Marburgvirus
+      - Ebolavirus
+      - Reston ebolavirus - Siena/Philippine-92
+      - Reston ebolavirus - Reston
+      - Ebola virus - Eckron (Zaire, 1976)
+      - Tai Forest virus - Cote d'Ivoire, Cote d'Ivoire, 1994
+      - Ebola virus - Mayinga, Zaire, 1976
+      - Ebola virus - Zaire (1995)
+      - Sudan ebolavirus - Maleo (1979)
+      - Sudan virus - Boniface, Sudan,1976
+      - Ebola virus - Gabon (1994-1997)
+      - Lake Victoria marburgvirus - Popp
+      - Marburg virus - Musoke, Kenya, 1980
+      - Filoviridae

@@ -1,7 +1,7 @@
 nextflow.enable.dsl = 2
 
 
-process get_sequence_sets_for_curation {
+process get_curation_sequences {
     input:
         tuple path('groups.yaml'), path('sequences.fasta')
     output:
@@ -18,6 +18,29 @@ process get_sequence_sets_for_curation {
         seqtk subseq sequences.fasta \$fname_ids > \$fname_out
 
         #xargs -a \$fname_ids -n 100 samtools faidx sequences.fasta > \$fname_out
+    done
+    """
+}
+
+
+process get_filter_sequences {
+    input:
+        tuple path('groups.yaml'), path('sequences.fasta')
+    output:
+        path("*.fasta")
+    """
+    sort_ids_to_groups.py --taxgroups groups.yaml --sequences sequences.fasta --outdir out --category filters
+
+    if [ -f out/NOGROUP.txt ]
+    then
+        rm out/NOGROUP.txt
+    fi
+
+    for fname_ids in out/*.txt
+    do
+        bname=\$(basename \$fname_ids)
+        fname_out="\${bname%.txt}.fasta" # Remove .txt extension
+        seqtk subseq sequences.fasta \$fname_ids > \$fname_out
     done
     """
 }
@@ -347,10 +370,10 @@ process cdhit {
     input:
         tuple val(label), path(fasta)
     output:
-        tuple val(label), path("${label}.clustered.fasta")
+        tuple val(label), path("${label}.fasta")
     cpus 4
     """
-    cd-hit-est -i ${fasta} -o ${label}.clustered.fasta -c ${params.cdhit_threshold} -T ${task.cpus}
+    cd-hit-est -i ${fasta} -o ${label}.fasta -c ${params.cdhit_threshold} -T ${task.cpus}
     """
 }
 
@@ -359,7 +382,6 @@ process add_unknown_segment_info {
         path('in.nogroup.fasta')
     output:
         path('out.nogroup.fasta')
-
     """
     #!/usr/bin/env python3
     from Bio import SeqIO
@@ -373,6 +395,23 @@ process add_unknown_segment_info {
                 seq=seq.seq,
             )
             SeqIO.write(new_record, f_out, 'fasta')
+    """
+}
+
+process build_blast_db {
+    input:
+        path(all_fasta)
+    output:
+        path('blast_db')
+    """
+    mkdir -p blast_db
+
+    makeblastdb \
+        -dbtype nucl \
+        -in ${all_fasta} \
+        -out blast_db/ALL \
+        -parse_seqids \
+        -blastdb_version 5
     """
 }
 
