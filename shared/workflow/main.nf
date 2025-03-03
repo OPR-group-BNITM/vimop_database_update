@@ -143,7 +143,7 @@ def createFastaDict(List<String> filePaths) {
 
 
 // TODO: add download of organism names to the tax ids
-// TODO: add a check to make sure configs for extracting reads and curation of the sequences match
+
 
 workflow {
 
@@ -156,8 +156,8 @@ workflow {
         return tuple(label, file)
     }
 
-    ref_conf = new ReferenceConfigs(params.reference_config)
-    
+    ref_conf = new ReferenceConfigs(params.taxa_config)
+
     oriented_refs = Channel.from(ref_conf.getRefs())
     | combine(sequences_per_group)
     | filter { meta, label, fasta -> meta.label == label }
@@ -224,13 +224,13 @@ workflow {
 
     Channel.empty()
     | mix(
-        (sequences_per_group | map {label, fasta -> [fasta, "sequences", "${label}.all.fasta"]}),
+        sequences_per_group | map {label, fasta -> [fasta, "sequences", "${label}.all.fasta"]},
         oriented_refs.write_this,
         oriented_seqs.write_this,
-        (clustered | map { label, fasta -> [fasta, "db", "${label}.fasta"] }),
-        (fasta_all | map { fasta -> [fasta, "db", "ALL.fasta"] }),
-        (family_filters | map { fasta -> [fasta, "db", null] }),
-        (blast_db  | map { blast_dir -> [blast_dir, "db", "blast_db"] })
+        clustered | map { label, fasta -> [fasta, "db", "${label}.fasta"] },
+        fasta_all | map { fasta -> [fasta, "db", "ALL.fasta"] },
+        family_filters | map { fasta -> [fasta, "db", null] },
+        blast_db  | map { blast_dir -> [blast_dir, "db", "blast_db"] }
     )
     | output
 }

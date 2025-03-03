@@ -5,7 +5,7 @@ class ReferenceConfigs {
 
     ReferenceConfigs(String yamlFilePath) {
         Yaml yaml = new Yaml()
-        this.config = yaml.load(new File(yamlFilePath).text)
+        this.config = yaml.load(new File(yamlFilePath).text).curated
     }
 
     List<Map<String, Object>> getRefs() {

@@ -11,6 +11,12 @@ def main():
     parser.add_argument('--sequences', required=True, help='Fasta file with sequences')
     parser.add_argument('--outdir', required=True, help='Output directory')
     parser.add_argument('--category', required=True, help='Category like "curated" or "filters"')
+    parser.add_argument(
+        '--organism_label_position',
+        default=1,
+        help='Position of organism name in segments separated by "|" in fasta header. Counted from the end.',
+        type=int,
+    )
     args = parser.parse_args()
 
     fname_groups = args.taxgroups
@@ -48,7 +54,7 @@ def main():
     }
 
     for seq in SeqIO.parse(fname_seqs, 'fasta'):
-        organism = seq.description.rsplit('|', 1)[1].strip()
+        organism = seq.description.rsplit('|')[-args.organism_label_position].strip()
         for groupkey in organism_to_group.get(organism, ['NOGROUP']):
             outfiles[groupkey].write(seq.id + '\n')
 
