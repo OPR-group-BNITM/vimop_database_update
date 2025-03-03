@@ -420,6 +420,48 @@ process build_blast_db {
     """
 }
 
+
+process write_output_config {
+    input:
+        path('input.yaml')
+    output:
+        path('output.yaml')
+    """
+    #!/usr/bin/env python
+    import yaml
+    with open('input.yaml') as f_in:
+        config = yaml.safe_load(f_in)
+    out = {
+        'all': {
+            'blast_db': 'blast_db',
+            'blast_prefix': 'ALL',
+            'fasta': 'ALL.fasta',
+        },
+        'curated': {
+            label: {
+                'fasta': f'{label}.fasta',
+                'name': conf['name'],
+                'organisms': sorted(set([
+                    org
+                    for tax in conf['taxa']
+                    for org in tax['organisms']
+                ])),
+                'segments': list(conf['segments'].keys()),
+            }
+            for label, conf in config['curated'].items()
+        },
+        'filters': {
+            label: f'{label}.fasta'
+            for label in config['filters']
+        },
+        'version': '${params.output_version}'
+    }
+    with open('output.yaml', 'w') as f_out:
+        yaml.dump(dict(out), f_out, default_flow_style=False, sort_keys=False)
+    """
+}
+
+
 process output {
     // publish inputs to output directory
     cpus 1

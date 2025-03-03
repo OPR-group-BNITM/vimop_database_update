@@ -1,8 +1,8 @@
 curated:
   LASV:
+    name: Mammarenavirus lassense
     taxa:
     - taxid: 3052310
-      name: Mammarenavirus lassense
       organisms:
       - Mammarenavirus lassaense
       - Lassa virus Josiah
@@ -33,9 +33,9 @@ curated:
         - KT992435.1
         - KU961972.2
   EBOV:
+    name: Orthoebolavirus
     taxa:
     - taxid: 3044781
-      name: Orthoebolavirus
       organisms:
       - Orthoebolavirus zairense
       - Orthoebolavirus taiense
@@ -79,9 +79,9 @@ curated:
         - NC_006432.1
         - NC_004161.1
   MARV:
+    name: Orthomarburgvirus
     taxa:
     - taxid: 3044783
-      name: Orthomarburgvirus
       organisms:
       - Orthomarburgvirus marburgense
       - Orthomarburgvirus
@@ -104,9 +104,9 @@ curated:
         - NC_024781.1
 filters:
   FILO:
+    name: Filoviridae
     taxa:
     - taxid: 11266
-      name: Filoviridae
       organisms:
       - Nyctinomops bat filovirus
       - Mink stool-associated filovirus

@@ -27,6 +27,7 @@ include {
     add_unknown_segment_info;
     cdhit;
     build_blast_db;
+    write_output_config;
     // finally
     output
 } from './lib/processes.nf'
@@ -147,7 +148,9 @@ def createFastaDict(List<String> filePaths) {
 
 workflow {
 
-    sequences_per_group = Channel.of(params.taxa_config)
+    config_channel = Channel.of(params.taxa_config)
+
+    sequences_per_group = config_channel
     | map { fasta -> [fasta, params.fasta_sequences] }
     | get_curation_sequences
     | flatten  // Ensure individual files are passed
@@ -204,7 +207,7 @@ workflow {
     | concat_fasta_nolabel
 
     // extract the family-filters
-    family_filters = Channel.of(params.taxa_config)
+    family_filters = config_channel
     | combine(fasta_all)
     | get_filter_sequences
     | flatten
@@ -212,15 +215,8 @@ workflow {
     blast_db = fasta_all
     | build_blast_db
 
-    // TODO:
-    // 1. ) create a config for the database
-    // include
-    // - input: clustered files, config with organisms
-    // - version
-    // - key -> file
-    // - name (from config)
-    // - viruses that do occur in the clustered data-set
-    // - blast_db path
+    output_config = config_channel
+    | write_output_config
 
     Channel.empty()
     | mix(
@@ -230,7 +226,8 @@ workflow {
         clustered | map { label, fasta -> [fasta, "db", "${label}.fasta"] },
         fasta_all | map { fasta -> [fasta, "db", "ALL.fasta"] },
         family_filters | map { fasta -> [fasta, "db", null] },
-        blast_db  | map { blast_dir -> [blast_dir, "db", "blast_db"] }
+        blast_db  | map { blast_dir -> [blast_dir, "db", "blast_db"] },
+        output_config | map { config -> [config, "db", "db.yaml"] }
     )
     | output
 }

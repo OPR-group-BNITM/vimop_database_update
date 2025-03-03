@@ -1,8 +1,8 @@
 curated:
   COVID:
+    name: Severe acute respiratory syndrome coronavirus 2
     taxa:
     - taxid: 2697049
-      name: Severe acute respiratory syndrome coronavirus 2
       organisms:
       - Severe acute respiratory syndrome coronavirus 2
     segments:
@@ -12,9 +12,9 @@ curated:
         seqs:
         - NC_045512.2
   LASV:
+    name: Mammarenavirus lassense
     taxa:
     - taxid: 3052310
-      name: Mammarenavirus lassense
       organisms:
       - Mammarenavirus lassaense
       - Lassa virus Josiah
@@ -45,9 +45,9 @@ curated:
         - KT992435.1
         - KU961972.2
   LCMV:
+    name: Mammarenavirus choriomeningitidis
     taxa:
     - taxid: 3052303
-      name: Mammarenavirus choriomeningitidis
       organisms:
       - Mammarenavirus choriomeningitidis
       - Dandenong virus
@@ -69,9 +69,9 @@ curated:
         - NC_077807.1
         - NC_004294.1
   JUNV:
+    name: Mammarenavirus juninense
     taxa:
     - taxid: 2169991
-      name: Mammarenavirus juninense
       organisms:
       - Mammarenavirus juninense
     segments:
@@ -86,9 +86,9 @@ curated:
         seqs:
         - NC_005081.1
   EBOV:
+    name: Orthoebolavirus
     taxa:
     - taxid: 3044781
-      name: Orthoebolavirus
       organisms:
       - Orthoebolavirus zairense
       - Orthoebolavirus taiense
@@ -132,9 +132,9 @@ curated:
         - NC_006432.1
         - NC_004161.1
   MARV:
+    name: Orthomarburgvirus
     taxa:
     - taxid: 3044783
-      name: Orthomarburgvirus
       organisms:
       - Orthomarburgvirus marburgense
       - Orthomarburgvirus
@@ -156,9 +156,9 @@ curated:
         - NC_001608.3
         - NC_024781.1
   DENV:
+    name: Orthoflavivirus denguei
     taxa:
     - taxid: 3052464
-      name: Orthoflavivirus denguei
       organisms:
       - Orthoflavivirus denguei
       - Dengue virus 2 Thailand/0168/1979
@@ -204,9 +204,9 @@ curated:
         - NC_001475.2
         - NC_002640.1
   ZIKA:
+    name: Orthoflavivirus zikaense
     taxa:
     - taxid: 3048459
-      name: Orthoflavivirus zikaense
       organisms:
       - Zika virus MR766
       - Orthoflavivirus zikaense
@@ -221,9 +221,9 @@ curated:
         - NC_035889.1
         - NC_012532.1
   MS2:
+    name: Emesvirus zinderi
     taxa:
     - taxid: 329852
-      name: Emesvirus zinderi
       organisms:
       - Enterobacteria phage ZR
       - Emesvirus zinderi
@@ -241,9 +241,9 @@ curated:
         seqs:
         - NC_001417.2
   YFV:
+    name: Yellow fever virus
     taxa:
     - taxid: 11089
-      name: Yellow fever virus
       organisms:
       - Yellow fever virus 17D/Tiantan
       - Yellow fever virus isolate Ethiopia/Couma/1961
@@ -264,9 +264,9 @@ curated:
         seqs:
         - NC_002031.1
   WNV:
+    name: West nile virus
     taxa:
     - taxid: 11082
-      name: West nile virus
       organisms:
       - West Nile virus 2
       - West Nile virus 1
@@ -293,9 +293,9 @@ curated:
         - NC_009942.1
         - NC_001563.2
   HAZV:
+    name: Orthonairovirus hazaraense
     taxa:
     - taxid: 3052519
-      name: Orthonairovirus hazaraense
       organisms:
       - Orthonairovirus hazaraense
       - Hazara virus (isolate JC280)
@@ -318,9 +318,9 @@ curated:
         - NC_038711.1
 filters:
   ARENA:
+    name: Arenaviridae
     taxa:
     - taxid: 11617
-      name: Arenaviridae
       organisms:
       - Pannonia mammarenavirus
       - Hemidactylus frenatus arenavirus
@@ -582,9 +582,9 @@ filters:
       - Arenavirus
       - Arenaviridae
   FILO:
+    name: Filoviridae
     taxa:
     - taxid: 11266
-      name: Filoviridae
       organisms:
       - Nyctinomops bat filovirus
       - Mink stool-associated filovirus
@@ -664,9 +664,9 @@ filters:
       - Marburg virus - Musoke, Kenya, 1980
       - Filoviridae
   HANTA:
+    name: Hantaviridae
     taxa:
     - taxid: 1980413
-      name: Hantaviridae
       organisms:
       - Chencang Niviventer confucianus orthohantavirus
       - Chencang Apodemus agrarius orthohantavirus
@@ -1323,9 +1323,9 @@ filters:
       - Hantaan virus Lee
       - HoJo virus
   NAIRO:
+    name: Nairoviridae
     taxa:
     - taxid: 1980415
-      name: Nairoviridae
       organisms:
       - Blattodean nairo-related virus
       - Yunnan tick nairovirus YN 54
