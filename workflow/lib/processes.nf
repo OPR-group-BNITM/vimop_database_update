@@ -457,9 +457,9 @@ process write_output_config {
         'version': '${params.output_version}',
         'params.fasta_sequences': '${params.fasta_sequences}',
         'params.taxa_config': '${params.taxa_config}',
-        'params.filter_max_n_share': '${params.filter_max_n_share}',
-        'params.filter_min_relative_length': '${params.filter_min_relative_length}',
-        'params.cdhit_threshold': '${params.cdhit_threshold}',
+        'params.filter_max_n_share': ${params.filter_max_n_share},
+        'params.filter_min_relative_length': ${params.filter_min_relative_length},
+        'params.cdhit_threshold': ${params.cdhit_threshold},
     }
     with open('output.yaml', 'w') as f_out:
         yaml.dump(dict(out), f_out, default_flow_style=False, sort_keys=False)
