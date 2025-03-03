@@ -1,0 +1,12 @@
+name: alignorient
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - python=3.11
+  - seqtk
+  - minimap2
+  - samtools
+  - pysam
+  - biopython
+  - pandas
