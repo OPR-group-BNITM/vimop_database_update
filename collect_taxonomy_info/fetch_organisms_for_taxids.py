@@ -1,3 +1,4 @@
+import copy
 import argparse
 import yaml
 from Bio import Entrez
@@ -33,18 +34,16 @@ def main():
     with open(args.config) as f_in:
         config = yaml.safe_load(f_in)
 
-    out = {}
+    out = copy.deepcopy(config)
 
     # category is e.g. curated, filters
     for category, category_dict in config.items():
         # identifier like DENV, ARENA
         for identifier, groupdict in category_dict.items():
-            for taxon in groupdict['taxa']:
-                organisms = fetch_organism_names(taxon['taxid'])
-                taxon_dict_out = taxon | {'organisms': organisms}
-                
-                out.setdefault(category, {}).setdefault(
-                    identifier, {}).setdefault('taxa', []).append(taxon_dict_out)
+            out[category][identifier]['taxa'] = [
+                taxon | {'organisms': fetch_organism_names(taxon['taxid'])}
+                for taxon in groupdict['taxa']
+            ] 
 
     with open(args.out, "w") as f_out:
         yaml.dump(dict(out), f_out, default_flow_style=False, sort_keys=False)
