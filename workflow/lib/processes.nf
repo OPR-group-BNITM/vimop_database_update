@@ -2,6 +2,7 @@ nextflow.enable.dsl = 2
 
 
 process get_curation_sequences {
+    conda 'bioconda::samtools=1.21 bioconda::seqtk=1.4'
     input:
         tuple path('groups.yaml'), path('sequences.fasta')
     output:
@@ -24,6 +25,7 @@ process get_curation_sequences {
 
 
 process get_filter_sequences {
+    conda 'bioconda::seqtk=1.4'
     input:
         tuple path('groups.yaml'), path('sequences.fasta')
     output:
@@ -70,6 +72,7 @@ process get_id_lists {
 
 
 process extract_sequences {
+    conda 'bioconda::seqtk=1.4'
     input:
         tuple val(segment_info), path('ref_ids.txt'), path('query_ids.txt'), path("sequences.fasta")
     output:
@@ -82,6 +85,7 @@ process extract_sequences {
 
 
 process minimap {
+    conda 'bioconda::minimap2=2.28'
     input:
         tuple val(meta), path('refs.fasta'), path('queries.fasta')
     output:
@@ -101,6 +105,7 @@ process minimap {
 
 
 process get_orientations {
+    conda 'bioconda::samtools=1.21'
     input:
         tuple val(meta), path('mapped.sam')
     output:
@@ -114,6 +119,7 @@ process get_orientations {
 }
 
 process orient_reads {
+    conda 'conda-forge::biopython=1.85'
     input:
         tuple val(meta),
             path('forward_mapped_ids.txt'),
@@ -190,6 +196,7 @@ process concat_fasta_nolabel {
 } 
 
 process seq_lengths {
+    conda 'bioconda::seqtk=1.4'
     input:
         tuple val(label), path('seqs.fasta')
     output:
@@ -200,6 +207,7 @@ process seq_lengths {
 }
 
 process n_share {
+    conda 'bioconda::seqtk=1.4'
     input:
         tuple val(label), path('seqs.fasta')
     output:
@@ -210,6 +218,7 @@ process n_share {
 }
 
 process sam_info {
+    conda 'bioconda::pysam=0.23.0 anaconda::pandas'
     input:
         tuple val(meta), path('mapped.sam')
     output:
@@ -267,6 +276,7 @@ process concat_fasta {
 }
 
 process collect_seq_and_map_stats {
+    conda 'anaconda::pandas'
     input:
         tuple val(label),
             path('samstats.tsv'),
@@ -314,6 +324,7 @@ process collect_seq_and_map_stats {
 
 
 process mark_sequences_to_filter {
+    conda 'anaconda::pandas'
     input:
         tuple val(label), path('collected_stats.tsv')
     output:
@@ -340,6 +351,7 @@ process mark_sequences_to_filter {
 
 
 process orient_and_filter_fasta {
+    conda 'conda-forge::biopython=1.85 anaconda::pandas'
     input:
         tuple val(label), path('collected_stats_filtered.tsv'), path('sequences.fasta')
     output:
@@ -380,6 +392,7 @@ process orient_and_filter_fasta {
 
 
 process cdhit {
+    conda 'bioconda::cd-hit=4.8.1'    
     input:
         tuple val(label), path(fasta)
     output:
@@ -391,6 +404,7 @@ process cdhit {
 }
 
 process add_unknown_segment_info {
+    conda 'conda-forge::biopython=1.85'    
     input:
         path('in.nogroup.fasta')
     output:
@@ -412,6 +426,7 @@ process add_unknown_segment_info {
 }
 
 process build_blast_db {
+    conda 'bioconda::blast=2.16.0'    
     input:
         path(all_fasta)
     output:
@@ -430,6 +445,7 @@ process build_blast_db {
 
 
 process write_output_config {
+    conda 'anaconda::pyyaml=6.0.2'
     input:
         path('input.yaml')
     output:
