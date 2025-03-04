@@ -85,7 +85,7 @@ process extract_sequences {
 
 
 process minimap {
-    memory '10G'
+    memory '32 GB'
     label 'general'
     input:
         tuple val(meta), path('refs.fasta'), path('queries.fasta')
