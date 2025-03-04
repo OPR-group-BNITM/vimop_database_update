@@ -241,10 +241,11 @@ curated:
         seqs:
         - NC_001417.2
   YFV:
-    name: Yellow fever virus
+    name: Orthoflavivirus flavi
     taxa:
-    - taxid: 11089
+    - taxid: 3046277
       organisms:
+      - Orthoflavivirus flavi
       - Yellow fever virus 17D/Tiantan
       - Yellow fever virus isolate Ethiopia/Couma/1961
       - Yellow fever virus isolate Angola/14FA/1971
@@ -264,10 +265,11 @@ curated:
         seqs:
         - NC_002031.1
   WNV:
-    name: West nile virus
+    name: Orthoflavivirus nilense
     taxa:
-    - taxid: 11082
+    - taxid: 3048448
       organisms:
+      - Orthoflavivirus nilense
       - West Nile virus 2
       - West Nile virus 1
       - West Nile virus strain NY-99
