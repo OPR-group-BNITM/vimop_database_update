@@ -10,8 +10,6 @@ process get_curation_sequences {
     """
     sort_ids_to_groups.py --taxgroups groups.yaml --sequences sequences.fasta --outdir out --category curated
 
-    samtools faidx sequences.fasta
-
     for fname_ids in out/*.txt
     do
         bname=\$(basename \$fname_ids)
