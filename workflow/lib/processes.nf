@@ -2,7 +2,7 @@ nextflow.enable.dsl = 2
 
 
 process get_curation_sequences {
-    conda 'bioconda::samtools=1.21 bioconda::seqtk=1.4'
+    label 'general'
     input:
         tuple path('groups.yaml'), path('sequences.fasta')
     output:
@@ -17,15 +17,13 @@ process get_curation_sequences {
         bname=\$(basename \$fname_ids)
         fname_out="\${bname%.txt}.fasta" # Remove .txt extension
         seqtk subseq sequences.fasta \$fname_ids > \$fname_out
-
-        #xargs -a \$fname_ids -n 100 samtools faidx sequences.fasta > \$fname_out
     done
     """
 }
 
 
 process get_filter_sequences {
-    conda 'bioconda::seqtk=1.4'
+    label 'general'
     input:
         tuple path('groups.yaml'), path('sequences.fasta')
     output:
@@ -54,6 +52,7 @@ process get_filter_sequences {
 
 
 process get_id_lists {
+    label 'general'
     input:
         val(segment_info)
     output:
@@ -72,7 +71,7 @@ process get_id_lists {
 
 
 process extract_sequences {
-    conda 'bioconda::seqtk=1.4'
+    label 'general'
     input:
         tuple val(segment_info), path('ref_ids.txt'), path('query_ids.txt'), path("sequences.fasta")
     output:
@@ -85,7 +84,7 @@ process extract_sequences {
 
 
 process minimap {
-    conda 'bioconda::minimap2=2.28'
+    label 'general'
     input:
         tuple val(meta), path('refs.fasta'), path('queries.fasta')
     output:
@@ -105,7 +104,7 @@ process minimap {
 
 
 process get_orientations {
-    conda 'bioconda::samtools=1.21'
+    label 'general'
     input:
         tuple val(meta), path('mapped.sam')
     output:
@@ -119,7 +118,7 @@ process get_orientations {
 }
 
 process orient_reads {
-    conda 'conda-forge::biopython=1.85'
+    label 'general'
     input:
         tuple val(meta),
             path('forward_mapped_ids.txt'),
@@ -166,6 +165,7 @@ process orient_reads {
 
 
 process segment_table_add_columns {
+    label 'general'
     input:
         tuple val(label), val(segment), path('input_table_to_extend.tsv')
     output:
@@ -176,6 +176,7 @@ process segment_table_add_columns {
 }
 
 process concat_tsv {
+    label 'general'
     input:
         tuple val(label), path('in_*.tsv')
     output:
@@ -186,6 +187,7 @@ process concat_tsv {
 }
 
 process concat_fasta_nolabel {
+    label 'general'
     input:
         path('*.fasta')
     output:
@@ -196,7 +198,7 @@ process concat_fasta_nolabel {
 } 
 
 process seq_lengths {
-    conda 'bioconda::seqtk=1.4'
+    label 'general'
     input:
         tuple val(label), path('seqs.fasta')
     output:
@@ -207,7 +209,7 @@ process seq_lengths {
 }
 
 process n_share {
-    conda 'bioconda::seqtk=1.4'
+    label 'general'
     input:
         tuple val(label), path('seqs.fasta')
     output:
@@ -218,7 +220,7 @@ process n_share {
 }
 
 process sam_info {
-    conda 'bioconda::pysam=0.23.0 anaconda::pandas'
+    label 'general'
     input:
         tuple val(meta), path('mapped.sam')
     output:
@@ -266,6 +268,7 @@ process sam_info {
 }
 
 process concat_fasta {
+    label 'general'
     input:
         tuple val(label), path('in_*.fasta')
     output:
@@ -276,7 +279,7 @@ process concat_fasta {
 }
 
 process collect_seq_and_map_stats {
-    conda 'anaconda::pandas'
+    label 'general'
     input:
         tuple val(label),
             path('samstats.tsv'),
@@ -324,7 +327,7 @@ process collect_seq_and_map_stats {
 
 
 process mark_sequences_to_filter {
-    conda 'anaconda::pandas'
+    label 'general'
     input:
         tuple val(label), path('collected_stats.tsv')
     output:
@@ -351,7 +354,7 @@ process mark_sequences_to_filter {
 
 
 process orient_and_filter_fasta {
-    conda 'conda-forge::biopython=1.85 anaconda::pandas'
+    label 'general'
     input:
         tuple val(label), path('collected_stats_filtered.tsv'), path('sequences.fasta')
     output:
@@ -392,7 +395,7 @@ process orient_and_filter_fasta {
 
 
 process cdhit {
-    conda 'bioconda::cd-hit=4.8.1'    
+    label 'general'
     input:
         tuple val(label), path(fasta)
     output:
@@ -404,7 +407,7 @@ process cdhit {
 }
 
 process add_unknown_segment_info {
-    conda 'conda-forge::biopython=1.85'    
+    label 'general'
     input:
         path('in.nogroup.fasta')
     output:
@@ -426,7 +429,7 @@ process add_unknown_segment_info {
 }
 
 process build_blast_db {
-    conda 'bioconda::blast=2.16.0'    
+    label 'general'
     input:
         path(all_fasta)
     output:
@@ -445,7 +448,7 @@ process build_blast_db {
 
 
 process write_output_config {
-    conda 'anaconda::pyyaml=6.0.2'
+    label 'general'
     input:
         path('input.yaml')
     output:
@@ -492,6 +495,7 @@ process write_output_config {
 
 
 process output {
+    label 'general'
     // publish inputs to output directory
     cpus 1
     publishDir (
