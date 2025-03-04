@@ -36,9 +36,9 @@ process get_filter_sequences {
     --category filters \
     --organism_label_position 3
 
-    if [ -f out/NOGROUP.txt ]
+    if [ -f tmp/NOGROUP.txt ]
     then
-        rm out/NOGROUP.txt
+        rm tmp/NOGROUP.txt
     fi
 
     for fname_ids in tmp/*.txt

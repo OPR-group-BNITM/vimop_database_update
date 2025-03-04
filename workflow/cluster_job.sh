@@ -9,8 +9,8 @@
 
 source /opt/conda/etc/profile.d/conda.sh
 export PATH="/opt/conda/bin:$PATH"
-conda activate aligner
+conda activate env
 
 cd /data/home/nils.petersen/dev/VirusDatasetCuration/workflow
 nextflow main.nf -c /data/home/nils.petersen/dev/VirusDatasetCuration/workflow/configs/db2.0.config
-# nextflow main.nf -c /data/home/nils.petersen/dev/VirusDatasetCuration/workflow/testset/test.config
+#nextflow main.nf -c /data/home/nils.petersen/dev/VirusDatasetCuration/workflow/testset/test.config

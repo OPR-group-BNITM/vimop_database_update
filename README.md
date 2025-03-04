@@ -41,22 +41,24 @@ Each data set should have an own readme which documents the data set and it's cr
     - wget -qO- https://get.nextflow.io | bash && \
       chmod +x nextflow && \
       mv nextflow /usr/local/bin/
-  - created conda environments
-    - conda create -n aligner
-      - python=3.11
-      - seqtk=1.4
-      - minimap2=2.1.1
-      - samtools=1.21
-      - pysam=0.22.1
-      - biopython=1.85
-      - pandas=2.2.3
-    - conda create -n jupyter
-      - python=3.12
-      - jupyter=1.1.1
-      - papermill=2.6.0
-      - pandas=2.2.2.
-      - matplotlib=3.10.0
-      - biopython=1.85
-    - conda create -n msa
-      - cd-hit=4.8.1
-      - muscle=5.3
+    - afterwards install the conda environment in docker_images/general/env.yaml
+  - BEFORE:
+    - created conda environments
+      - conda create -n aligner
+        - python=3.11
+        - seqtk=1.4
+        - minimap2=2.1.1
+        - samtools=1.21
+        - pysam=0.22.1
+        - biopython=1.85
+        - pandas=2.2.3
+      - conda create -n jupyter
+        - python=3.12
+        - jupyter=1.1.1
+        - papermill=2.6.0
+        - pandas=2.2.2.
+        - matplotlib=3.10.0
+        - biopython=1.85
+      - conda create -n msa
+        - cd-hit=4.8.1
+        - muscle=5.3
