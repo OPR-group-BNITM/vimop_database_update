@@ -87,7 +87,15 @@ process minimap {
     output:
         tuple val(meta), path('mapped.sam')
     """
-    minimap2 -k ${params.minimap.kmer_length} -w ${params.minimap.window_size} -p ${params.minimap.p} --secondary=no --eqx -x map-ont -a refs.fasta queries.fasta > mapped.sam
+    set -o pipefail
+    minimap2 \
+        -k ${params.minimap.kmer_length} \
+        -w ${params.minimap.window_size} \
+        -p ${params.minimap.p} \
+        --secondary=no \
+        --eqx \
+        -x map-ont \
+        -a refs.fasta queries.fasta > mapped.sam && sync
     """
 }
 

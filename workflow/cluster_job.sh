@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -c 16 # number of cores
+#SBATCH -c 8 # number of cores
 #SBATCH --mem 128000 # memory pool for all cores
 #SBATCH -o /data2/le-petersen/nils/slurmout/slurm.db_build.%N.%j.out # STDOUT
 #SBATCH -e /data2/le-petersen/nils/slurmout/slurm.db_build.%N.%j.err # STDERR
