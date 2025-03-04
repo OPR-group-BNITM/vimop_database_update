@@ -27,12 +27,12 @@ process get_filter_sequences {
     input:
         tuple path('groups.yaml'), path('sequences.fasta')
     output:
-        path("*.fasta")
+        path("out/*.fasta")
     """
     sort_ids_to_groups.py \
     --taxgroups groups.yaml \
     --sequences sequences.fasta \
-    --outdir out \
+    --outdir tmp \
     --category filters \
     --organism_label_position 3
 
@@ -41,12 +41,13 @@ process get_filter_sequences {
         rm out/NOGROUP.txt
     fi
 
-    for fname_ids in out/*.txt
+    for fname_ids in tmp/*.txt
     do
         bname=\$(basename \$fname_ids)
         fname_out="\${bname%.txt}.fasta" # Remove .txt extension
-        seqtk subseq sequences.fasta \$fname_ids > \$fname_out
+        seqtk subseq sequences.fasta \$fname_ids > tmp/\$fname_out
     done
+    mv tmp out
     """
 }
 
@@ -84,6 +85,7 @@ process extract_sequences {
 
 
 process minimap {
+    memory '10G'
     label 'general'
     input:
         tuple val(meta), path('refs.fasta'), path('queries.fasta')
@@ -98,7 +100,7 @@ process minimap {
         --secondary=no \
         --eqx \
         -x map-ont \
-        -a refs.fasta queries.fasta > mapped.sam && sync
+        -a refs.fasta queries.fasta -o mapped.sam
     """
 }
 
