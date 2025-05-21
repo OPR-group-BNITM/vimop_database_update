@@ -1,8 +1,0 @@
-# Template for data set curation
-
-## Usage
-
-Copy this directory and set the paths in all scripts.
-Add relevant Info for the given case.
-
-Submit job.sh to the slurm cluster.

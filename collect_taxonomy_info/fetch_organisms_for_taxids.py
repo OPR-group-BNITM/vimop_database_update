@@ -1,3 +1,43 @@
+"""Add organism names to a yaml file with taxonomic groups.
+
+The file is organised like this
+
+curated:
+  LASV:
+    name: Mammarenavirus lassense
+    taxa:
+    - taxid: 3052310
+    segments:
+      S:
+        refs:
+        - NC_004296.1
+        seqs:
+        - NC_004296.1
+        - KM822128.1
+        - GU481068.1
+    ...
+
+And it will will add an entry with organism names for each taxid (here LASV) with organism names.
+
+  LASV:
+    name: Mammarenavirus lassense
+    taxa:
+    - taxid: 3052310
+      organisms:
+      - Mammarenavirus lassaense
+      - Lassa virus Josiah
+      - Lassa virus GA391
+    segments:
+      S:
+        refs:
+        - NC_004296.1
+        seqs:
+        - NC_004296.1
+        - KM822128.1
+        - GU481068.1
+    ...
+
+"""
 import copy
 import argparse
 import yaml
