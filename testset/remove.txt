@@ -1,0 +1,3 @@
+# These sequences will be completely removed from the data set
+LC710217.1
+LC710218.1

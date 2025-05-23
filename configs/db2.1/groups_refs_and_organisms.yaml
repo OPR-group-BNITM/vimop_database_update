@@ -1,0 +1,1510 @@
+curated:
+  COVID:
+    name: Severe acute respiratory syndrome coronavirus 2
+    taxa:
+    - taxid: 2697049
+      organisms:
+      - Severe acute respiratory syndrome coronavirus 2
+    segments:
+      Unsegmented:
+        refs:
+        - NC_045512.2
+        seqs:
+        - NC_045512.2
+  LASV:
+    name: Mammarenavirus lassense
+    taxa:
+    - taxid: 3052310
+      organisms:
+      - Mammarenavirus lassaense
+      - Lassa virus Josiah
+      - Lassa virus GA391
+    segments:
+      S:
+        refs:
+        - NC_004296.1
+        seqs:
+        - NC_004296.1
+        - KM822128.1
+        - GU481068.1
+        - OL774861.1
+        - HQ688672.1
+        - FR832711.1
+        - KT992425.1
+        - KU961971.1
+      L:
+        refs:
+        - NC_004297.1
+        seqs:
+        - NC_004297.1
+        - KM822127.1
+        - GU481069.1
+        - OL774860.1
+        - HQ688674.1
+        - FR832710.1
+        - KT992435.1
+        - KU961972.2
+  LCMV:
+    name: Mammarenavirus choriomeningitidis
+    taxa:
+    - taxid: 3052303
+      organisms:
+      - Mammarenavirus choriomeningitidis
+      - Dandenong virus
+      - Lymphocytic choriomeningitis virus (strain WE)
+      - Lymphocytic choriomeningitis virus (strain Traub)
+      - Lymphocytic choriomeningitis virus (strain Pasteur)
+      - Lymphocytic choriomeningitis virus (strain Armstrong)
+    segments:
+      L:
+        refs:
+        - NC_077806.1
+        seqs:
+        - NC_077806.1
+        - NC_004291.1
+      S:
+        refs:
+        - NC_077807.1
+        seqs:
+        - NC_077807.1
+        - NC_004294.1
+  JUNV:
+    name: Mammarenavirus juninense
+    taxa:
+    - taxid: 2169991
+      organisms:
+      - Mammarenavirus juninense
+    segments:
+      L:
+        refs:
+        - NC_005080.1
+        seqs:
+        - NC_005080.1
+      S:
+        refs:
+        - NC_005081.1
+        seqs:
+        - NC_005081.1
+  EBOV:
+    name: Orthoebolavirus
+    taxa:
+    - taxid: 3044781
+      organisms:
+      - Orthoebolavirus zairense
+      - Orthoebolavirus taiense
+      - Orthoebolavirus sudanense
+      - Orthoebolavirus restonense
+      - Orthoebolavirus bundibugyoense
+      - Orthoebolavirus bombaliense
+      - Orthoebolavirus
+      - Bombali virus
+      - Zaire ebolavirus Makona
+      - Ebola virus
+      - Sudan ebolavirus - Nakisamata
+      - Bundibugyo virus
+      - Ebola virus Yambio0403
+      - Ebola virus Yambio0402
+      - Ebola virus Yambio0401
+      - Sudan ebolavirus - Uganda (2000)
+      - Reston ebolavirus - Reston (1989)
+      - Tai Forest ebolavirus
+      - Sudan ebolavirus
+      - Reston ebolavirus
+      - Zaire ebolavirus
+      - Reston ebolavirus - Siena/Philippine-92
+      - Reston ebolavirus - Reston
+      - Ebola virus - Eckron (Zaire, 1976)
+      - Tai Forest virus - Cote d'Ivoire, Cote d'Ivoire, 1994
+      - Ebola virus - Mayinga, Zaire, 1976
+      - Ebola virus - Zaire (1995)
+      - Sudan ebolavirus - Maleo (1979)
+      - Sudan virus - Boniface, Sudan,1976
+      - Ebola virus - Gabon (1994-1997)
+    segments:
+      Unsegmented:
+        refs:
+        - NC_002549.1
+        seqs:
+        - NC_002549.1
+        - NC_039345.1
+        - NC_014373.1
+        - NC_014372.1
+        - NC_006432.1
+        - NC_004161.1
+  MARV:
+    name: Orthomarburgvirus
+    taxa:
+    - taxid: 3044783
+      organisms:
+      - Orthomarburgvirus marburgense
+      - Orthomarburgvirus
+      - Marburg virus - Angola
+      - Marburg virus - Uganda
+      - Lake Victoria marburgvirus - Leiden
+      - Lake Victoria marburgvirus - Ozolin
+      - Lake Victoria marburgvirus - Ci67
+      - Lake Victoria marburgvirus - DRC1999
+      - Lake Victoria marburgvirus - Angola2005
+      - Ravn virus - Ravn, Kenya, 1987
+      - Lake Victoria marburgvirus - Popp
+      - Marburg virus - Musoke, Kenya, 1980
+    segments:
+      Unsegmented:
+        refs:
+        - NC_001608.3
+        seqs:
+        - NC_001608.3
+        - NC_024781.1
+  DENV:
+    name: Orthoflavivirus denguei
+    taxa:
+    - taxid: 3052464
+      organisms:
+      - Orthoflavivirus denguei
+      - Dengue virus 2 Thailand/0168/1979
+      - Dengue virus 4 Dominica/814669/1981
+      - Dengue virus 3 Philippines/H87/1956
+      - Dengue virus 2 Peru/IQT2913/1996
+      - Dengue virus 3 Singapore/8120/1995
+      - Dengue virus 3 Sri Lanka/1266/2000
+      - Dengue virus 3 Martinique/1243/1999
+      - Dengue virus 3 China/80-2/1980
+      - Dengue virus 4 Thailand/0476/1997
+      - Dengue virus 4 Thailand/0348/1991
+      - Dengue virus 4 Singapore/8976/1995
+      - Dengue virus 4 Philippines/H241/1956
+      - Dengue virus 1 Brazil/97-11/1997
+      - Dengue virus 1 Singapore/S275/1990
+      - Dengue virus 2 Thailand/TH-36/1958
+      - Dengue virus 2 China/D2-04
+      - Dengue virus 2 16681-PDK53
+      - Dengue virus 2 Thailand/16681/84
+      - Dengue virus
+      - dengue virus type 4
+      - dengue virus type 3
+      - Dengue virus 2 Thailand/PUO-218/1980
+      - Dengue virus 2 Tonga/EKB194/1974
+      - Dengue virus 2 Puerto Rico/PR159-S1/1969
+      - Dengue virus 2 Thailand/NGS-C/1944
+      - Dengue virus 2 Jamaica/1409/1983
+      - Dengue virus 2 Malaysia M3
+      - Dengue virus 2 Malaysia M2
+      - dengue virus type 2
+      - Dengue virus 1 Nauru/West Pac/1974
+      - Dengue virus 1 Jamaica/CV1636/1977
+      - Dengue virus 1 Thailand/AHF 82-80/1980
+      - dengue virus type 1
+    segments:
+      Unsegmented:
+        refs:
+        - NC_001475.2
+        seqs:
+        - NC_001477.1
+        - NC_001474.2
+        - NC_001475.2
+        - NC_002640.1
+  ZIKA:
+    name: Orthoflavivirus zikaense
+    taxa:
+    - taxid: 3048459
+      organisms:
+      - Zika virus MR766
+      - Orthoflavivirus zikaense
+      - Zika virus ZIKV/Human/Cambodia/FSS13025/2010
+      - Zika virus ZIKV/H. sapiens/FrenchPolynesia/10087PF/2013
+      - Zika virus
+    segments:
+      Unsegmented:
+        refs:
+        - NC_035889.1
+        seqs:
+        - NC_035889.1
+        - NC_012532.1
+  MS2:
+    name: Emesvirus zinderi
+    taxa:
+    - taxid: 329852
+      organisms:
+      - Enterobacteria phage ZR
+      - Emesvirus zinderi
+      - Enterobacteria phage M12
+      - Enterobacteria phage fr1
+      - Enterobacteria phage R17
+      - Escherichia phage MS2
+      - Enterobacteria phage JP501
+      - Enterobacteria phage fr
+      - Enterobacteria phage f2
+    segments:
+      Unsegmented:
+        refs:
+        - NC_001417.2
+        seqs:
+        - NC_001417.2
+  YFV:
+    name: Orthoflavivirus flavi
+    taxa:
+    - taxid: 3046277
+      organisms:
+      - Orthoflavivirus flavi
+      - Yellow fever virus 17D/Tiantan
+      - Yellow fever virus isolate Ethiopia/Couma/1961
+      - Yellow fever virus isolate Angola/14FA/1971
+      - Yellow fever virus isolate Uganda/A7094A4/1948
+      - Yellow fever virus isolate Ivory Coast/85-82H/1982
+      - Yellow fever virus Trinidad/79A/1979
+      - Yellow fever virus isolate Ivory Coast/1999
+      - Yellow fever virus strain French neurotropic vaccine
+      - Yellow fever virus strain Ghana/Asibi/1927
+      - Yellow fever virus 1899/81
+      - Yellow fever virus 17D
+      - Yellow fever virus
+    segments:
+      Unsegmented:
+        refs:
+        - NC_002031.1
+        seqs:
+        - NC_002031.1
+  WNV:
+    name: Orthoflavivirus nilense
+    taxa:
+    - taxid: 3048448
+      organisms:
+      - Orthoflavivirus nilense
+      - West Nile virus 2
+      - West Nile virus 1
+      - West Nile virus strain NY-99
+      - West Nile virus strain PT6.39
+      - West Nile virus strain PT6.5
+      - West Nile virus strain PT5.2
+      - West Nile virus strain PT6.16
+      - West Nile virus crow/New York/3356/2000
+      - West Nile virus H442
+      - West Nile virus SA381/00
+      - West Nile virus SPU116/89
+      - West Nile virus SA93/01
+      - West Nile virus strain PTRoxo
+      - West Nile virus strain 385-99
+      - West Nile virus
+      - Kunjin virus (STRAIN MRM61C)
+      - Kunjin virus
+    segments:
+      Unsegmented:
+        refs:
+        - NC_009942.1
+        seqs:
+        - NC_009942.1
+        - NC_001563.2
+  HAZV:
+    name: Orthonairovirus hazaraense
+    taxa:
+    - taxid: 3052519
+      organisms:
+      - Orthonairovirus hazaraense
+      - Hazara virus (isolate JC280)
+      - Hazara virus
+    segments:
+      L:
+        refs:
+        - NC_038709.1
+        seqs:
+        - NC_038709.1
+      M:
+        refs:
+        - NC_038710.1
+        seqs:
+        - NC_038710.1
+      S:
+        refs:
+        - NC_038711.1
+        seqs:
+        - NC_038711.1
+filters:
+  ARENA:
+    name: Arenaviridae
+    taxa:
+    - taxid: 11617
+      organisms:
+      - Pannonia mammarenavirus
+      - Hemidactylus frenatus arenavirus
+      - Yunnan shrew mammarenavirus 1
+      - Yunnan rodent mammarenavirus 1
+      - Dandong mammarenavirus
+      - Erinaceus europaeus arenavirus
+      - Hetplan gecko arenavirus
+      - Grammomys rat arenavirus
+      - Trematomus arenavirus
+      - Muraenolepis arenavirus
+      - Ardenna-associated arenavirus
+      - Wufeng bat mammarenavirus 1
+      - Wenzhou rodent arenavirus 1
+      - Kwanza virus
+      - Hailar virus
+      - big electron-dense squares virus 1
+      - Bitu virus
+      - Yellow silver pine arena-like virus 3
+      - Yellow silver pine arena-like virus 2
+      - Yellow silver pine arena-like virus
+      - Moss arena-like virus
+      - Lwood arena-like virus 2
+      - Lwood arena-like virus
+      - Dracophyllum arena-like virus
+      - Neolamprologus walteri arenavirus
+      - Longfin eel arenavirus
+      - Innmovirus hailarense
+      - Hartmanivirus unni
+      - Hartmanivirus quadrati
+      - Reptarenavirus rotterdamense
+      - Reptarenavirus giessenae
+      - Reptarenavirus commune
+      - Reptarenavirus californiae
+      - Reptarenavirus aurei
+      - Mammarenavirus xapuriense
+      - Mammarenavirus whitewaterense
+      - Mammarenavirus wenzhouense
+      - Mammarenavirus tamiamiense
+      - Mammarenavirus tacaribeense
+      - Mammarenavirus solweziense
+      - Mammarenavirus ryukyuense
+      - Mammarenavirus praomyidis
+      - Mammarenavirus piritalense
+      - Mammarenavirus paranaense
+      - Mammarenavirus oliverosense
+      - Mammarenavirus okahandjaense
+      - Mammarenavirus mopeiaense
+      - Mammarenavirus merinoense
+      - Mammarenavirus marientalense
+      - Mammarenavirus machupoense
+      - Mammarenavirus lunkense
+      - Mammarenavirus lunaense
+      - Mammarenavirus lujoense
+      - Mammarenavirus loeiense
+      - Mammarenavirus lijiangense
+      - Mammarenavirus latinum
+      - Mammarenavirus lassaense
+      - Mammarenavirus kitaleense
+      - Mammarenavirus ippyense
+      - Mammarenavirus guanaritoense
+      - Mammarenavirus gairoense
+      - Mammarenavirus flexalense
+      - Mammarenavirus cupixiense
+      - Mammarenavirus choriomeningitidis
+      - Mammarenavirus chapareense
+      - Mammarenavirus cameroonense
+      - Mammarenavirus caliense
+      - Mammarenavirus brazilense
+      - Mammarenavirus bearense
+      - Mammarenavirus aporeense
+      - Mammarenavirus amapariense
+      - Hartmanivirus turici
+      - Hartmanivirus scholae
+      - Hartmanivirus patriae
+      - Hartmanivirus helvetiae
+      - Hartmanivirus haartmani
+      - Hartmanivirus brazilense
+      - Antennavirus striale
+      - Antennavirus salmonis
+      - Antennavirus hirsutum
+      - Innmovirus
+      - Mecsek Mountains virus
+      - Berega mammarenavirus
+      - Songea mammarenavirus
+      - Ngerengere mammarenavirus
+      - Pika arenavirus
+      - WENV Rattus norvegicus mammarenavirus
+      - Tiete mammarenavirus
+      - Universidad Nacional virus 1
+      - Anole arenavirus
+      - Mammarenavirus kwanzaense
+      - Mammarenavirus bituense
+      - Aershan mammarenavirus
+      - Wenzhou Rattus losea mammarenavirus 1
+      - Sabia virus
+      - Parana virus
+      - Pichinde virus
+      - Amapari virus
+      - Wufeng Rhinolophus pearsonii mammarenavirus 1
+      - Wufeng Niviventer niviventer mammarenavirus 1
+      - Wenzhou Suncus murinus mammarenavirus 1
+      - Wenzhou Rattus tanezumi mammarenavirus 1
+      - Wenzhou Rattus norvegicus mammarenavirus 1
+      - Wenzhou Apodemus agrarius mammarenavirus 1
+      - unclassified Arenavirus
+      - Apore virus
+      - University of Helsinki virus 1
+      - University of Giessen virus 3
+      - SetPatVet virus 1
+      - Kitale virus
+      - andere Heimat virus 1
+      - Alxa virus
+      - Mammarenavirus AnRB3214
+      - Western carp gudgeon arenavirus
+      - Eastern mosquitofish arenavirus
+      - Inner Mongolia sediment arena-like virus
+      - Tetronarce arenavirus
+      - Pygmy goby arenavirus FL15
+      - Big eyed perch arenavirus FL1
+      - plateau pika virus
+      - Haartman Institute snake virus 1
+      - Dhati Welel mammarenavirus
+      - Mammarenavirus alashanense
+      - Arenaviridae sp.
+      - University of Helsinki virus-2
+      - Gaucho virus-1
+      - Saudades virus-1
+      - Porto Alegre virus-1
+      - Frankfurter Strasse virus-1
+      - Aramboia boa virus-1
+      - Arabuta Snake virus-1
+      - Salmon pescarenavirus 1
+      - Salmon pescarenavirus 2
+      - Antennavirus
+      - Rat mammarenavirus
+      - University of Giessen virus 2
+      - S7-like reptarenavirus
+      - Mista naita tulee virus 1
+      - Kuka mita hah virus 1
+      - Suri Vanera virus 2
+      - Tavallinen suomalainen mies virus 1
+      - Kiva uusi kaarme virus 1
+      - S2-like reptarenavirus
+      - Peto jauhoksi virus 1
+      - Aurora borealis virus 4
+      - University of Helsinki virus 3
+      - University of Giessen virus 1
+      - tavallinen suomalainen mies virus 2
+      - Suri Vanera virus 1
+      - Hipoen jatkoon virus 1
+      - Keijut pohjoismaissa virus 1
+      - Kaltenbach virus 1
+      - Aurora borealis virus 3
+      - Veterinary Pathology Zurich virus 2
+      - Haartman Institute snake virus 2
+      - Veterinary Pathology Zurich virus 1
+      - Old schoolhouse virus 1
+      - Old schoolhouse virus 2
+      - Dante Muikkunen virus 1
+      - S10-like virus
+      - Hipoen jatkoon virus
+      - Peto jauhoksi virus
+      - Xapuri virus
+      - Xingyi virus
+      - Lijiang virus
+      - Mammarenavirus juninense
+      - Hartmanivirus
+      - Wenling frogfish arenavirus 2
+      - Wenling frogfish arenavirus 1
+      - Haikou virus
+      - Reptarenavirus sp.
+      - Jerboa arenavirus
+      - Mammarenavirus sp.
+      - unclassified Mammarenavirus
+      - Souris virus
+      - S5-like reptarenavirus
+      - Keijut pohjoismaissa virus
+      - Kuka mitae haeh virus
+      - Kaltenbach virus
+      - Bis spoeter virus
+      - Gruetzi mitenand virus
+      - University of Giessen virus
+      - Tavallinen suomalainen mies virus
+      - Suri Vanera virus
+      - Hans Kompis virus
+      - Aurora borealis virus
+      - Haartman Institute snake virus
+      - unidentified Reptarenavirus
+      - unclassified Reptarenavirus
+      - Alethinophid 3 reptarenavirus
+      - Alethinophid 2 reptarenavirus
+      - Alethinophid 1 reptarenavirus
+      - Reptarenavirus
+      - Mammarenavirus
+      - North American arenavirus strain B0940005
+      - North American arenavirus strain P0070018
+      - North American arenavirus strain F0190012
+      - Praomys arenavirus
+      - Wenzhou virus 2
+      - Wenzhou virus 3
+      - Patawa virus
+      - Arenaviridae sp. 13ZR68
+      - Arenavirus DX1401
+      - Witsand virus
+      - Omdraaivlei virus
+      - Bobomene virus
+      - Cardamones virus
+      - Boid arenavirus
+      - University of Helsinki virus
+      - Natorduori virus
+      - ROUT virus
+      - Middle Pease River virus
+      - Golden Gate virus
+      - CAS virus
+      - Ocozocoautla de Espinosa virus
+      - Lunk virus NKS-1
+      - Real de Catorce virus
+      - Menekre virus
+      - Gbagroube virus
+      - Tacaribe virus strain Franze-Fernandez
+      - Arenavirus Mus/TZ22285/TZA/2008
+      - Mafiga mammarenavirus
+      - Arenavirus H0030028
+      - Arenavirus H0030026
+      - Arenavirus sp. 9408800235/ZAF
+      - Black Mesa virus
+      - Orogrande virus
+      - Morogoro mammarenavirus
+      - Arenavirus H0380005
+      - Arenavirus AV 96010025
+      - Pinhal virus
+      - unclassified New world arenaviruses
+      - Dandenong virus
+      - unclassified Old world arenaviruses
+      - North American arenavirus
+      - Skinner Tank virus
+      - Big brushy tank virus
+      - Tonto creek virus
+      - Kodoko virus
+      - Catarina virus
+      - Mopeia Lassa virus reassortant 29
+      - Mopeia virus AN20410
+      - unclassified Arenaviridae
+      - New world arenaviruses
+      - Old world arenaviruses
+      - Mammarenavirus allpahuayoense
+      - Pampa virus
+      - Arenavirus sp.
+      - Tacaribe virus strain V7
+      - Tacaribe virus strain V5
+      - Tacaribe virus strain TRVL 11598
+      - Lymphocytic choriomeningitis virus (strain WE)
+      - Lymphocytic choriomeningitis virus (strain Traub)
+      - Lymphocytic choriomeningitis virus (strain Pasteur)
+      - Lymphocytic choriomeningitis virus (strain Armstrong)
+      - Lassa virus Josiah
+      - Lassa virus GA391
+      - Arenavirus
+      - Arenaviridae
+  FILO:
+    name: Filoviridae
+    taxa:
+    - taxid: 11266
+      organisms:
+      - Nyctinomops bat filovirus
+      - Mink stool-associated filovirus
+      - Slender scalyhead filovirus
+      - Scaly rockcod filovirus
+      - Thamnovirus thamnaconi
+      - Striavirus antennarii
+      - Orthomarburgvirus marburgense
+      - Orthoebolavirus zairense
+      - Orthoebolavirus taiense
+      - Orthoebolavirus sudanense
+      - Orthoebolavirus restonense
+      - Orthoebolavirus bundibugyoense
+      - Orthoebolavirus bombaliense
+      - Dianlovirus menglaense
+      - Cuevavirus lloviuense
+      - Orthomarburgvirus
+      - Orthoebolavirus
+      - Loetschberg virus
+      - Thamnovirus percae
+      - Thamnovirus kanderense
+      - Tapjovirus bothropis
+      - Oblavirus percae
+      - Tapjovirus
+      - Oblavirus
+      - Kander virus
+      - Tapajos virus
+      - John dory filovirus FL11
+      - Blue spotted goatfish filovirus FL3
+      - Filoviridae sp.
+      - Dianlovirus
+      - Oberland virus
+      - Fiwi virus
+      - Thamnovirus
+      - Striavirus
+      - Wenling thamnaconus septentrionalis filovirus
+      - Wenling frogfish filovirus
+      - Bombali virus
+      - Zaire ebolavirus Makona
+      - Marburg virus - Angola
+      - Marburg virus - Uganda
+      - Bat filovirus
+      - Ebola virus
+      - Cuevavirus
+      - Sudan ebolavirus - Nakisamata
+      - Lake Victoria marburgvirus - Leiden
+      - unclassified Filoviridae
+      - Bundibugyo virus
+      - Lake Victoria marburgvirus - Ozolin
+      - Lake Victoria marburgvirus - Ci67
+      - Ebola virus Yambio0403
+      - Ebola virus Yambio0402
+      - Ebola virus Yambio0401
+      - Sudan ebolavirus - Uganda (2000)
+      - Reston ebolavirus - Reston (1989)
+      - Lake Victoria marburgvirus - DRC1999
+      - Lake Victoria marburgvirus - Angola2005
+      - Ravn virus - Ravn, Kenya, 1987
+      - unclassified Ebolavirus
+      - Ebola virus sp.
+      - Tai Forest ebolavirus
+      - Sudan ebolavirus
+      - Reston ebolavirus
+      - Zaire ebolavirus
+      - Marburgvirus
+      - Ebolavirus
+      - Reston ebolavirus - Siena/Philippine-92
+      - Reston ebolavirus - Reston
+      - Ebola virus - Eckron (Zaire, 1976)
+      - Tai Forest virus - Cote d'Ivoire, Cote d'Ivoire, 1994
+      - Ebola virus - Mayinga, Zaire, 1976
+      - Ebola virus - Zaire (1995)
+      - Sudan ebolavirus - Maleo (1979)
+      - Sudan virus - Boniface, Sudan,1976
+      - Ebola virus - Gabon (1994-1997)
+      - Lake Victoria marburgvirus - Popp
+      - Marburg virus - Musoke, Kenya, 1980
+      - Filoviridae
+  HANTA:
+    name: Hantaviridae
+    taxa:
+    - taxid: 1980413
+      organisms:
+      - Chencang Niviventer confucianus orthohantavirus
+      - Chencang Apodemus agrarius orthohantavirus
+      - Hemidactylus frenatus hantavirus
+      - Samur virus
+      - Artesian virus
+      - Orthohantavirus sp. 'chicoanense'
+      - Sager Creek orthohantavirus
+      - Acanthurus nigrofuscus actinovirus
+      - Rousettus bat hantavirus
+      - Stubbeard plunderfish hantavirus
+      - Macrourus hantavirus
+      - Ozark orthohantavirus
+      - Rainbow skink hantavirus
+      - Northern spotted skink hantavirus
+      - Mamanguape virus
+      - Kurkino virus
+      - Ardenna-associated hantavirus
+      - Wufeng rodent thottimvirus 1
+      - Retropinna hantavirus
+      - Limestone Canyon virus
+      - Thottimvirus thottapalayamense
+      - Thottimvirus imjinense
+      - Reptillovirus hemidactyli
+      - Orthohantavirus yakeshiense
+      - Orthohantavirus tulaense
+      - Orthohantavirus tigrayense
+      - Orthohantavirus thailandense
+      - Orthohantavirus tatenalense
+      - Orthohantavirus sinnombreense
+      - Orthohantavirus seoulense
+      - Orthohantavirus sangassouense
+      - Orthohantavirus rockportense
+      - Orthohantavirus robinaense
+      - Orthohantavirus puumalaense
+      - Orthohantavirus prospectense
+      - Orthohantavirus oxbowense
+      - Orthohantavirus nigrorivense
+      - Orthohantavirus negraense
+      - Orthohantavirus necocliense
+      - Orthohantavirus moroense
+      - Orthohantavirus montanoense
+      - Orthohantavirus maporalense
+      - Orthohantavirus luxiense
+      - Orthohantavirus khabarovskense
+      - Orthohantavirus kenkemeense
+      - Orthohantavirus jejuense
+      - Orthohantavirus hantanense
+      - Orthohantavirus fusongense
+      - Orthohantavirus fugongense
+      - Orthohantavirus dobravaense
+      - Orthohantavirus delgaditoense
+      - Orthohantavirus dabieshanense
+      - Orthohantavirus chocloense
+      - Orthohantavirus caobangense
+      - Orthohantavirus brugesense
+      - Orthohantavirus boweense
+      - Orthohantavirus bayoui
+      - Mobatvirus xuansonense
+      - Mobatvirus quezonense
+      - Mobatvirus novaense
+      - Mobatvirus lenaense
+      - Mobatvirus laibinense
+      - Loanvirus longquanense
+      - Loanvirus brunaense
+      - Agnathovirus eptatreti
+      - Actinovirus triacanthodis
+      - Percilovirus lophii
+      - Actinovirus halieutaeae
+      - Actinovirus bernense
+      - Erinaceus hedgehog seoul orthohantavirus
+      - Kiwira virus
+      - Skink hantavirus
+      - Pygmy goby hantavirus
+      - Trimma fangi actinovirus
+      - Luposicya lupus actinovirus
+      - Pleurosicya actinovirus
+      - Cephalopholis boenak actinovirus
+      - Amugulang hantann virus
+      - Longquan Rhinolophus affinis hantavirus 1
+      - Jingmen Rattus norvegicus orthohantavirus 1
+      - Wufeng Chodsigoa smithii orthohantavirus 1
+      - Wenzhou Niviventer niviventer orthohantavirus 1
+      - Wenzhou Suncus murinus thottimvirus 1
+      - Wenzhou Pipistrellus abramus hantavirus 1
+      - Wufeng Niviventer fulvescens orthohantavirus 1
+      - Wufeng Niviventer niviventer orthohantavirus 1
+      - Wenzhou Rattus tanezumi orthohantavirus 1
+      - Wenzhou Rattus norvegicus orthohantavirus 1
+      - Longquan Niviventer niviventer orthohantavirus 1
+      - Longquan Niviventer fulvescens orthohantavirus 1
+      - Longquan Leopoldamys edwardsi orthohantavirus 1
+      - Lena virus
+      - Fusong virus
+      - Fugong virus
+      - Murray-Darling rainbowfish hantavirus
+      - Ponan loanvirus
+      - Mouyassue loanvirus
+      - Pygmy goby hantavirus FL16
+      - Mobatvirus sp.
+      - Loanvirus sp.
+      - Hantaviridae sp.
+      - unclassified Thottimvirus
+      - unclassified Loanvirus
+      - Biya River virus
+      - Rusne orthohantavirus
+      - Lanka hantavirus
+      - Plecopteran hanta-related virus OKIAV215
+      - Coleopteran hanta-related virus OKIAV221
+      - Bern perch virus
+      - unclassified Actinovirus
+      - Traemmersee orthohantavirus
+      - Buffalo Bayou virus
+      - Meliandou hantavirus
+      - Sarawak mobatvirus
+      - Academ virus
+      - Orthohantavirus seewisense
+      - Reptillovirus
+      - Agnathovirus
+      - Actinovirus
+      - Repantavirinae
+      - Mammantavirinae
+      - Agantavirinae
+      - Actantavirinae
+      - Hantavirus HantaV-3
+      - Hantavirus HantaV-2
+      - Hantavirus HantaV-1
+      - Hantavirus China/YN06
+      - unclassified Mobatvirus
+      - Thottimvirus
+      - Mobatvirus
+      - Loanvirus
+      - Dode virus
+      - Dakrong virus
+      - Monongahela hantavirus
+      - Wenling hagfish virus
+      - Hainan oriental leaf-toed gecko hantavirus
+      - Wenling yellow goosefish hantavirus
+      - Wenling red spikefish hantavirus
+      - Wenling minipizza batfish hantavirus
+      - unclassified Hantaviridae
+      - Kielder hantavirus
+      - Asturias virus
+      - Shrew hantavirus
+      - Rodent hantavirus
+      - Jerboa hantavirus
+      - Orthohantavirus sp.
+      - unclassified Orthohantavirus
+      - Thottapalayam virus
+      - Orthohantavirus asikkalaense
+      - Orthohantavirus asamaense
+      - Orthohantavirus andesense
+      - Amga orthohantavirus
+      - Orthohantavirus
+      - Hantaviridae
+      - Makokou virus
+      - Quezon virus
+      - Hantavirus MAYOV
+      - Hantavirus MAYV
+      - Hantavirus Leninskoe JAO 449-44-15
+      - Eothenomys eleusis hantavirus FUGV
+      - Hantavirus ASTV3914
+      - Hantavirus ASTV3890
+      - Hantavirus ASTV3947
+      - Hantavirus ASTV3943
+      - Hantavirus ASTV3873
+      - Hantavirus ASTV3877
+      - Brno virus
+      - Bruges virus
+      - Hantavirus NMAp57
+      - Hantavirus NMAp117
+      - Hantavirus NMAa82
+      - Laibin virus
+      - Adler virus
+      - Lohja virus
+      - Uurainen virus
+      - Hantavirus FL-2014
+      - Altai-like virus
+      - Yuanjiang virus
+      - Korf virus
+      - Amga virus
+      - Hantavirus Zhangmu01
+      - Anjozorobe virus
+      - Hantavirus Hu/BRA/511H/2009
+      - Hantavirus Hu/BRA/462H/2009
+      - Hantavirus Hu/BRA/461H/2009
+      - Hantavirus Hu/BRA/452H/2009
+      - Hantavirus Hu/BRA/420H/2009
+      - Hantavirus Hu/BRA/417H/2009
+      - Hantavirus Hu/BRA/395H/2009
+      - Hantavirus Hu/BRA/389H/2009
+      - Hantavirus Hu/BRA/305H/2009
+      - Hantavirus Hu/BRA/292H/2009
+      - Hantavirus Hu/BRA/274H/2009
+      - Hantavirus Hu/BRA/268H/2009
+      - Hantavirus Hu/BRA/256H/2009
+      - Hantavirus Hu/BRA/213H/2009
+      - Hantavirus Hu/BRA/169H/2009
+      - Hantavirus Hu/BRA/46H/2009
+      - Hantavirus Hu/BRA/32H/2009
+      - Xinyi virus
+      - Sarufutsu virus
+      - Bowe virus
+      - Puumala virus bank vole/CG1820/Russia/1984
+      - Yakeshi virus
+      - Lianghe virus
+      - Huangpi virus
+      - Tatenale virus
+      - Xuan son virus
+      - Gou virus
+      - Longquan virus
+      - Tigray virus
+      - Boginia virus
+      - RIOMV-4 Hantavirus
+      - RIOMV-3 Hantavirus
+      - LANV-2 Hantavirus
+      - Castelo dos Sonhos-2 virus
+      - CASV-2 Hantavirus
+      - CASV Hantavirus
+      - ANAJ Hantavirus
+      - Kilimanjaro virus
+      - Uluguru virus
+      - Mouyassue virus
+      - Dabieshan virus
+      - Necocli virus
+      - Hantavirus MGB/1209
+      - Hantaan virus XAAa10091712
+      - Hantavirus NFG357
+      - Hantavirus NFG354
+      - Hantavirus NFG339
+      - Hantavirus NFG313
+      - Hantavirus NFG299
+      - Hantavirus NFG297
+      - Hantavirus NFG289
+      - Ussuri virus
+      - Hokkaido virus
+      - Hantavirus YN06-868
+      - Hantavirus YN06-813
+      - Hantavirus YN06-79
+      - Hantavirus YN06-747
+      - Hantavirus YN06-696
+      - Hantavirus YN06-605
+      - Hantavirus YN06-489
+      - Hantavirus YN06-455
+      - Hantavirus YN06-365
+      - Hantavirus YN06-362
+      - Hantavirus YN06-282
+      - Hantavirus YN06-270
+      - Hantavirus YN06-257
+      - Hantavirus YN06-256
+      - Hantavirus YN06-254
+      - Hantavirus YN06-153
+      - Hantavirus YN06-1024
+      - Hantavirus YN05-9
+      - Hantavirus YN05-83
+      - Hantavirus YN05-7
+      - Hantavirus YN05-637
+      - Hantavirus YN05-494
+      - Hantavirus YN05-484
+      - Hantavirus YN05-47
+      - Hantavirus YN05-389
+      - Hantavirus YN05-324
+      - Hantavirus YN05-304
+      - Hantavirus YN05-295
+      - Tunari virus
+      - Hantavirus XAHu09066
+      - Hantavirus XAHu09047
+      - Hantavirus XAHu09041
+      - Hantavirus XAHu09027
+      - Hantavirus XAHu09011
+      - Hantavirus RPR/07-10104
+      - Hantavirus RPR/09-10351
+      - Hantavirus RPR/08-10217
+      - Hantavirus RPR/09-12460
+      - Hantaan virus P09072
+      - Hantaan virus H10150
+      - Hantaan virus CA10081905
+      - Hantaan virus CA10081708
+      - Hantaan virus CA10081206
+      - Hantaan virus CA10081203
+      - Hantaan virus CA10081113
+      - Hantaan virus CA10081109
+      - Hantaan virus CA09082007
+      - Hantavirus YN06-862
+      - Eothenomys miletus hantavirus LX43
+      - Eothenomys miletus hantavirus LX17
+      - Azagny virus
+      - Rockport virus
+      - Huitzilac virus
+      - Carrizal virus
+      - Seoul virus HP8
+      - Seoul virus HP7
+      - Seoul virus 41CSG
+      - Seoul virus 25CSG
+      - Seoul virus 11CSG
+      - Seoul virus 5CSG
+      - Seoul virus 24D12
+      - Seoul virus 19D12
+      - Seoul virus 14D12
+      - Seoul virus 60CSG
+      - Seoul virus 58CSG
+      - Seoul virus 57CSG
+      - Seoul virus 51CSG
+      - Seoul virus 44CSG
+      - Seoul virus 42CSG
+      - Seoul virus 38CSG
+      - Seoul virus 33CSG
+      - Seoul virus CSG25
+      - Seoul virus 19CSG
+      - Seoul virus CSG11
+      - Seoul virus CSG5
+      - Jeju virus
+      - Eothenomys miletus hantavirus LX309
+      - Hantavirus strain H700306
+      - Dahonggou Creek virus
+      - Hantavirus Hu/CPVRP2/Batatais/BRA/2007
+      - Hantavirus Calomys/CPVRP147/Cajuru/BRA/2006
+      - Seoul virus SD5-153
+      - Seoul virus SD201
+      - Seoul virus Rn-YUE12
+      - Seoul virus Rn-SHY17
+      - Seoul virus Rn-HD27
+      - Seoul virus Rn-HD11
+      - Seoul virus Rn-CP7
+      - Seoul virus HuBJ9
+      - Seoul virus HuBJ3
+      - Seoul virus HuBJ22
+      - Seoul virus HuBJ20
+      - Seoul virus HuBJ19
+      - Seoul virus HuBJ16
+      - Seoul virus HuBJ15
+      - Hantavirus strain Akm6943
+      - Hantavirus strain Oln8057
+      - Hantavirus LX378
+      - Kenkeme virus
+      - Qian Hu Shan virus
+      - Hantavirus Oln8129
+      - Hantavirus Oln8057
+      - Hantavirus Akm6903
+      - Hantavirus Akm6266
+      - Ape Aime-Itapua virus
+      - Hantavirus KY
+      - Hantavirus HPR02-71
+      - Hantavirus HPR03-97
+      - Nova virus
+      - Oxbow virus
+      - Hantavirus Jurong TJK/06(RT50)
+      - Hantavirus Jurong TJK/06(RT49)
+      - Maripa virus
+      - Hantavirus HMT 08-02
+      - Hantavirus Olini/RPR/07-10091/BRA/2007
+      - Hantavirus Akomo/RPR/07-10028/BRA/2006
+      - Hantavirus Akomo/RPR/07-10027/BRA/2006
+      - Hantavirus Oxyju/RPR/07-10056/BRA/2006
+      - Hantavirus Human/HRP/02-72/BRA/2002
+      - Hantavirus Oln6469
+      - Hantavirus Oln6470
+      - Hantavirus 2336 Biritiba Mirim
+      - Hantavirus 2319 Biritiba Mirim
+      - Hantavirus 2315 Biritiba Mirim
+      - Hantavirus 2306 Biritiba Mirim
+      - Hantavirus 2303 Biritiba Mirim
+      - Hantavirus 2145 Biritiba Mirim
+      - Hantavirus 2076 Biritiba Mirim
+      - Hantavirus 2075 Biritiba Mirim
+      - Hantavirus 2072 Biritiba Mirim
+      - Hantavirus 2071 Biritiba Mirim
+      - Hantavirus 2070 Biritiba Mirim
+      - Hantavirus 2066 Biritiba Mirim
+      - Hantavirus 2064 Biritiba Mirim
+      - Hantavirus 2063 Biritiba Mirim
+      - Hantavirus 2062 Biritiba Mirim
+      - Hantavirus 2036 Biritiba Mirim
+      - Asama virus
+      - Hantavirus Yuanjiang-Mf-78
+      - Hantavirus Yuanjiang-Mf-21
+      - Hantavirus Yuanjiang-Mf-15
+      - Hantavirus Yuanjiang-Mf-13
+      - Hantavirus Shenyang-Mf-136
+      - Hantavirus Shenyang-Mf-135
+      - Hantavirus Fusong-Mf-732
+      - Juquitiba-like virus strain PB 981
+      - Juquitiba-like virus strain PB 1033
+      - Juquitiba-like virus strain PB 1002
+      - Serang virus
+      - Altai virus
+      - Artybash virus
+      - Sorex araneus hantavirus
+      - Neomys anomalus hantavirus
+      - Hantavirus NB9
+      - Hantavirus NB8
+      - Hantavirus NB5
+      - Hantavirus NB2
+      - Hantavirus H162
+      - Hantavirus H158
+      - Hantavirus H156
+      - Hantaanvirus CGRni1
+      - Hantaanvirus CGRn2618
+      - Hantaanvirus CGRn15
+      - Hantaanvirus CGHu3
+      - Hantaanvirus CGHu2
+      - Hantaanvirus CGRn2616
+      - Hantavirus sdp2 YXL-2008
+      - Hantavirus Case Itapua
+      - Hantavirus Case 1
+      - Hantavirus AC210py
+      - Hantavirus sdp37
+      - Hantavirus sdp3
+      - Hantavirus sdp22
+      - Hantavirus sdp1
+      - Hantaanvirus CJAp93
+      - Hantaanvirus CGRn45
+      - Hantaanvirus CGHu1
+      - Hantaanvirus CGAa75
+      - Hantaanvirus CGAa2
+      - Hantavirus Fusong-Mf-731
+      - Hantavirus Yakeshi-Mm-795
+      - Hantavirus Yakeshi-Mm-62
+      - Hantavirus Yakeshi-Mm-59
+      - Hantavirus Yakeshi-Mm-42
+      - Hantavirus Yakeshi-Mm-31
+      - Hantavirus Yakeshi-Mm-182
+      - Hantavirus Fusong-Mf-682
+      - Imjin virus
+      - Ash River virus
+      - Jemez Springs virus
+      - Hantavirus R34
+      - Hantavirus R167
+      - Hantavirus R165
+      - Hantavirus R150
+      - Hantavirus R142
+      - Hantavirus R11
+      - Camp Ripley virus
+      - Hantavirus CGRn9415
+      - Hantavirus CGRn8316
+      - Hantaanvirus CGRn93P8
+      - Hantaanvirus CGRn93MP8
+      - Hantaanvirus CGRn5310
+      - Hantaanvirus CGRn53
+      - Hantaanvirus CGAa4P15
+      - Hantaanvirus CGAa4MP9
+      - Hantaanvirus CGHu3614
+      - Hantaanvirus CGHu3612
+      - Hantaanvirus CGAa31P9
+      - Hantaanvirus CGAa31MP7
+      - Hantaanvirus CGAa1015
+      - Hantaanvirus CGAa1011
+      - Playa de Oro hantavirus
+      - Hantavirus SDP2
+      - Hantavirus SDP19
+      - Hantavirus SDP12
+      - Hantavirus SDH8
+      - Hantavirus SDH17
+      - Hantavirus SDH14
+      - Seewis virus
+      - Araraquara-like virus strain P5/Cajuru
+      - Hantavirus sp. Paranoa
+      - Jabora hantavirus
+      - Jabora virus
+      - Juquitiba virus
+      - Puumala-like virus isolate Fusong-Cr-311
+      - Puumala-like virus isolate Fusong-Cr-302
+      - Puumala-like virus isolate Fusong-Cr-275
+      - Puumala-like virus isolate Fusong-Cr-272
+      - Puumala-like virus isolate Fusong-Cr-247
+      - Puumala-like virus isolate Fusong-Cr-211
+      - Tanganya virus
+      - Hantavirus CJAp93
+      - Hantavirus CJAp89
+      - Hantavirus CJAp787
+      - Hantavirus CJAp705
+      - Hantavirus CJAp595
+      - Hantavirus CJAp318
+      - Hantavirus CJAp267
+      - Hantavirus CJAp177
+      - Hantavirus CJAa716
+      - Hantavirus CJAa594
+      - Hantavirus CJAa142
+      - Hantavirus CJAa1109
+      - Hantavirus Z5
+      - Hantaan virus N8
+      - Thailand virus (Nakhon Pathom/Bi0067/2004)
+      - Thailand virus (Nakhon Ratchasima/Bi0024/2004)
+      - Thailand virus (Nakhon Pathom/Bi0016/2004)
+      - Thailand virus (Nakhon Ratchasima/Bi0017/2004)
+      - Hantavirus GM04-38
+      - Hantavirus ZB8
+      - Anajatuba virus
+      - Rio Mearim virus
+      - Seoul virus B-1
+      - Central Plata virus
+      - Hantaan virus Q32
+      - Neembucu hantavirus
+      - Hantavirus strain Itapua 38
+      - Hantavirus strain Itapua 37
+      - Hantavirus strain IP16
+      - Hantavirus JUN5-14
+      - Catacamas virus
+      - Muju virus
+      - unclassified Hantavirus
+      - Hantanvirus strain C-10
+      - Hantanvirus strain QH367
+      - Juquitiba-like virus strain On576
+      - Hantavirus strain YU61
+      - Hantavirus strain CJilin93
+      - Araucaria virus
+      - Hantavirus HPR/02-73
+      - Hantavirus Thailand 741
+      - Soochong virus-4
+      - Soochong virus-3
+      - Soochong virus-2
+      - Soochong virus-1
+      - Soochong virus
+      - Seoul virus BjHD01
+      - Hantavirus Z37
+      - Itapua hantavirus
+      - Alto Paraguay hantavirus
+      - Newfound Gap hantavirus
+      - Maporal virus
+      - Hantavirus U89
+      - Hantavirus Sa63
+      - Hantavirus Ce22
+      - Hantavirus Ce20
+      - Hantaan virus KHB/HFRS/Pat#A12
+      - Hantaan virus KHB/HFRS/Pat#A2
+      - Hantaan virus KHB/HFRS/Pat#A3
+      - Hantavirus Amur/680
+      - Hantavirus Amur/1169
+      - Hantavirus Amur/1166
+      - Amur virus Primorye/H2/2000
+      - Amur virus Primorye/H1/2000
+      - Amur virus Solovey/AP63/1999
+      - Amur virus Solovey/AP61/1999
+      - Calabazo virus
+      - Choclo virus
+      - Hantavirus S85-46
+      - Hantavirus SN7
+      - Seoul virus K24-v2
+      - Seoul virus K24-e7
+      - Hantavirus Gou3-v9
+      - Seoul virus Gou3-e5
+      - Hantavirus Liu
+      - Hantavirus AH211
+      - Hantaan virus A16
+      - Hantaan virus E142
+      - Seoul virus Hb8610
+      - Hantaan virus 84FLi
+      - Seoulvirus IR461
+      - Seoulvirus tchoupitoulas
+      - Hantavirus AH09
+      - Castelo dos Sonhos virus
+      - Araraquara virus
+      - Hantavirus AA137/Omsk-97
+      - Hantavirus CG32/Moscow-95
+      - Hantavirus LR1
+      - Hantavirus RG9
+      - Hantavirus Pe4Hu
+      - Hantavirus Bu3Hu
+      - Hantavirus Ca2Hu
+      - Hantavirus Ac1Hu
+      - Hantavirus HTN261
+      - Amur virus AMR/4313
+      - Amur virus AMR/4309
+      - Amur virus AMR/4234
+      - Hantavirus HTN/Far East/7866
+      - Hantavirus HTN/Far East/7701
+      - Hantavirus HTN/Far East/7406
+      - Hantavirus HTN/Far East/7303
+      - Hantavirus HTN/Far East/4382
+      - Hantavirus HTN/Far East/4251
+      - Hantavirus HTN/Far East/4241
+      - Hantavirus HTN/Far East/4229
+      - Hantavirus HTN/Far East/4209
+      - Hantavirus HTN/Far East/3955
+      - Hantavirus HTN/Far East/3867
+      - Hantavirus HTN/Far East/3844
+      - Hantavirus SEO/Vlad/8243
+      - Hantavirus SEO/Vlad/7218
+      - Hantavirus HTN/Far East/7732
+      - Hantavirus HTN/Far East/4338
+      - Hantavirus HTN/Far East/4329
+      - Hantavirus HTN/Far East/4320
+      - Hantavirus HTN/Far East/4307
+      - Hantavirus HTN/Far East/4296
+      - Hantavirus HTN/Far East/4294
+      - Hantavirus HTN/Far East/4290
+      - Hantavirus HTN/Far East/4254
+      - Hantavirus HTN/Far East/4253
+      - Hantavirus HTN/Far East/4235
+      - Hantavirus HTN/Far East/4231
+      - Hantavirus HTN/Far East/4228
+      - Hantavirus HTN/Far East/4226
+      - Hantavirus HTN/Far East/4211
+      - Hantavirus HTN/Far East/4029
+      - Hantavirus HTN/Far East/3829
+      - Hantavirus SEO/Vlad/7393
+      - Hantavirus SEO/Far East/3824
+      - Hantavirus SEO/Far East/248
+      - Hantavirus SEO
+      - Hantavirus HTN/Far East/3850
+      - Hantavirus Lodz-2
+      - Hantavirus Lodz-1
+      - Seoulvirus Gou3
+      - Hantavirus Z10
+      - Amur virus
+      - Topografov virus
+      - Hantavirus AP111
+      - Hantavirus CRF367
+      - Hantavirus CRF355
+      - Hantavirus CRF110
+      - Vladivostok virus
+      - Hantaan virus A9
+      - Seoulvirus L99
+      - Seoulvirus HB55
+      - Blue River virus
+      - Pergamino virus
+      - Oran virus
+      - Maciel virus
+      - Lechiguanas virus
+      - Hu39694 virus
+      - Bermejo virus
+      - Taimyr hantavirus
+      - Muleshoe hantavirus
+      - Rio Mamore hantavirus
+      - New York virus
+      - Seoulvirus R22
+      - Hantavirus Monongahela-3
+      - Hantavirus Monongahela-2
+      - Hantavirus Monongahela-1
+      - Isla Vista hantavirus
+      - Puumala virus udmurtia/894cg/91
+      - Puumala virus sotkamo/v-2969/81
+      - Puumala virus p360
+      - Puumala virus k27
+      - Puumala virus evo/12cg/93
+      - Puumala virus strain berkel
+      - Hantavirus HTN
+      - Hantavirus sp.
+      - Prairie vole hantavirus
+      - Rio Segundo hantavirus
+      - Hantaan-like virus DX
+      - Convict Creek 107 virus
+      - Four Corners hantavirus
+      - Seoul virus R22
+      - Seoulvirus Baltimore
+      - Hantavirus A9
+      - Hantaan virus B-1
+      - Seoul virus 80-39
+      - Seoul virus SR11
+      - Sapporo rat virus
+      - Puumala virus - Sotkamo
+      - Puumala virus Hallnas B1
+      - Hantaan virus 76-118
+      - Hantaan virus Lee
+      - HoJo virus
+  NAIRO:
+    name: Nairoviridae
+    taxa:
+    - taxid: 1980415
+      organisms:
+      - Blattodean nairo-related virus
+      - Yunnan tick nairovirus YN 54
+      - Yunnan tick nairovirus YN 53
+      - Xue-Cheng virus
+      - Crimean-Congo hemorrhagic fever virus clade III
+      - Yunnan shrew orthonairovirus 2
+      - Yunnan shrew orthonairovirus 1
+      - Hunchun nairovirus
+      - Wetland virus
+      - Iwanai Valley virus
+      - Cat Tien Thyropygus nairo-like virus
+      - BSF nairo-like virus 1
+      - Crocidura tanakae nairovirus 2
+      - Crocidura tanakae nairovirus 1
+      - Periplaneta americana nairovirus 3
+      - Periplaneta americana nairovirus 2
+      - Periplaneta americana nairovirus 1
+      - red goblin roach virus 1
+      - Mikuni nairovirus
+      - Iricinus orthonairovirus
+      - Wufeng shrew orthonairovirus 5
+      - Wufeng shrew orthonairovirus 4
+      - Wufeng shrew orthonairovirus 3
+      - Wufeng shrew orthonairovirus 2
+      - Beiji nariovirus
+      - Beiji orthonairovirus
+      - Orthonairovirus yezoense
+      - Orthonairovirus sulinaense
+      - Xinspivirus xinzhouense
+      - Striwavirus sanxiaense
+      - Shaspivirus aranei
+      - Sabavirus americanum
+      - Orthonairovirus zirkuense
+      - Orthonairovirus yogueense
+      - Orthonairovirus wenzhouense
+      - Orthonairovirus tunisense
+      - Orthonairovirus tomdiense
+      - Orthonairovirus thiaforaense
+      - Orthonairovirus tachengense
+      - Orthonairovirus soldadoense
+      - Orthonairovirus sakhalinense
+      - Orthonairovirus qalyubense
+      - Orthonairovirus peruense
+      - Orthonairovirus parahaemorrhagiae
+      - Orthonairovirus nairobiense
+      - Orthonairovirus meramense
+      - Orthonairovirus macquariense
+      - Orthonairovirus lusakaense
+      - Orthonairovirus khani
+      - Orthonairovirus keterehense
+      - Orthonairovirus kasokeroense
+      - Orthonairovirus japonicum
+      - Orthonairovirus issykkulense
+      - Orthonairovirus huangpiense
+      - Orthonairovirus hazaraense
+      - Orthonairovirus haemorrhagiae
+      - Orthonairovirus gossasense
+      - Orthonairovirus esteroense
+      - Orthonairovirus erveense
+      - Orthonairovirus dugbeense
+      - Orthonairovirus dermacentoris
+      - Orthonairovirus chimense
+      - Orthonairovirus bushkeyense
+      - Orthonairovirus buranaense
+      - Orthonairovirus bandiaense
+      - Orthonairovirus australiaense
+      - Orthonairovirus amblyommae
+      - Ocetevirus paratemnopterygis
+      - Norwavirus grotenhoutense
+      - Antu virus
+      - Cencurut virus
+      - Gubbo nairovirus
+      - Yichun nairovirus
+      - Ji'an nairovirus
+      - Linzhi Nairo tick virus 1
+      - Xining Nairo tick virus 1
+      - Dali Nairo tick virus 1
+      - Yushu Nairo tick virus 1
+      - Yanbian Nairo tick virus 2
+      - Yanbian Nairo tick virus 1
+      - Tonghua Nairo tick virus 1
+      - Norwavirus sp.
+      - Pangolin orthonairovirus
+      - Sichuan tick nairovirus
+      - Meihua Mountain virus
+      - Wufeng Crocidura attenuata orthonairovirus 1
+      - Hangzhou paederus fuscipes nairovirus 1
+      - Fushun diaea subdola nairovirus 1
+      - unclassified Norwavirus
+      - Aigai virus
+      - Uzun-Agach virus
+      - Keterah virus
+      - Orthonairovirus avalonense
+      - Orthonairovirus abuminaense
+      - Orthonairovirus abuhammadense
+      - Xinspivirus
+      - Sabavirus
+      - Ocetevirus
+      - Norwavirus
+      - Yezo virus
+      - Sulina virus
+      - Nairoviridae sp.
+      - Songling virus
+      - Gakugsa tick virus
+      - Berlin bat nairovirus
+      - Wittenau bat nairovirus
+      - Prackenbach bat nairovirus
+      - Frankliniella occidentalis nairo-like virus 1
+      - Camel Crimean-Congo hemorrhagic fever orthonairovirus
+      - unclassified Nairoviridae
+      - Meram virus
+      - Rondonia orthonairovirus
+      - unclassified Orthonairovirus
+      - Orthonairovirus sp.
+      - Striwavirus
+      - Shaspivirus
+      - Beiji nairovirus
+      - Orthonairovirus artashatense
+      - Estero Real virus
+      - Vinegar Hill virus
+      - Norway nairovirus 1
+      - Orthonairovirus
+      - Nairoviridae
+      - Pacific coast tick nairovirus
+      - Nairovirus sp.
+      - Grotenhout virus
+      - Pustyn virus
+      - Clo Mor virus
+      - Avalon virus
+      - Zirqa virus
+      - Great Saltee virus
+      - Sapphire II virus
+      - Tunis virus
+      - Gossas virus
+      - Yogue virus
+      - Kasokero virus
+      - Tofla virus
+      - Nayun tick nairovirus
+      - Xinzhou Spider Virus
+      - Wenzhou Tick Virus
+      - Tacheng Tick Virus 1
+      - Shayang Spider Virus 1
+      - Sanxia Water Strider Virus 1
+      - Huangpi Tick Virus 1
+      - South Bay virus
+      - Tamdy virus
+      - Paramushir virus
+      - Issyk-Kul virus
+      - Geran virus
+      - Caspiy virus
+      - Burana virus
+      - Leopards Hill virus
+      - Bat nairovirus
+      - unclassified Nairovirus
+      - Dugbe virus (isolate ArD44313)
+      - Crimean-Congo hemorrhagic fever virus strain IbAr10200
+      - Kupe virus
+      - Taggert virus
+      - Soldado virus
+      - Crimean-Congo hemorrhagic fever virus CTF-Hu7/06
+      - Crimean-Congo hemorrhagic fever virus CTF-Hu30/06
+      - Crimean-Congo hemorrhagic fever virus CTF-Hu27/06
+      - Crimean-Congo hemorrhagic fever virus CTF-Hu15/06
+      - Crimean-Congo hemorrhagic fever virus CTF-Hu10/06
+      - Crimean-Congo hemorrhagic fever virus (ZAM57/06)
+      - Erve virus
+      - Bandia virus
+      - Abu Mina virus
+      - Abu Hammad virus
+      - Punta Salinas virus
+      - Raza virus
+      - Farallon virus
+      - Nairobi sheep disease virus
+      - Crimean-Congo Hemorrhagic Fever virus strain China
+      - Crimean-Congo hemorrhagic fever virus strain BA88166
+      - Tillamook virus
+      - Hazara virus (isolate JC280)
+      - Hazara virus
+      - Crimean-Congo hemorrhagic fever virus (isolate C68031)
