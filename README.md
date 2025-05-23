@@ -4,7 +4,7 @@ This repository contains scripts to create data sets for different virus species
 
 ## Run a data set curation
 
-There is a test run in workflow/testset. You can run it by changing to workflow and then typing ´nextflow main.nf -c testset/test.config´. The results will be written to ´output_test´. The reference virus genome data base is then found in ´output_test/db´. It contains files with genomes for the respective filters, a yaml config file and the blast data base.
+There is a test run in `testset`. You can run it by typing `nextflow main.nf -c testset/test.config`. The results will be written to `data/output_databases/test`. The reference virus genome data base is then found in `data/output_databases/test/db`. It contains files with genomes for the respective filters, a yaml config file and the blast data base.
 
 ## Review the outcome
 
