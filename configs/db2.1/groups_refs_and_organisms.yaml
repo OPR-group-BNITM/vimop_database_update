@@ -324,6 +324,9 @@ filters:
     taxa:
     - taxid: 11617
       organisms:
+      - "Aba\u0300-Mia\u0301nya\u0301ng virus"
+      - Mammarenavirus abaense
+      - Rodent Mammarenavirus
       - Pannonia mammarenavirus
       - Hemidactylus frenatus arenavirus
       - Yunnan shrew mammarenavirus 1
@@ -340,6 +343,7 @@ filters:
       - Kwanza virus
       - Hailar virus
       - big electron-dense squares virus 1
+      - Dhati Welel virus
       - Bitu virus
       - Yellow silver pine arena-like virus 3
       - Yellow silver pine arena-like virus 2
@@ -350,6 +354,7 @@ filters:
       - Dracophyllum arena-like virus
       - Neolamprologus walteri arenavirus
       - Longfin eel arenavirus
+      - Mammarenavirus dhati-welelense
       - Innmovirus hailarense
       - Hartmanivirus unni
       - Hartmanivirus quadrati
@@ -445,7 +450,6 @@ filters:
       - Big eyed perch arenavirus FL1
       - plateau pika virus
       - Haartman Institute snake virus 1
-      - Dhati Welel mammarenavirus
       - Mammarenavirus alashanense
       - Arenaviridae sp.
       - University of Helsinki virus-2
@@ -1329,9 +1333,17 @@ filters:
     taxa:
     - taxid: 1980415
       organisms:
+      - Rodent orthonairovirus
+      - Wutonggou orthonairovirus 2
+      - Wutonggou orthonairovirus 1
+      - Nanshano orthonairovirus 1
+      - Nanshan orthonairovirus 4
+      - Nanshan orthonairovirus 3
+      - Nanshan orthonairovirus 2
+      - Dadong virus
       - Blattodean nairo-related virus
-      - Yunnan tick nairovirus YN 54
-      - Yunnan tick nairovirus YN 53
+      - Yunnan nairo-like virus 54
+      - Yunnan nairo-like virus 53
       - Xue-Cheng virus
       - Crimean-Congo hemorrhagic fever virus clade III
       - Yunnan shrew orthonairovirus 2
