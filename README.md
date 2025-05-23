@@ -2,9 +2,17 @@
 
 This repository contains scripts to create data sets for different virus species. The data sets are used as references in our metagenomics pipeline (currently named vimop).
 
-Each data set should have an own readme which documents the data set and it's creation.
+## Run a data set curation
+
+There is a test run in workflow/testset. You can run it by changing to workflow and then typing ´nextflow main.nf -c testset/test.config´. The results will be written to ´output_test´. The reference virus genome data base is then found in ´output_test/db´. It contains files with genomes for the respective filters, a yaml config file and the blast data base.
+
+## Review the outcome
+
+To have a look into the statistics of the curated data sets use the jupyter notebook workflow/utils/evaluate.ipynb and change the paths and data set name to the one you are interested in.
 
 ## Virus with taxid
+
+The following viruses and families are currently in our data sets.
 
 ### Viruses
 
@@ -14,7 +22,7 @@ Each data set should have an own readme which documents the data set and it's cr
 | Mammarenavirus choriomeningitidis  | LCMV         | 305230    |
 | Mammarenavirus juninense           | JUNV         | 2169991   |
 | Orthoebolavirus                    | EBOV         | 3044781   |
-| Orthomarburgvirus                  | EBOV         | 3044783   |
+| Orthomarburgvirus                  | MARV         | 3044783   |
 | Orthoflavivirus denguei            | DENV         | 3052464   |
 | Orthoflavivirus zikaense           | ZIKA         | 3048459   |
 | Emesvirus zinderi                  | MS2          | 329852    |
@@ -33,6 +41,8 @@ Each data set should have an own readme which documents the data set and it's cr
 | Nairoviridae            | NAIRO        | 1980415   |
 
 ## Gaia installation
+
+This has to be replaced!
 
 - created a container using init_container.sh. The container is called nextflow.
 - started the container with run_instance.sh.

@@ -5,12 +5,22 @@ import yaml
 from Bio import SeqIO
 
 
+def read_remove_set(fname):
+    with open(fname) as f_in:
+        return {
+            line.strip()
+            for line in f_in
+            if not line.strip().startswith('#')
+        }
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--taxgroups', required=True, help='Groups with the organism names')
     parser.add_argument('--sequences', required=True, help='Fasta file with sequences')
     parser.add_argument('--outdir', required=True, help='Output directory')
     parser.add_argument('--category', required=True, help='Category like "curated" or "filters"')
+    parser.add_argument('--remove_set', required=True, help='Text file with sequence IDs to remove.')
     parser.add_argument(
         '--organism_label_position',
         default=1,
@@ -26,6 +36,8 @@ def main():
 
     with open(fname_groups) as f_in:
         groups = yaml.safe_load(f_in)
+
+    remove_set = read_remove_set(args.remove_set)
 
     # build a dictionary organism name -> groupkey
     # (e.g. mammarenavirus lassaense -> LASV)
@@ -54,6 +66,8 @@ def main():
     }
 
     for seq in SeqIO.parse(fname_seqs, 'fasta'):
+        if seq.id in remove_set:
+            continue
         organism = seq.description.rsplit('|')[-args.organism_label_position].strip()
         for groupkey in organism_to_group.get(organism, ['NOGROUP']):
             outfiles[groupkey].write(seq.id + '\n')

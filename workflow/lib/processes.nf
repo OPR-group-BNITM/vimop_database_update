@@ -8,7 +8,12 @@ process get_curation_sequences {
     output:
         path("*.fasta")
     """
-    sort_ids_to_groups.py --taxgroups groups.yaml --sequences sequences.fasta --outdir out --category curated
+    sort_ids_to_groups.py \\
+        --taxgroups groups.yaml \\
+        --sequences sequences.fasta \\
+        --outdir out \\
+        --remove_set ${params.remove_set} \\
+        --category curated
 
     for fname_ids in out/*.txt
     do
@@ -27,12 +32,13 @@ process get_filter_sequences {
     output:
         path("out/*.fasta")
     """
-    sort_ids_to_groups.py \
-    --taxgroups groups.yaml \
-    --sequences sequences.fasta \
-    --outdir tmp \
-    --category filters \
-    --organism_label_position 3
+    sort_ids_to_groups.py \\
+        --taxgroups groups.yaml \\
+        --sequences sequences.fasta \\
+        --outdir tmp \\
+        --remove_set ${params.remove_set} \\
+        --category filters \\
+        --organism_label_position 3
 
     if [ -f tmp/NOGROUP.txt ]
     then
@@ -91,13 +97,13 @@ process minimap {
         tuple val(meta), path('mapped.sam')
     """
     set -o pipefail
-    minimap2 \
-        -k ${params.minimap.kmer_length} \
-        -w ${params.minimap.window_size} \
-        -p ${params.minimap.p} \
-        --secondary=no \
-        --eqx \
-        -x map-ont \
+    minimap2 \\
+        -k ${params.minimap.kmer_length} \\
+        -w ${params.minimap.window_size} \\
+        -p ${params.minimap.p} \\
+        --secondary=no \\
+        --eqx \\
+        -x map-ont \\
         -a refs.fasta queries.fasta -o mapped.sam
     """
 }
