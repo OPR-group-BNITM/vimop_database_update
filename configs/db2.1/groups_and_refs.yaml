@@ -92,9 +92,9 @@ curated:
     segments:
       Unsegmented:
         refs:
-        - NC_001608.3
+        - NC_001608.4
         seqs:
-        - NC_001608.3
+        - NC_001608.4
         - NC_024781.1
   DENV:
     name: Orthoflavivirus denguei
