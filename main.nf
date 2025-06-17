@@ -227,7 +227,7 @@ workflow {
         fasta_all | map { fasta -> [fasta, "db", "ALL.fasta"] },
         family_filters | map { fasta -> [fasta, "db", null] },
         blast_db  | map { blast_dir -> [blast_dir, "db", "blast_db"] },
-        output_config | map { config -> [config, "db", "db.yaml"] }
+        output_config | map { config -> [config, "db", "virus.yaml"] }
     )
     | output
 }

@@ -488,7 +488,7 @@ process write_output_config {
             for label in config['filters']
         },
         'version': '${params.output_version}',
-        'description': '${params.output_description}',
+        'description': '"${params.output_description}"',
         'params.fasta_sequences': '${params.fasta_sequences}',
         'params.taxa_config': '${params.taxa_config}',
         'params.filter_max_n_share': ${params.filter_max_n_share},
