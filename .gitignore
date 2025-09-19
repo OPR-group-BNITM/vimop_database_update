@@ -2,3 +2,4 @@ virus/work/
 virus/.nextflow/
 virus/.nextflow.log*
 virus/data/
+.DS_Store
