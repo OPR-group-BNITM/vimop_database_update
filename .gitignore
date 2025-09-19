@@ -1,4 +1,4 @@
-work/
-.nextflow/
-.nextflow.log*
-data/
+virus/work/
+virus/.nextflow/
+virus/.nextflow.log*
+virus/data/
