@@ -46,7 +46,7 @@ python scripts/merge_ncbi_rvdb_covid.py \
 -e nils.petersen@bnitm.de \
 --rvdb data/input_genomes/C-RVDBv30.0.fasta.gz \
 --ncbi data/input_genomes/ncbi_nocovid_20250922.fasta
-```.
+```
 It will merge the NCBI genomes with the covid genomes from RVDB and the Covid reference genome.
 The latter is downloaded from NCBI using Entrez, that is why you have to add your email adress.  
 
