@@ -43,12 +43,13 @@ Save this as `data/input_genomes/ncbi_nocovid_YYYYMMDD` and replace date in the 
 Run the script
 ```
 python scripts/merge_ncbi_rvdb_covid.py \
--e nils.petersen@bnitm.de \
+--email user@host.de \
 --rvdb data/input_genomes/C-RVDBv30.0.fasta.gz \
 --ncbi data/input_genomes/ncbi_nocovid_20250922.fasta
 ```
+Replace the email with yours and set the versions in the fasta filenames according to what you have downloaded. 
 It will merge the NCBI genomes with the covid genomes from RVDB and the Covid reference genome.
-The latter is downloaded from NCBI using Entrez, that is why you have to add your email adress.  
+The Covid reference genome is downloaded from NCBI using Entrez, that is why you have to add your email adress.  
 
 ## Get taxonomic information
 
