@@ -13,13 +13,27 @@ The workflow to create a new data base version requires several steps.
 - run the data set curation pipeline
 - review the outcome (using a jupyter notebook)
 
-## Dowload the data
+## Dowload virus genomes
 
 Read the following to learn how to download and merge data from RVDB and NCBI virus.
 
-### Download RVDB and extract Covid genomes
+### Download RVDB
 
 Go to the [RVDB-website](https://rvdb.dbi.udel.edu/).
+Download the latest Unclustered DB data set and save it in `data/rvdb/U-RVDBvX.fasta.gz` where you replace X with the version number (e.g. 30.0).
+
+### Download NCBI virus genomes without Covid
+
+Open this [NCBI virus link](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=Viruses,%20taxid:10239&VirusLineage_ss=taxid:NOT%202697049). It's all viruses except covid. Download the genomes
+
+### Merge the NCBI and RVDB-Covid data
+
+Run the script ``.
+TODO
+
+## Get taxonomic information
+
+TODO
 
 ## Run a data set curation
 
