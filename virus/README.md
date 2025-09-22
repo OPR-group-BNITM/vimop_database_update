@@ -3,6 +3,24 @@
 This repository contains scripts to create data sets for different virus species.
 The data sets are used as references in our metagenomics pipeline (currently named vimop).
 
+## Overview
+
+The workflow to create a new data base version requires several steps.
+
+- Download sequence data from NCBI virus and RVDB and merge them
+- set up config files to create the data base
+  - get taxonomy information
+- run the data set curation pipeline
+- review the outcome (using a jupyter notebook)
+
+## Dowload the data
+
+Read the following to learn how to download and merge data from RVDB and NCBI virus.
+
+### Download RVDB and extract Covid genomes
+
+Go to the [RVDB-website](https://rvdb.dbi.udel.edu/).
+
 ## Run a data set curation
 
 There is a test run in `testset`. You can run it by typing `nextflow main.nf -c testset/test.config`. The results will be written to `data/output_databases/test`. The reference virus genome data base is then found in `data/output_databases/test/db`. It contains files with genomes for the respective filters, a yaml config file and the blast data base.
