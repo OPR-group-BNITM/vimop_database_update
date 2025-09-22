@@ -47,7 +47,7 @@ def main():
 
         # Step 2: Add all RVDB covid genomes
 
-        with gzip_open(args.input) as f_rvdb:
+        with gzip_open(args.rvdb) as f_rvdb:
             for record in SeqIO.parse(f_rvdb, 'fasta'):
                 descr_split = record.id.split('|')
                 if len(descr_split) < 5:

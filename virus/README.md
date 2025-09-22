@@ -45,7 +45,8 @@ Run the script
 python scripts/merge_ncbi_rvdb_covid.py \
 --email user@host.de \
 --rvdb data/input_genomes/C-RVDBv30.0.fasta.gz \
---ncbi data/input_genomes/ncbi_nocovid_20250922.fasta
+--ncbi data/input_genomes/ncbi_nocovid_20250922.fasta \
+--output data/input_genomes/ncbi_nocovid_20250922_crvdbv30.0_covid.fasta
 ```
 Replace the email with yours and set the versions in the fasta filenames according to what you have downloaded. 
 It will merge the NCBI genomes with the covid genomes from RVDB and the Covid reference genome.
