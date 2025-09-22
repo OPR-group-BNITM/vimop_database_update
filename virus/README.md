@@ -45,7 +45,7 @@ The following viruses and families are currently in our data sets.
 | Hantaviridae            | HANTA        | 1980413   |
 | Nairoviridae            | NAIRO        | 1980415   |
 
-## Container setup
+## Container setup for slurm
 
 To run this inside a container (e.g. in slurm system) you need to install the following inside the container:
 - conda (best to use an image with conda and mamba already installed)
