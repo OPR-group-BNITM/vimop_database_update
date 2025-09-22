@@ -20,16 +20,28 @@ Read the following to learn how to download and merge data from RVDB and NCBI vi
 ### Download RVDB
 
 Go to the [RVDB-website](https://rvdb.dbi.udel.edu/).
-Download the latest Unclustered DB data set and save it in `data/rvdb/U-RVDBvX.fasta.gz` where you replace X with the version number (e.g. 30.0).
+Download the latest Unclustered DB data set and save it in `data/input_genomes/U-RVDBvX.fasta.gz` where you replace X with the version number (e.g. 30.0).
 
 ### Download NCBI virus genomes without Covid
 
-Open this [NCBI virus link](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=Viruses,%20taxid:10239&VirusLineage_ss=taxid:NOT%202697049). It's all viruses except covid. Download the genomes
+Open this [NCBI virus link](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=Viruses,%20taxid:10239&VirusLineage_ss=taxid:NOT%202697049). It's all viruses except covid. Click the following
+
+- Download All Results
+- Nucleotide
+- Donwload All Records
+- Build Custom
+  - Accession
+  - GenBankTitle
+  - Accession
+  - Species
+- Download
+
+Save this as `data/input_genomes/ncbi_nocovid_YYYYMMDD` and replace date in the format year, month, data (e.g. 20251029 for the 29th octobre 2025).
 
 ### Merge the NCBI and RVDB-Covid data
 
 Run the script ``.
-TODO
+It will merge the NCBI genomes with the covid genomes from RVDB and the Covid reference genome. The latter is downloaded from NCBI using Entrez, that is why you have to add your email adress.  
 
 ## Get taxonomic information
 

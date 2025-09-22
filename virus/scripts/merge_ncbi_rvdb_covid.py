@@ -23,7 +23,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-e', '--email', help='email used for entrez to download refseq covid sequence')
     parser.add_argument('--covid-refseq-id', help='Covid Refseq sequence is included', default='NC_045512.2')
-    parser.add_argument('-i', '--input', required=True, help="RVDB input fasta file.")
+    parser.add_argument('--rvdb', required=True, help="RVDB input fasta file.")
+    parser.add_argument('--ncbi', required=True, help="NCBI virus input fasta file.")
     parser.add_argument('-o', '--output', required=True, help="Output fasta file.")
     args = parser.parse_args()
 
@@ -31,6 +32,9 @@ def main():
     covid = 'Severe acute respiratory syndrome coronavirus 2'
 
     with open(args.output, 'w') as f_out:
+
+        # Step 1: Download the RefSeq covid entry
+
         Entrez.email = args.email
         with Entrez.efetch(db='nuccore', id=args.covid_refseq_id, rettype='fasta', retmode='text') as handle:
             record = SeqIO.read(io.StringIO(handle.read()), 'fasta')
@@ -41,8 +45,10 @@ def main():
             )
             SeqIO.write(refseq_out, f_out, 'fasta')
 
-        with gzip_open(args.input) as f_in:
-            for record in SeqIO.parse(f_in, 'fasta'):
+        # Step 2: Add all RVDB covid genomes
+
+        with gzip_open(args.input) as f_rvdb:
+            for record in SeqIO.parse(f_rvdb, 'fasta'):
                 descr_split = record.id.split('|')
                 if len(descr_split) < 5:
                     continue
@@ -57,6 +63,12 @@ def main():
                         seq=record.seq
                     )
                     SeqIO.write(seq_out, f_out, 'fasta')
+
+        # Step 3: merge with all other species genomes from NCBI virus
+
+        with gzip_open(args.ncbi) as f_ncbi:
+            for ncbi_record in SeqIO.parse(f_ncbi, 'fasta'):
+                SeqIO.write(ncbi_record, f_out, 'fasta')
 
 
 if __name__ == '__main__':
