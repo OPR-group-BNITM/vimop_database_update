@@ -7,6 +7,10 @@ The data sets are used as references in our metagenomics pipeline (currently nam
 
 There is a test run in `testset`. You can run it by typing `nextflow main.nf -c testset/test.config`. The results will be written to `data/output_databases/test`. The reference virus genome data base is then found in `data/output_databases/test/db`. It contains files with genomes for the respective filters, a yaml config file and the blast data base.
 
+By default this pipeline runs with docker, but you can also choose other profiles using `-profile conda` or `-profile noenv`.
+The latter requires the dependencies to be installed in the sourrounding system.  
+This can be useful, if you want to run this in a slurm container. 
+
 ## Review the outcome
 
 To have a look into the statistics of the curated data sets use the jupyter notebook workflow/utils/evaluate.ipynb and change the paths and data set name to the one you are interested in.
@@ -43,33 +47,11 @@ The following viruses and families are currently in our data sets.
 
 ## Container setup
 
-This has to be replaced!
-
-- created a container using init_container.sh. The container is called nextflow.
-- started the container with run_instance.sh.
-  - installed java (apt-get install -y openjdk-11-jdk-headless)
-  - installed nextflow 
+To run this inside a container (e.g. in slurm system) you need to install the following inside the container:
+- conda (best to use an image with conda and mamba already installed)
+- java (apt-get install -y openjdk-11-jdk-headless)
+- nextflow:
     - wget -qO- https://get.nextflow.io | bash && \
       chmod +x nextflow && \
       mv nextflow /usr/local/bin/
-    - afterwards install the conda environment in docker_images/general/env.yaml
-  - BEFORE:
-    - created conda environments
-      - conda create -n aligner
-        - python=3.11
-        - seqtk=1.4
-        - minimap2=2.1.1
-        - samtools=1.21
-        - pysam=0.22.1
-        - biopython=1.85
-        - pandas=2.2.3
-      - conda create -n jupyter
-        - python=3.12
-        - jupyter=1.1.1
-        - papermill=2.6.0
-        - pandas=2.2.2.
-        - matplotlib=3.10.0
-        - biopython=1.85
-      - conda create -n msa
-        - cd-hit=4.8.1
-        - muscle=5.3
+- the conda environment in docker_images/general/env.yaml
