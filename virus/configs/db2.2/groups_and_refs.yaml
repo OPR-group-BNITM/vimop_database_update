@@ -1,0 +1,210 @@
+curated:
+  COVID:
+    name: Severe acute respiratory syndrome coronavirus 2
+    taxa:
+    - taxid: 2697049
+    segments:
+      Unsegmented:
+        refs:
+        - NC_045512.2
+        seqs:
+        - NC_045512.2
+  LASV:
+    name: Mammarenavirus lassense
+    taxa:
+    - taxid: 3052310
+    segments:
+      S:
+        refs:
+        - NC_004296.1
+        seqs:
+        - NC_004296.1
+        - KM822128.1
+        - GU481068.1
+        - OL774861.1
+        - HQ688672.1
+        - FR832711.1
+        - KT992425.1
+        - KU961971.1
+      L:
+        refs:
+        - NC_004297.1
+        seqs:
+        - NC_004297.1
+        - KM822127.1
+        - GU481069.1
+        - OL774860.1
+        - HQ688674.1
+        - FR832710.1
+        - KT992435.1
+        - KU961972.2
+  LCMV:
+    name: Mammarenavirus choriomeningitidis
+    taxa:
+    - taxid: 3052303
+    segments:
+      L:
+        refs:
+        - NC_077806.1
+        seqs:
+        - NC_077806.1
+        - NC_004291.1
+      S:
+        refs:
+        - NC_077807.1
+        seqs:
+        - NC_077807.1
+        - NC_004294.1
+  JUNV:
+    name: Mammarenavirus juninense
+    taxa:
+    - taxid: 2169991
+    segments:
+      L:
+        refs:
+        - NC_005080.1
+        seqs:
+        - NC_005080.1
+      S:
+        refs:
+        - NC_005081.1
+        seqs:
+        - NC_005081.1
+  EBOV:
+    name: Orthoebolavirus
+    taxa:
+    - taxid: 3044781
+    segments:
+      Unsegmented:
+        refs:
+        - NC_002549.1
+        seqs:
+        - NC_002549.1
+        - NC_039345.1
+        - NC_014373.1
+        - NC_014372.1
+        - NC_006432.1
+        - NC_004161.1
+  MARV:
+    name: Orthomarburgvirus
+    taxa:
+    - taxid: 3044783
+    segments:
+      Unsegmented:
+        refs:
+        - NC_001608.4
+        seqs:
+        - NC_001608.4
+        - NC_024781.1
+  DENV:
+    name: Orthoflavivirus denguei
+    taxa:
+    - taxid: 3052464
+    segments:
+      Unsegmented:
+        refs:
+        - NC_001475.2
+        seqs:
+        - NC_001477.1
+        - NC_001474.2
+        - NC_001475.2
+        - NC_002640.1
+  ZIKA:
+    name: Orthoflavivirus zikaense
+    taxa:
+    - taxid: 3048459
+    segments:
+      Unsegmented:
+        refs:
+        - NC_035889.1
+        seqs:
+        - NC_035889.1
+        - NC_012532.1
+  MS2:
+    name: Emesvirus zinderi
+    taxa:
+    - taxid: 329852
+    segments:
+      Unsegmented:
+        refs:
+        - NC_001417.2
+        seqs:
+        - NC_001417.2
+  YFV:
+    name: Orthoflavivirus flavi
+    taxa:
+    - taxid: 3046277
+    segments:
+      Unsegmented:
+        refs:
+        - NC_002031.1
+        seqs:
+        - NC_002031.1
+  WNV:
+    name: Orthoflavivirus nilense
+    taxa:
+    - taxid: 3048448
+    segments:
+      Unsegmented:
+        refs:
+        - NC_009942.1
+        seqs:
+        - NC_009942.1
+        - NC_001563.2
+  HAZV:
+    name: Orthonairovirus hazaraense
+    taxa:
+    - taxid: 3052519
+    segments:
+      L:
+        refs:
+        - NC_038709.1
+        seqs:
+        - NC_038709.1
+      M:
+        refs:
+        - NC_038710.1
+        seqs:
+        - NC_038710.1
+      S:
+        refs:
+        - NC_038711.1
+        seqs:
+        - NC_038711.1
+  HIV1:
+    name: Human immunodeficiency virus 1
+    taxa:
+    - taxid: 11676
+    segments:
+      Unsegmented:
+        refs:
+        - NC_001802.1
+        seqs:
+        - NC_001802.1
+  HIV2:
+    name: Human immunodeficiency virus 2
+    taxa:
+    - taxid: 11709
+    segments:
+      Unsegmented:
+        refs:
+        - NC_001722.1
+        seqs:
+        - NC_001722.1
+filters:
+  ARENA:
+    name: Arenaviridae
+    taxa:
+    - taxid: 11617
+  FILO:
+    name: Filoviridae
+    taxa:
+    - taxid: 11266
+  HANTA:
+    name: Hantaviridae
+    taxa:
+    - taxid: 1980413
+  NAIRO:
+    name: Nairoviridae
+    taxa:
+    - taxid: 1980415
