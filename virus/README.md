@@ -57,8 +57,10 @@ The Covid reference genome is downloaded from NCBI using Entrez, that is why you
 ### Define the curated data set
 
 Create a configuration file to define curated data sets and filters.
-Example:
+Save this in `configs/dbX.Y/groups_and_refs.yaml` (replace X and Y with your version).
+Typically you want to copy this from a previous version and modify it if needed.
 
+Example:
 ```
 curated:
   COVID:
@@ -104,7 +106,6 @@ The first section `curated` holds the curated species.
 `seqs` are more reference genomes.
 Note, that all genomes in the input data set will be considered for this data set.
 The sequences here are used to compare all sequences to in order to filter out genomes in the data set, that are assigned falsely to this taxon.
-Save this in `configs/dbX.Y/groups_and_refs.yaml` (replace X and Y with your version).
 
 ### Add organism names
 
@@ -114,6 +115,7 @@ python scripts/fetch_organisms_for_taxids.py \
   --config configs/db2.2/groups_and_refs.yaml \
   --out configs/db2.2/groups_refs_and_organisms.yaml
 ```
+to add organism names.
 
 ## Run a data set curation
 
