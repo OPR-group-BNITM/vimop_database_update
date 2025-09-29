@@ -1,0 +1,4396 @@
+curated:
+  COVID:
+    name: Severe acute respiratory syndrome coronavirus 2
+    taxa:
+    - taxid: 2697049
+      organisms:
+      - Severe acute respiratory syndrome coronavirus 2
+    segments:
+      Unsegmented:
+        refs:
+        - NC_045512.2
+        seqs:
+        - NC_045512.2
+  LASV:
+    name: Mammarenavirus lassense
+    taxa:
+    - taxid: 3052310
+      organisms:
+      - Mammarenavirus lassaense
+      - Lassa virus Josiah
+      - Lassa virus GA391
+    segments:
+      S:
+        refs:
+        - NC_004296.1
+        seqs:
+        - NC_004296.1
+        - KM822128.1
+        - GU481068.1
+        - OL774861.1
+        - HQ688672.1
+        - FR832711.1
+        - KT992425.1
+        - KU961971.1
+      L:
+        refs:
+        - NC_004297.1
+        seqs:
+        - NC_004297.1
+        - KM822127.1
+        - GU481069.1
+        - OL774860.1
+        - HQ688674.1
+        - FR832710.1
+        - KT992435.1
+        - KU961972.2
+  LCMV:
+    name: Mammarenavirus choriomeningitidis
+    taxa:
+    - taxid: 3052303
+      organisms:
+      - Mammarenavirus choriomeningitidis
+      - Dandenong virus
+      - Lymphocytic choriomeningitis virus (strain WE)
+      - Lymphocytic choriomeningitis virus (strain Traub)
+      - Lymphocytic choriomeningitis virus (strain Pasteur)
+      - Lymphocytic choriomeningitis virus (strain Armstrong)
+    segments:
+      L:
+        refs:
+        - NC_077806.1
+        seqs:
+        - NC_077806.1
+        - NC_004291.1
+      S:
+        refs:
+        - NC_077807.1
+        seqs:
+        - NC_077807.1
+        - NC_004294.1
+  JUNV:
+    name: Mammarenavirus juninense
+    taxa:
+    - taxid: 2169991
+      organisms:
+      - Mammarenavirus juninense
+    segments:
+      L:
+        refs:
+        - NC_005080.1
+        seqs:
+        - NC_005080.1
+      S:
+        refs:
+        - NC_005081.1
+        seqs:
+        - NC_005081.1
+  EBOV:
+    name: Orthoebolavirus
+    taxa:
+    - taxid: 3044781
+      organisms:
+      - Orthoebolavirus zairense
+      - Orthoebolavirus taiense
+      - Orthoebolavirus sudanense
+      - Orthoebolavirus restonense
+      - Orthoebolavirus bundibugyoense
+      - Orthoebolavirus bombaliense
+      - Orthoebolavirus
+      - Bombali virus
+      - Zaire ebolavirus Makona
+      - Ebola virus
+      - Sudan ebolavirus - Nakisamata
+      - Bundibugyo virus
+      - Ebola virus Yambio0403
+      - Ebola virus Yambio0402
+      - Ebola virus Yambio0401
+      - Sudan ebolavirus - Uganda (2000)
+      - Reston ebolavirus - Reston (1989)
+      - Tai Forest ebolavirus
+      - Sudan ebolavirus
+      - Reston ebolavirus
+      - Zaire ebolavirus
+      - Reston ebolavirus - Siena/Philippine-92
+      - Reston ebolavirus - Reston
+      - Ebola virus - Eckron (Zaire, 1976)
+      - Tai Forest virus - Cote d'Ivoire, Cote d'Ivoire, 1994
+      - Ebola virus - Mayinga, Zaire, 1976
+      - Ebola virus - Zaire (1995)
+      - Sudan ebolavirus - Maleo (1979)
+      - Sudan virus - Boniface, Sudan,1976
+      - Ebola virus - Gabon (1994-1997)
+    segments:
+      Unsegmented:
+        refs:
+        - NC_002549.1
+        seqs:
+        - NC_002549.1
+        - NC_039345.1
+        - NC_014373.1
+        - NC_014372.1
+        - NC_006432.1
+        - NC_004161.1
+  MARV:
+    name: Orthomarburgvirus
+    taxa:
+    - taxid: 3044783
+      organisms:
+      - Orthomarburgvirus marburgense
+      - Orthomarburgvirus
+      - Marburg virus - Angola
+      - Marburg virus - Uganda
+      - Lake Victoria marburgvirus - Leiden
+      - Lake Victoria marburgvirus - Ozolin
+      - Lake Victoria marburgvirus - Ci67
+      - Lake Victoria marburgvirus - DRC1999
+      - Lake Victoria marburgvirus - Angola2005
+      - Ravn virus - Ravn, Kenya, 1987
+      - Lake Victoria marburgvirus - Popp
+      - Marburg virus - Musoke, Kenya, 1980
+    segments:
+      Unsegmented:
+        refs:
+        - NC_001608.4
+        seqs:
+        - NC_001608.4
+        - NC_024781.1
+  DENV:
+    name: Orthoflavivirus denguei
+    taxa:
+    - taxid: 3052464
+      organisms:
+      - Orthoflavivirus denguei
+      - Dengue virus 2 Thailand/0168/1979
+      - Dengue virus 4 Dominica/814669/1981
+      - Dengue virus 3 Philippines/H87/1956
+      - Dengue virus 2 Peru/IQT2913/1996
+      - Dengue virus 3 Singapore/8120/1995
+      - Dengue virus 3 Sri Lanka/1266/2000
+      - Dengue virus 3 Martinique/1243/1999
+      - Dengue virus 3 China/80-2/1980
+      - Dengue virus 4 Thailand/0476/1997
+      - Dengue virus 4 Thailand/0348/1991
+      - Dengue virus 4 Singapore/8976/1995
+      - Dengue virus 4 Philippines/H241/1956
+      - Dengue virus 1 Brazil/97-11/1997
+      - Dengue virus 1 Singapore/S275/1990
+      - Dengue virus 2 Thailand/TH-36/1958
+      - Dengue virus 2 China/D2-04
+      - Dengue virus 2 16681-PDK53
+      - Dengue virus 2 Thailand/16681/84
+      - Dengue virus
+      - dengue virus type 4
+      - dengue virus type 3
+      - Dengue virus 2 Thailand/PUO-218/1980
+      - Dengue virus 2 Tonga/EKB194/1974
+      - Dengue virus 2 Puerto Rico/PR159-S1/1969
+      - Dengue virus 2 Thailand/NGS-C/1944
+      - Dengue virus 2 Jamaica/1409/1983
+      - Dengue virus 2 Malaysia M3
+      - Dengue virus 2 Malaysia M2
+      - dengue virus type 2
+      - Dengue virus 1 Nauru/West Pac/1974
+      - Dengue virus 1 Jamaica/CV1636/1977
+      - Dengue virus 1 Thailand/AHF 82-80/1980
+      - dengue virus type 1
+    segments:
+      Unsegmented:
+        refs:
+        - NC_001475.2
+        seqs:
+        - NC_001477.1
+        - NC_001474.2
+        - NC_001475.2
+        - NC_002640.1
+  ZIKA:
+    name: Orthoflavivirus zikaense
+    taxa:
+    - taxid: 3048459
+      organisms:
+      - Zika virus MR766
+      - Orthoflavivirus zikaense
+      - Zika virus ZIKV/Human/Cambodia/FSS13025/2010
+      - Zika virus ZIKV/H. sapiens/FrenchPolynesia/10087PF/2013
+      - Zika virus
+    segments:
+      Unsegmented:
+        refs:
+        - NC_035889.1
+        seqs:
+        - NC_035889.1
+        - NC_012532.1
+  MS2:
+    name: Emesvirus zinderi
+    taxa:
+    - taxid: 329852
+      organisms:
+      - Enterobacteria phage ZR
+      - Emesvirus zinderi
+      - Enterobacteria phage M12
+      - Enterobacteria phage fr1
+      - Enterobacteria phage R17
+      - Escherichia phage MS2
+      - Enterobacteria phage JP501
+      - Enterobacteria phage fr
+      - Enterobacteria phage f2
+    segments:
+      Unsegmented:
+        refs:
+        - NC_001417.2
+        seqs:
+        - NC_001417.2
+  YFV:
+    name: Orthoflavivirus flavi
+    taxa:
+    - taxid: 3046277
+      organisms:
+      - Orthoflavivirus flavi
+      - Yellow fever virus 17D/Tiantan
+      - Yellow fever virus isolate Ethiopia/Couma/1961
+      - Yellow fever virus isolate Angola/14FA/1971
+      - Yellow fever virus isolate Uganda/A7094A4/1948
+      - Yellow fever virus isolate Ivory Coast/85-82H/1982
+      - Yellow fever virus Trinidad/79A/1979
+      - Yellow fever virus isolate Ivory Coast/1999
+      - Yellow fever virus strain French neurotropic vaccine
+      - Yellow fever virus strain Ghana/Asibi/1927
+      - Yellow fever virus 1899/81
+      - Yellow fever virus 17D
+      - Yellow fever virus
+    segments:
+      Unsegmented:
+        refs:
+        - NC_002031.1
+        seqs:
+        - NC_002031.1
+  WNV:
+    name: Orthoflavivirus nilense
+    taxa:
+    - taxid: 3048448
+      organisms:
+      - Orthoflavivirus nilense
+      - West Nile virus 2
+      - West Nile virus 1
+      - West Nile virus strain NY-99
+      - West Nile virus strain PT6.39
+      - West Nile virus strain PT6.5
+      - West Nile virus strain PT5.2
+      - West Nile virus strain PT6.16
+      - West Nile virus crow/New York/3356/2000
+      - West Nile virus H442
+      - West Nile virus SA381/00
+      - West Nile virus SPU116/89
+      - West Nile virus SA93/01
+      - West Nile virus strain PTRoxo
+      - West Nile virus strain 385-99
+      - West Nile virus
+      - Kunjin virus (STRAIN MRM61C)
+      - Kunjin virus
+    segments:
+      Unsegmented:
+        refs:
+        - NC_009942.1
+        seqs:
+        - NC_009942.1
+        - NC_001563.2
+  HAZV:
+    name: Orthonairovirus hazaraense
+    taxa:
+    - taxid: 3052519
+      organisms:
+      - Orthonairovirus hazaraense
+      - Hazara virus (isolate JC280)
+      - Hazara virus
+    segments:
+      L:
+        refs:
+        - NC_038709.1
+        seqs:
+        - NC_038709.1
+      M:
+        refs:
+        - NC_038710.1
+        seqs:
+        - NC_038710.1
+      S:
+        refs:
+        - NC_038711.1
+        seqs:
+        - NC_038711.1
+  HIV1:
+    name: Human immunodeficiency virus 1
+    taxa:
+    - taxid: 11676
+      organisms:
+      - HIV-1 recombinants
+      - HIV-1 recombinant
+      - HIV-1 M:CRF01 BA5
+      - HIV-1 M:CRF02 BA244
+      - HIV-1 M:CRF11 BA243
+      - HIV-1 M:G BA222
+      - HIV-1 M:H BA204
+      - HIV-1 M:CRF01 BA203
+      - HIV-1 M:CRF01 BA131
+      - HIV-1 M:CRF01 BA83
+      - HIV-1 M:CRF15 BA46
+      - HIV-1 M:CRF11 BA22
+      - HIV-1 M:CRF11 BA245
+      - HIV-1 M:G BA212
+      - HIV-1 M:A1 BA194
+      - HIV-1 M:CRF01 BA183
+      - HIV-1 M:CRF15 BA162
+      - HIV-1 M:D BA69
+      - HIV-1 M:A1 BA23
+      - HIV-1 M:CRF11 BA17
+      - HIV-1 M:CRF11 BA15
+      - HIV-1 M:A1 BA6
+      - HIV-1 M:CRF01 BA4
+      - HIV-1 M:CRF02 BA2
+      - HIV-1 CRO1171
+      - HIV-1 CRO1188
+      - HIV-1 CRO1091_2
+      - HIV-1 CRO777_2
+      - HIV-1 CRO777_1
+      - HIV-1 CRO1130
+      - HIV-1 CRO480_3
+      - HIV-1 CRO479_3
+      - HIV-1 CRO729_2
+      - HIV-1 CRO832_2
+      - HIV-1 CRO23_3
+      - HIV-1 CRO1006_2
+      - HIV-1 CRO588_2
+      - HIV-1 CRO1091_1
+      - HIV-1 CRO832_1
+      - HIV-1 CRO65_3
+      - HIV-1 CRO23_2
+      - HIV-1 CRO1019
+      - HIV-1 CRO780
+      - HIV-1 CRO480_2
+      - HIV-1 CRO729_1
+      - HIV-1 CRO519
+      - HIV-1 CRO569
+      - HIV-1 CRO322
+      - HIV-1 CRO707_2
+      - HIV-1 CRO1000
+      - HIV-1 CRO514
+      - HIV-1 CRO1006_1
+      - HIV-1 CRO372_2
+      - HIV-1 CRO462_3
+      - HIV-1 CRO267
+      - HIV-1 CRO834_3
+      - HIV-1 CRO851
+      - HIV-1 CRO800
+      - HIV-1 CRO477_3
+      - HIV-1 CRO479_2
+      - HIV-1 CRO480_1
+      - HIV-1 CRO240
+      - HIV-1 CRO574
+      - HIV-1 CRO5_2
+      - HIV-1 CRO817
+      - HIV-1 CRO580
+      - HIV-1 CRO588_1
+      - HIV-1 M:CRF02_BA244
+      - HIV-1 M:G_BA240
+      - HIV-1 M:CRF11_BA238
+      - HIV-1 M:CRF11_BA237
+      - HIV-1 M:G_BA234
+      - HIV-1 M:G_BA233
+      - HIV-1 M:A1_BA232
+      - HIV-1 M:CRF01_BA231
+      - HIV-1 M:CRF11_BA226
+      - HIV-1 M:CRF11_BA224
+      - HIV-1 M:CRF11_BA220
+      - HIV-1 M:CRF15_BA219
+      - HIV-1 M:F1_BA216
+      - HIV-1 M:CRF02_BA215
+      - HIV-1 M:H_BA208
+      - HIV-1 M:G_BA202
+      - HIV-1 M:CRF11_BA199
+      - HIV-1 M:CRF11_BA195
+      - HIV-1 M:CRF11_BA192
+      - HIV-1 M:CRF02_BA190
+      - HIV-1 M:CRF11_BA189
+      - HIV-1 M:CRF11_BA185
+      - HIV-1 M:CRF11_BA184
+      - HIV-1 M:CRF01_BA179
+      - HIV-1 M:CRF11_BA177
+      - HIV-1 M:G_BA172
+      - HIV-1 M:CRF01_BA165
+      - HIV-1 M:CRF11_BA159
+      - HIV-1 M:G_BA157
+      - HIV-1 M:CRF01_BA156
+      - HIV-1 M:A1_BA153
+      - HIV-1 M:G_BA152
+      - HIV-1 M:CRF01_BA148
+      - HIV-1 M:A1_BA147
+      - HIV-1 M:CRF01_BA146
+      - HIV-1 M:CRF11_BA137
+      - HIV-1 M:G_BA134
+      - HIV-1 M:CRF01_BA131
+      - HIV-1 M:CRF01_BA128
+      - HIV-1 M:CRF11_BA126
+      - HIV-1 M:G_BA125
+      - HIV-1 M:CRF11_BA124
+      - HIV-1 M:CRF11_BA123
+      - HIV-1 M:CRF01_BA121
+      - HIV-1 M:A1_BA88
+      - HIV-1 M:CRF11_BA87
+      - HIV-1 M:D_BA85
+      - HIV-1 M:CRF11_BA78
+      - HIV-1 M:CRF01_BA77
+      - HIV-1 M:CRF01_BA76
+      - HIV-1 M:CRF11_BA68
+      - HIV-1 M:CRF01_BA67
+      - HIV-1 M:CRF02_BA60
+      - HIV-1 M:CRF02_BA59
+      - HIV-1 M:CRF02_BA58
+      - HIV-1 M:A1_BA56
+      - HIV-1 M:CRF02_BA53
+      - HIV-1 M:CRF11_BA51
+      - HIV-1 M:CRF15_BA49
+      - HIV-1 M:A1_BA44
+      - HIV-1 M:A1_BA41
+      - HIV-1 M:CRF11_BA37
+      - HIV-1 M:CRF11_BA36
+      - HIV-1 M:CRF02_BA35
+      - HIV-1 M:CRF01_BA33
+      - HIV-1 M:A1_BA32
+      - HIV-1 M:A1_BA31
+      - HIV-1 M:CRF01_BA30
+      - HIV-1 M:CRF11_BA29
+      - HIV-1 M:C_BA28
+      - HIV-1 M:CRF11_BA25
+      - HIV-1 M:A1_BA18
+      - HIV-1 M:CRF11_BA14
+      - HIV-1 M:CRF01_BA13
+      - HIV-1 M:CRF01_BA11
+      - HIV-1 M:CRF11_BA9
+      - HIV-1 M:CRF01_BA8
+      - HIV-1 M:CRF11_BA7
+      - HIV-1 M:A1_BA3
+      - HIV-1 M:CRF11_BA242
+      - HIV-1 M:CRF11_BA230
+      - HIV-1 M:CRF11_BA227
+      - HIV-1 M:CRF11_BA225
+      - HIV-1 M:CRF01_BA219
+      - HIV-1 M:CRF02_BA213
+      - HIV-1 M:B_BA205
+      - HIV-1 M:H_BA201
+      - HIV-1 M:A1_BA200
+      - HIV-1 M:CRF11_BA197
+      - HIV-1 M:CRF13_BA182
+      - HIV-1 M:CRF11_BA175
+      - HIV-1 M:CRF11_BA173
+      - HIV-1 M:CRF01_BA166
+      - HIV-1 M:CRF15_BA162
+      - HIV-1 M:D_BA160
+      - HIV-1 M:CRF01_BA151
+      - HIV-1 M:CRF11_BA150
+      - HIV-1 M:CRF11_BA149
+      - HIV-1 M:CRF01_BA133
+      - HIV-1 M:CRF01_BA132
+      - HIV-1 M:CRF01_BA118
+      - HIV-1 M:A1_BA117
+      - HIV-1 M:CRF11_BA116
+      - HIV-1 M:B_BA111
+      - HIV-1 M:A1_BA110
+      - HIV-1 M:CRF11_BA109
+      - HIV-1 M:A1_BA106
+      - HIV-1 M:F1_BA97
+      - HIV-1 M:CRF01_BA94
+      - HIV-1 M:F1_BA93
+      - HIV-1 M:CRF11_BA80
+      - HIV-1 M:CRF11_BA72
+      - HIV-1 M:D_BA69
+      - HIV-1 M:D_BA66
+      - HIV-1 M:CRF13_BA64
+      - HIV-1 M:A1_BA52
+      - HIV-1 M:CRF11_BA50
+      - HIV-1 M:A1_BA49
+      - HIV-1 M:CRF11_BA48
+      - HIV-1 M:CRF13_BA40
+      - HIV-1 M:CRF11_BA34
+      - HIV-1 M:CRF02_BA26
+      - HIV-1 M:A1_BA23
+      - HIV-1 M:CRF11_BA20
+      - HIV-1 M:H_BA16
+      - HIV-1 M:C_BA12
+      - HIV-1 M:CRF01_BA1
+      - HIV-1 M:CRF02_AG_1393HALD
+      - HIV-1 M:CRF02_AG_4921HALD
+      - HIV-1 M:A3_4769RTHALD
+      - HIV-1 M:U/A3_4769PROTHALD
+      - HIV-1 M:C_510HALD
+      - HIV-1 M:CRF02_AG_49HALD
+      - HIV-1 M:A1 Br-42A1
+      - HIV-1 M:A1 Br-48A1
+      - HIV-1 M:A1 Br-33A1
+      - HIV-1 M:A1 Br-41A1
+      - HIV-1 M:A1 Br-40A1
+      - HIV-1 M:A1 Br-38A1
+      - HIV-1 M:A1 Br-37A1
+      - HIV-1 M:A1 Br-34A1
+      - HIV-1 M:A1 Br-32A1
+      - HIV-1 M:D_3259Hald
+      - HIV-1 M:CRF06_cpx_2401Hald
+      - HIV-1 M:CRF02_AG_2107Hald
+      - HIV-1 M:CRF45_cpx/U_1523Hald
+      - HIV-1 M:CRF02_AG_1837Hald
+      - HIV-1 M:CRF02_AG_8253Hald
+      - HIV-1 M:C_2931Hald
+      - HIV-1 M:B_101Hald
+      - HIV-1 M:CRF02_AG_4039Hald
+      - HIV-1 M:CRF02_AG_2413Hald-RT
+      - HIV-1 M:CRF02_AG_2413Hald-PROT
+      - HIV-1 M:CRF02_AG_2698Hald
+      - HIV-1 M:CRF02_AG_929Hald
+      - HIV-1 M:CRF02_AG/A3_8253Hald
+      - HIV-1 M:CRF13_cpx_2829Hald
+      - HIV-1 M:CRF02_AG_2613Hald
+      - HIV-1 M:CRF06_cpx/CRF02_AG_2401Hald
+      - HIV-1 M:CRF02_AG_2340Hald
+      - HIV-1 M:C_1032Hald-RT
+      - HIV-1 M:U/CRF45_cpx_1523Hald
+      - HIV-1 M:U/CRF
+      - HIV-1 M:URF(C/A/C/U/C)
+      - HIV-1 M:URF(A/C/U/C)
+      - HIV-1 M:URF(C/A1/C)
+      - HIV-1 M:URF(U/C/CRF10/A)
+      - HIV-1 M:URF(A/U/C)
+      - HIV-1 M:URF(A/C/A/C/A/C)
+      - HIV-1 M:URF(C/A/C)
+      - HIV-1 M:URF(C/A)
+      - HIV-1 M:URF(C/A1)
+      - HIV-1 M:URF(A/C)
+      - HIV-1 M:URF(CRF45_cpx/C)
+      - HIV-1 M:URF(A1/C/A/C)
+      - HIV-1 M:URF(A1/C)
+      - HIV-1 M:URF(A/D/A)
+      - HIV-1 M:URF(A/C/A)
+      - HIV-1 M:CRF06_cpx_MAU60-PROT
+      - HIV-1 M:D'/A1_MAU2002
+      - HIV-1 M:CRF02_AG_MAU2048
+      - HIV-1 M:A3_MAU1838
+      - HIV-1 M:CRF02_AG_MAU1743
+      - HIV-1 M:CRF11_cpx_MAU963
+      - HIV-1 M:CRF02_AG_MAU523
+      - HIV-1 M:CRF02_AG/A3_MAU2140
+      - HIV-1 M:CRF02_AG_MAU2117
+      - HIV-1 M:CRF02_AG_MAU2115
+      - HIV-1 M:CRF02_AG_MAU2073
+      - HIV-1 M:CRF02_AG_MAU2059
+      - HIV-1 M:A3/U_MAU2044
+      - HIV-1 M:CRF02_AG_MAU1911
+      - HIV-1 M:A3/U_MAU1876
+      - HIV-1 M:CRF02_AG_MAU1860
+      - HIV-1 M:CRF02_AG_MAU1674
+      - HIV-1 M:CRF02_AG_MAU1567
+      - HIV-1 M:CRF06_cpx_MAU1554
+      - HIV-1 M:CRF02_AG_MAU1399
+      - HIV-1 M:CRF02_AG_MAU1339
+      - HIV-1 M:CRF02_AG_MAU1298
+      - HIV-1 M:CRF02_AG_MAU1247
+      - HIV-1 M:CRF06_cpx_MAU1213
+      - HIV-1 M:CRF02_AG_MAU1151
+      - HIV-1 M:CRF02_AG_MAU1138
+      - HIV-1 M:CRF02_AG_MAU1120
+      - HIV-1 M:CRF02_AG_MAU1086
+      - HIV-1 M:CRF37_cpx/U_MAU969
+      - HIV-1 M:CRF02_AG_MAU938
+      - HIV-1 M:CRF02_AG_MAU938-PROT
+      - HIV-1 M:CRF06_cpx_MAU922
+      - HIV-1 M:CRF02_AG_MAU765
+      - HIV-1 M:A3_MAU759
+      - HIV-1 M:H_MAU757
+      - HIV-1 M:CRF02_AG_MAU722
+      - HIV-1 M:CRF02_AG_MAU683
+      - HIV-1 M:CRF02_AG_MAU670
+      - HIV-1 M:CRF02_AG_MAU664
+      - HIV-1 M:CRF02_AG_MAU657
+      - HIV-1 M:CRF02_AG_MAU635
+      - HIV-1 M:CRF02_AG_MAU631
+      - HIV-1 M:CRF02_AG_MAU624
+      - HIV-1 M:CRF02_AG_MAU577
+      - HIV-1 M:CRF02_AG_MAU521
+      - HIV-1 M:CRF02_AG_MAU519
+      - HIV-1 M:CRF02_AG_MAU515
+      - HIV-1 M:CRF02_AG_MAU513
+      - HIV-1 M:U/CRF01_AE_MAU509
+      - HIV-1 M:CRF02_AG_MAU471
+      - HIV-1 M:A3/U_MAU432
+      - HIV-1 M:C_MAU420
+      - HIV-1 M:C/U/C_MAU420-PROT
+      - HIV-1 M:CRF02_AG_MAU406
+      - HIV-1 M:CRF02_AG_MAU339
+      - HIV-1 M:C_MAU331
+      - HIV-1 M:CRF06_cpx_MAU284
+      - HIV-1 M:CRF02_AG/A3_MAU251
+      - HIV-1 M:CRF02_AG_MAU222
+      - HIV-1 M:CRF02_AG/A3/CRF02_AG_MAU216
+      - HIV-1 M:CRF02_AG_MAU161
+      - HIV-1 M:A3_MAU159
+      - HIV-1 M:B_MAU153
+      - HIV-1 M:CRF02_AG_MAU145
+      - HIV-1 M:CRF06_cpx_MAU60
+      - HIV-1 M:CRF02_AG_MAU53
+      - HIV-1 M:CRF02-AG_MAU46
+      - HIV-1 M:CRF06_cpx_MAU25
+      - HIV-1 M:URF(A/CRF02_AG)
+      - HIV-1 M:URF(CRF06_cpx/CRF02_AG/A)
+      - HIV-1 M:URF(CRF02_AG/A3/CRF02_AG/A3)
+      - HIV-1 M:URF(G/CRF06_cpx)
+      - HIV-1 M:URF(CRF02_AG/A3)
+      - HIV-1 M:URF(CRF06_cpx/CRF02_AG/CRF06_cpx)
+      - HIV-1 M:URF(CRF02_AG/G)
+      - HIV-1 M:DA1
+      - HIV-1 M:A1C
+      - HIV-1 M:A1
+      - HIV-1 M:CRF22_01A1
+      - HIV-1 M:F2
+      - HIV-1 M:CRF07_BC
+      - HIV-1 M:CRF08_BC
+      - HIV-1 M:URF(U/A1/D)
+      - HIV-1 M:URF(U/D/U)
+      - HIV-1 M:URF(CRF02_AG/CRF09_cpx/CRF02_AG)
+      - HIV-1 M:URF(CRF02_AG/U/A3)
+      - HIV-1 M:URF(CRF02_AG/CRF06_cpx/CRF02_AG)
+      - HIV-1 M:CRF09_cpx MS1268
+      - HIV-1 M:CRF09_cpx MS1048
+      - HIV-1 M:CRF02_AG MS1209
+      - HIV-1 M:CRF02_AG MS3017
+      - HIV-1 M:CRF02_AG MS2015
+      - HIV-1 M:CRF02_AG MS1122
+      - HIV-1 M:CRF02_AG MS2054
+      - HIV-1 M:CRF02_AG MS1151
+      - HIV-1 M:CRF02_AG MS4040
+      - HIV-1 M:CRF02_AG MS4077
+      - HIV-1 M:CRF02_AG MS1292
+      - HIV-1 M:CRF02_AG MS3022
+      - HIV-1 M:CRF02_AG MS1289
+      - HIV-1 M:CRF02_AG MS1215
+      - HIV-1 M:CRF02_AG MS1068
+      - HIV-1 M:CRF02_AG MS1157
+      - HIV-1 M:C MS3007
+      - HIV-1 M:C MS1120
+      - HIV-1 M:C MS1075
+      - HIV-1 M:C MS1157-SGA2
+      - HIV-1 M:C MS1157-SGA1
+      - HIV-1 M:C MS1203
+      - HIV-1 M:C MS1100
+      - HIV-1 M:C MS1257
+      - HIV-1 M:C MS1185
+      - HIV-1 M:C MS1092
+      - HIV-1 M:C MS1021
+      - HIV-1 M:C MS1187
+      - HIV-1 M:D MS4017
+      - HIV-1 M:D MS1193
+      - HIV-1 M:B MS1106
+      - HIV-1 M:B MS1078
+      - HIV-1 M:U MS3017SGA
+      - HIV-1 M:CRF02_AG MS1157SGA2
+      - HIV-1 M:C MS1157SGA1
+      - HIV-1 M:CRF09_cpx MS4017
+      - HIV-1 M:CRF09_cpx MS1179
+      - HIV-1 M:CRF02_AG MS1165
+      - HIV-1 M:CRF02_AG MS3007
+      - HIV-1 M:CRF02_AG MS1120
+      - HIV-1 M:CRF02_AG MS1118
+      - HIV-1 M:CRF02_AG MS2005
+      - HIV-1 M:CRF02_AG MS1305
+      - HIV-1 M:CRF02_AG MS1295
+      - HIV-1 M:CRF02_AG MS1047
+      - HIV-1 M:CRF02_AG MS1083
+      - HIV-1 M:CRF02_AG MS1229
+      - HIV-1 M:CRF01_AE MS2015
+      - HIV-1 M:CRF01_AE MS1268
+      - HIV-1 M:G MS3017
+      - HIV-1 M:G MS3013
+      - HIV-1 M:G MS1209
+      - HIV-1 M:G MS1106
+      - HIV-1 M:G MS1122
+      - HIV-1 M:C MS1169
+      - HIV-1 M:C MS1240
+      - HIV-1 M:C MS3012
+      - HIV-1 M:C MS2034
+      - HIV-1 M:C MS1293
+      - HIV-1 M:C MS1184
+      - HIV-1 M:C MS1212
+      - HIV-1 M:C MS1225
+      - HIV-1 M:C MS1246
+      - HIV-1 M:C MS1196
+      - HIV-1 M:C MS1189
+      - HIV-1 M:C MS1147
+      - HIV-1 M:C MS1177
+      - HIV-1 M:C MS1095
+      - HIV-1 M:C MS1259
+      - HIV-1 M:C MS1088
+      - HIV-1 M:C MS1072
+      - HIV-1 M:C MS1193
+      - HIV-1 M:C MS1065
+      - HIV-1 M:C MS1037
+      - HIV-1 M:F2 MS1075
+      - HIV-1 M:C MS1178
+      - HIV-1 M:C MS1174
+      - HIV-1 M:C MS1048
+      - HIV-1 M:C MS1060
+      - HIV-1 M:C MS1045
+      - HIV-1 M:C MS1043
+      - HIV-1 M:B MS1221
+      - HIV-1 M:B MS2016
+      - HIV-1 M:B MS1115
+      - HIV-1 M:B MS1046
+      - HIV-1 M:B MS1005
+      - HIV-1 M:URF(A3/C)
+      - HIV-1 M:CRF06_cpx
+      - HIV-1 M:URF(A3/U)
+      - HIV-1 M:URF(D/C)
+      - HIV-1 M:URF(CRF02_AG/U)
+      - HIV-1 M:URF(U/C)
+      - HIV-1 M:CRF49_cpx
+      - HIV-1 M:CRF01_AE
+      - HIV-1 M:CRF13_N_ARN_pl_N7
+      - HIV-1 M:CRF13_N_ARN_pl_N2_2
+      - HIV-1 M:CRF13_N_ARN_pl_N20
+      - HIV-1 M:CRF13_N_ARN_pl_N11
+      - HIV-1 M:CRF13_N_ARN_pl_N8_1
+      - HIV-1 M:CRF13_N_ARN_pl_N6_1
+      - HIV-1 M:CRF13_N_ARN_pl_N8_2
+      - HIV-1 M:CRF13_N_ARN_pl_N1_2
+      - HIV-1 M:CRF13_N_ARN_pl_N13
+      - HIV-1 M:CRF13_N_ADN_ge_N4_1
+      - HIV-1 M:CRF13_N_ADN_ge_N11
+      - HIV-1 M:CRF13_N_ARN_ge_N5
+      - HIV-1 M:CRF13_N_ADN_ge_N7_2
+      - HIV-1 M:CRF13_N_ARN_pl_N4_2
+      - HIV-1 M:CRF13_N_ARN_pl_N14
+      - HIV-1 M:CRF13_N_ARN_pl_N3_2
+      - HIV-1 M:CRF13_N_ADN_ge_N19
+      - HIV-1 M:CRF13_N_ADN_ge_N13_2
+      - HIV-1 M:CRF13_N_ADN_ge_N12
+      - HIV-1 M:CRF13_N_ADN_ge_N7_1
+      - HIV-1 M:CRF13_N_ADN_ge_N3_2
+      - HIV-1 M:CRF13_N_ARN_ge_N10
+      - HIV-1 M:CRF13_N_ADN_ge_N17
+      - HIV-1 M:CRF13_N_ARN_ge_N3_1
+      - HIV-1 M:CRF13_N_ARN_ge_N9
+      - HIV-1 M:CRF13_N_ADN_ge_N8_1
+      - HIV-1 M:CRF13_N_ADN_ge_N6_1
+      - HIV-1 M:CRF13_N_ADN_ge_N1_2
+      - HIV-1 M:CRF13_N_ARN_pl_N15
+      - HIV-1 M:CRF13_N_ADN_ge_N9_1
+      - HIV-1 M:CRF13_N_ADN_ge_N20
+      - HIV-1 M:CRF13_N_ADN_ge_N16
+      - HIV-1 M:CRF13_N_ADN_ge_N8_2
+      - HIV-1 M:CRF13_N_ADN_ge_N6_2
+      - HIV-1 M:CRF13_N_ADN_ge_N10_2
+      - HIV-1 M:CRF13_N_ADN_ge_N9_2
+      - HIV-1 M:CRF13_N_ADN_ge_N13_1
+      - HIV-1 M:CRF13_N_ADN_ge_N5_2
+      - HIV-1 M:CRF13_N_ADN_ge_N5_1
+      - HIV-1 M:CRF13_N_ADN_ge_N10_1
+      - HIV-1 M:CRF13_N_ADN_ge_N2_1
+      - HIV-1 M:CRF13_N_ARN_pl_N19
+      - HIV-1 M:CRF13_N_ADN_ge_N18
+      - HIV-1 M:CRF13_N_ADN_ge_N4_2
+      - HIV-1 M:CRF13_N_ADN_ge_N15
+      - HIV-1 M:CRF13_N_ARN_ge_N4
+      - HIV-1 M:CRF13_N_ARN_ge_N3
+      - HIV-1 M:CRF13_N_ARN_ge_N2
+      - HIV-1 M:CRF13_N_ADN_ge_N14
+      - HIV-1 M:CRF13_N_ARN_ge_N6
+      - HIV-1 M:CRF13_N_ARN_ge_N11
+      - HIV-1 M:CRF13_N_ARN_ge_N12
+      - HIV-1 M:CRF13_N_ARN_ge_N8
+      - HIV-1 M:CRF13_N_ARN_ge_N19
+      - HIV-1 M:CRF13_N_ARN_ge_N15
+      - HIV-1 M:CRF13_N_ARN_ge_N16
+      - HIV-1 M:CRF13_N_ARN_ge_N14
+      - HIV-1 M:CRF13_N_ARN_ge_N17
+      - HIV-1 M:CRF13_N_ARN_ge_N13
+      - HIV-1 M:CRF13_N_ARN_ge_N1
+      - HIV-1 M:CRF13_N_ARN_ge_N7
+      - HIV-1 M:CRF13_N_ARN_ge_N18
+      - HIV-1 M:CRF13_N_ARN_ge_N1_2
+      - HIV-1 M:CRF13_N_ARN_ge_N2_2
+      - HIV-1 M:CRF02_K_ARN_pl_K20
+      - HIV-1 M:CRF02_K_ARN_pl_K1_1
+      - HIV-1 M:CRF02_K_ARN_pl_K17
+      - HIV-1 M:CRF02_K_ARN_ge_K9
+      - HIV-1 M:CRF02_K_ARN_ge_K3
+      - HIV-1 M:CRF02_K_ARN_ge_K15
+      - HIV-1 M:CRF02_K_ARN_ge_K7
+      - HIV-1 M:CRF02_K_ARN_ge_K4
+      - HIV-1 M:CRF02_K_ARN_ge_K10
+      - HIV-1 M:CRF02_K_ARN_ge_K12
+      - HIV-1 M:CRF02_K_ARN_ge_K2
+      - HIV-1 M:CRF02_K_ARN_ge_K19
+      - HIV-1 M:CRF02_K_ARN_ge_K13
+      - HIV-1 M:CRF02_K_ARN_ge_K16
+      - HIV-1 M:CRF02_K_ARN_ge_K14
+      - HIV-1 M:CRF02_K_ARN_ge_K17
+      - HIV-1 M:CRF02_K_ARN_ge_K1
+      - HIV-1 M:CRF02_K_ADN_ge_K11
+      - HIV-1 M:CRF02_K_ADN_ge_K6_2
+      - HIV-1 M:CRF02_K_ADN_ge_K9_2
+      - HIV-1 M:CRF02_K_ADN_ge_K6_1
+      - HIV-1 M:CRF02_K_ADN_ge_K12
+      - HIV-1 M:CRF02_K_ADN_ge_K4_1
+      - HIV-1 M:CRF02_K_ADN_ge_K3_2
+      - HIV-1 M:CRF02_K_ARN_pl_K19
+      - HIV-1 M:CRF02_K_ARN_pl_K13
+      - HIV-1 M:CRF02_K_ARN_pl_K12
+      - HIV-1 M:CRF02_K_ARN_pl_K5_2
+      - HIV-1 M:CRF02_K_ADN_ge_K16
+      - HIV-1 M:CRF02_K_ADN_ge_K2_1
+      - HIV-1 M:CRF02_K_ADN_ge_K5_1
+      - HIV-1 M:CRF02_K_ADN_ge_K5_2
+      - HIV-1 M:CRF02_K_ADN_ge_K2_2
+      - HIV-1 M:CRF02_K_ADN_ge_K19
+      - HIV-1 M:CRF02_K_ADN_ge_K9_1
+      - HIV-1 M:CRF02_K_ADN_ge_K18
+      - HIV-1 M:CRF02_K_ADN_ge_K7_2
+      - HIV-1 M:CRF02_K_ADN_ge_K10_1
+      - HIV-1 M:CRF02_K_ADN_ge_K4_2
+      - HIV-1 M:CRF02_K_ADN_ge_K1_2
+      - HIV-1 M:CRF02_K_ARN_pl_K11_1
+      - HIV-1 M:CRF02_K_ARN_pl_K9
+      - HIV-1 M:CRF02_K_ARN_pl_K2
+      - HIV-1 M:CRF02_K_ARN_pl_K18
+      - HIV-1 M:CRF02_K_ARN_pl_K8_2
+      - HIV-1 M:CRF02_K_ARN_pl_K8_1
+      - HIV-1 M:CRF02_K_ARN_pl_K7_2
+      - HIV-1 M:CRF02_K_ARN_pl_K1_2
+      - HIV-1 M:CRF02_K_ARN_pl_K6
+      - HIV-1 M:CRF02_K_ARN_pl_K5_1
+      - HIV-1 M:CRF02_K_ADN_ge_K13
+      - HIV-1 M:CRF02_K_ARN_pl_K7_1
+      - HIV-1 M:CRF02_K_ADN_ge_K20
+      - HIV-1 M:CRF02_K_ADN_ge_K10_2
+      - HIV-1 M:CRF02_K_ADN_ge_K1_1
+      - HIV-1 M:CRF02_A_ARN_pl_A3_1
+      - HIV-1 M:CRF02_A_ARN_pl_A18_2
+      - HIV-1 M:CRF02_A_ARN_pl_A3_2
+      - HIV-1 M:CRF02_A_ARN_pl_A18_1
+      - HIV-1 M:CRF02_A_ARN_pl_A16
+      - HIV-1 M:CRF02_A_ARN_pl_A2_1
+      - HIV-1 M:CRF02_A_ARN_pl_A10_2
+      - HIV-1 M:CRF02_A_ARN_pl_A2_2
+      - HIV-1 M:CRF02_A_ARN_pl_A12
+      - HIV-1 M:CRF02_A_ARN_pl_A6_1
+      - HIV-1 M:CRF02_A_ARN_pl_A10_1
+      - HIV-1 M:CRF02_A_ARN_pl_A4_1
+      - HIV-1 M:CRF02_A_ARN_ge_A7
+      - HIV-1 M:CRF02_A_ARN_ge_A12
+      - HIV-1 M:CRF02_A_ARN_ge_A17
+      - HIV-1 M:CRF02_A_ARN_ge_A11
+      - HIV-1 M:CRF02_A_ARN_ge_A19
+      - HIV-1 M:CRF02_A_ARN_ge_A13
+      - HIV-1 M:CRF02_A_ARN_ge_A18
+      - HIV-1 M:CRF02_A_ARN_ge_A16
+      - HIV-1 M:CRF02_A_ARN_ge_A10
+      - HIV-1 M:CRF02_A_ARN_ge_A6
+      - HIV-1 M:CRF02_A_ARN_pl_A6_2
+      - HIV-1 M:CRF02_A_ARN_ge_A3
+      - HIV-1 M:CRF02_A_ARN_ge_A1
+      - HIV-1 M:CRF02_A_ADN_ge_A4_1
+      - HIV-1 M:CRF02_A_ARN_pl_A8
+      - HIV-1 M:CRF02_A_ADN_ge_A9_2
+      - HIV-1 M:CRF02_A_ADN_ge_A3_2
+      - HIV-1 M:CRF02_A_ADN_ge_A16
+      - HIV-1 M:CRF02_A_ADN_ge_A4_2
+      - HIV-1 M:CRF02_A_ADN_ge_A2_2
+      - HIV-1 M:CRF02_A_ADN_ge_A19
+      - HIV-1 M:CRF02_A_ADN_ge_A13
+      - HIV-1 M:CRF02_A_ADN_ge_A14
+      - HIV-1 M:CRF02_A_ADN_ge_A8_1
+      - HIV-1 M:CRF02_A_ADN_ge_A5_1
+      - HIV-1 M:CRF02_A_ADN_ge_A17
+      - HIV-1 M:CRF02_A_ADN_ge_A11
+      - HIV-1 M:CRF02_A_ADN_ge_A18
+      - HIV-1 M:CRF02_A_ADN_ge_A9_1
+      - HIV-1 M:CRF02_A_ADN_ge_A8_2
+      - HIV-1 M:CRF02_A_ADN_ge_A15
+      - HIV-1 M:CRF02_A_ADN_ge_A20
+      - HIV-1 M:CRF02_A_ADN_ge_A12
+      - HIV-1 M:CRF02_A_ADN_ge_A3_1
+      - HIV-1 M:CRF02_A_ADN_ge_A1_2
+      - HIV-1 M:RecCpx_D_ARN_pl_D4
+      - HIV-1 M:RecCpx_D_ARN_pl_D14
+      - HIV-1 M:RecCpx_D_ARN_ge_D8
+      - HIV-1 M:RecCpx_D_ARN_ge_D10
+      - HIV-1 M:RecCpx_D_ARN_ge_D7
+      - HIV-1 M:RecCpx_D_ARN_ge_D11
+      - HIV-1 M:RecCpx_D_ARN_ge_D9
+      - HIV-1 M:RecCpx_D_ARN_ge_D4
+      - HIV-1 M:RecCpx_D_ARN_ge_D17
+      - HIV-1 M:RecCpx_D_ARN_ge_D14
+      - HIV-1 M:RecCpx_D_ARN_ge_D13
+      - HIV-1 M:RecCpx_D_ARN_ge_D6
+      - HIV-1 M:RecCpx_D_ARN_ge_D5
+      - HIV-1 M:RecCpx_D_ARN_ge_D18
+      - HIV-1 M:RecCpx_D_ARN_ge_D16
+      - HIV-1 M:RecCpx_D_ARN_ge_D15
+      - HIV-1 M:RecCpx_D_ARN_ge_D12
+      - HIV-1 M:RecCpx_D_ARN_ge_D19
+      - HIV-1 M:RecCpx_D_ARN_ge_D3
+      - HIV-1 M:RecCpx_D_ARN_ge_D2
+      - HIV-1 M:RecCpx_D_ARN_ge_D1
+      - HIV-1 M:RecCpx_D_ADN_ge_D16
+      - HIV-1 M:RecCpx_D_ADN_ge_D13
+      - HIV-1 M:RecCpx_D_ADN_ge_D19
+      - HIV-1 M:RecCpx_D_ADN_ge_D10
+      - HIV-1 M:RecCpx_D_ADN_ge_D14
+      - HIV-1 M:RecCpx_D_ADN_ge_D4
+      - HIV-1 M:RecCpx_D_ARN_pl_D17
+      - HIV-1 M:RecCpx_D_ADN_ge_D7
+      - HIV-1 M:RecCpx_D_ADN_ge_D6
+      - HIV-1 M:RecCpx_D_ADN_ge_D11
+      - HIV-1 M:RecCpx_D_ADN_ge_D3
+      - HIV-1 M:RecCpx_D_ARN_pl_D15
+      - HIV-1 M:RecCpx_D_ARN_pl_D16
+      - HIV-1 M:RecCpx_D_ADN_ge_D2
+      - HIV-1 M:RecCpx_D_ARN_pl_D7
+      - HIV-1 M:RecCpx_D_ARN_pl_D13
+      - HIV-1 M:RecCpx_D_ARN_pl_D2
+      - HIV-1 M:RecCpx_D_ARN_pl_D5
+      - HIV-1 M:RecCpx_D_ARN_pl_D19
+      - HIV-1 M:RecCpx_D_ARN_pl_D1
+      - HIV-1 M:RecCpx_D_ARN_pl_D9
+      - HIV-1 M:RecCpx_D_ARN_pl_D18
+      - HIV-1 M:RecCpx_D_ARN_pl_D6
+      - HIV-1 M:RecCpx_D_ADN_ge_D18
+      - HIV-1 M:RecCpx_D_ADN_ge_D15
+      - HIV-1 M:RecCpx_D_ADN_ge_D9
+      - HIV-1 M:RecCpx_D_ADN_ge_D8
+      - HIV-1 M:RecCpx_D_ADN_ge_D5
+      - HIV-1 M:RecCpx_D_ADN_ge_D12
+      - HIV-1 M:RecCpx_D_ADN_ge_D1
+      - HIV-1 M:RecCpx_O_ARN_pl_O3_1
+      - HIV-1 M:RecCpx_O_ARN_ge_O13
+      - HIV-1 M:RecCpx_O_ARN_pl_O1_2
+      - HIV-1 M:RecCpx_O_ARN_pl_O1_1
+      - HIV-1 M:RecCpx_O_ARN_pl_O13
+      - HIV-1 M:RecCpx_O_ARN_pl_O9_1
+      - HIV-1 M:RecCpx_O_ARN_ge_O3_2
+      - HIV-1 M:RecCpx_O_ARN_ge_O6
+      - HIV-1 M:RecCpx_O_ARN_pl_O5_2
+      - HIV-1 M:RecCpx_O_ARN_pl_O5_1
+      - HIV-1 M:RecCpx_O_ARN_pl_O8_2
+      - HIV-1 M:RecCpx_O_ARN_ge_O2
+      - HIV-1 M:RecCpx_O_ARN_pl_O4_2
+      - HIV-1 M:RecCpx_O_ARN_pl_O9_2
+      - HIV-1 M:RecCpx_O_ARN_pl_O12
+      - HIV-1 M:RecCpx_O_ARN_pl_O7_1
+      - HIV-1 M:RecCpx_O_ARN_pl_O4_1
+      - HIV-1 M:RecCpx_O_ARN_pl_O14
+      - HIV-1 M:RecCpx_O_ARN_pl_O8_1
+      - HIV-1 M:RecCpx_O_ARN_pl_O15
+      - HIV-1 M:RecCpx_O_ARN_pl_O3_2
+      - HIV-1 M:RecCpx_O_ARN_ge_O7
+      - HIV-1 M:RecCpx_O_ARN_ge_O3
+      - HIV-1 M:RecCpx_O_ARN_ge_O4
+      - HIV-1 M:RecCpx_O_ARN_pl_O2
+      - HIV-1 M:RecCpx_O_ARN_ge_O18
+      - HIV-1 M:RecCpx_O_ARN_ge_O1
+      - HIV-1 M:RecCpx_O_ARN_ge_O1_1
+      - HIV-1 M:RecCpx_O_ARN_ge_O20
+      - HIV-1 M:RecCpx_O_ARN_ge_O11
+      - HIV-1 M:RecCpx_O_ARN_ge_O14
+      - HIV-1 M:RecCpx_O_ARN_ge_O8
+      - HIV-1 M:RecCpx_O_ARN_ge_O5
+      - HIV-1 M:RecCpx_O_ARN_ge_O9
+      - HIV-1 M:RecCpx_O_ARN_ge_O10
+      - HIV-1 M:RecCpx_O_ARN_pl_O6_2
+      - HIV-1 M:RecCpx_O_ARN_pl_O6_1
+      - HIV-1 M:RecCpx_O_ARN_pl_O10_1
+      - HIV-1 M:RecCpx_O_ARN_ge_O16
+      - HIV-1 M:RecCpx_O_ARN_ge_O2_2
+      - HIV-1 M:RecCpx_O_ARN_ge_O12
+      - HIV-1 M:RecCpx_M_ADN_ge_M1_1
+      - HIV-1 M:RecCpx_M_ARN_ge_M16
+      - HIV-1 M:RecCpx_M_ARN_ge_M13
+      - HIV-1 M:RecCpx_M_ARN_ge_M7
+      - HIV-1 M:RecCpx_M_ARN_ge_M17
+      - HIV-1 M:RecCpx_M_ARN_ge_M12
+      - HIV-1 M:RecCpx_M_ARN_ge_M5
+      - HIV-1 M:RecCpx_M_ARN_ge_M2(2)
+      - HIV-1 M:RecCpx_M_ARN_ge_M4
+      - HIV-1 M:RecCpx_M_ARN_ge_M3
+      - HIV-1 M:RecCpx_M_ARN_ge_M3_2
+      - HIV-1 M:RecCpx_M_ARN_ge_M10
+      - HIV-1 M:RecCpx_M_ARN_ge_M9
+      - HIV-1 M:RecCpx_M_ARN_ge_M2
+      - HIV-1 M:RecCpx_M_ARN_ge_M15
+      - HIV-1 M:RecCpx_M_ARN_ge_M14
+      - HIV-1 M:RecCpx_M_ARN_ge_M6
+      - HIV-1 M:RecCpx_M_ARN_ge_M19
+      - HIV-1 M:RecCpx_M_ARN_ge_M8
+      - HIV-1 M:RecCpx_M_ARN_ge_M1_2
+      - HIV-1 M:RecCpx_M_ARN_ge_M11
+      - HIV-1 M:RecCpx_M_ARN_ge_M1
+      - HIV-1 M:RecCpx_M_ADN_ge_M9_2
+      - HIV-1 M:RecCpx_M_ADN_ge_M9_1
+      - HIV-1 M:RecCpx_M_ARN_pl_M3_2
+      - HIV-1 M:RecCpx_M_ARN_pl_M14
+      - HIV-1 M:RecCpx_M_ARN_pl_M16
+      - HIV-1 M:RecCpx_M_ARN_pl_M8_2
+      - HIV-1 M:RecCpx_M_ARN_pl_M10_1
+      - HIV-1 M:RecCpx_M_ARN_pl_M12
+      - HIV-1 M:RecCpx_M_ARN_pl_M7_1
+      - HIV-1 M:RecCpx_M_ARN_pl_M19
+      - HIV-1 M:RecCpx_M_ARN_pl_M7_2
+      - HIV-1 M:RecCpx_M_ARN_pl_M2
+      - HIV-1 M:RecCpx_M_ARN_pl_M17
+      - HIV-1 M:RecCpx_M_ARN_pl_M13
+      - HIV-1 M:RecCpx_M_ARN_ge_M18
+      - HIV-1 M:RecCpx_M_ADN_ge_M17
+      - HIV-1 M:RecCpx_M_ADN_ge_M4_2
+      - HIV-1 M:RecCpx_M_ADN_ge_M13
+      - HIV-1 M:RecCpx_M_ADN_ge_M8
+      - HIV-1 M:RecCpx_M_ADN_ge_M10
+      - HIV-1 M:RecCpx_M_ADN_ge_M5_1
+      - HIV-1 M:RecCpx_M_ARN_pl_M8_1
+      - HIV-1 M:RecCpx_M_ADN_ge_M3_2
+      - HIV-1 M:RecCpx_M_ADN_ge_M3_1
+      - HIV-1 M:RecCpx_M_ADN_ge_M6_2
+      - HIV-1 M:RecCpx_M_ADN_ge_M6_1
+      - HIV-1 M:RecCpx_M_ADN_ge_M2_1
+      - HIV-1 M:RecCpx_M_ARN_pl_M1_1
+      - HIV-1 M:RecCpx_M_ARN_pl_M20
+      - HIV-1 M:RecCpx_M_ARN_pl_M4
+      - HIV-1 M:RecCpx_M_ADN_ge_M14
+      - HIV-1 M:RecCpx_M_ARN_pl_M10_2
+      - HIV-1 M:RecCpx_M_ADN_ge_M12
+      - HIV-1 M:RecCpx_M_ADN_ge_M2_2
+      - HIV-1 M:RecCpx_M_ARN_pl_M18
+      - HIV-1 M:RecCpx_M_ADN_ge_M4_1
+      - HIV-1 M:RecCpx_M_ADN_ge_M15
+      - HIV-1 M:RecCpx_M_ADN_ge_M1_2
+      - HIV-1 M:CRF11_G_ARN_pl_G3
+      - HIV-1 M:CRF11_G_ARN_pl_G4
+      - HIV-1 M:CRF11_G_ARN_pl_G18
+      - HIV-1 M:CRF11_G_ARN_pl_G10
+      - HIV-1 M:CRF11_G_ARN_pl_G14
+      - HIV-1 M:CRF11_G_ARN_pl_G13
+      - HIV-1 M:CRF11_G_ARN_pl_G7
+      - HIV-1 M:CRF11_G_ARN_pl_G16
+      - HIV-1 M:CRF11_G_ARN_pl_G15
+      - HIV-1 M:CRF11_G_ARN_pl_G12
+      - HIV-1 M:CRF11_G_ARN_pl_G9
+      - HIV-1 M:CRF11_G_ARN_pl_G1
+      - HIV-1 M:CRF11_G_ARN_pl_G11
+      - HIV-1 M:CRF11_G_ARN_pl_G8
+      - HIV-1 M:CRF11_G_ARN_pl_G2
+      - HIV-1 M:CRF11_G_ADN_ge_G20
+      - HIV-1 M:CRF11_G_ADN_ge_G16
+      - HIV-1 M:CRF11_G_ADN_ge_G8
+      - HIV-1 M:CRF11_G_ADN_ge_G18
+      - HIV-1 M:CRF11_G_ADN_ge_G13
+      - HIV-1 M:CRF11_G_ADN_ge_G11
+      - HIV-1 M:CRF11_G_ADN_ge_G10
+      - HIV-1 M:CRF11_G_ADN_ge_G9
+      - HIV-1 M:CRF11_G_ADN_ge_G14
+      - HIV-1 M:CRF11_G_ADN_ge_G2
+      - HIV-1 M:CRF11_G_ADN_ge_G7
+      - HIV-1 M:CRF11_G_ADN_ge_G4
+      - HIV-1 M:CRF11_G_ADN_ge_G1
+      - HIV-1 M:CRF11_G_ADN_ge_G5
+      - HIV-1 M:CRF11_G_ADN_ge_G17
+      - HIV-1 M:CRF11_G_ADN_ge_G15
+      - HIV-1 M:CRF11_G_ADN_ge_G3
+      - HIV-1 M:CRF11_G_ADN_ge_G19
+      - HIV-1 M:CRF11_G_ADN_ge_G12
+      - HIV-1 M:CRF11_G_ARN_ge_G15
+      - HIV-1 M:CRF11_G_ARN_ge_G14
+      - HIV-1 M:CRF11_G_ARN_ge_G16
+      - HIV-1 M:CRF11_G_ARN_ge_G4
+      - HIV-1 M:CRF11_G_ARN_ge_G11
+      - HIV-1 M:CRF11_G_ARN_ge_G17
+      - HIV-1 M:CRF11_G_ARN_ge_G6
+      - HIV-1 M:CRF11_G_ARN_ge_G7
+      - HIV-1 M:CRF11_G_ARN_ge_G5
+      - HIV-1 M:CRF11_G_ARN_ge_G9
+      - HIV-1 M:CRF11_G_ARN_ge_G3
+      - HIV-1 M:CRF11_G_ARN_ge_G18
+      - HIV-1 M:CRF11_G_ARN_ge_G10
+      - HIV-1 M:CRF11_F_ARN_pl_F6
+      - HIV-1 M:CRF11_F_ARN_pl_F3_1
+      - HIV-1 M:CRF11_F_ARN_pl_F16
+      - HIV-1 M:CRF11_F_ARN_pl_F4_1
+      - HIV-1 M:CRF11_F_ARN_pl_F15
+      - HIV-1 M:CRF11_F_ARN_pl_F9
+      - HIV-1 M:CRF11_F_ARN_pl_F5
+      - HIV-1 M:CRF11_F_ARN_pl_F14
+      - HIV-1 M:CRF11_F_ARN_pl_F4_2
+      - HIV-1 M:CRF11_F_ARN_pl_F13
+      - HIV-1 M:CRF11_F_ARN_pl_F1
+      - HIV-1 M:CRF11_F_ARN_pl_F12
+      - HIV-1 M:CRF11_F_ARN_pl_F7_1
+      - HIV-1 M:CRF11_F_ARN_ge_F4
+      - HIV-1 M:CRF11_F_ARN_ge_F19
+      - HIV-1 M:CRF11_F_ARN_ge_F14
+      - HIV-1 M:CRF11_F_ARN_ge_F2
+      - HIV-1 M:CRF11_F_ARN_ge_F13
+      - HIV-1 M:CRF11_F_ARN_ge_F1
+      - HIV-1 M:CRF11_F_ARN_ge_F16
+      - HIV-1 M:CRF11_E_ARN_pl_E19
+      - HIV-1 M:CRF11_E_ARN_pl_E14
+      - HIV-1 M:CRF11_E_ARN_pl_E2_2
+      - HIV-1 M:CRF11_E_ARN_pl_E11
+      - HIV-1 M:CRF11_E_ARN_pl_E7_1
+      - HIV-1 M:CRF11_E_ARN_pl_E12
+      - HIV-1 M:CRF11_E_ARN_pl_E10_2
+      - HIV-1 M:CRF11_E_ARN_pl_E9_1
+      - HIV-1 M:CRF11_E_ARN_pl_E4_2
+      - HIV-1 M:CRF11_E_ARN_pl_E6_2
+      - HIV-1 M:CRF11_E_ARN_pl_E3_2
+      - HIV-1 M:CRF11_E_ARN_ge_E7
+      - HIV-1 M:CRF11_E_ARN_ge_E13
+      - HIV-1 M:CRF11_E_ARN_ge_E3
+      - HIV-1 M:CRF11_E_ARN_ge_E20
+      - HIV-1 M:CRF11_E_ARN_ge_E2
+      - HIV-1 M:CRF11_E_ARN_ge_E10
+      - HIV-1 M:CRF11_E_ARN_ge_E8
+      - HIV-1 M:CRF11_E_ARN_ge_E1
+      - HIV-1 M:CRF11_E_ARN_ge_E16
+      - HIV-1 M:CRF11_E_ARN_ge_E15
+      - HIV-1 M:CRF11_E_ARN_pl_E8_1
+      - HIV-1 M:CRF11_E_ARN_pl_E6_1
+      - HIV-1 M:CRF11_E_ARN_pl_E3_1
+      - HIV-1 M:CRF11_E_ARN_pl_E1
+      - HIV-1 M:CRF11_E_ARN_pl_E15
+      - HIV-1 M:CRF11_E_ARN_pl_E4_1
+      - HIV-1 M:CRF11_E_ARN_pl_E17
+      - HIV-1 M:CRF11_E_ARN_pl_E16
+      - HIV-1 M:CRF11_E_ARN_pl_E8_3
+      - HIV-1 M:CRF11_E_ARN_pl_E8_2
+      - HIV-1 M:CRF11_E_ARN_pl_E7_2
+      - HIV-1 M:CRF11_E_ARN_pl_E5_1
+      - HIV-1 M:CRF11_E_ARN_pl_E9_2
+      - HIV-1 M:CRF11_E_ADN_ge_E1_2
+      - HIV-1 M:CRF11_E_ADN_ge_E6_2
+      - HIV-1 M:CRF11_E_ADN_ge_E4_1
+      - HIV-1 M:CRF11_E_ARN_pl_E10_1
+      - HIV-1 M:CRF11_E_ADN_ge_E7_1
+      - HIV-1 M:CRF11_E_ADN_ge_E9_2
+      - HIV-1 M:CRF11_E_ADN_ge_E8_1
+      - HIV-1 M:CRF11_E_ADN_ge_E18
+      - HIV-1 M:CRF11_E_ADN_ge_E6_1
+      - HIV-1 M:CRF11_E_ADN_ge_E9_1
+      - HIV-1 M:CRF11_E_ADN_ge_E5_2
+      - HIV-1 M:CRF11_E_ADN_ge_E7_2
+      - HIV-1 M:CRF11_E_ADN_ge_E6_3
+      - HIV-1 M:CRF11_E_ADN_ge_E2_3
+      - HIV-1 M:CRF11_E_ADN_ge_E2_2
+      - HIV-1 M:CRF11_E_ADN_ge_E14
+      - HIV-1 M:CRF11_E_ADN_ge_E5_1
+      - HIV-1 M:CRF11_E_ADN_ge_E12
+      - HIV-1 M:CRF11_E_ADN_ge_E1_3
+      - HIV-1 M:CRF11_E_ADN_ge_E4_3
+      - HIV-1 M:CRF11_E_ADN_ge_E3_2
+      - HIV-1 M:CRF11_E_ADN_ge_E10
+      - HIV-1 M:CRF11_E_ADN_ge_E3_1
+      - HIV-1 M:CRF11_E_ADN_ge_E2_1
+      - HIV-1 M:CRF11_E_ADN_ge_E8_2
+      - HIV-1 M:CRF11_E_ADN_ge_E1_1
+      - HIV-1 M:CRF11_L_ARN_pl_L20
+      - HIV-1 M:CRF11_L_ARN_pl_L4
+      - HIV-1 M:CRF11_L_ARN_pl_L6
+      - HIV-1 M:CRF11_L_ARN_pl_L3_1
+      - HIV-1 M:CRF11_L_ARN_pl_L19
+      - HIV-1 M:CRF11_L_ARN_pl_L11
+      - HIV-1 M:CRF11_L_ARN_pl_L1_1
+      - HIV-1 M:CRF11_L_ARN_pl_L17
+      - HIV-1 M:CRF11_L_ARN_pl_L3_2
+      - HIV-1 M:CRF11_L_ADN_ge_L9_2
+      - HIV-1 M:CRF11_L_ADN_ge_L5_2
+      - HIV-1 M:CRF11_L_ARN_pl_L7_2
+      - HIV-1 M:CRF11_L_ARN_pl_L7_1
+      - HIV-1 M:CRF11_L_ADN_ge_L9_3
+      - HIV-1 M:CRF11_L_ADN_ge_L3_3
+      - HIV-1 M:CRF11_L_ADN_ge_L6_1
+      - HIV-1 M:CRF11_L_ADN_ge_L2_2
+      - HIV-1 M:CRF11_L_ADN_ge_L10_1
+      - HIV-1 M:CRF11_L_ADN_ge_L9_1
+      - HIV-1 M:CRF11_L_ADN_ge_L4_2
+      - HIV-1 M:CRF11_L_ADN_ge_L10_2
+      - HIV-1 M:CRF11_L_ADN_ge_L8_3
+      - HIV-1 M:CRF11_L_ADN_ge_L7_3
+      - HIV-1 M:CRF11_L_ADN_ge_L7_2
+      - HIV-1 M:CRF11_L_ADN_ge_L7_1
+      - HIV-1 M:CRF11_L_ADN_ge_L3_2
+      - HIV-1 M:CRF11_L_ADN_ge_L3_1
+      - HIV-1 M:CRF11_L_ADN_ge_L5_3
+      - HIV-1 M:CRF11_L_ADN_ge_L8_2
+      - HIV-1 M:CRF11_L_ADN_ge_L6_2
+      - HIV-1 M:CRF11_L_ADN_ge_L1_3
+      - HIV-1 M:CRF11_L_ADN_ge_L6_3
+      - HIV-1 M:CRF11_L_ARN_pl_L10_2
+      - HIV-1 M:CRF11_L_ARN_pl_L2_2
+      - HIV-1 M:CRF11_L_ADN_ge_L4_1
+      - HIV-1 M:CRF11_L_ADN_ge_L1_1
+      - HIV-1 M:CRF11_L_ARN_pl_L1_2
+      - HIV-1 M:CRF11_L_ARN_ge_L19
+      - HIV-1 M:CRF11_L_ARN_ge_L5
+      - HIV-1 M:CRF11_L_ARN_ge_L12
+      - HIV-1 M:CRF11_L_ARN_ge_L7
+      - HIV-1 M:CRF11_L_ARN_ge_L13
+      - HIV-1 M:CRF11_L_ARN_ge_L6
+      - HIV-1 M:CRF11_L_ARN_ge_L18
+      - HIV-1 M:CRF11_L_ARN_ge_L17
+      - HIV-1 M:CRF11_L_ARN_ge_L15
+      - HIV-1 M:CRF11_L_ARN_ge_L16
+      - HIV-1 M:CRF11_L_ARN_ge_L2
+      - HIV-1 M:CRF11_L_ARN_ge_L4
+      - HIV-1 M:CRF11_L_ARN_ge_L11
+      - HIV-1 M:CRF11_L_ARN_ge_L8
+      - HIV-1 M:CRF11_L_ARN_ge_L1
+      - HIV-1 M:CRF11_L_ARN_ge_L14
+      - HIV-1 M:CRF11_L_ARN_ge_L3
+      - HIV-1 M:CRF26_H_ARN_pl_H14
+      - HIV-1 M:CRF25_H_ARN_pl_H15
+      - HIV-1 M:CRF24_H_ARN_pl_H7_1
+      - HIV-1 M:CRF23_H_ARN_pl_H7_2
+      - HIV-1 M:CRF22_H_ARN_pl_H6_1
+      - HIV-1 M:CRF21_H_ARN_pl_H13
+      - HIV-1 M:CRF20_H_ARN_pl_H8
+      - HIV-1 M:CRF19_H_ARN_pl_H6_2
+      - HIV-1 M:CRF18_H_ARN_pl_H4_1
+      - HIV-1 M:CRF17_H_ARN_pl_H5_1
+      - HIV-1 M:CRF16_H_ARN_pl_H4_2
+      - HIV-1 M:CRF15_H_ARN_pl_H9
+      - HIV-1 M:CRF14_H_ARN_pl_H2
+      - HIV-1 M:CRF13_H_ARN_ge_H1
+      - HIV-1 M:CRF12_H_ARN_ge_H14
+      - HIV-1 M:CRF11_H_ARN_ge_H4
+      - HIV-1 M:CRF10_H_ARN_ge_H15
+      - HIV-1 M:CRF09_H_ARN_ge_H17
+      - HIV-1 M:CRF08_H_ARN_ge_H9
+      - HIV-1 M:CRF07_H_ARN_ge_H8
+      - HIV-1 M:CRF06_H_ARN_ge_H16
+      - HIV-1 M:CRF05_H_ARN_ge_H3
+      - HIV-1 M:CRF04_H_ARN_ge_H5
+      - HIV-1 M:CRF03_H_ARN_ge_H2
+      - HIV-1 M:CRF02_H_ARN_ge_H11
+      - HIV-1 M:CRF02_H_ARN_ge_H10
+      - HIV-1 M:CRF11_C_ARN_pl_C13
+      - HIV-1 M:CRF11_C_ARN_pl_C17
+      - HIV-1 M:CRF11_C_ARN_pl_C8
+      - HIV-1 M:CRF11_C_ARN_pl_C7
+      - HIV-1 M:CRF11_C_ARN_pl_C14
+      - HIV-1 M:CRF11_C_ARN_pl_C12
+      - HIV-1 M:CRF11_C_ARN_pl_C1
+      - HIV-1 M:CRF11_C_ARN_pl_C6
+      - HIV-1 M:CRF11_C_ARN_pl_C5
+      - HIV-1 M:CRF11_C_ARN_pl_C16
+      - HIV-1 M:CRF11_C_ARN_pl_C11
+      - HIV-1 M:CRF11_C_ARN_ge_C7
+      - HIV-1 M:CRF11_C_ARN_ge_C11
+      - HIV-1 M:CRF11_C_ARN_ge_C6
+      - HIV-1 M:CRF11_C_ARN_ge_C2
+      - HIV-1 M:CRF11_C_ARN_ge_C9
+      - HIV-1 M:CRF11_C_ARN_ge_C4
+      - HIV-1 M:CRF11_C_ARN_ge_C17
+      - HIV-1 M:CRF11_C_ARN_ge_C8
+      - HIV-1 M:CRF11_C_ARN_ge_C1
+      - HIV-1 M:CRF11_C_ARN_ge_C12
+      - HIV-1 M:CRF11_C_ARN_ge_C13
+      - HIV-1 M:CRF11_C_ARN_ge_C5
+      - HIV-1 M:CRF02_B_ARN_pl_B9_1
+      - HIV-1 M:CRF02_B_ARN_pl_B5_1
+      - HIV-1 M:CRF02_B_ARN_pl_B6_2
+      - HIV-1 M:CRF02_B_ARN_pl_B3_1
+      - HIV-1 M:CRF02_B_ARN_pl_B6_1
+      - HIV-1 M:CRF02_B_ADN_ge_B12
+      - HIV-1 M:CRF02_B_ADN_ge_B20
+      - HIV-1 M:CRF02_B_ADN_ge_B18
+      - HIV-1 M:CRF02_B_ARN_pl_B15
+      - HIV-1 M:CRF02_B_ARN_pl_B9_2
+      - HIV-1 M:CRF02_B_ARN_pl_B10_2
+      - HIV-1 M:CRF02_B_ARN_pl_B4_2
+      - HIV-1 M:CRF02_B_ARN_pl_B4_1
+      - HIV-1 M:CRF02_B_ARN_pl_B3_2
+      - HIV-1 M:CRF02_B_ARN_pl_B7_2
+      - HIV-1 M:CRF02_B_ARN_pl_B14
+      - HIV-1 M:CRF02_B_ARN_pl_B2_1
+      - HIV-1 M:CRF02_B_ARN_pl_B10_1
+      - HIV-1 M:CRF02_B_ARN_pl_B1_2
+      - HIV-1 M:CRF02_B_ARN_pl_B16
+      - HIV-1 M:CRF02_B_ARN_pl_B11
+      - HIV-1 M:CRF02_B_ARN_pl_B2_2
+      - HIV-1 M:CRF02_B_ADN_ge_B16
+      - HIV-1 M:CRF02_B_ADN_ge_B25
+      - HIV-1 M:CRF02_B_ADN_ge_B17
+      - HIV-1 M:CRF02_B_ADN_ge_B8
+      - HIV-1 M:CRF02_B_ADN_ge_B10
+      - HIV-1 M:CRF02_B_ADN_ge_B6
+      - HIV-1 M:CRF02_B_ADN_ge_B9
+      - HIV-1 M:CRF02_B_ADN_ge_B5
+      - HIV-1 M:CRF02_B_ADN_ge_B4
+      - HIV-1 M:CRF02_B_ARN_ge_B19
+      - HIV-1 M:CRF02_B_ARN_ge_B18
+      - HIV-1 M:CRF02_B_ARN_ge_B6
+      - HIV-1 M:CRF02_B_ARN_ge_B9
+      - HIV-1 M:CRF02_B_ARN_ge_B5
+      - HIV-1 M:CRF02_B_ARN_ge_B12
+      - HIV-1 M:CRF02_B_ARN_ge_B2
+      - HIV-1 M:CRF02_B_ARN_ge_B17
+      - HIV-1 M:CRF02_B_ARN_ge_B11
+      - HIV-1 M:CRF02_B_ARN_ge_B16
+      - HIV-1 M:CRF02_B_ARN_ge_B7
+      - HIV-1 M:CRF02_B_ARN_ge_B8
+      - HIV-1 M:CRF02_B_ARN_ge_B15
+      - HIV-1 M:CRF02_B_ARN_ge_B10
+      - HIV-1 M:CRF02_B_ARN_ge_B3
+      - HIV-1 M:CRF02_B_ARN_ge_B4
+      - HIV-1 M:CRF02_B_ARN_ge_B13
+      - HIV-1 M:CRF02_B_ARN_ge_B1
+      - HIV-1 M:CRF02_B_ADN_ge_B15
+      - HIV-1 M:CRF02_B_ADN_ge_B11
+      - HIV-1 M:CRF02_B_ADN_ge_B3
+      - HIV-1 M:CRF02_B_ADN_ge_B19
+      - HIV-1 M:CRF02_B_ADN_ge_B21
+      - HIV-1 M:CRF02_B_ADN_ge_B1
+      - HIV-1 M:CRF02_B_ADN_ge_B24
+      - HIV-1 M:CRF02_B_ADN_ge_B13
+      - HIV-1 M:CRF01_R_ADN_ge_R12
+      - HIV-1 M:CRF01_R_ADN_ge_R9
+      - HIV-1 M:CRF01_R_ARN_pl_R4
+      - HIV-1 M:CRF01_R_ARN_pl_R5
+      - HIV-1 M:CRF01_R_ARN_pl_R2
+      - HIV-1 M:CRF01_R_ADN_ge_R14
+      - HIV-1 M:CRF01_R_ADN_ge_R15
+      - HIV-1 M:CRF01_R_ADN_ge_R10
+      - HIV-1 M:CRF01_R_ADN_ge_R6
+      - HIV-1 M:CRF01_R_ARN_pl_R8
+      - HIV-1 M:CRF01_R_ARN_pl_R21
+      - HIV-1 M:CRF01_R_ARN_pl_R19
+      - HIV-1 M:CRF01_R_ADN_ge_R2
+      - HIV-1 M:CRF01_R_ADN_ge_R1
+      - HIV-1 M:CRF01_R_ARN_pl_R11
+      - HIV-1 M:CRF01_R_ADN_ge_R7
+      - HIV-1 M:CRF01_R_ADN_ge_R16
+      - HIV-1 M:CRF01_R_ADN_ge_R13
+      - HIV-1 M:CRF01_R_ADN_ge_R11
+      - HIV-1 M:CRF01_R_ADN_ge_R3
+      - HIV-1 M:CRF01_R_ARN_pl_R9
+      - HIV-1 M:CRF01_R_ARN_pl_R3
+      - HIV-1 M:CRF01_R_ADN_ge_R17
+      - HIV-1 M:CRF01_R_ADN_ge_R18
+      - HIV-1 M:CRF01_R_ADN_ge_R5
+      - HIV-1 M:CRF_43
+      - HIV-1 M:CRF09_cpx
+      - HIV-1 M:URF(A3/CRF02_AG)
+      - HIV-1 M:URF(C/D)
+      - HIV-1 M:URF(CRF02_AG/C)
+      - HIV-1 M:URF(C/CRF02_AG)
+      - HIV-1 M:CRF01_AE_10988/2012/KWT
+      - HIV-1 M:A_2178/2012/KWT
+      - HIV-1 M:B_7750/2012/KWT
+      - HIV-1 M:C_4276/2011/KWT
+      - HIV-1 M:C_6920/2011/KWT
+      - HIV-1 M:CRF01_AE_5717/2011/KWT
+      - HIV-1 M:B_513/2012/KW
+      - HIV-1 M:C_571/2012/KWT
+      - HIV-1 M:B_5827/2012/KWT
+      - HIV-1 M:C_30801/2012/KWT
+      - HIV-1 M:B_21831/2012/KWT
+      - HIV-1 M:B_9773/2012/KWT
+      - HIV-1 M:B_8830/2012/KWT
+      - HIV-1 M:C_8618/2012/KWT
+      - HIV-1 M:URF MnObl-67
+      - HIV-1 M:B Vit-6B
+      - HIV-1 M:B Mn-37B
+      - HIV-1 M:C Mn-39C
+      - HIV-1 M:A1 Br-27A1
+      - HIV-1 M:A1 Br-23A1
+      - HIV-1 M:A1 Gom-30A1
+      - HIV-1 M:A1 Br-28A1
+      - HIV-1 M:A1 Br-29A1
+      - HIV-1 M:A1 Gom-29A1
+      - HIV-1 M:A1 Br-24A1
+      - HIV-1 M:A1 Br-26A1
+      - HIV-1 M:A1 Br-25A1
+      - HIV-1 M:A1 Gom-31A1
+      - HIV-1 M:A1 Gr-17A1
+      - HIV-1 M:A1 Br-22A1
+      - HIV-1 M:A1 Br-21A1
+      - HIV-1 M:A1 Br-20A1
+      - HIV-1 M:A1 Vit-7A1
+      - HIV-1 M:A1 Vit-5A1
+      - HIV-1 M:A1 Vit-4A1
+      - HIV-1 M:A1 Mn-41A1
+      - HIV-1 M:A1 Mn-40A1
+      - HIV-1 M:A1 Mn-38A1
+      - HIV-1 M:A1 Mn-36A1
+      - HIV-1 M:A1 Mn-35A1
+      - HIV-1 M:A1 Mn-34A1
+      - HIV-1 M:A1 Mn-33A1
+      - HIV-1 M:A1 Mn-32A1
+      - HIV-1 M:A1 Mn-31A1
+      - HIV-1 M:A1 Mn-30A1
+      - HIV-1 M:A1 Mn-29A1
+      - HIV-1 M:A1 Mn-28A1
+      - HIV-1 M:A1 Mn-27A1
+      - HIV-1 M:A1 Mn-26A1
+      - HIV-1 M:A1 Mn-25A1
+      - HIV-1 M:A1 Mn-24A1
+      - HIV-1 M:A1 Mn-23A1
+      - HIV-1 M:A1 Mn19A1
+      - HIV-1 M:A1 Mn7A1
+      - HIV-1 M:A1 Mn10A1
+      - HIV-1 M:A1 Mn13A1
+      - HIV-1 M:A1 Mn17A1
+      - HIV-1 M:A1 MnObl-48A1
+      - HIV-1 M:A1 MnObl-58A1
+      - HIV-1 M:A1 MnObl-51A1
+      - HIV-1 M:A1 MnObl-49A1
+      - HIV-1 M:A1 MnObl-53A1
+      - HIV-1 M:A1 MnObl-47A1
+      - HIV-1 M:A1 MnObl-42A1
+      - HIV-1 M:A1 MnObl-43A1
+      - HIV-1 M:A1 MnObl-40A1
+      - HIV-1 M:A1 MnObl-65A1
+      - HIV-1 M:A1 MnObl-38A1
+      - HIV-1 M:A1 MnObl-46A1
+      - HIV-1 M:A1 MnObl-68A1
+      - HIV-1 M:A1 MnoBl-60A1
+      - HIV-1 M:A1 MnObl-62A1
+      - HIV-1 M:A1 MnObl-36A1
+      - HIV-1 M:A1 MnObl-44A1
+      - HIV-1 M:A1 MnObl-55A1
+      - HIV-1 M:A1 MnObl-45A1
+      - HIV-1 M:A1 MnObl-50A1
+      - HIV-1 M:A1 MnObl-59A1
+      - HIV-1 M:A1 MnObl-64A1
+      - HIV-1 M:A1 MnObl-57A1
+      - HIV-1 M:A1 MnObl-37A1
+      - HIV-1 M:A1 MnObl-56A1
+      - HIV-1 M:A1 MnObl-66A1
+      - HIV-1 M:D_NA127
+      - HIV-1 M:A1 MnObl-63A1
+      - HIV-1 M:A3
+      - HIV-1 M:CRF02_AG
+      - HIV-1 M:URF(CRF02_AG/CRF06_cpx/CRF02_AG/CRF06_cpx/U)
+      - HIV-1 M:URF(CRF02_AG/CRF06_cpx)
+      - HIV-1 M:URF(CRF02_AG/A3/CRF02_AG)
+      - HIV-1 M:URF(CRF37_cpx/A/CRF37_cpx)
+      - HIV-1 M:URF(G/U/G)
+      - HIV-1 M:URF(CRF02_AG/CRF06_cpx/CRF02_AG/CRF06_cpx)
+      - HIV-1 M:URF(U/A/K)
+      - HIV-1 M:URF(D/CRF02_AG/D)
+      - HIV-1 M:D_NA135
+      - HIV-1 M:D_NA134
+      - HIV-1 M:D_RO006
+      - HIV-1 M:D_RO005
+      - HIV-1 M:D_RO004
+      - HIV-1 M:D_RO003
+      - HIV-1 M:D_RO002
+      - HIV-1 M:D_RO001
+      - HIV-1 M:D_RE238
+      - HIV-1 M:D_RE237
+      - HIV-1 M:D_RE236
+      - HIV-1 M:D_RE207
+      - HIV-1 M:D_RE142
+      - HIV-1 M:D_RE083
+      - HIV-1 M:D_RE056
+      - HIV-1 M:D_PO022
+      - HIV-1 M:D_PO012
+      - HIV-1 M:D_PO011
+      - HIV-1 M:D_NA133
+      - HIV-1 M:D_NA132
+      - HIV-1 M:D_NA131
+      - HIV-1 M:D_NA130
+      - HIV-1 M:D_NA129
+      - HIV-1 M:D_NA128
+      - HIV-1 M:D_NA126
+      - HIV-1 M:D_NA125
+      - HIV-1 M:D_NA113
+      - HIV-1 M:D_CA080
+      - HIV-1 M:D_CA067
+      - HIV-1 M:D_CA048
+      - HIV-1 M:D_CA035
+      - HIV-1 M:D_BR019
+      - HIV-1 M:D_BR015
+      - HIV-1 M:D_BR014
+      - HIV-1 M:D_AN177
+      - HIV-1 M:D_AN176
+      - HIV-1 M:D_AN175
+      - HIV-1 M:D_AN174
+      - HIV-1 M:D_AN113
+      - HIV-1 M:D_AN034
+      - HIV-1 M:D_AN019
+      - HIV-1 M:D_AN010
+      - HIV-1 M:CRF02_AG_80394360234
+      - HIV-1 M:CRF02_AG_00384760994
+      - HIV-1 M:CRF02_AG_09826618155
+      - HIV-1 M:CRF02_AG_01835871153
+      - HIV-1 M:CRF02_AG_08855259237
+      - HIV-1 M:CRF02_AG_00082500314
+      - HIV-1 M:CRF02_AG_90684486142
+      - HIV-1 M:CRF02_AG_00384364598
+      - HIV-1 M:CRF02_AG_80880292104
+      - HIV-1 M:CRF02_AG_07821754717
+      - HIV-1 M:CRF02_AG_04732291679
+      - HIV-1 M:CRF02_AG_50067984846
+      - HIV-1 M:CRF02_AG_20069834746
+      - HIV-1 M:CRF02_AG_05655055625
+      - HIV-1 M:CRF02_AG_08633910237
+      - HIV-1 M:CRF02_AG_04566394139
+      - HIV-1 M:URF_06526755339
+      - HIV-1 M:URF_09504133825
+      - HIV-1 M:CRF02_AG_60159306954
+      - HIV-1 M:CRF02_AG_20154094266
+      - HIV-1 M:CRF02_AG_00446856847
+      - HIV-1 M:CRF02_AG_00486811743
+      - HIV-1 M:URF_07415052079
+      - HIV-1 M:CRF02_AG_04319750683
+      - HIV-1 M:CRF02_AG_50936804498
+      - HIV-1 M:CRF02_AG_03328130847
+      - HIV-1 M:CRF02_AG_00136644558
+      - HIV-1 M:URF_30631572644
+      - HIV-1 M:CRF02_AG_08351618287
+      - HIV-1 M:CRF02_AG_09360633833
+      - HIV-1 M:CRF02_AG_20029892406
+      - HIV-1 M:CRF02_AG_30220614916
+      - HIV-1 M:CRF02_AG_00129346294
+      - HIV-1 M:CRF02_AG_20728228596
+      - HIV-1 M:CRF02_AG_30111376596
+      - HIV-1 M:CRF02_AG_01161893839
+      - HIV-1 M:CRF02_AG_50314106694
+      - HIV-1 M:CRF02_AG_03099751427
+      - HIV-1 M:URF_03092610735
+      - HIV-1 M:CRF02_AG_00401150434
+      - HIV-1 M:CRF02_29HALD
+      - HIV-1 M:D_305HALD
+      - HIV-1 M:CRF02_16HALD
+      - HIV-1 M:G_L136
+      - HIV-1 M:A_171HPD
+      - HIV-1 M:A3_492HALD
+      - HIV-1 M:D_472HALD
+      - HIV-1 M:CRF06_1223SC
+      - HIV-1 M:CRF02_125HPD
+      - HIV-1 M:A_L044
+      - HIV-1 M:CRF11_413HALD
+      - HIV-1 M:CRF02_L019
+      - HIV-1 M:CRF02_227HALD
+      - HIV-1 M:H_316HALD
+      - HIV-1 M:G_K1243
+      - HIV-1 M:A_K2033
+      - HIV-1 M:A_K2025
+      - HIV-1 M:A3_K1339
+      - HIV-1 M:CRF02_K1318
+      - HIV-1 M:G_K1316
+      - HIV-1 M:CRF22_K1314
+      - HIV-1 M:CRF02_K1311
+      - HIV-1 M:CRF02_K1306
+      - HIV-1 M:CRF02_K1303
+      - HIV-1 M:CRF11_K1288
+      - HIV-1 M:CRF02_K1283
+      - HIV-1 M:CRF02_K1282
+      - HIV-1 M:CRF02_K1281
+      - HIV-1 M:A_K1263
+      - HIV-1 M:A_K1259
+      - HIV-1 M:A_K1256
+      - HIV-1 M:CRF02_K1166
+      - HIV-1 M:CRF22_K1135
+      - HIV-1 M:CRF02_K2053
+      - HIV-1 M:CRF02_K2035
+      - HIV-1 M:F2_K2009
+      - HIV-1 M:CRF02_K2007
+      - HIV-1 M:CRF02_K2005
+      - HIV-1 M:CRF02_K2002
+      - HIV-1 M:D_K1417
+      - HIV-1 M:A_K1394
+      - HIV-1 M:U_K1381
+      - HIV-1 M:CRF02_K1370
+      - HIV-1 M:CRF22_K1369
+      - HIV-1 M:A_K1363
+      - HIV-1 M:A_K1355
+      - HIV-1 M:CRF43_K1349
+      - HIV-1 M:CRF43_K1348
+      - HIV-1 M:F2_K1346
+      - HIV-1 M:A_K1345
+      - HIV-1 M:CRF02_K1343
+      - HIV-1 M:C_K1335
+      - HIV-1 M:CRF02_K1333
+      - HIV-1 M:CRF02_K1331
+      - HIV-1 M:A_K1304
+      - HIV-1 M:D_K1299
+      - HIV-1 M:G_K1291
+      - HIV-1 M:CRF02_K1268
+      - HIV-1 M:A3_K1245
+      - HIV-1 M:CRF02_K1227
+      - HIV-1 M:CRF22_K1214
+      - HIV-1 M:A_K1212
+      - HIV-1 M:CRF06_K1211
+      - HIV-1 M:A_K1200
+      - HIV-1 M:CRF02_K1194
+      - HIV-1 M:G_K1184
+      - HIV-1 M:CRF22_K1182
+      - HIV-1 M:CRF02_K1175
+      - HIV-1 M:CRF02_K1163
+      - HIV-1 M:CRF22_K1116
+      - HIV-1 M:CRF02_K1114
+      - HIV-1 M:A_K1111
+      - HIV-1 M:CRF02_K1110
+      - HIV-1 M:CRF02_K1103
+      - HIV-1 M:CRF22_K2006
+      - HIV-1 M:C_K1165
+      - HIV-1 M:CRF11_K1186
+      - HIV-1 M:CRF02_K1086
+      - HIV-1 M:D_K2055
+      - HIV-1 M:CRF24_MP1416
+      - HIV-1 M:CRF24_K1254
+      - HIV-1 M:F1_MP577
+      - HIV-1 M:F1_MP1035
+      - HIV-1 M:D_MP1017
+      - HIV-1 M:A_MP1294
+      - HIV-1 M:A_MP804
+      - HIV-1 M:CRF06_MP1075
+      - HIV-1 M:CRF04_K2049
+      - HIV-1 M:CRF02_MP812
+      - HIV-1 M:A_U2226
+      - HIV-1 M:G_U1720
+      - HIV-1 M:CRF10_U1916
+      - HIV-1 M:A_U0434
+      - HIV-1 M:CRF06_U2929
+      - HIV-1 M:C_U1803
+      - HIV-1 M:H_U3121
+      - HIV-1 M:CRF06_ORAV455
+      - HIV-1 M:CRF09_ORAV224
+      - HIV-1 M:CRF02_ORAV227
+      - HIV-1 M:A_ORAV459
+      - HIV-1 M:U_225HALD
+      - HIV-1 M:D_L016
+      - HIV-1 M:CRF09_16HALD
+      - HIV-1 M:CRF02_311HALD
+      - HIV-1 M:CRF02_L091
+      - HIV-1 M:CRF02_481HALD
+      - HIV-1 M:CRF02_323HALD
+      - HIV-1 M:CRF02_171HPD
+      - HIV-1 M:CRF02_42HPD
+      - HIV-1 M:CRF02_420HALD
+      - HIV-1 M:CRF02_191HPD
+      - HIV-1 M:CRF02_L035
+      - HIV-1 M:CRF02_466HALD
+      - HIV-1 M:CRF02_309HALD
+      - HIV-1 M:CRF02_34HALD
+      - HIV-1 M:CRF02_L086
+      - HIV-1 M:CRF02_L057
+      - HIV-1 M:CRF02_L056
+      - HIV-1 M:CRF02_L014
+      - HIV-1 M:CRF02_L009
+      - HIV-1 M:CRF02_455HALD
+      - HIV-1 M:CRF02_426HALD
+      - HIV-1 M:CRF02_479HALD
+      - HIV-1 M:CRF02_477HALD
+      - HIV-1 M:CRF02_471HALD
+      - HIV-1 M:CRF02_422HALD
+      - HIV-1 M:CRF02_304HPD
+      - HIV-1 M:CRF02_304HALD
+      - HIV-1 M:CRF02_233HALD
+      - HIV-1 M:CRF02_232HALD
+      - HIV-1 M:CRF02_163HALD
+      - HIV-1 M:CRF02_18HALD
+      - HIV-1 M:CRF02_L003
+      - HIV-1 M:CRF02_L006
+      - HIV-1 M:CRF02_469HALD
+      - HIV-1 M:CRF11_L018
+      - HIV-1 M:CRF06_L058
+      - HIV-1 M:CRF02_283HPD
+      - HIV-1 M:CRF02_97HALD
+      - HIV-1 M:CRF02_L084
+      - HIV-1 M:CRF02_265HPD
+      - HIV-1 M:CRF02_324HALD
+      - HIV-1 M:CRF02_L074
+      - HIV-1 M:CRF02_L040
+      - HIV-1 M:CRF02_303HALD
+      - HIV-1 M:CRF02_234HALD
+      - HIV-1 M:CRF02_46HALD
+      - HIV-1 M:CRF02_307HPD
+      - HIV-1 M:CRF02_418HALD
+      - HIV-1 M:CRF02_L117
+      - HIV-1 M:CRF02_496HALD
+      - HIV-1 M:CRF02_167HPD
+      - HIV-1 M:CRF02_474HALD
+      - HIV-1 M:CRF02_424HALD
+      - HIV-1 M:CRF02_L080
+      - HIV-1 M:CRF02_217HALD
+      - HIV-1 M:CRF02_456HALD
+      - HIV-1 M:CRF02_484HALD
+      - HIV-1 M:CRF02_416HALD
+      - HIV-1 M:C_L160
+      - HIV-1 M:C_39HALD
+      - HIV-1 M:B_215HPD
+      - HIV-1 M:A3_1223SC
+      - HIV-1 M:A3_L044
+      - HIV-1 M:CRF22_413HALD
+      - HIV-1 M:A_L019
+      - HIV-1 M:A_227HALD
+      - HIV-1 M:CRF22_316HALD
+      - HIV-1 M:CRF06_L136
+      - HIV-1 M:CRF06_L021
+      - HIV-1 M:CRF02_L013
+      - HIV-1 M:B_486HALD
+      - HIV-1 M:CRF02_383HALD
+      - HIV-1 M:U_29HALD
+      - HIV-1 M:B_21HALD
+      - HIV-1 M:A_15HALD
+      - HIV-1 M:CRF02_L001
+      - HIV-1 M:A_69HPD
+      - HIV-1 M:CRF02_492HALD
+      - HIV-1 M:BD_472HALD
+      - HIV-1 M:CRF02_214HPD
+      - HIV-1 M:B_17HALD
+      - HIV-1 M:A3_125HPD
+      - HIV-1 M:B_MP051
+      - HIV-1 M:A_LBS024
+      - HIV-1 M:H_KTB238
+      - HIV-1 M:A_KS049
+      - HIV-1 M:C_MP116
+      - HIV-1 M:B_MP077
+      - HIV-1 M:CRF01_MP38
+      - HIV-1 M:CRF01_MP365
+      - HIV-1 M:C_MP102
+      - HIV-1 M:CRF02_K2023
+      - HIV-1 M:A_K2032
+      - HIV-1 M:CRF22_K2031
+      - HIV-1 M:CRF22_K2030
+      - HIV-1 M:CRF02_K1316
+      - HIV-1 M:CRF22_K1301
+      - HIV-1 M:G_K1293
+      - HIV-1 M:CRF02_K1263
+      - HIV-1 M:G_K1256
+      - HIV-1 M:CRF22_K1166
+      - HIV-1 M:A_K1143
+      - HIV-1 M:F2_K1135
+      - HIV-1 M:CRF02_K1129
+      - HIV-1 M:CRF22_K2051
+      - HIV-1 M:G_K2005
+      - HIV-1 M:CRF02_K1425
+      - HIV-1 M:A_K1369
+      - HIV-1 M:F2_K1361
+      - HIV-1 M:A_K1360
+      - HIV-1 M:CRF11_K1356
+      - HIV-1 M:D_K1300
+      - HIV-1 M:CRF02_K1292
+      - HIV-1 M:D_K1291
+      - HIV-1 M:U_K1273
+      - HIV-1 M:A_K1245
+      - HIV-1 M:CRF02_K1243
+      - HIV-1 M:F2_K1240
+      - HIV-1 M:CRF02_K1230
+      - HIV-1 M:A_K1229
+      - HIV-1 M:CRF22_K1223
+      - HIV-1 M:CRF11_K1213
+      - HIV-1 M:CRF13_K1212
+      - HIV-1 M:A_K1210
+      - HIV-1 M:CRF13_K1209
+      - HIV-1 M:U_K1200
+      - HIV-1 M:CRF22_K1183
+      - HIV-1 M:CRF22_K1179
+      - HIV-1 M:CRF02_K1178
+      - HIV-1 M:CRF02_K1171
+      - HIV-1 M:CRF11_K1140
+      - HIV-1 M:CRF02_K1131
+      - HIV-1 M:F2_K1125
+      - HIV-1 M:CRF25_K1123
+      - HIV-1 M:CRF02_K1118
+      - HIV-1 M:A_K1113
+      - HIV-1 M:CRF18_K1111
+      - HIV-1 M:CRF01_K1104
+      - HIV-1 M:B_K1043
+      - HIV-1 M:F2_K2006
+      - HIV-1 M:D_K1371
+      - HIV-1 M:BD_K1165
+      - HIV-1 M:D_K1186
+      - HIV-1 M:CRF02_MP1075
+      - HIV-1 M:U_MP816
+      - HIV-1 M:H_MP964
+      - HIV-1 M:CRF02_MP1540
+      - HIV-1 M:CRF02_MP803
+      - HIV-1 M:G_MP1372
+      - HIV-1 M:G_MP694
+      - HIV-1 M:G_K1295
+      - HIV-1 M:G_K1167
+      - HIV-1 M:G_MP1369
+      - HIV-1 M:F2_MP1236
+      - HIV-1 M:F2_K1191
+      - HIV-1 M:F2_MP1031
+      - HIV-1 M:F1_MP411
+      - HIV-1 M:F1_MP1436
+      - HIV-1 M:CRF18_MP1335
+      - HIV-1 M:CRF18_MP1294
+      - HIV-1 M:CRF11_MP703
+      - HIV-1 M:CRF11_MP818
+      - HIV-1 M:CRF02_K1326
+      - HIV-1 M:CRF02_MP1277
+      - HIV-1 M:CRF02_MP1071
+      - HIV-1 M:CRF02_MP802
+      - HIV-1 M:CRF02_MP1378
+      - HIV-1 M:CRF02_MP815
+      - HIV-1 M:CRF22_MP512
+      - HIV-1 M:CRF22_MP1237
+      - HIV-1 M:A_MP1392
+      - HIV-1 M:A_K1305
+      - HIV-1 M:CRF22_K2049
+      - HIV-1 M:A_MP812
+      - HIV-1 M:A_MP582
+      - HIV-1 M:G_MP962
+      - HIV-1 M:CRF02_MP804
+      - HIV-1 M:G_MP801
+      - HIV-1 M:CRF02_MP1539
+      - HIV-1 M:G_MP1416
+      - HIV-1 M:U_MP1069
+      - HIV-1 M:CRF02_K2055
+      - HIV-1 M:F2_K2001
+      - HIV-1 M:CRF02_K1380
+      - HIV-1 M:CRF02_K1344
+      - HIV-1 M:A_K1290
+      - HIV-1 M:D_K1185
+      - HIV-1 M:CRF02_K1170
+      - HIV-1 M:F2_K1130
+      - HIV-1 M:CRF22_MP811
+      - HIV-1 M:CRF11_MP809
+      - HIV-1 M:CRF02_MP642
+      - HIV-1 M:A_MP640
+      - HIV-1 M:CRF02_MP578
+      - HIV-1 M:F2_MP577
+      - HIV-1 M:F2_MP576
+      - HIV-1 M:CRF02_MP540
+      - HIV-1 M:G_MP1417
+      - HIV-1 M:G_MP1397
+      - HIV-1 M:CRF22_MP1073
+      - HIV-1 M:F2_MP1035
+      - HIV-1 M:CRF13_MP1034
+      - HIV-1 M:G_MP1033
+      - HIV-1 M:F2_MP1017
+      - HIV-1 M:CRF22_K1274
+      - HIV-1 M:CRF11_K1244
+      - HIV-1 M:D_K1176
+      - HIV-1 M:CRF22_K1161
+      - HIV-1 M:F2_K1308
+      - HIV-1 M:C_SF621
+      - HIV-1 M:C_U0435
+      - HIV-1 M:C_SF130
+      - HIV-1 M:C_U0636
+      - HIV-1 M:K_U2226
+      - HIV-1 M:CRF10_U1929
+      - HIV-1 M:C_U0820
+      - HIV-1 M:C_U0812
+      - HIV-1 M:C_U0505
+      - HIV-1 M:C_U0702
+      - HIV-1 M:A_U1803
+      - HIV-1 M:A_U3121
+      - HIV-1 M:A_U1524
+      - HIV-1 M:D_U0106
+      - HIV-1 M:C_B1100
+      - HIV-1 M:C_U2132
+      - HIV-1 M:C_U0808
+      - HIV-1 M:C_U0333
+      - HIV-1 M:C_U0126
+      - HIV-1 M:C_U0705
+      - HIV-1 M:C_U1622
+      - HIV-1 M:C_U0727
+      - HIV-1 M:C_U0427
+      - HIV-1 M:C_B1085
+      - HIV-1 M:C_U0221
+      - HIV-1 M:C_SF431
+      - HIV-1 M:CRF22_U1617
+      - HIV-1 M:CRF22_U2929
+      - HIV-1 M:C_U0735
+      - HIV-1 M:C_U0211
+      - HIV-1 M:C_B1054
+      - HIV-1 M:D_U1916
+      - HIV-1 M:A_U1808
+      - HIV-1 M:C_U0434
+      - HIV-1 M:CRF02_ORAV465
+      - HIV-1 M:CRF06_ORAV227
+      - HIV-1 M:CRF02_ORAV455
+      - HIV-1 M:CRF06_ORAV224
+      - HIV-1 M:CRF06_ORAV208
+      - HIV-1 M:CRF06_ORAV436
+      - HIV-1 M:CRF02_ORAV461
+      - HIV-1 M:CRF06_ORAV462
+      - HIV-1 M:CRF06_ORAV460
+      - HIV-1 M:CRF06_ORAV456
+      - HIV-1 M:CRF06_ORAV453
+      - HIV-1 M:CRF06_ORAV452
+      - HIV-1 M:CRF06_ORAV405
+      - HIV-1 M:CRF06_ORAV217
+      - HIV-1 M:CRF06_ORAV216
+      - HIV-1 M:CRF06_ORAV459
+      - HIV-1 M:CRF06_ORAV215
+      - HIV-1 M:U_ORAV208
+      - HIV-1 M:CRF06_ORAV207
+      - HIV-1 M:CRF02_K2033
+      - HIV-1 M:CRF45_K2023
+      - HIV-1 M:CRF02_K1300
+      - HIV-1 M:CRF37_K1163
+      - HIV-1 M:D_K1192
+      - HIV-1 M:CRF13_MP816
+      - HIV-1 M:CRF01_MP540
+      - HIV-1 M:CRF22_MP1036
+      - HIV-1 M:G_K1254
+      - HIV-1 M:G_K1247
+      - HIV-1 M:CRF02_K1371
+      - HIV-1 M:F2_MP1367
+      - HIV-1 M:G_MP1367
+      - HIV-1 M:U_U1720
+      - HIV-1 M:D_MBFE252
+      - HIV-1 M:CRF05_LBTB018
+      - HIV-1 M:A1_LBS024
+      - HIV-1 M:J_KTB238
+      - HIV-1 M:CRF11_KS049
+      - HIV-1 M:F1_KBS154
+      - HIV-1 M:CRF06_127HPD
+      - HIV-1 M:CRF02_459HALD
+      - HIV-1 M:U_483HALD
+      - HIV-1 M:CRF45_413HALD
+      - HIV-1 M:CRF45_316HALD
+      - HIV-1 M:A_5HALD
+      - HIV-1 M:CRF25_10HALD
+      - HIV-1 M:U_305HALD
+      - HIV-1 M:CRF02_49HALD
+      - HIV-1 M:BD
+      - HIV-1 M:A MnObl-33-A
+      - HIV-1 M:A MnObl-35-A
+      - HIV-1 M:A MnObl-34-A
+      - HIV-1 M:A Gr-7-A
+      - HIV-1 M:A Gr-15-A
+      - HIV-1 M:A Br-4-A
+      - HIV-1 M:A Br-18-A
+      - HIV-1 M:A Br-7-A
+      - HIV-1 M:A Gom-3-A
+      - HIV-1 M:A Gom-9-A
+      - HIV-1 M:A Gom-18-A
+      - HIV-1 M:A MnObl-13-A
+      - HIV-1 M:A MnObl-12-A
+      - HIV-1 M:A MnObl-17-A
+      - HIV-1 M:A MnObl-11-A
+      - HIV-1 M:A MnObl-10-A
+      - HIV-1 M:A MnObl-31-A
+      - HIV-1 M:A MnObl-24-A
+      - HIV-1 M:A MnObl-29-A
+      - HIV-1 M:A MnObl-16-A
+      - HIV-1 M:A MnObl-25-A
+      - HIV-1 M:A MnObl-26-A
+      - HIV-1 M:A MnObl-08-A
+      - HIV-1 M:A MnObl-14-A
+      - HIV-1 M:A MnObl-32-A
+      - HIV-1 M:A MnObl-07-A
+      - HIV-1 M:A MnObl-30-A
+      - HIV-1 M:A MnObl-23-A
+      - HIV-1 M:A MnObl-18-A
+      - HIV-1 M:A MnObl-19-A
+      - HIV-1 M:A MnObl-22-A
+      - HIV-1 M:A MnObl-20-A
+      - HIV-1 M:A MnObl-09-A
+      - HIV-1 M:A MnObl-21-A
+      - HIV-1 M:A Mg-9-A
+      - HIV-1 M:A Br-17-A
+      - HIV-1 M:A Br-15-A
+      - HIV-1 M:A Br-19-A
+      - HIV-1 M:A Gom-22-A
+      - HIV-1 M:A Gom-21-A
+      - HIV-1 M:A Mn-20-A
+      - HIV-1 M:C Mn-22-C
+      - HIV-1 M:A Mn-3-A
+      - HIV-1 M:A MnObl-39-A
+      - HIV-1 M:A Mg-2-A
+      - HIV-1 M:A Mg-4-A
+      - HIV-1 M:A Mg-5-A
+      - HIV-1 M:A Mg-6-A
+      - HIV-1 M:A Mg-7-A
+      - HIV-1 M:A Mg-1-A
+      - HIV-1 M:G Mg-3-G
+      - HIV-1 M:A Vit-3-A
+      - HIV-1 M:A Vit-1-A
+      - HIV-1 M:A Vit-2-A
+      - HIV-1 M:A Gr-9-A
+      - HIV-1 M:A Gr-10-A
+      - HIV-1 M:A Gr-11-A
+      - HIV-1 M:C Gr-8-A/B
+      - HIV-1 M:A Gr-12-A
+      - HIV-1 M:A Gr-16-A
+      - HIV-1 M:A Gr-5-A
+      - HIV-1 M:A Gr-4-A
+      - HIV-1 M:A Gr-2-A
+      - HIV-1 M:A Gr-13-A
+      - HIV-1 M:A Gr-1-A
+      - HIV-1 M:A Gr-14-A
+      - HIV-1 M:A Br-16-A
+      - HIV-1 M:A Br-11-A
+      - HIV-1 M:A Br-9-A
+      - HIV-1 M:A Br-12-A
+      - HIV-1 M:A Br-6-A
+      - HIV-1 M:A Br-10-A
+      - HIV-1 M:A Br-2-A
+      - HIV-1 M:A Br-14-A
+      - HIV-1 M:A Br-5-A
+      - HIV-1 M:A Br-3-A
+      - HIV-1 M:A Br-1-A
+      - HIV-1 M:A Br-13-A
+      - HIV-1 M:B Mn-8-B
+      - HIV-1 M:A Mn-2-A
+      - HIV-1 M:A Mn-6-A
+      - HIV-1 M:A Mn-5-A
+      - HIV-1 M:A Mn-1-A
+      - HIV-1 M:A Mn-11-A
+      - HIV-1 M:B Mn-15-B
+      - HIV-1 M:A Mn-18-A
+      - HIV-1 M:A Mn-12-A
+      - HIV-1 M:B Mn-9-B
+      - HIV-1 M:A Mn-16-A
+      - HIV-1 M:B Mn-14-B
+      - HIV-1 M:A Mn-4-A
+      - HIV-1 M:A Gom-4-A
+      - HIV-1 M:A Gom-10-A
+      - HIV-1 M:A Gom-16-A
+      - HIV-1 M:A Gom-25-A
+      - HIV-1 M:A Gom-2-A
+      - HIV-1 M:A Gom-6-A
+      - HIV-1 M:A Gom-5-A
+      - HIV-1 M:A Gom-15-A
+      - HIV-1 M:A Gom-7-A
+      - HIV-1 M:A Gom-11-A
+      - HIV-1 M:A Gom-12-A
+      - HIV-1 M:A Gom-8-A
+      - HIV-1 M:A Gom-24-A
+      - HIV-1 M:A Gom-14-A
+      - HIV-1 M:A Gom-13-A
+      - HIV-1 M:A Gom-19-A
+      - HIV-1 M:A Gom-20-A
+      - HIV-1 M:A Gom-23-A
+      - HIV-1 M:A Gom-26-A
+      - HIV-1 M:A Gom-1-A
+      - HIV-1 M:A Gom-27-A
+      - HIV-1 M:A Gom-17-A
+      - HIV-1 M:C_1083
+      - HIV-1 M:C_14Fann
+      - HIV-1 M:C_25Fann
+      - HIV-1 M:C_478HALD
+      - HIV-1 M:C_1119
+      - HIV-1 M:C_1186
+      - HIV-1 M:C_1189
+      - HIV-1 M:C_102HALD
+      - HIV-1 M:C_260HALD
+      - HIV-1 M:C_154HALD
+      - HIV-1 M:C_321HALD
+      - HIV-1 M:C_463HALD
+      - HIV-1 M:C_3076HALD
+      - HIV-1 M:C_2936HALD
+      - HIV-1 M:C_2911HALD
+      - HIV-1 M:C_2909HALD
+      - HIV-1 M:C_2658HALD
+      - HIV-1 M:C_L065
+      - HIV-1 M:A MnObl-06-A-BY
+      - HIV-1 M:A MnObl-05-A-BY
+      - HIV-1 M:A MnObl-04-A-BY
+      - HIV-1 M:A MnObl-03-A-BY
+      - HIV-1 M:A MnObl-02-A-BY
+      - HIV-1 M:A MnObl-01-A-BY
+      - HIV-1 M:G_PT919
+      - HIV-1 M:G_PT9000
+      - HIV-1 M:G_PT836
+      - HIV-1 M:G_PT85
+      - HIV-1 M:G_PT9108
+      - HIV-1 M:G_PT9456
+      - HIV-1 M:G_PT955
+      - HIV-1 M:G_PT98
+      - HIV-1 M:G_PT806
+      - HIV-1 M:G_PT72
+      - HIV-1 M:G_PT727
+      - HIV-1 M:G_PT7139
+      - HIV-1 M:G_PT658
+      - HIV-1 M:G_PT6060
+      - HIV-1 M:G_PT5236
+      - HIV-1 M:D_PT317
+      - HIV-1 M:CRF02_AG_PT836
+      - HIV-1 M:CRF02_AG_PT727
+      - HIV-1 M:CRF02_AG_PT4132
+      - HIV-1 M:G_PT4773
+      - HIV-1 M:G_PT471
+      - HIV-1 M:G_PT482
+      - HIV-1 M:G_PT4132
+      - HIV-1 M:G_PT3
+      - HIV-1 M:G_PT251
+      - HIV-1 M:G_PT13
+      - HIV-1 M:G_PT271
+      - HIV-1 M:G_PT176
+      - HIV-1 M:G_PT227
+      - HIV-1 M:G_PT1631
+      - HIV-1 M:G_PT1544
+      - HIV-1 M:B_PT508
+      - HIV-1 M:B_PT983
+      - HIV-1 M:B_PT8731
+      - HIV-1 M:B_PT709
+      - HIV-1 M:B_PT695
+      - HIV-1 M:B_PT423
+      - HIV-1 M:B_PT38
+      - HIV-1 M:B_PT3013
+      - HIV-1 M:B_PT2
+      - HIV-1 M:B_PT24
+      - HIV-1 M:B_PT16
+      - HIV-1 M:B_PT114
+      - HIV-1 M:B_PT1147
+      - HIV-1 M:B_PT107
+      - HIV-1 M:B_PT073
+      - HIV-1 M:CRF02_AG_PT9000
+      - HIV-1 M:CRF02_AG_PT4773
+      - HIV-1 M:B_PT6060
+      - HIV-1 M:B_PT893
+      - HIV-1 M:B_PT955
+      - HIV-1 M:B_PT317
+      - HIV-1 M:B_PT471
+      - HIV-1 M:CRF02_AG_PT988
+      - HIV-1 M:B_PT919
+      - HIV-1 M:G_PT91
+      - HIV-1 M:B_PT85
+      - HIV-1 M:G_PT709
+      - HIV-1 M:B_PT176
+      - HIV-1 M:G_PT988
+      - HIV-1 M:G_PTR251
+      - HIV-1 M:F1_PT658
+      - HIV-1 M:D/B_PT317
+      - HIV-1 M:B/A/CR14_BG_PT107
+      - HIV-1 M:B/CRF14_BG_PT176
+      - HIV-1 M:B/D_PT508
+      - HIV-1 M:G_PT114
+      - HIV-1 M:CRF02_AG/URF_PT836
+      - HIV-1 M:B/URF_PT38
+      - HIV-1 M:URF/D_PT317
+      - HIV-1 M:B_BM2010-2
+      - HIV-1 M:B_BM2010-1
+      - HIV-1 M:URF(G/CRF02/G/CRF02)_08TG.C7044
+      - HIV-1 M:CRF02_AG_08TG.C7030
+      - HIV-1 M:CRF02_AG_08TG.C7028
+      - HIV-1 M:CRF02_AG_08TG.C7024
+      - HIV-1 M:CRF02_AG_08TG.C7023
+      - HIV-1 M:URF(G/CRF02/G/CRF02/G)_08TG.C7022
+      - HIV-1 M:CRF02_AG_08TG.C7017
+      - HIV-1 M:URF(J/U/K/J)_08TG.C7012
+      - HIV-1 M:URF(U/CRF06/CRF02/CRF06/U)_08TG.C7004
+      - HIV-1 M:CRF02_AG_08TG.C7003
+      - HIV-1 M:CRF02_AG_08TG.E5068
+      - HIV-1 M:CRF06_cpx_08TG.E5061
+      - HIV-1 M:CRF06_cpx_08TG.E5059
+      - HIV-1 M:CRF02_AG_08TG.E5053
+      - HIV-1 M:URF(CRF06/G)_08TG.E5047
+      - HIV-1 M:CRF02_AG_08TG.E5044
+      - HIV-1 M:CRF02_AG_08TG.E5043
+      - HIV-1 M:CRF02_AG_08TG.E5032
+      - HIV-1 M:CRF02_AG_08TG.E5027
+      - HIV-1 M:CRF02_AG_08TG.E5025
+      - HIV-1 M:URF(G/A/CRF02)_08TG.E5024
+      - HIV-1 M:CRF06_cpx_08TG.E5020
+      - HIV-1 M:CRF02_AG_08TG.E5017
+      - HIV-1 M:CRF06_cpx_08TG.E5016
+      - HIV-1 M:CRF02_AG_08TG.E5013
+      - HIV-1 M:G_08TG.E5011
+      - HIV-1 M:URF(CRF02/CRF06/CRF02)_08TG.E5009
+      - HIV-1 M:CRF02_AG_08TG.T3073
+      - HIV-1 M:URF(G/A3)_08TG.T3071
+      - HIV-1 M:CRF02_AG_08TG.T3069
+      - HIV-1 M:URF(G/A)_08TG.T3067
+      - HIV-1 M:CRF02_AG_08TG.T3061
+      - HIV-1 M:CRF02_AG_08TG.T3049
+      - HIV-1 M:URF(CRF02/U/CRF02)_08TG.T3047
+      - HIV-1 M:CRF02_AG_08TG.T3046
+      - HIV-1 M:CRF02_AG_08TG.T3043
+      - HIV-1 M:CRF06_cpx_08TG.T3042
+      - HIV-1 M:URF(CRF02/A3)_08TG.T3041
+      - HIV-1 M:URF(CRF02/A3)_08TG.T3039
+      - HIV-1 M:CRF02_AG_08TG.T3031
+      - HIV-1 M:CRF02_AG_08TG.T3029
+      - HIV-1 M:CRF02_AG_08TG.T3017
+      - HIV-1 M:URF(U/CRF02_AG)_08TG.T3013
+      - HIV-1 M:CRF02_AG_08TG.T3008
+      - HIV-1 M:CRF02_AG_08TG.T3003
+      - HIV-1 M:CRF06_cpx_08TG.T3034
+      - HIV-1 M:CRF06 2
+      - HIV-1 M:CRF06 1
+      - HIV-1 M:URF
+      - HIV-1 M:U
+      - HIV-1 M:URF(CRF11/J/U):07CD2587
+      - HIV-1 M:U:07CD0002
+      - HIV-1 M:U:07CD1874
+      - HIV-1 M:URF(G/CRF11):07CD3871
+      - HIV-1 M:URF(U/J/U/K/A/J):07CD3861
+      - HIV-1 M:URF(C/U/C):07CD0565
+      - HIV-1 M:URF(J/U/K/A):07CD1402
+      - HIV-1 M:URF(A/U/CRF02/G):07CD0222
+      - HIV-1 M:URF(A1/C):07CD4607
+      - HIV-1 M:URF(G/U):07CD0218
+      - HIV-1 M:CRF43:07CD1680
+      - HIV-1 M:URF(CRF02/A2):07CD1474
+      - HIV-1 M:URF(G/A/G/A/G):07CD1301
+      - HIV-1 M:A:07CD4078
+      - HIV-1 M:URF(D/U/A):07CD4059
+      - HIV-1 M:URF(C/D/U/C):07CD4715
+      - HIV-1 M:URF(CRF26/D):07CD0639
+      - HIV-1 M:URF(CRF06/H/CRF06):07CD0479
+      - HIV-1 M:A2:07CD2656
+      - HIV-1 M:A2:07CD2038
+      - HIV-1 M:URF(U/A/D):07CD2682
+      - HIV-1 M:D:07CD4647
+      - HIV-1 M:J:07CD2805
+      - HIV-1 M:A:07CD3191
+      - HIV-1 M:A:07CD3537
+      - HIV-1 M:A:07CD2657
+      - HIV-1 M:A1:07CD2974
+      - HIV-1 M:C:07CD3699
+      - HIV-1 M:URF(CRF02/U/CRF37):07CD3746
+      - HIV-1 M:D:07CD3864
+      - HIV-1 M:URF(CRF02/A):07CD2865
+      - HIV-1 M:URF(CRF02/A/CRF02/A):07CD1152
+      - HIV-1 M:URF(A/D/U/A/U/D):07CD0680
+      - HIV-1 M:URF(H/J):07CD1723
+      - HIV-1 M:D:07CD2996
+      - HIV-1 M:A:07CD0040
+      - HIV-1 M:URF(A/CRF09/A/CRF09):07CD2743
+      - HIV-1 M:URF(CRF09/A/CRF09/U/A):07CD1094
+      - HIV-1 M:C:07CD0729
+      - HIV-1 M:CRF13:07CD4724
+      - HIV-1 M:CRF13:07CD4778
+      - HIV-1 M:D:07CD2193
+      - HIV-1 M:CRF37:07CD0438
+      - HIV-1 M:URF(A/CRF37):07CD3533
+      - HIV-1 M:CRF45:07CD3422
+      - HIV-1 M:A:07CD0335
+      - HIV-1 M:C:07CD3479
+      - HIV-1 M:C:07CD3522
+      - HIV-1 M:A1:07CD3784
+      - HIV-1 M:CRF01:07CD3458
+      - HIV-1 M:A:07CD3373
+      - HIV-1 M:URF(A/A3/A):07CD2084
+      - HIV-1 M:G:07CD2699
+      - HIV-1 M:G:07CD2755
+      - HIV-1 M:C:07CD2845
+      - HIV-1 M:CRF25:07CD2336
+      - HIV-1 M:A:07CD1525
+      - HIV-1 M:A:07CD1425
+      - HIV-1 M:A:07CD4292
+      - HIV-1 M:URF(U/H):07CD4108
+      - HIV-1 M:URF(CRF01/A):07CD0638
+      - HIV-1 M:URF(CRF22/U):07CD2047
+      - HIV-1 M:URF(A/CRF22):07CD4617
+      - HIV-1 M:A:07CD2110
+      - HIV-1 M:A:07CD0050
+      - HIV-1 M:C:07CD0067
+      - HIV-1 M:G:07CD0158
+      - HIV-1 M:URF(A/CRF22):07CD0117
+      - HIV-1 M:URF(A/CRF22):07CD0062
+      - HIV-1 M:G:07CD0484
+      - HIV-1 M:URF(A/CRF22):07CD3407
+      - HIV-1 M:C:07CD2644
+      - HIV-1 M:A:07CD3729
+      - HIV-1 M:A:07CD3012
+      - HIV-1 M:C:07CD1429
+      - HIV-1 M:C:07CD2463
+      - HIV-1 M:C:07CD3188
+      - HIV-1 M:CRF02:07CD3272
+      - HIV-1 M:CRF26:07CD3355
+      - HIV-1 M:C:07CD3654
+      - HIV-1 M:G:07CD2201
+      - HIV-1 M:CRF45:07CD1741
+      - HIV-1 M:URF(CRF02/A3):07CD1433
+      - HIV-1 M:C:07CD0866
+      - HIV-1 M:A1:07CD3665
+      - HIV-1 M:CRF45:07CD2443
+      - HIV-1 M:A1:07CD0444
+      - HIV-1 M:CRF11:07CD4676
+      - HIV-1 M:C:07CD4094
+      - HIV-1 M:A1:07CD0509
+      - HIV-1 M:A1:07CD1246
+      - HIV-1 M:H:07CD4215
+      - HIV-1 M:CRF02:07CD0511
+      - HIV-1 M:CRF26:07CD4751
+      - HIV-1 M:02_AG 60408069911
+      - HIV-1 M:B 51470016401
+      - HIV-1 M:B 11470036308
+      - HIV-1 M:B 51409035375
+      - HIV-1 M:B 51270048879
+      - HIV-1 M:B 41601508923
+      - HIV-1 M:B 11601408488
+      - HIV-1 M:B 71570010518
+      - HIV-1 M:B 103108082064
+      - HIV-1 M:B 5028932
+      - HIV-1 M:B 22560053163
+      - HIV-1 M:B 121307097233
+      - HIV-1 M:B 102670074592
+      - HIV-1 M:B 102170098250
+      - HIV-1 M:CRF02 AE6089
+      - HIV-1 M:C 6023
+      - HIV-1 M:C 6577
+      - HIV-1 M:F1 6514
+      - HIV-1 M:A 6170
+      - HIV-1 M:A 6143
+      - HIV-1 M:F1 5947
+      - HIV-1 M:C 5279
+      - HIV-1 M:B 1997_KC005
+      - HIV-1 M:B 93_KC005
+      - HIV-1 M:B 2003_KC005
+      - HIV-1 M:B 2003_KC134
+      - HIV-1 M:B 2004_KC134
+      - HIV-1 M:B 2008_HIV-084
+      - HIV-1 M:B 2008_HIV-097
+      - HIV-1 M:B 2001_KC134
+      - HIV-1 M:B 2007_HIV_010
+      - HIV-1 M:B 2008_HIV-009
+      - HIV-1 M:B 2003_KC005B
+      - HIV-1 M:B 2007_HIV-032
+      - HIV-1 M:B 2000_KC005
+      - HIV-1 M:C_198/93_KC005
+      - HIV-1 M:C_176/93_KC005
+      - HIV-1 M:C_169/93_KC005
+      - HIV-1 M:C_164/93_KC005
+      - HIV-1 M:C_162/93_KC005
+      - HIV-1 M:C_154/93_KC005
+      - HIV-1 M:C_148/93_KC005
+      - HIV-1 M:C_145/93_KC005
+      - HIV-1 M:C_144/93_KC005
+      - HIV-1 M:C_132/93_KC005
+      - HIV-1 M:C_131/93_KC005
+      - HIV-1 M:C_130/93_KC005
+      - HIV-1 M:C_92/93_KC005
+      - HIV-1 M:C_88/93_KC005
+      - HIV-1 M:C_86/93_KC005
+      - HIV-1 M:C_79/93_KC005
+      - HIV-1 M:C_72/93_KC005
+      - HIV-1 M:C_68/93_KC005
+      - HIV-1 M:C_64/93_KC005
+      - HIV-1 M:C_62/93_KC005
+      - HIV-1 M:C_59/93_KC005
+      - HIV-1 M:C_58/93_KC005
+      - HIV-1 M:C_51/93_KC005
+      - HIV-1 M:C_49/93_KC005
+      - HIV-1 M:C_44/93_KC005
+      - HIV-1 M:C_38/93_KC005
+      - HIV-1 M:C_183/93_KC005
+      - HIV-1 M:C_181/93_KC005
+      - HIV-1 M:C_179/93_KC005
+      - HIV-1 M:C_143/93_KC005
+      - HIV-1 M:C_142/93_KC005
+      - HIV-1 M:C_141/93_KC005
+      - HIV-1 M:C_138/93_KC005
+      - HIV-1 M:C_109/93_KC005
+      - HIV-1 M:C_101/93_KC005
+      - HIV-1 M:C_100/93_KC005
+      - HIV-1 M:C_99/93_KC005
+      - HIV-1 M:C_97/93_KC005
+      - HIV-1 M:C_96/93_KC005
+      - HIV-1 M:C_94/93_KC005
+      - HIV-1 M:C_43/93_KC005
+      - HIV-1 M:C_41/93_KC005
+      - HIV-1 M:C_40/93_KC005
+      - HIV-1 M:C_36/93_KC005
+      - HIV-1 M:C_35/93_KC005
+      - HIV-1 M:C_34/93_KC005
+      - HIV-1 M:C_33/93_KC005
+      - HIV-1 M:C_32/93_KC005
+      - HIV-1 M:C_24/93_KC005
+      - HIV-1 M:C_23/93_KC005
+      - HIV-1 M:C_19/93_KC005
+      - HIV-1 M:C_16/93_KC005
+      - HIV-1 M:C_15/93_KC005
+      - HIV-1 M:C_14/93_KC005
+      - HIV-1 M:C_11/93_KC005
+      - HIV-1 M:C_10/93_KC005
+      - HIV-1 M:C_9/93_KC005
+      - HIV-1 M:C_3/93_KC005
+      - HIV-1 M:C_77/1997_KC005
+      - HIV-1 M:C_224/1997_KC005
+      - HIV-1 M:C_148/1997_KC005
+      - HIV-1 M:F2 08GQ099
+      - HIV-1 M:C 08GQ404
+      - HIV-1 M:C 08GQ304
+      - HIV-1 M:08GQ267
+      - HIV-1 M:URF (H/U/H) 08GQ479
+      - HIV-1 M:URF (CRF02_AG/CRF43_02G/CRF02_AG) 08GQ027
+      - HIV-1 M:URF (CRF02_AG/A3) 08GQ193
+      - HIV-1 CRF11_cpx:08GQ380
+      - HIV-1 CRF06_cpx:08GQ191
+      - HIV-1 CRF02_AG:08GQ415
+      - HIV-1 CRF02_AG:08GQ269
+      - HIV-1 CRF02_AG:08GQ370
+      - HIV-1 CRF02_AG:08GQ061
+      - HIV-1 CRF02_AG:08GQ058
+      - HIV-1 CRF02_AG:08GQ092
+      - HIV-1 CRF02_AG:08GQ378
+      - HIV-1 CRF02_AG:08GQ060
+      - HIV-1 CRF02_AG:08GQ385
+      - HIV-1 CRF02_AG:08GQ239
+      - HIV-1 CRF02_AG:08GQ093
+      - HIV-1 CRF02_AG:08GQ386
+      - HIV-1 CRF02_AG:08GQ057
+      - HIV-1 CRF02_AG:08GQ433
+      - HIV-1 CRF02_AG:08GQ463
+      - HIV-1 CRF02_AG:08GQ200
+      - HIV-1 CRF02_AG:08GQ342
+      - HIV-1 CRF02_AG:08GQ032
+      - HIV-1 CRF02_AG:08GQ203
+      - HIV-1 CRF02_AG:08GQ392
+      - HIV-1 CRF02_AG:08GQ258
+      - HIV-1 CRF09_cpx:08GQ399
+      - HIV-1 M:A 08GQ281
+      - HIV-1 CRF22_01A1:08GQ346
+      - HIV-1 M:A3 08GQ508
+      - HIV-1 M:A3 08GQ182
+      - HIV-1 CRF26_A5U:08GQ323
+      - HIV-1 CRF26_A5U:08GQ019
+      - HIV-1 M:G 08GQ113
+      - HIV-1 M:G 08GQ328
+      - HIV-1 M:G 08GQ045
+      - HIV-1 CRF02_AG:08GQ166
+      - Human immunodeficiency virus type 1 1578-CRO
+      - Human immunodeficiency virus type 1 2446-CRO
+      - Human immunodeficiency virus type 1 10-CRO
+      - Human immunodeficiency virus type 1 24-CRO
+      - Human immunodeficiency virus type 1 23-CRO
+      - Human immunodeficiency virus type 1 12-CRO
+      - Human immunodeficiency virus type 1 15-CRO
+      - Human immunodeficiency virus type 1 21-CRO
+      - Human immunodeficiency virus type 1 6873-CRO
+      - Human immunodeficiency virus type 1 19-CRO
+      - Human immunodeficiency virus type 1 8-CRO
+      - Human immunodeficiency virus type 1 17-CRO
+      - Human immunodeficiency virus type 1 16-CRO
+      - Human immunodeficiency virus type 1 7-CRO
+      - Human immunodeficiency virus type 1 13-CRO
+      - Human immunodeficiency virus type 1 1-CRO
+      - Human immunodeficiency virus type 1 1316-CRO
+      - Human immunodeficiency virus type 1 9-CRO
+      - Human immunodeficiency virus type 1 20-CRO
+      - Human immunodeficiency virus type 1 8783-CRO
+      - Human immunodeficiency virus type 1 6179-CRO
+      - Human immunodeficiency virus type 1 4183-CRO
+      - Human immunodeficiency virus type 1 6259-CRO
+      - Human immunodeficiency virus type 1 3705-CRO
+      - Human immunodeficiency virus type 1 1751-CRO
+      - Human immunodeficiency virus type 1 7702-CRO
+      - Human immunodeficiency virus type 1 5-CRO
+      - Human immunodeficiency virus type 1 3916-CRO
+      - Human immunodeficiency virus type 1 22-CRO
+      - Human immunodeficiency virus type 1 11-CRO
+      - Human immunodeficiency virus type 1 14-CRO
+      - Human immunodeficiency virus type 1 2-CRO
+      - HIV-1 M:G_06TG.HT072
+      - HIV-1 M:G_06TG.HT049
+      - HIV-1 M:G_06TG.HT023
+      - HIV-1 M:A_06TG.HT247
+      - HIV-1 M:A_06TG.HT152
+      - HIV-1 M:A_06TG.HT032
+      - HIV-1 06TG.HT045
+      - HIV-1 06TG.HT041
+      - HIV-1 06TG.HT030
+      - HIV-1 06TG.HT008
+      - HIV-1 M:G_06TG.HT149
+      - HIV-1 M:G_06TG.HT139
+      - HIV-1 M:G_06TG.HT116
+      - HIV-1 M:G_06TG.HT087
+      - HIV-1 M:G_06TG.HT086
+      - HIV-1 M:G_06TG.HT082
+      - HIV-1 M:G_06TG.HT081
+      - HIV-1 M:G_06TG.HT068
+      - HIV-1 M:G_06TG.HT065
+      - HIV-1 M:G_06TG.HT056
+      - HIV-1 M:A_06TG.HT126
+      - HIV-1 M:A_06TG.HT085
+      - HIV-1 M:A_06TG.HT077
+      - HIV-1 M:A_06TG.HT055
+      - HIV-1 M:A_06TG.HT045
+      - HIV-1 07TG.HT220
+      - HIV-1 07TG.HT178
+      - HIV-1 06TG.HT247
+      - HIV-1 06TG.HT218
+      - HIV-1 06TG.HT217
+      - HIV-1 06TG.HT216
+      - HIV-1 06TG.HT211
+      - HIV-1 06TG.HT204
+      - HIV-1 06TG.HT181
+      - HIV-1 06TG.HT170
+      - HIV-1 06TG.HT161
+      - HIV-1 06TG.HT157
+      - HIV-1 06TG.HT156
+      - HIV-1 06TG.HT155
+      - HIV-1 06TG.HT153
+      - HIV-1 06TG.HT152
+      - HIV-1 06TG.HT151
+      - HIV-1 06TG.HT147
+      - HIV-1 06TG.HT146
+      - HIV-1 06TG.HT143
+      - HIV-1 06TG.HT136
+      - HIV-1 06TG.HT135
+      - HIV-1 06TG.HT134
+      - HIV-1 06TG.HT131
+      - HIV-1 06TG.HT129
+      - HIV-1 06TG.HT128
+      - HIV-1 06TG.HT127
+      - HIV-1 06TG.HT124
+      - HIV-1 06TG.HT121
+      - HIV-1 06TG.HT120
+      - HIV-1 06TG.HT117
+      - HIV-1 06TG.HT114
+      - HIV-1 06TG.HT112
+      - HIV-1 06TG.HT090
+      - HIV-1 06TG.HT088
+      - HIV-1 06TG.HT083
+      - HIV-1 06TG.HT076
+      - HIV-1 06TG.HT075
+      - HIV-1 06TG.HT073
+      - HIV-1 06TG.HT072
+      - HIV-1 06TG.HT071
+      - HIV-1 06TG.HT070
+      - HIV-1 06TG.HT069
+      - HIV-1 06TG.HT066
+      - HIV-1 06TG.HT064
+      - HIV-1 06TG.HT063
+      - HIV-1 06TG.HT061
+      - HIV-1 06TG.HT060
+      - HIV-1 06TG.HT058
+      - HIV-1 06TG.HT057
+      - HIV-1 06TG.HT054
+      - HIV-1 06TG.HT051
+      - HIV-1 06TG.HT050
+      - HIV-1 06TG.HT048
+      - HIV-1 06TG.HT046
+      - HIV-1 06TG.HT044
+      - HIV-1 06TG.HT043
+      - HIV-1 06TG.HT038
+      - HIV-1 06TG.HT037
+      - HIV-1 06TG.HT036
+      - HIV-1 06TG.HT035
+      - HIV-1 06TG.HT034
+      - HIV-1 06TG.HT032
+      - HIV-1 M:B_04NOVAX41
+      - HIV-1 M:B_03NOVAX41
+      - HIV-1 M:B_96NOVAX41
+      - HIV-1 M:B_95NOVAX41
+      - HIV-1 M:B_03NOVAX40
+      - HIV-1 M:B_00NOVAX40
+      - HIV-1 M:B_05NOVAX38
+      - HIV-1 M:B_00NOVAX38
+      - HIV-1 M:B_06NOVAX37
+      - HIV-1 M:B_99NOVAX37
+      - HIV-1 M:B_04NOVAX36
+      - HIV-1 M:B_06NOVAX34
+      - HIV-1 M:D_03NOVAX33
+      - HIV-1 M:D_97NOVAX33
+      - HIV-1 M:B_06NOVAX32
+      - HIV-1 M:B_98NOVAX32
+      - HIV-1 M:CRF01_04NOVAX31
+      - HIV-1 M:CRF01_03NOVAX31
+      - HIV-1 M:CRF01_97NOVAX31
+      - HIV-1 M:B_06NOVAX30
+      - HIV-1 M:B_02NOVAX30
+      - HIV-1 M:B_04NOVAX29
+      - HIV-1 M:B_03NOVAX29
+      - HIV-1 M:B_98NOVAX29
+      - HIV-1 M:B_06NOVAX28
+      - HIV-1 M:B_98NOVAX28
+      - HIV-1 M:B_04NOVAX26
+      - HIV-1 M:B_97NOVAX26
+      - HIV-1 M:C_05NOVAX25
+      - HIV-1 M:C_04NOVAX25
+      - HIV-1 M:C_03NOVAX25
+      - HIV-1 M:C_96NOVAX25
+      - HIV-1 M:B_05NOVAX23
+      - HIV-1 M:B_96NOVAX23
+      - HIV-1 M:B_04NOVAX22
+      - HIV-1 M:B_99NOVAX22
+      - HIV-1 M:B_06NOVAX21
+      - HIV-1 M:B_98NOVAX21
+      - HIV-1 M:B_04NOVAX20
+      - HIV-1 M:B_00NOVAX20
+      - HIV-1 M:B_06NOVAX19
+      - HIV-1 M:B_04NOVAX19
+      - HIV-1 M:B_03NOVAX19
+      - HIV-1 M:B_99NOVAX19
+      - HIV-1 M:B_98NOVAX19
+      - HIV-1 M:B_03NOVAX16
+      - HIV-1 M:B_98NOVAX16
+      - HIV-1 M:B_04NOVAX15
+      - HIV-1 M:B_03NOVAX15
+      - HIV-1 M:B_01NOVAX15
+      - HIV-1 M:B_00NOVAX15
+      - HIV-1 M:B_06NOVAX14
+      - HIV-1 M:B_04NOVAX14
+      - HIV-1 M:B_03NOVAX14
+      - HIV-1 M:B_97NOVAX14
+      - HIV-1 M:B_96NOVAX14
+      - HIV-1 M:B_03NOVAX13
+      - HIV-1 M:B_97NOVAX13
+      - HIV-1 M:B_06NOVAX12
+      - HIV-1 M:B_04NOVAX12
+      - HIV-1 M:B_03NOVAX12
+      - HIV-1 M:B_06NOVAX11
+      - HIV-1 M:B_06NOVAX10
+      - HIV-1 M:B_00NOVAX10
+      - HIV-1 M:B_06NOVAX07
+      - HIV-1 M:B_97NOVAX07
+      - HIV-1 M:B_03NOVAX06
+      - HIV-1 M:B_00NOVAX06
+      - HIV-1 M:B_03NOVAX04
+      - HIV-1 M:B_99NOVAX04
+      - HIV-1 M:B_06NOVAX03
+      - HIV-1 M:B_00NOVAX03
+      - HIV-1 M:B_05NOVAX02
+      - HIV-1 M:B_04NOVAX02
+      - HIV-1 M:B_03NOVAX02
+      - HIV-1 M:B_97NOVAX02
+      - HIV-1 M:B_04NOVAX01
+      - HIV-1 M:B_03NOVAX01
+      - HIV-1 M:B_97NOVAX01
+      - HIV-1 M:B_96NOVAX01
+      - HIV-1 M_97CD.KMST91
+      - HIV-1 M_97CD.MBFE250
+      - HIV-1 M_02CD.MBTB047
+      - HIV-1 M_02CD.LBTB084
+      - HIV-1 M_02CD.KS069
+      - HIV-1 M_02CD.LBTB032
+      - HIV-1 M_97CD.KFE267
+      - HIV-1 M_97CD.KTB119
+      - Human immunodeficiency virus type 1 H1.19.2
+      - Human immunodeficiency virus type 1 H1.19.1
+      - HIV-1 M:B_07CN.HN007
+      - HIV-1 M:B_07CN.HN079
+      - HIV-1 M:B_07CN.HN064
+      - HIV-1 M:B_07CN.HN063
+      - HIV-1 M:B_07CN.HN033
+      - HIV-1 M:B_07CN.HN030
+      - HIV-1 M:B_07CN.HN029
+      - HIV-1 M:B_07CN.HN023
+      - HIV-1 M:B_07CN.HN022
+      - HIV-1 M:B_07CN.HN009
+      - HIV-1 M:C_07CN.HN004
+      - HIV-1 M:C_07CN.HN003
+      - HIV-1 M:B_04SN.MS019
+      - HIV-1 M:CRF02_04SN.MS869
+      - HIV-1 M:CRF02_04SN.MS842
+      - HIV-1 M:CRF02_04SN.MS840
+      - HIV-1 M:CRF02_04SN.MS831
+      - HIV-1 M:CRF09_04SN.MS823
+      - HIV-1 M:CRF02_04SN.MS668
+      - HIV-1 M:CRF02_04SN.MS641
+      - HIV-1 M:CRF02_04SN.MS636
+      - HIV-1 M:CRF02_04SN.MS618
+      - HIV-1 M:CRF02_04SN.MS516
+      - HIV-1 M:CRF02_04SN.MS474
+      - HIV-1 M:CRF09_04SN.MS463
+      - HIV-1 M:CRF09_04SN.MS445
+      - HIV-1 M:CFR02/01_04SN.MS291
+      - HIV-1 M:CRF02_04SN.MS268
+      - HIV-1 M:CRF02/06_04SN.MS258
+      - HIV-1 M:CRF02_04SN.MS253
+      - HIV-1 M:CRF02/06/09_04SN.MS235
+      - HIV-1 M:CRF02_04SN.MS206
+      - HIV-1 M:CRF02_04SN.MS178
+      - HIV-1 M:CRF02_04SN.MS013
+      - HIV-1 M:U/G_04SN.MS285
+      - HIV-1 M:G/CRF02_04SN.MS642
+      - HIV-1 M:G_04SN.MS486
+      - HIV-1 M:G_04SN.MS297
+      - HIV-1 M:G_04SN.MS279
+      - HIV-1 M:G_04SN.MS210
+      - HIV-1 M:G_04SN.MS209
+      - HIV-1 M:B_04SN.MS868
+      - HIV-1 M:B_04SN.MS838
+      - HIV-1 M:B_04SN.MS830
+      - HIV-1 M:B_04SN.MS812
+      - HIV-1 M:B_04SN.MS802
+      - HIV-1 M:B_04SN.MS651
+      - HIV-1 M:B_04SN.MS619
+      - HIV-1 M:B_04SN.MS614
+      - HIV-1 M:B_04SN.MS605
+      - HIV-1 M:B_04SN.MS483
+      - HIV-1 M:B_04SN.MS482
+      - HIV-1 M:B_04SN.MS103
+      - HIV-1 M:C_04SN.MS835
+      - HIV-1 M:C_04SN.MS855
+      - HIV-1 M:C_04SN.MS821
+      - HIV-1 M:C_04SN.MS816
+      - HIV-1 M:C_04SN.MS034
+      - HIV-1 M:C_04SN.MS883
+      - HIV-1 M:C_04SN.MS779
+      - HIV-1 M:C_04SN.MS700
+      - HIV-1 M:C_04SN.MS540
+      - HIV-1 M:C_04SN.MS522
+      - HIV-1 M:C_04SN.MS492
+      - HIV-1 M:C_04SN.MS487
+      - HIV-1 M:C_04SN.MS481
+      - HIV-1 M:C_04SN.MS477
+      - HIV-1 M:C_04SN.MS475
+      - HIV-1 M:C_04SN.MS456
+      - HIV-1 M:C_04SN.MS448
+      - HIV-1 M:C_04SN.MS440
+      - HIV-1 M:C_04SN.MS422
+      - HIV-1 M:C_04SN.MS281
+      - HIV-1 M:C_04SN.MS262
+      - HIV-1 M:C_04SN.MS245
+      - HIV-1 M:C_04SN.MS036
+      - HIV-1 M:C_04SN.MS029
+      - HIV-1 M:C_04SN.MS015
+      - HIV-1 M:C_04SN.MS011
+      - HIV-1 M:C_04SN.MS010
+      - HIV-1 M:C_04SN.MS007
+      - HIV-1 M:C_04SN.MS002
+      - HIV-1 CRF03_AB
+      - HIV-1 circulating recombinant forms
+      - HIV-1 unknown group
+      - HIV-1 CRF04_cpx
+      - HIV-1 group M unknown subgroup
+      - HIV-1 M ARV34
+      - HIV-1 M:G_GB03
+      - HIV-1 M CP15
+      - HIV-1 M:J_CP14
+      - HIV-1 M CP13
+      - HIV-1 M CP11
+      - HIV-1 M CP10
+      - HIV-1 M:H_CP07
+      - HIV-1 M:G_CP06
+      - HIV-1 M:D_CP03
+      - HIV-1 M:G_CHU56
+      - HIV-1 M:D_CHU53
+      - HIV-1 M:F_CHU51
+      - HIV-1 M CHU50
+      - HIV-1 M:G_CHU46
+      - HIV-1 M CHU43
+      - HIV-1 M:D_CHU39
+      - HIV-1 M:G_CHU38
+      - HIV-1 M CHU35
+      - HIV-1 M CHU33
+      - HIV-1 M CHU31
+      - HIV-1 M CHU30
+      - HIV-1 M:J_CHU29
+      - HIV-1 M:D_CHU27
+      - HIV-1 M:D_CHU19
+      - HIV-1 M CHU18
+      - HIV-1 M CHU17
+      - HIV-1 M:G_CHU16
+      - HIV-1 M CHU14
+      - HIV-1 M CHU13
+      - HIV-1 M:A_CHU12
+      - HIV-1 M:G_CHU11
+      - HIV-1 M CHU09
+      - HIV-1 M CHU08
+      - HIV-1 M:D_CHU07
+      - HIV-1 M:G_CHU06
+      - HIV-1 M CHU03
+      - HIV-1 M AS23
+      - HIV-1 M ARV94
+      - HIV-1 M:G_ARV93
+      - HIV-1 M ARV81
+      - HIV-1 M ARV64
+      - HIV-1 M ARV60
+      - HIV-1 M ARV56
+      - HIV-1 M ARV47
+      - HIV-1 M ARV41
+      - HIV-1 M ARV80
+      - HIV-1 M:D_ARV32
+      - HIV-1 M ARV04
+      - HIV-1 M ARV26
+      - HIV-1 M:CRF10 U1929
+      - HIV-1 M:C U0812
+      - HIV-1 M:C U0211
+      - HIV-1 M:K
+      - HIV-1 M:J
+      - HIV-1 M:H
+      - HIV-1 M:G
+      - HIV-1 M:F
+      - HIV-1 M:D
+      - HIV-1 M:CRF
+      - HIV-1 M:C
+      - HIV-1 M:B
+      - HIV-1 M:A
+      - HIV-1 M:K MP535
+      - HIV-1 M:CRF18 K1256
+      - HIV-1 M:CRF18 MP1335
+      - HIV-1 M:CRF18 MP1294
+      - HIV-1 M:H K2009
+      - HIV-1 M:H MP964
+      - HIV-1 M:H U3121
+      - HIV-1 M:H MP1069
+      - HIV-1 M:G K2055
+      - HIV-1 M:G ORAV227
+      - HIV-1 M:G MP1033
+      - HIV-1 M:G MP1416
+      - HIV-1 M:G MP1417
+      - HIV-1 M:G K1167
+      - HIV-1 M:G MP1369
+      - HIV-1 M:G MP694
+      - HIV-1 M:G K1295
+      - HIV-1 M:G 225Hald
+      - HIV-1 M:G MP801
+      - HIV-1 M:G MP962
+      - HIV-1 M:G MP1372
+      - HIV-1 M:F K1130
+      - HIV-1 M:F MP1236
+      - HIV-1 M:F MP577
+      - HIV-1 M:F K2001
+      - HIV-1 M:F K1191
+      - HIV-1 M:F MP411
+      - HIV-1 M:F MP1035
+      - HIV-1 M:F MP1031
+      - HIV-1 M:F MP576
+      - HIV-1 M:F K2049
+      - HIV-1 M:F MP1017
+      - HIV-1 M:F MP1436
+      - HIV-1 M:CRF13 MP1034
+      - HIV-1 M:CRF11 K1288
+      - HIV-1 M:CRF11 K1186
+      - HIV-1 M:CRF11 L018
+      - HIV-1 M:CRF11 MP818
+      - HIV-1 M:CRF11 K1244
+      - HIV-1 M:CRF11 MP809
+      - HIV-1 M:CRF11 ORAV224
+      - HIV-1 M:CRF11 MP703
+      - HIV-1 M:CRF09 454Hald
+      - HIV-1 M:CRF06 ORAV453
+      - HIV-1 M:CRF06 ORAV217
+      - HIV-1 M:CRF06 ORAV462
+      - HIV-1 M:CRF06 ORAV452
+      - HIV-1 M:CRF06 ORAV405
+      - HIV-1 M:CRF06 ORAV216
+      - HIV-1 M:CRF06 ORAV215
+      - HIV-1 M:CRF06 MP1075
+      - HIV-1 M:CRF06 L136
+      - HIV-1 M:CRF06 L058
+      - HIV-1 M:CRF06 L021
+      - HIV-1 M:CRF06 1223SC
+      - HIV-1 M:CRF06 ORAV456
+      - HIV-1 M:CRF06 MP1397
+      - HIV-1 M:CRF06 ORAV438
+      - HIV-1 M:CRF06 ORAV210
+      - HIV-1 M:CRF06 ORAV436
+      - HIV-1 M:CRF06 ORAV460
+      - HIV-1 M:CRF06 ORAV234
+      - HIV-1 M:CRF06 43Hald
+      - HIV-1 M:CRF06 ORAV459
+      - HIV-1 M:CRF02 K2028
+      - HIV-1 M:CRF02 K2006
+      - HIV-1 M:CRF02 K1425
+      - HIV-1 M:CRF02 K1417
+      - HIV-1 M:CRF02 K1408
+      - HIV-1 M:CRF02 K1381
+      - HIV-1 M:CRF02 K1380
+      - HIV-1 M:CRF02 K1365
+      - HIV-1 M:CRF02 K1344
+      - HIV-1 M:CRF02 K1343
+      - HIV-1 M:CRF02 K1314
+      - HIV-1 M:CRF02 K1303
+      - HIV-1 M:CRF02 K1302
+      - HIV-1 M:CRF02 K1281
+      - HIV-1 M:CRF02 K1272
+      - HIV-1 M:CRF02 K1227
+      - HIV-1 M:CRF02 K1206
+      - HIV-1 M:CRF02 K1195
+      - HIV-1 M:CRF02 K1184
+      - HIV-1 M:CRF02 K1182
+      - HIV-1 M:CRF02 K1175
+      - HIV-1 M:CRF02 K1173
+      - HIV-1 M:CRF02 K1129
+      - HIV-1 M:CRF02 K1115
+      - HIV-1 M:CRF02 K1114
+      - HIV-1 M:CRF02 K1101
+      - HIV-1 M:CRF02 K1086
+      - HIV-1 M:CRF02 K1355
+      - HIV-1 M:CRF02 K1131
+      - HIV-1 M:CRF02 217Hald
+      - HIV-1 M:CRF02 L040
+      - HIV-1 M:CRF02 MP804
+      - HIV-1 M:CRF02 469Hald
+      - HIV-1 M:CRF02 171HPD
+      - HIV-1 M:CRF02 K1326
+      - HIV-1 M:CRF02 466Hald
+      - HIV-1 M:CRF02 422Hald
+      - HIV-1 M:CRF02 383Hald
+      - HIV-1 M:CRF02 ORAV465
+      - HIV-1 M:CRF02 L084
+      - HIV-1 M:CRF02 427Hald
+      - HIV-1 M:CRF02 303Hald
+      - HIV-1 M:CRF02 283HPD
+      - HIV-1 M:CRF02 125HPD
+      - HIV-1 M:CRF02 MP802
+      - HIV-1 M:CRF02 L117
+      - HIV-1 M:CRF02 L080
+      - HIV-1 M:CRF02 97Hald
+      - HIV-1 M:CRF02 46Hald
+      - HIV-1 M:CRF02 484Hald
+      - HIV-1 M:CRF02 456Hald
+      - HIV-1 M:CRF02 324Hald
+      - HIV-1 M:CRF02 MP1071
+      - HIV-1 M:CRF02 496Hald
+      - HIV-1 M:CRF02 ORAV455
+      - HIV-1 M:CRF02 MP1540
+      - HIV-1 M:CRF02 MP1378
+      - HIV-1 M:CRF02 MP815
+      - HIV-1 M:CRF02 MP803
+      - HIV-1 M:CRF02 MP642
+      - HIV-1 M:CRF02 L086
+      - HIV-1 M:CRF02 L074
+      - HIV-1 M:CRF02 L057
+      - HIV-1 M:CRF02 L056
+      - HIV-1 M:CRF02 L035
+      - HIV-1 M:CRF02 L013
+      - HIV-1 M:CRF02 L009
+      - HIV-1 M:CRF02 L006
+      - HIV-1 M:CRF02 L003
+      - HIV-1 M:CRF02 471Hald
+      - HIV-1 M:CRF02 459Hald
+      - HIV-1 M:CRF02 455Hald
+      - HIV-1 M:CRF02 426Hald
+      - HIV-1 M:CRF02 424Hald
+      - HIV-1 M:CRF02 420Hald
+      - HIV-1 M:CRF02 416Hald
+      - HIV-1 M:CRF02 392Hald
+      - HIV-1 M:CRF02 309Hald
+      - HIV-1 M:CRF02 307HPD
+      - HIV-1 M:CRF02 304HPD
+      - HIV-1 M:CRF02 304Hald
+      - HIV-1 M:CRF02 265HPD
+      - HIV-1 M:CRF02 233Hald
+      - HIV-1 M:CRF02 232Hald
+      - HIV-1 M:CRF02 191HPD
+      - HIV-1 M:CRF02 163Hald
+      - HIV-1 M:CRF02 481Hald
+      - HIV-1 M:CRF02 479Hald
+      - HIV-1 M:CRF02 477Hald
+      - HIV-1 M:CRF02 42HPD
+      - HIV-1 M:CRF02 34Hald
+      - HIV-1 M:CRF02 18Hald
+      - HIV-1 M:CRF02 16Hald
+      - HIV-1 M:CRF02 L019
+      - HIV-1 M:CRF02 ORAV461
+      - HIV-1 M:CRF02 418Hald
+      - HIV-1 M:CRF02 227Hald
+      - HIV-1 M:CRF02 234Hald
+      - HIV-1 M:CRF02 MP578
+      - HIV-1 M:CRF02 MP1277
+      - HIV-1 M:CRF02 MP1539
+      - HIV-1 M:CRF02 L091
+      - HIV-1 M:CRF02 L014
+      - HIV-1 M:CRF02 311Hald
+      - HIV-1 M:CRF02 167HPD
+      - HIV-1 M:CRF01 MP365
+      - HIV-1 M:CRF01 MP38
+      - HIV-1 M:C K1165
+      - HIV-1 M:C U0435
+      - HIV-1 M:C SF431
+      - HIV-1 M:C 478Hald
+      - HIV-1 M:C U0126
+      - HIV-1 M:C 39Hald
+      - HIV-1 M:C U2226
+      - HIV-1 M:C U2132
+      - HIV-1 M:C U1622
+      - HIV-1 M:C U0820
+      - HIV-1 M:C U0808
+      - HIV-1 M:C U0735
+      - HIV-1 M:C U0727
+      - HIV-1 M:C U0705
+      - HIV-1 M:C U0702
+      - HIV-1 M:C U0636
+      - HIV-1 M:C U0505
+      - HIV-1 M:C U0434
+      - HIV-1 M:C U0427
+      - HIV-1 M:C U0333
+      - HIV-1 M:C U0221
+      - HIV-1 M:C SF621
+      - HIV-1 M:C SF130
+      - HIV-1 M:C MP116
+      - HIV-1 M:C MP102
+      - HIV-1 M:C L160
+      - HIV-1 M:C B1100
+      - HIV-1 M:C B1085
+      - HIV-1 M:C B1054
+      - HIV-1 M:C 321Hald
+      - HIV-1 M:C 102Hald
+      - HIV-1 M:D K1185
+      - HIV-1 M:D MN012
+      - HIV-1 M:D K1176
+      - HIV-1 M:D U1916
+      - HIV-1 M:D 472Hald
+      - HIV-1 M:D L016
+      - HIV-1 M:D 21Hald
+      - HIV-1 M:B MP77
+      - HIV-1 M:B MP51
+      - HIV-1 M:B 215HPD
+      - HIV-1 M:B L156
+      - HIV-1 M:B 486Hald
+      - HIV-1 M:A-Cam L044
+      - HIV-1 M:A-Cam MP811
+      - HIV-1 M:A-Cam K1274
+      - HIV-1 M:A-Cam MP512
+      - HIV-1 M:A-Cam MP1073
+      - HIV-1 M:A-Cam MP1237
+      - HIV-1 M:A-Cam K1161
+      - HIV-1 M:A3 492Hald
+      - HIV-1 M:A3 323Hald
+      - HIV-1 M:A3 214HPD
+      - HIV-1 M:A3 L001
+      - HIV-1 M:A K1360
+      - HIV-1 M:A K1339
+      - HIV-1 M:A K1210
+      - HIV-1 M:A K1170
+      - HIV-1 M:A K1113
+      - HIV-1 M:A K1245
+      - HIV-1 M:A1 K1290
+      - HIV-1 M:A 29Hald
+      - HIV-1 M:A U2929
+      - HIV-1 M:A MP812
+      - HIV-1 M:A1 MP1392
+      - HIV-1 M:A U1524
+      - HIV-1 M:A 15Hald
+      - HIV-1 M:A1 MP640
+      - HIV-1 M:A1 MP582
+      - HIV-1 M:A1 K1305
+      - HIV-1 M:A1 U1808
+      - HIV-1 M:A1 U1803
+      - HIV-1 M:A U1617
+      - HIV-1 M:A1 69HPD
+      - HIV-1 M:A1 U0106
+      - HIV-1 CRF08_BC
+      - HIV-1 CRF01_AE
+      - Human immunodeficiency virus type 1 02CD.KTB050
+      - Human immunodeficiency virus type 1 04CD.FR.KZS
+      - Human immunodeficiency virus type 1 02CD.LBR024
+      - HIV-1 M:B_89.6
+      - HIV-1 M:K_97ZR-EQTB11
+      - HIV-1 M:K_96CM-MP535
+      - HIV-1 M:J_SE9280
+      - HIV-1 M:J_SE9173
+      - HIV-1 M:H_VI991
+      - HIV-1 M:H_90CF056
+      - HIV-1 M:G_92NG083
+      - HIV-1 M:G_SE6165
+      - HIV-1 M:F2_MP257C
+      - HIV-1 N_YBF106
+      - HIV-1 N_YBF30
+      - HIV-1 group N
+      - HIV-1 O_MVP5180
+      - HIV-1 M:F2_MP255C
+      - HIV-1 M:F1_93BR020
+      - HIV-1 M:F1_VI850
+      - HIV-1 M:C_92BR025
+      - HIV-1 group O
+      - HIV-1 M:C_ETH2220
+      - HIV-1 group M
+      - Human immunodeficiency virus type 1 (isolate YU2)
+      - HIV-1 O_ANT70
+      - HIV-1 M:B_Lai
+      - Human immunodeficiency virus type 1 lw12.3 isolate
+      - Human immunodeficiency virus type 1 (NIT-A isolate)
+      - Human immunodeficiency virus type 1 (KB-1 isolate)
+      - Human immunodeficiency virus 3
+      - Human immunodeficiency virus type 1 (WMJ1 isolate)
+      - Human immunodeficiency virus type 1 (ZAIRE 6 ISOLATE)
+      - Human immunodeficiency virus type 1 (HXB3 ISOLATE)
+      - HIV-1 M:B_HXB2R
+      - Human immunodeficiency virus type 1 (WMJ2 ISOLATE)
+      - Human immunodeficiency virus type 1 (MFA ISOLATE)
+      - Human immunodeficiency virus type 1 (STRAIN UGANDAN / ISOLATE U455)
+      - Human immunodeficiency virus type 1 (SC ISOLATE)
+      - Human immunodeficiency virus type 1 (RF/HAT ISOLATE)
+      - Human immunodeficiency virus type 1 (OYI ISOLATE)
+      - Human immunodeficiency virus type 1 (NEW YORK-5 ISOLATE)
+      - Human immunodeficiency virus type 1 (MAL ISOLATE)
+      - HIV-1 M:B_MN
+      - Human immunodeficiency virus type 1 (NDK ISOLATE)
+      - Human immunodeficiency virus type 1 (JH3 ISOLATE)
+      - Human immunodeficiency virus type 1 (BRAIN ISOLATE)
+      - Human immunodeficiency virus type 1 (ZAIRE HZ321 ISOLATE)
+      - Human immunodeficiency virus type 1 (SF162 ISOLATE)
+      - Human immunodeficiency virus type 1 (SF33 ISOLATE)
+      - Human immunodeficiency virus type 1 (ELI ISOLATE)
+      - Human immunodeficiency virus type 1 (JRCSF ISOLATE)
+      - Human immunodeficiency virus type 1 (CDC-451 ISOLATE)
+      - Human immunodeficiency virus type 1 (BRU ISOLATE)
+      - HIV-1 M:B_ARV2/SF2
+      - Human immunodeficiency virus type 1 (BH8 ISOLATE)
+      - Human immunodeficiency virus type 1 (Z2/CDC-Z34 ISOLATE)
+      - Human immunodeficiency virus type 1 (BH5 ISOLATE)
+      - Human immunodeficiency virus type 1 (Z-84 ISOLATE)
+      - Human immunodeficiency virus type 1 (ZAIRE 3 ISOLATE)
+      - Human immunodeficiency virus type 1 (CLONE 12)
+      - Human immunodeficiency virus type 1 BH10
+      - Human immunodeficiency virus 1
+    segments:
+      Unsegmented:
+        refs:
+        - NC_001802.1
+        seqs:
+        - NC_001802.1
+  HIV2:
+    name: Human immunodeficiency virus 2
+    taxa:
+    - taxid: 11709
+      organisms:
+      - HIV-2 subtype A
+      - HIV-2 B_UC1
+      - HIV-2 B_EHO
+      - HIV-2 subtype B
+      - Human immunodeficiency virus type 2 (isolate 7312A)
+      - Human immunodeficiency virus type 2 (isolate KR)
+      - HIV-2.D205
+      - Human immunodeficiency virus type 2 (isolate ST/24.1C#2)
+      - Human immunodeficiency virus type 2 (ISOLATE ST)
+      - Human immunodeficiency virus type 2 (ISOLATE ROD)
+      - Human immunodeficiency virus type 2 (ISOLATE NIH-Z)
+      - Human immunodeficiency virus type 2 (ISOLATE SBLISY)
+      - Human immunodeficiency virus type 2 (ISOLATE GHANA-1)
+      - Human immunodeficiency virus type 2 (ISOLATE D205,7)
+      - Human immunodeficiency virus type 2 (ISOLATE CAM2)
+      - Human immunodeficiency virus type 2 (ISOLATE BEN)
+      - Human immunodeficiency virus type 2 (ISOLATE D194)
+      - Human immunodeficiency virus 2
+    segments:
+      Unsegmented:
+        refs:
+        - NC_001722.1
+        seqs:
+        - NC_001722.1
+filters:
+  ARENA:
+    name: Arenaviridae
+    taxa:
+    - taxid: 11617
+      organisms:
+      - Mammarenavirus vello
+      - Mammarenavirus tietense
+      - Mammarenavirus songeaense
+      - Mammarenavirus ngerengerense
+      - Mammarenavirus mecsekense
+      - Mammarenavirus mafigaense
+      - Mammarenavirus ganziense
+      - Mammarenavirus beregaense
+      - Mammarenavirus batangense
+      - Antennavirus trematomi
+      - "Aba\u0300-Mia\u0301nya\u0301ng virus"
+      - Mammarenavirus abaense
+      - Rodent Mammarenavirus
+      - Pannonia mammarenavirus
+      - Hemidactylus frenatus arenavirus
+      - Yunnan shrew mammarenavirus 1
+      - Yunnan rodent mammarenavirus 1
+      - Dandong mammarenavirus
+      - Erinaceus europaeus arenavirus
+      - Hetplan gecko arenavirus
+      - Grammomys rat arenavirus
+      - Trematomus arenavirus
+      - Muraenolepis arenavirus
+      - Ardenna-associated arenavirus
+      - Wufeng bat mammarenavirus 1
+      - Wenzhou rodent arenavirus 1
+      - Kwanza virus
+      - Hailar virus
+      - big electron-dense squares virus 1
+      - Dhati Welel virus
+      - Bitu virus
+      - Yellow silver pine arena-like virus 3
+      - Yellow silver pine arena-like virus 2
+      - Yellow silver pine arena-like virus
+      - Moss arena-like virus
+      - Lwood arena-like virus 2
+      - Lwood arena-like virus
+      - Dracophyllum arena-like virus
+      - Neolamprologus walteri arenavirus
+      - Longfin eel arenavirus
+      - Mammarenavirus dhati-welelense
+      - Innmovirus hailarense
+      - Hartmanivirus unni
+      - Hartmanivirus quadrati
+      - Reptarenavirus rotterdamense
+      - Reptarenavirus giessenae
+      - Reptarenavirus commune
+      - Reptarenavirus californiae
+      - Reptarenavirus aurei
+      - Mammarenavirus xapuriense
+      - Mammarenavirus whitewaterense
+      - Mammarenavirus wenzhouense
+      - Mammarenavirus tamiamiense
+      - Mammarenavirus tacaribeense
+      - Mammarenavirus solweziense
+      - Mammarenavirus ryukyuense
+      - Mammarenavirus praomyidis
+      - Mammarenavirus piritalense
+      - Mammarenavirus paranaense
+      - Mammarenavirus oliverosense
+      - Mammarenavirus okahandjaense
+      - Mammarenavirus mopeiaense
+      - Mammarenavirus merinoense
+      - Mammarenavirus marientalense
+      - Mammarenavirus machupoense
+      - Mammarenavirus lunkense
+      - Mammarenavirus lunaense
+      - Mammarenavirus lujoense
+      - Mammarenavirus loeiense
+      - Mammarenavirus lijiangense
+      - Mammarenavirus latinum
+      - Mammarenavirus lassaense
+      - Mammarenavirus kitaleense
+      - Mammarenavirus ippyense
+      - Mammarenavirus guanaritoense
+      - Mammarenavirus gairoense
+      - Mammarenavirus flexalense
+      - Mammarenavirus cupixiense
+      - Mammarenavirus choriomeningitidis
+      - Mammarenavirus chapareense
+      - Mammarenavirus cameroonense
+      - Mammarenavirus caliense
+      - Mammarenavirus brazilense
+      - Mammarenavirus bearense
+      - Mammarenavirus aporeense
+      - Mammarenavirus amapariense
+      - Hartmanivirus turici
+      - Hartmanivirus scholae
+      - Hartmanivirus patriae
+      - Hartmanivirus helvetiae
+      - Hartmanivirus haartmani
+      - Hartmanivirus brazilense
+      - Antennavirus striale
+      - Antennavirus salmonis
+      - Antennavirus hirsutum
+      - Innmovirus
+      - Mecsek Mountains virus
+      - Berega mammarenavirus
+      - Songea mammarenavirus
+      - Ngerengere mammarenavirus
+      - Pika arenavirus
+      - WENV Rattus norvegicus mammarenavirus
+      - Tiete mammarenavirus
+      - Universidad Nacional virus 1
+      - Anole arenavirus
+      - Mammarenavirus kwanzaense
+      - Mammarenavirus bituense
+      - Aershan mammarenavirus
+      - Wenzhou Rattus losea mammarenavirus 1
+      - Sabia virus
+      - Parana virus
+      - Pichinde virus
+      - Amapari virus
+      - Wufeng Rhinolophus pearsonii mammarenavirus 1
+      - Wufeng Niviventer niviventer mammarenavirus 1
+      - Wenzhou Suncus murinus mammarenavirus 1
+      - Wenzhou Rattus tanezumi mammarenavirus 1
+      - Wenzhou Rattus norvegicus mammarenavirus 1
+      - Wenzhou Apodemus agrarius mammarenavirus 1
+      - unclassified Arenavirus
+      - Apore virus
+      - University of Helsinki virus 1
+      - University of Giessen virus 3
+      - SetPatVet virus 1
+      - Kitale virus
+      - andere Heimat virus 1
+      - Alxa virus
+      - Mammarenavirus AnRB3214
+      - Western carp gudgeon arenavirus
+      - Eastern mosquitofish arenavirus
+      - Inner Mongolia sediment arena-like virus
+      - Tetronarce arenavirus
+      - Pygmy goby arenavirus FL15
+      - Big eyed perch arenavirus FL1
+      - plateau pika virus
+      - Haartman Institute snake virus 1
+      - Mammarenavirus alashanense
+      - Arenaviridae sp.
+      - University of Helsinki virus-2
+      - Gaucho virus-1
+      - Saudades virus-1
+      - Porto Alegre virus-1
+      - Frankfurter Strasse virus-1
+      - Aramboia boa virus-1
+      - Arabuta Snake virus-1
+      - Salmon pescarenavirus 1
+      - Salmon pescarenavirus 2
+      - Antennavirus
+      - Rat mammarenavirus
+      - University of Giessen virus 2
+      - S7-like reptarenavirus
+      - Mista naita tulee virus 1
+      - Kuka mita hah virus 1
+      - Suri Vanera virus 2
+      - Tavallinen suomalainen mies virus 1
+      - Kiva uusi kaarme virus 1
+      - S2-like reptarenavirus
+      - Peto jauhoksi virus 1
+      - Aurora borealis virus 4
+      - University of Helsinki virus 3
+      - University of Giessen virus 1
+      - tavallinen suomalainen mies virus 2
+      - Suri Vanera virus 1
+      - Hipoen jatkoon virus 1
+      - Keijut pohjoismaissa virus 1
+      - Kaltenbach virus 1
+      - Aurora borealis virus 3
+      - Veterinary Pathology Zurich virus 2
+      - Haartman Institute snake virus 2
+      - Veterinary Pathology Zurich virus 1
+      - Old schoolhouse virus 1
+      - Old schoolhouse virus 2
+      - Dante Muikkunen virus 1
+      - S10-like virus
+      - Hipoen jatkoon virus
+      - Peto jauhoksi virus
+      - Xapuri virus
+      - Xingyi virus
+      - Lijiang virus
+      - Mammarenavirus juninense
+      - Hartmanivirus
+      - Wenling frogfish arenavirus 2
+      - Wenling frogfish arenavirus 1
+      - Haikou virus
+      - Reptarenavirus sp.
+      - Jerboa arenavirus
+      - Mammarenavirus sp.
+      - unclassified Mammarenavirus
+      - Souris virus
+      - S5-like reptarenavirus
+      - Keijut pohjoismaissa virus
+      - Kuka mitae haeh virus
+      - Kaltenbach virus
+      - Bis spoeter virus
+      - Gruetzi mitenand virus
+      - University of Giessen virus
+      - Tavallinen suomalainen mies virus
+      - Suri Vanera virus
+      - Hans Kompis virus
+      - Aurora borealis virus
+      - Haartman Institute snake virus
+      - unidentified Reptarenavirus
+      - unclassified Reptarenavirus
+      - Alethinophid 3 reptarenavirus
+      - Alethinophid 2 reptarenavirus
+      - Alethinophid 1 reptarenavirus
+      - Reptarenavirus
+      - Mammarenavirus
+      - North American arenavirus strain B0940005
+      - North American arenavirus strain P0070018
+      - North American arenavirus strain F0190012
+      - Praomys arenavirus
+      - Wenzhou virus 2
+      - Wenzhou virus 3
+      - Patawa virus
+      - Arenaviridae sp. 13ZR68
+      - Arenavirus DX1401
+      - Witsand virus
+      - Omdraaivlei virus
+      - Bobomene virus
+      - Cardamones virus
+      - Boid arenavirus
+      - University of Helsinki virus
+      - Natorduori virus
+      - ROUT virus
+      - Middle Pease River virus
+      - Golden Gate virus
+      - CAS virus
+      - Ocozocoautla de Espinosa virus
+      - Lunk virus NKS-1
+      - Real de Catorce virus
+      - Menekre virus
+      - Gbagroube virus
+      - Tacaribe virus strain Franze-Fernandez
+      - Arenavirus Mus/TZ22285/TZA/2008
+      - Mafiga mammarenavirus
+      - Arenavirus H0030028
+      - Arenavirus H0030026
+      - Arenavirus sp. 9408800235/ZAF
+      - Black Mesa virus
+      - Orogrande virus
+      - Morogoro mammarenavirus
+      - Arenavirus H0380005
+      - Arenavirus AV 96010025
+      - Pinhal virus
+      - unclassified New world arenaviruses
+      - Dandenong virus
+      - unclassified Old world arenaviruses
+      - North American arenavirus
+      - Skinner Tank virus
+      - Big brushy tank virus
+      - Tonto creek virus
+      - Kodoko virus
+      - Catarina virus
+      - Mopeia Lassa virus reassortant 29
+      - Mopeia virus AN20410
+      - unclassified Arenaviridae
+      - New world arenaviruses
+      - Old world arenaviruses
+      - Mammarenavirus allpahuayoense
+      - Pampa virus
+      - Arenavirus sp.
+      - Tacaribe virus strain V7
+      - Tacaribe virus strain V5
+      - Tacaribe virus strain TRVL 11598
+      - Lymphocytic choriomeningitis virus (strain WE)
+      - Lymphocytic choriomeningitis virus (strain Traub)
+      - Lymphocytic choriomeningitis virus (strain Pasteur)
+      - Lymphocytic choriomeningitis virus (strain Armstrong)
+      - Lassa virus Josiah
+      - Lassa virus GA391
+      - Arenavirus
+      - Arenaviridae
+  FILO:
+    name: Filoviridae
+    taxa:
+    - taxid: 11266
+      organisms:
+      - Loebevirus percae
+      - Dianlovirus dehongense
+      - Nyctinomops bat filovirus
+      - Mink stool-associated filovirus
+      - Loebevirus
+      - Slender scalyhead filovirus
+      - Scaly rockcod filovirus
+      - Thamnovirus thamnaconi
+      - Striavirus antennarii
+      - Orthomarburgvirus marburgense
+      - Orthoebolavirus zairense
+      - Orthoebolavirus taiense
+      - Orthoebolavirus sudanense
+      - Orthoebolavirus restonense
+      - Orthoebolavirus bundibugyoense
+      - Orthoebolavirus bombaliense
+      - Dianlovirus menglaense
+      - Cuevavirus lloviuense
+      - Orthomarburgvirus
+      - Orthoebolavirus
+      - Loetschberg virus
+      - Dehong virus
+      - Thamnovirus percae
+      - Thamnovirus kanderense
+      - Tapjovirus bothropis
+      - Oblavirus percae
+      - Tapjovirus
+      - Oblavirus
+      - Kander virus
+      - Tapajos virus
+      - John dory filovirus FL11
+      - Blue spotted goatfish filovirus FL3
+      - Filoviridae sp.
+      - Dianlovirus
+      - Oberland virus
+      - Fiwi virus
+      - Thamnovirus
+      - Striavirus
+      - Wenling thamnaconus septentrionalis filovirus
+      - Wenling frogfish filovirus
+      - Bombali virus
+      - Zaire ebolavirus Makona
+      - Marburg virus - Angola
+      - Marburg virus - Uganda
+      - Bat filovirus
+      - Ebola virus
+      - Cuevavirus
+      - Sudan ebolavirus - Nakisamata
+      - Lake Victoria marburgvirus - Leiden
+      - unclassified Filoviridae
+      - Bundibugyo virus
+      - Lake Victoria marburgvirus - Ozolin
+      - Lake Victoria marburgvirus - Ci67
+      - Ebola virus Yambio0403
+      - Ebola virus Yambio0402
+      - Ebola virus Yambio0401
+      - Sudan ebolavirus - Uganda (2000)
+      - Reston ebolavirus - Reston (1989)
+      - Lake Victoria marburgvirus - DRC1999
+      - Lake Victoria marburgvirus - Angola2005
+      - Ravn virus - Ravn, Kenya, 1987
+      - unclassified Ebolavirus
+      - Ebola virus sp.
+      - Tai Forest ebolavirus
+      - Sudan ebolavirus
+      - Reston ebolavirus
+      - Zaire ebolavirus
+      - Marburgvirus
+      - Ebolavirus
+      - Reston ebolavirus - Siena/Philippine-92
+      - Reston ebolavirus - Reston
+      - Ebola virus - Eckron (Zaire, 1976)
+      - Tai Forest virus - Cote d'Ivoire, Cote d'Ivoire, 1994
+      - Ebola virus - Mayinga, Zaire, 1976
+      - Ebola virus - Zaire (1995)
+      - Sudan ebolavirus - Maleo (1979)
+      - Sudan virus - Boniface, Sudan,1976
+      - Ebola virus - Gabon (1994-1997)
+      - Lake Victoria marburgvirus - Popp
+      - Marburg virus - Musoke, Kenya, 1980
+      - Filoviridae
+  HANTA:
+    name: Hantaviridae
+    taxa:
+    - taxid: 1980413
+      organisms:
+      - Percilovirus gobii
+      - Orthohantavirus wufangense
+      - Orthohantavirus sagercreekense
+      - Orthohantavirus ozarkense
+      - Orthohantavirus mamorense
+      - Orthohantavirus lankaense
+      - Orthohantavirus carrizalense
+      - Orthohantavirus artybashense
+      - Mobatvirus robinaense
+      - Mobatvirus dakrongense
+      - Chencang Niviventer confucianus orthohantavirus
+      - Chencang Apodemus agrarius orthohantavirus
+      - Hemidactylus frenatus hantavirus
+      - Samur virus
+      - Artesian virus
+      - Orthohantavirus sp. 'chicoanense'
+      - Sager Creek orthohantavirus
+      - Acanthurus nigrofuscus actinovirus
+      - Percilovirus
+      - Rousettus bat hantavirus
+      - Stubbeard plunderfish hantavirus
+      - Macrourus hantavirus
+      - Ozark orthohantavirus
+      - Rainbow skink hantavirus
+      - Northern spotted skink hantavirus
+      - Mamanguape virus
+      - Kurkino virus
+      - Ardenna-associated hantavirus
+      - Wufeng rodent thottimvirus 1
+      - Retropinna hantavirus
+      - Limestone Canyon virus
+      - Thottimvirus thottapalayamense
+      - Thottimvirus imjinense
+      - Reptillovirus hemidactyli
+      - Orthohantavirus sp. 'yakeshiense'
+      - Orthohantavirus tulaense
+      - Orthohantavirus tigrayense
+      - Orthohantavirus thailandense
+      - Orthohantavirus tatenalense
+      - Orthohantavirus sinnombreense
+      - Orthohantavirus seoulense
+      - Orthohantavirus sangassouense
+      - Orthohantavirus rockportense
+      - Orthohantavirus robinaense
+      - Orthohantavirus puumalaense
+      - Orthohantavirus prospectense
+      - Orthohantavirus sp. 'oxbowense'
+      - Orthohantavirus nigrorivense
+      - Orthohantavirus negraense
+      - Orthohantavirus sp. 'necocliense'
+      - Orthohantavirus moroense
+      - Orthohantavirus montanoense
+      - Orthohantavirus maporalense
+      - Orthohantavirus luxiense
+      - Orthohantavirus khabarovskense
+      - Orthohantavirus kenkemeense
+      - Orthohantavirus jejuense
+      - Orthohantavirus hantanense
+      - Orthohantavirus sp. 'fusongense'
+      - Orthohantavirus fugongense
+      - Orthohantavirus dobravaense
+      - Orthohantavirus delgaditoense
+      - Orthohantavirus dabieshanense
+      - Orthohantavirus chocloense
+      - Orthohantavirus caobangense
+      - Orthohantavirus brugesense
+      - Orthohantavirus boweense
+      - Orthohantavirus bayoui
+      - Mobatvirus xuansonense
+      - Mobatvirus quezonense
+      - Mobatvirus novaense
+      - Mobatvirus lenaense
+      - Mobatvirus laibinense
+      - Loanvirus longquanense
+      - Loanvirus brunaense
+      - Agnathovirus eptatreti
+      - Actinovirus triacanthodis
+      - Percilovirus lophii
+      - Actinovirus halieutaeae
+      - Actinovirus bernense
+      - Erinaceus hedgehog seoul orthohantavirus
+      - Kiwira virus
+      - Skink hantavirus
+      - Pygmy goby hantavirus
+      - Trimma fangi actinovirus
+      - Luposicya lupus actinovirus
+      - Pleurosicya actinovirus
+      - Cephalopholis boenak actinovirus
+      - Amugulang hantann virus
+      - Longquan Rhinolophus affinis hantavirus 1
+      - Jingmen Rattus norvegicus orthohantavirus 1
+      - Wufeng Chodsigoa smithii orthohantavirus 1
+      - Wenzhou Niviventer niviventer orthohantavirus 1
+      - Wenzhou Suncus murinus thottimvirus 1
+      - Wenzhou Pipistrellus abramus hantavirus 1
+      - Wufeng Niviventer fulvescens orthohantavirus 1
+      - Wufeng Niviventer niviventer orthohantavirus 1
+      - Wenzhou Rattus tanezumi orthohantavirus 1
+      - Wenzhou Rattus norvegicus orthohantavirus 1
+      - Longquan Niviventer niviventer orthohantavirus 1
+      - Longquan Niviventer fulvescens orthohantavirus 1
+      - Longquan Leopoldamys edwardsi orthohantavirus 1
+      - Lena virus
+      - Fusong virus
+      - Fugong virus
+      - Murray-Darling rainbowfish hantavirus
+      - Ponan loanvirus
+      - Mouyassue loanvirus
+      - Pygmy goby hantavirus FL16
+      - Mobatvirus sp.
+      - Loanvirus sp.
+      - Hantaviridae sp.
+      - unclassified Thottimvirus
+      - unclassified Loanvirus
+      - Biya River virus
+      - Rusne orthohantavirus
+      - Lanka hantavirus
+      - Plecopteran hanta-related virus OKIAV215
+      - Coleopteran hanta-related virus OKIAV221
+      - Bern perch virus
+      - unclassified Actinovirus
+      - Traemmersee orthohantavirus
+      - Buffalo Bayou virus
+      - Meliandou hantavirus
+      - Sarawak mobatvirus
+      - Academ virus
+      - Orthohantavirus sp. 'seewisense'
+      - Reptillovirus
+      - Agnathovirus
+      - Actinovirus
+      - Repantavirinae
+      - Mammantavirinae
+      - Agantavirinae
+      - Actantavirinae
+      - Hantavirus HantaV-3
+      - Hantavirus HantaV-2
+      - Hantavirus HantaV-1
+      - Hantavirus China/YN06
+      - unclassified Mobatvirus
+      - Thottimvirus
+      - Mobatvirus
+      - Loanvirus
+      - Dode virus
+      - Dakrong virus
+      - Monongahela hantavirus
+      - Wenling hagfish virus
+      - Hainan oriental leaf-toed gecko hantavirus
+      - Wenling yellow goosefish hantavirus
+      - Wenling red spikefish hantavirus
+      - Wenling minipizza batfish hantavirus
+      - unclassified Hantaviridae
+      - Kielder hantavirus
+      - Asturias virus
+      - Shrew hantavirus
+      - Rodent hantavirus
+      - Jerboa hantavirus
+      - Orthohantavirus sp.
+      - unclassified Orthohantavirus
+      - Thottapalayam virus
+      - Orthohantavirus asikkalaense
+      - Orthohantavirus asamaense
+      - Orthohantavirus andesense
+      - Amga orthohantavirus
+      - Orthohantavirus
+      - Hantaviridae
+      - Makokou virus
+      - Quezon virus
+      - Hantavirus MAYOV
+      - Hantavirus MAYV
+      - Hantavirus Leninskoe JAO 449-44-15
+      - Eothenomys eleusis hantavirus FUGV
+      - Hantavirus ASTV3914
+      - Hantavirus ASTV3890
+      - Hantavirus ASTV3947
+      - Hantavirus ASTV3943
+      - Hantavirus ASTV3873
+      - Hantavirus ASTV3877
+      - Brno virus
+      - Bruges virus
+      - Hantavirus NMAp57
+      - Hantavirus NMAp117
+      - Hantavirus NMAa82
+      - Laibin virus
+      - Adler virus
+      - Lohja virus
+      - Uurainen virus
+      - Hantavirus FL-2014
+      - Altai-like virus
+      - Yuanjiang virus
+      - Korf virus
+      - Amga virus
+      - Hantavirus Zhangmu01
+      - Anjozorobe virus
+      - Hantavirus Hu/BRA/511H/2009
+      - Hantavirus Hu/BRA/462H/2009
+      - Hantavirus Hu/BRA/461H/2009
+      - Hantavirus Hu/BRA/452H/2009
+      - Hantavirus Hu/BRA/420H/2009
+      - Hantavirus Hu/BRA/417H/2009
+      - Hantavirus Hu/BRA/395H/2009
+      - Hantavirus Hu/BRA/389H/2009
+      - Hantavirus Hu/BRA/305H/2009
+      - Hantavirus Hu/BRA/292H/2009
+      - Hantavirus Hu/BRA/274H/2009
+      - Hantavirus Hu/BRA/268H/2009
+      - Hantavirus Hu/BRA/256H/2009
+      - Hantavirus Hu/BRA/213H/2009
+      - Hantavirus Hu/BRA/169H/2009
+      - Hantavirus Hu/BRA/46H/2009
+      - Hantavirus Hu/BRA/32H/2009
+      - Xinyi virus
+      - Sarufutsu virus
+      - Bowe virus
+      - Puumala virus bank vole/CG1820/Russia/1984
+      - Yakeshi virus
+      - Lianghe virus
+      - Huangpi virus
+      - Tatenale virus
+      - Xuan son virus
+      - Gou virus
+      - Longquan virus
+      - Tigray virus
+      - Boginia virus
+      - RIOMV-4 Hantavirus
+      - RIOMV-3 Hantavirus
+      - LANV-2 Hantavirus
+      - Castelo dos Sonhos-2 virus
+      - CASV-2 Hantavirus
+      - CASV Hantavirus
+      - ANAJ Hantavirus
+      - Kilimanjaro virus
+      - Uluguru virus
+      - Mouyassue virus
+      - Dabieshan virus
+      - Necocli virus
+      - Hantavirus MGB/1209
+      - Hantaan virus XAAa10091712
+      - Hantavirus NFG357
+      - Hantavirus NFG354
+      - Hantavirus NFG339
+      - Hantavirus NFG313
+      - Hantavirus NFG299
+      - Hantavirus NFG297
+      - Hantavirus NFG289
+      - Ussuri virus
+      - Hokkaido virus
+      - Hantavirus YN06-868
+      - Hantavirus YN06-813
+      - Hantavirus YN06-79
+      - Hantavirus YN06-747
+      - Hantavirus YN06-696
+      - Hantavirus YN06-605
+      - Hantavirus YN06-489
+      - Hantavirus YN06-455
+      - Hantavirus YN06-365
+      - Hantavirus YN06-362
+      - Hantavirus YN06-282
+      - Hantavirus YN06-270
+      - Hantavirus YN06-257
+      - Hantavirus YN06-256
+      - Hantavirus YN06-254
+      - Hantavirus YN06-153
+      - Hantavirus YN06-1024
+      - Hantavirus YN05-9
+      - Hantavirus YN05-83
+      - Hantavirus YN05-7
+      - Hantavirus YN05-637
+      - Hantavirus YN05-494
+      - Hantavirus YN05-484
+      - Hantavirus YN05-47
+      - Hantavirus YN05-389
+      - Hantavirus YN05-324
+      - Hantavirus YN05-304
+      - Hantavirus YN05-295
+      - Tunari virus
+      - Hantavirus XAHu09066
+      - Hantavirus XAHu09047
+      - Hantavirus XAHu09041
+      - Hantavirus XAHu09027
+      - Hantavirus XAHu09011
+      - Hantavirus RPR/07-10104
+      - Hantavirus RPR/09-10351
+      - Hantavirus RPR/08-10217
+      - Hantavirus RPR/09-12460
+      - Hantaan virus P09072
+      - Hantaan virus H10150
+      - Hantaan virus CA10081905
+      - Hantaan virus CA10081708
+      - Hantaan virus CA10081206
+      - Hantaan virus CA10081203
+      - Hantaan virus CA10081113
+      - Hantaan virus CA10081109
+      - Hantaan virus CA09082007
+      - Hantavirus YN06-862
+      - Eothenomys miletus hantavirus LX43
+      - Eothenomys miletus hantavirus LX17
+      - Azagny virus
+      - Rockport virus
+      - Huitzilac virus
+      - Carrizal virus
+      - Seoul virus HP8
+      - Seoul virus HP7
+      - Seoul virus 41CSG
+      - Seoul virus 25CSG
+      - Seoul virus 11CSG
+      - Seoul virus 5CSG
+      - Seoul virus 24D12
+      - Seoul virus 19D12
+      - Seoul virus 14D12
+      - Seoul virus 60CSG
+      - Seoul virus 58CSG
+      - Seoul virus 57CSG
+      - Seoul virus 51CSG
+      - Seoul virus 44CSG
+      - Seoul virus 42CSG
+      - Seoul virus 38CSG
+      - Seoul virus 33CSG
+      - Seoul virus CSG25
+      - Seoul virus 19CSG
+      - Seoul virus CSG11
+      - Seoul virus CSG5
+      - Jeju virus
+      - Eothenomys miletus hantavirus LX309
+      - Hantavirus strain H700306
+      - Dahonggou Creek virus
+      - Hantavirus Hu/CPVRP2/Batatais/BRA/2007
+      - Hantavirus Calomys/CPVRP147/Cajuru/BRA/2006
+      - Seoul virus SD5-153
+      - Seoul virus SD201
+      - Seoul virus Rn-YUE12
+      - Seoul virus Rn-SHY17
+      - Seoul virus Rn-HD27
+      - Seoul virus Rn-HD11
+      - Seoul virus Rn-CP7
+      - Seoul virus HuBJ9
+      - Seoul virus HuBJ3
+      - Seoul virus HuBJ22
+      - Seoul virus HuBJ20
+      - Seoul virus HuBJ19
+      - Seoul virus HuBJ16
+      - Seoul virus HuBJ15
+      - Hantavirus strain Akm6943
+      - Hantavirus strain Oln8057
+      - Hantavirus LX378
+      - Kenkeme virus
+      - Qian Hu Shan virus
+      - Hantavirus Oln8129
+      - Hantavirus Oln8057
+      - Hantavirus Akm6903
+      - Hantavirus Akm6266
+      - Ape Aime-Itapua virus
+      - Hantavirus KY
+      - Hantavirus HPR02-71
+      - Hantavirus HPR03-97
+      - Nova virus
+      - Oxbow virus
+      - Hantavirus Jurong TJK/06(RT50)
+      - Hantavirus Jurong TJK/06(RT49)
+      - Maripa virus
+      - Hantavirus HMT 08-02
+      - Hantavirus Olini/RPR/07-10091/BRA/2007
+      - Hantavirus Akomo/RPR/07-10028/BRA/2006
+      - Hantavirus Akomo/RPR/07-10027/BRA/2006
+      - Hantavirus Oxyju/RPR/07-10056/BRA/2006
+      - Hantavirus Human/HRP/02-72/BRA/2002
+      - Hantavirus Oln6469
+      - Hantavirus Oln6470
+      - Hantavirus 2336 Biritiba Mirim
+      - Hantavirus 2319 Biritiba Mirim
+      - Hantavirus 2315 Biritiba Mirim
+      - Hantavirus 2306 Biritiba Mirim
+      - Hantavirus 2303 Biritiba Mirim
+      - Hantavirus 2145 Biritiba Mirim
+      - Hantavirus 2076 Biritiba Mirim
+      - Hantavirus 2075 Biritiba Mirim
+      - Hantavirus 2072 Biritiba Mirim
+      - Hantavirus 2071 Biritiba Mirim
+      - Hantavirus 2070 Biritiba Mirim
+      - Hantavirus 2066 Biritiba Mirim
+      - Hantavirus 2064 Biritiba Mirim
+      - Hantavirus 2063 Biritiba Mirim
+      - Hantavirus 2062 Biritiba Mirim
+      - Hantavirus 2036 Biritiba Mirim
+      - Asama virus
+      - Hantavirus Yuanjiang-Mf-78
+      - Hantavirus Yuanjiang-Mf-21
+      - Hantavirus Yuanjiang-Mf-15
+      - Hantavirus Yuanjiang-Mf-13
+      - Hantavirus Shenyang-Mf-136
+      - Hantavirus Shenyang-Mf-135
+      - Hantavirus Fusong-Mf-732
+      - Juquitiba-like virus strain PB 981
+      - Juquitiba-like virus strain PB 1033
+      - Juquitiba-like virus strain PB 1002
+      - Serang virus
+      - Altai virus
+      - Artybash virus
+      - Sorex araneus hantavirus
+      - Neomys anomalus hantavirus
+      - Hantavirus NB9
+      - Hantavirus NB8
+      - Hantavirus NB5
+      - Hantavirus NB2
+      - Hantavirus H162
+      - Hantavirus H158
+      - Hantavirus H156
+      - Hantaanvirus CGRni1
+      - Hantaanvirus CGRn2618
+      - Hantaanvirus CGRn15
+      - Hantaanvirus CGHu3
+      - Hantaanvirus CGHu2
+      - Hantaanvirus CGRn2616
+      - Hantavirus sdp2 YXL-2008
+      - Hantavirus Case Itapua
+      - Hantavirus Case 1
+      - Hantavirus AC210py
+      - Hantavirus sdp37
+      - Hantavirus sdp3
+      - Hantavirus sdp22
+      - Hantavirus sdp1
+      - Hantaanvirus CJAp93
+      - Hantaanvirus CGRn45
+      - Hantaanvirus CGHu1
+      - Hantaanvirus CGAa75
+      - Hantaanvirus CGAa2
+      - Hantavirus Fusong-Mf-731
+      - Hantavirus Yakeshi-Mm-795
+      - Hantavirus Yakeshi-Mm-62
+      - Hantavirus Yakeshi-Mm-59
+      - Hantavirus Yakeshi-Mm-42
+      - Hantavirus Yakeshi-Mm-31
+      - Hantavirus Yakeshi-Mm-182
+      - Hantavirus Fusong-Mf-682
+      - Imjin virus
+      - Ash River virus
+      - Jemez Springs virus
+      - Hantavirus R34
+      - Hantavirus R167
+      - Hantavirus R165
+      - Hantavirus R150
+      - Hantavirus R142
+      - Hantavirus R11
+      - Camp Ripley virus
+      - Hantavirus CGRn9415
+      - Hantavirus CGRn8316
+      - Hantaanvirus CGRn93P8
+      - Hantaanvirus CGRn93MP8
+      - Hantaanvirus CGRn5310
+      - Hantaanvirus CGRn53
+      - Hantaanvirus CGAa4P15
+      - Hantaanvirus CGAa4MP9
+      - Hantaanvirus CGHu3614
+      - Hantaanvirus CGHu3612
+      - Hantaanvirus CGAa31P9
+      - Hantaanvirus CGAa31MP7
+      - Hantaanvirus CGAa1015
+      - Hantaanvirus CGAa1011
+      - Playa de Oro hantavirus
+      - Hantavirus SDP2
+      - Hantavirus SDP19
+      - Hantavirus SDP12
+      - Hantavirus SDH8
+      - Hantavirus SDH17
+      - Hantavirus SDH14
+      - Seewis virus
+      - Araraquara-like virus strain P5/Cajuru
+      - Hantavirus sp. Paranoa
+      - Jabora hantavirus
+      - Jabora virus
+      - Juquitiba virus
+      - Puumala-like virus isolate Fusong-Cr-311
+      - Puumala-like virus isolate Fusong-Cr-302
+      - Puumala-like virus isolate Fusong-Cr-275
+      - Puumala-like virus isolate Fusong-Cr-272
+      - Puumala-like virus isolate Fusong-Cr-247
+      - Puumala-like virus isolate Fusong-Cr-211
+      - Tanganya virus
+      - Hantavirus CJAp93
+      - Hantavirus CJAp89
+      - Hantavirus CJAp787
+      - Hantavirus CJAp705
+      - Hantavirus CJAp595
+      - Hantavirus CJAp318
+      - Hantavirus CJAp267
+      - Hantavirus CJAp177
+      - Hantavirus CJAa716
+      - Hantavirus CJAa594
+      - Hantavirus CJAa142
+      - Hantavirus CJAa1109
+      - Hantavirus Z5
+      - Hantaan virus N8
+      - Thailand virus (Nakhon Pathom/Bi0067/2004)
+      - Thailand virus (Nakhon Ratchasima/Bi0024/2004)
+      - Thailand virus (Nakhon Pathom/Bi0016/2004)
+      - Thailand virus (Nakhon Ratchasima/Bi0017/2004)
+      - Hantavirus GM04-38
+      - Hantavirus ZB8
+      - Anajatuba virus
+      - Rio Mearim virus
+      - Seoul virus B-1
+      - Central Plata virus
+      - Hantaan virus Q32
+      - Neembucu hantavirus
+      - Hantavirus strain Itapua 38
+      - Hantavirus strain Itapua 37
+      - Hantavirus strain IP16
+      - Hantavirus JUN5-14
+      - Catacamas virus
+      - Muju virus
+      - unclassified Hantavirus
+      - Hantanvirus strain C-10
+      - Hantanvirus strain QH367
+      - Juquitiba-like virus strain On576
+      - Hantavirus strain YU61
+      - Hantavirus strain CJilin93
+      - Araucaria virus
+      - Hantavirus HPR/02-73
+      - Hantavirus Thailand 741
+      - Soochong virus-4
+      - Soochong virus-3
+      - Soochong virus-2
+      - Soochong virus-1
+      - Soochong virus
+      - Seoul virus BjHD01
+      - Hantavirus Z37
+      - Itapua hantavirus
+      - Alto Paraguay hantavirus
+      - Newfound Gap hantavirus
+      - Maporal virus
+      - Hantavirus U89
+      - Hantavirus Sa63
+      - Hantavirus Ce22
+      - Hantavirus Ce20
+      - Hantaan virus KHB/HFRS/Pat#A12
+      - Hantaan virus KHB/HFRS/Pat#A2
+      - Hantaan virus KHB/HFRS/Pat#A3
+      - Hantavirus Amur/680
+      - Hantavirus Amur/1169
+      - Hantavirus Amur/1166
+      - Amur virus Primorye/H2/2000
+      - Amur virus Primorye/H1/2000
+      - Amur virus Solovey/AP63/1999
+      - Amur virus Solovey/AP61/1999
+      - Calabazo virus
+      - Choclo virus
+      - Hantavirus S85-46
+      - Hantavirus SN7
+      - Seoul virus K24-v2
+      - Seoul virus K24-e7
+      - Hantavirus Gou3-v9
+      - Seoul virus Gou3-e5
+      - Hantavirus Liu
+      - Hantavirus AH211
+      - Hantaan virus A16
+      - Hantaan virus E142
+      - Seoul virus Hb8610
+      - Hantaan virus 84FLi
+      - Seoulvirus IR461
+      - Seoulvirus tchoupitoulas
+      - Hantavirus AH09
+      - Castelo dos Sonhos virus
+      - Araraquara virus
+      - Hantavirus AA137/Omsk-97
+      - Hantavirus CG32/Moscow-95
+      - Hantavirus LR1
+      - Hantavirus RG9
+      - Hantavirus Pe4Hu
+      - Hantavirus Bu3Hu
+      - Hantavirus Ca2Hu
+      - Hantavirus Ac1Hu
+      - Hantavirus HTN261
+      - Amur virus AMR/4313
+      - Amur virus AMR/4309
+      - Amur virus AMR/4234
+      - Hantavirus HTN/Far East/7866
+      - Hantavirus HTN/Far East/7701
+      - Hantavirus HTN/Far East/7406
+      - Hantavirus HTN/Far East/7303
+      - Hantavirus HTN/Far East/4382
+      - Hantavirus HTN/Far East/4251
+      - Hantavirus HTN/Far East/4241
+      - Hantavirus HTN/Far East/4229
+      - Hantavirus HTN/Far East/4209
+      - Hantavirus HTN/Far East/3955
+      - Hantavirus HTN/Far East/3867
+      - Hantavirus HTN/Far East/3844
+      - Hantavirus SEO/Vlad/8243
+      - Hantavirus SEO/Vlad/7218
+      - Hantavirus HTN/Far East/7732
+      - Hantavirus HTN/Far East/4338
+      - Hantavirus HTN/Far East/4329
+      - Hantavirus HTN/Far East/4320
+      - Hantavirus HTN/Far East/4307
+      - Hantavirus HTN/Far East/4296
+      - Hantavirus HTN/Far East/4294
+      - Hantavirus HTN/Far East/4290
+      - Hantavirus HTN/Far East/4254
+      - Hantavirus HTN/Far East/4253
+      - Hantavirus HTN/Far East/4235
+      - Hantavirus HTN/Far East/4231
+      - Hantavirus HTN/Far East/4228
+      - Hantavirus HTN/Far East/4226
+      - Hantavirus HTN/Far East/4211
+      - Hantavirus HTN/Far East/4029
+      - Hantavirus HTN/Far East/3829
+      - Hantavirus SEO/Vlad/7393
+      - Hantavirus SEO/Far East/3824
+      - Hantavirus SEO/Far East/248
+      - Hantavirus SEO
+      - Hantavirus HTN/Far East/3850
+      - Hantavirus Lodz-2
+      - Hantavirus Lodz-1
+      - Seoulvirus Gou3
+      - Hantavirus Z10
+      - Amur virus
+      - Topografov virus
+      - Hantavirus AP111
+      - Hantavirus CRF367
+      - Hantavirus CRF355
+      - Hantavirus CRF110
+      - Vladivostok virus
+      - Hantaan virus A9
+      - Seoulvirus L99
+      - Seoulvirus HB55
+      - Blue River virus
+      - Pergamino virus
+      - Oran virus
+      - Maciel virus
+      - Lechiguanas virus
+      - Hu39694 virus
+      - Bermejo virus
+      - Taimyr hantavirus
+      - Muleshoe hantavirus
+      - Rio Mamore hantavirus
+      - New York virus
+      - Seoulvirus R22
+      - Hantavirus Monongahela-3
+      - Hantavirus Monongahela-2
+      - Hantavirus Monongahela-1
+      - Isla Vista hantavirus
+      - Puumala virus udmurtia/894cg/91
+      - Puumala virus sotkamo/v-2969/81
+      - Puumala virus p360
+      - Puumala virus k27
+      - Puumala virus evo/12cg/93
+      - Puumala virus strain berkel
+      - Hantavirus HTN
+      - Hantavirus sp.
+      - Prairie vole hantavirus
+      - Rio Segundo hantavirus
+      - Hantaan-like virus DX
+      - Convict Creek 107 virus
+      - Four Corners hantavirus
+      - Seoul virus R22
+      - Seoulvirus Baltimore
+      - Hantavirus A9
+      - Hantaan virus B-1
+      - Seoul virus 80-39
+      - Seoul virus SR11
+      - Sapporo rat virus
+      - Puumala virus - Sotkamo
+      - Puumala virus Hallnas B1
+      - Hantaan virus 76-118
+      - Hantaan virus Lee
+      - HoJo virus
+  NAIRO:
+    name: Nairoviridae
+    taxa:
+    - taxid: 1980415
+      organisms:
+      - Plateau tick nairovirus
+      - Sitinavirus sichuanense
+      - Orthonairovirus sunci
+      - Orthonairovirus sinense
+      - Orthonairovirus meihuashanense
+      - Orthonairovirus manidae
+      - Orthonairovirus lambarenense
+      - Orthonairovirus gubboense
+      - Orthonairovirus crocidurae
+      - Orthonairovirus antuense
+      - Rodent orthonairovirus
+      - Wutonggou orthonairovirus 2
+      - Wutonggou orthonairovirus 1
+      - Nanshano orthonairovirus 1
+      - Nanshan orthonairovirus 4
+      - Nanshan orthonairovirus 3
+      - Nanshan orthonairovirus 2
+      - Dadong virus
+      - Blattodean nairo-related virus
+      - Yunnan nairo-like virus 54
+      - Yunnan nairo-like virus 53
+      - Xue-Cheng virus
+      - Crimean-Congo hemorrhagic fever virus clade III
+      - Yunnan shrew orthonairovirus 2
+      - Yunnan shrew orthonairovirus 1
+      - Desert orthonairovirus
+      - Hunchun nairovirus
+      - Wetland virus
+      - Iwanai Valley virus
+      - Cat Tien Thyropygus nairo-like virus
+      - BSF nairo-like virus 1
+      - Sitinavirus
+      - Crocidura tanakae nairovirus 2
+      - Crocidura tanakae nairovirus 1
+      - Periplaneta americana nairovirus 3
+      - Periplaneta americana nairovirus 2
+      - Periplaneta americana nairovirus 1
+      - red goblin roach virus 1
+      - Mikuni nairovirus
+      - Iricinus orthonairovirus
+      - Wufeng shrew orthonairovirus 5
+      - Wufeng shrew orthonairovirus 4
+      - Wufeng shrew orthonairovirus 3
+      - Wufeng shrew orthonairovirus 2
+      - Beiji nariovirus
+      - Beiji orthonairovirus
+      - Orthonairovirus yezoense
+      - Orthonairovirus sulinaense
+      - Orthonairovirus songlingense
+      - Norwavirus beijiense
+      - Xinspivirus xinzhouense
+      - Striwavirus sanxiaense
+      - Shaspivirus aranei
+      - Sabavirus americanum
+      - Orthonairovirus zirkuense
+      - Orthonairovirus yogueense
+      - Orthonairovirus wenzhouense
+      - Orthonairovirus tunisense
+      - Orthonairovirus tomdiense
+      - Orthonairovirus thiaforaense
+      - Orthonairovirus tachengense
+      - Orthonairovirus soldadoense
+      - Orthonairovirus sakhalinense
+      - Orthonairovirus randallense
+      - Orthonairovirus qalyubense
+      - Orthonairovirus peruense
+      - Orthonairovirus parahaemorrhagiae
+      - Orthonairovirus nairobiense
+      - Orthonairovirus meramense
+      - Orthonairovirus macquariense
+      - Orthonairovirus lusakaense
+      - Orthonairovirus khani
+      - Orthonairovirus keterehense
+      - Orthonairovirus kasokeroense
+      - Orthonairovirus japonicum
+      - Orthonairovirus issykkulense
+      - Orthonairovirus huangpiense
+      - Orthonairovirus hazaraense
+      - Orthonairovirus haemorrhagiae
+      - Orthonairovirus gossasense
+      - Orthonairovirus esteroense
+      - Orthonairovirus erveense
+      - Orthonairovirus dugbeense
+      - Orthonairovirus dermacentoris
+      - Orthonairovirus clomorense
+      - Orthonairovirus chimense
+      - Orthonairovirus bushkeyense
+      - Orthonairovirus buranaense
+      - Orthonairovirus bandiaense
+      - Orthonairovirus australiaense
+      - Orthonairovirus amblyommae
+      - Ocetevirus paratemnopterygis
+      - Norwavirus grotenhoutense
+      - Antu virus
+      - Cencurut virus
+      - Gubbo nairovirus
+      - Yichun nairovirus
+      - Ji'an nairovirus
+      - Linzhi Nairo tick virus 1
+      - Xining Nairo tick virus 1
+      - Dali Nairo tick virus 1
+      - Yushu Nairo tick virus 1
+      - Yanbian Nairo tick virus 2
+      - Yanbian Nairo tick virus 1
+      - Tonghua Nairo tick virus 1
+      - Norwavirus sp.
+      - Pangolin orthonairovirus
+      - Sichuan tick nairovirus
+      - Meihua Mountain virus
+      - Wufeng Crocidura attenuata orthonairovirus 1
+      - Hangzhou paederus fuscipes nairovirus 1
+      - Fushun diaea subdola nairovirus 1
+      - unclassified Norwavirus
+      - Aigai virus
+      - Uzun-Agach virus
+      - Keterah virus
+      - Orthonairovirus avalonense
+      - Orthonairovirus abuminaense
+      - Orthonairovirus abuhammadense
+      - Xinspivirus
+      - Sabavirus
+      - Ocetevirus
+      - Norwavirus
+      - Yezo virus
+      - Sulina virus
+      - Nairoviridae sp.
+      - Songling virus
+      - Gakugsa tick virus
+      - Berlin bat nairovirus
+      - Wittenau bat nairovirus
+      - Prackenbach bat nairovirus
+      - Frankliniella occidentalis nairo-like virus 1
+      - Camel Crimean-Congo hemorrhagic fever orthonairovirus
+      - unclassified Nairoviridae
+      - Meram virus
+      - Rondonia orthonairovirus
+      - unclassified Orthonairovirus
+      - Orthonairovirus sp.
+      - Striwavirus
+      - Shaspivirus
+      - Beiji nairovirus
+      - Orthonairovirus artashatense
+      - Estero Real virus
+      - Vinegar Hill virus
+      - Norway nairovirus 1
+      - Orthonairovirus
+      - Nairoviridae
+      - Pacific coast tick nairovirus
+      - Nairovirus sp.
+      - Grotenhout virus
+      - Pustyn virus
+      - Clo Mor virus
+      - Avalon virus
+      - Zirqa virus
+      - Great Saltee virus
+      - Sapphire II virus
+      - Tunis virus
+      - Gossas virus
+      - Yogue virus
+      - Kasokero virus
+      - Tofla virus
+      - Nayun tick nairovirus
+      - Xinzhou Spider Virus
+      - Wenzhou Tick Virus
+      - Tacheng Tick Virus 1
+      - Shayang Spider Virus 1
+      - Sanxia Water Strider Virus 1
+      - Huangpi Tick Virus 1
+      - South Bay virus
+      - Tamdy virus
+      - Paramushir virus
+      - Issyk-Kul virus
+      - Geran virus
+      - Caspiy virus
+      - Burana virus
+      - Leopards Hill virus
+      - Bat nairovirus
+      - unclassified Nairovirus
+      - Dugbe virus (isolate ArD44313)
+      - Crimean-Congo hemorrhagic fever virus strain IbAr10200
+      - Kupe virus
+      - Taggert virus
+      - Soldado virus
+      - Crimean-Congo hemorrhagic fever virus CTF-Hu7/06
+      - Crimean-Congo hemorrhagic fever virus CTF-Hu30/06
+      - Crimean-Congo hemorrhagic fever virus CTF-Hu27/06
+      - Crimean-Congo hemorrhagic fever virus CTF-Hu15/06
+      - Crimean-Congo hemorrhagic fever virus CTF-Hu10/06
+      - Crimean-Congo hemorrhagic fever virus (ZAM57/06)
+      - Erve virus
+      - Bandia virus
+      - Abu Mina virus
+      - Abu Hammad virus
+      - Punta Salinas virus
+      - Raza virus
+      - Farallon virus
+      - Nairobi sheep disease virus
+      - Crimean-Congo Hemorrhagic Fever virus strain China
+      - Crimean-Congo hemorrhagic fever virus strain BA88166
+      - Tillamook virus
+      - Hazara virus (isolate JC280)
+      - Hazara virus
+      - Crimean-Congo hemorrhagic fever virus (isolate C68031)
