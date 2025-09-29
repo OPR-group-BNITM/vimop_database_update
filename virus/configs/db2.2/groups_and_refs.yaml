@@ -172,9 +172,9 @@ curated:
         seqs:
         - NC_038711.1
   HIV1:
-    name: Human immunodeficiency virus 1
+    name: Lentivirus humimdef1
     taxa:
-    - taxid: 11676
+    - taxid: 3418650
     segments:
       Unsegmented:
         refs:
@@ -182,9 +182,9 @@ curated:
         seqs:
         - NC_001802.1
   HIV2:
-    name: Human immunodeficiency virus 2
+    name: Lentivirus humimdef2
     taxa:
-    - taxid: 11709
+    - taxid: 3418651
     segments:
       Unsegmented:
         refs:
