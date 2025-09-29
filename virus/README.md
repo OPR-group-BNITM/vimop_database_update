@@ -52,9 +52,68 @@ Replace the email with yours and set the versions in the fasta filenames accordi
 It will merge the NCBI genomes with the covid genomes from RVDB and the Covid reference genome.
 The Covid reference genome is downloaded from NCBI using Entrez, that is why you have to add your email adress.  
 
-## Get taxonomic information
+## Create the configs
 
-TODO
+### Define the curated data set
+
+Create a configuration file to define curated data sets and filters.
+Example:
+
+```
+curated:
+  COVID:
+    name: Severe acute respiratory syndrome coronavirus 2
+    taxa:
+    - taxid: 2697049
+    segments:
+      Unsegmented:
+        refs:
+        - NC_045512.2
+        seqs:
+        - NC_045512.2
+  LASV:
+    name: Mammarenavirus lassense
+    taxa:
+    - taxid: 3052310
+    segments:
+      S:
+        refs:
+        - NC_004296.1
+        seqs:
+        - NC_004296.1
+        - KM822128.1
+        - GU481068.1
+        - OL774861.1
+      L:
+        refs:
+        - NC_004297.1
+        seqs:
+        - NC_004297.1
+        - KM822127.1
+        - GU481069.1
+        - OL774860.1
+filters:
+  ARENA:
+    name: Arenaviridae
+    taxa:
+    - taxid: 11617
+```
+
+The first section `curated` holds the curated species.
+`refs` is the place to put one reference that defines the orientation in which all genomes will be deposited.
+`seqs` are more reference genomes.
+Note, that all genomes in the input data set will be considered for this data set.
+The sequences here are used to compare all sequences to in order to filter out genomes in the data set, that are assigned falsely to this taxon.
+Save this in `configs/dbX.Y/groups_and_refs.yaml` (replace X and Y with your version).
+
+### Add organism names
+
+Run 
+```
+python scripts/fetch_organisms_for_taxids.py \
+  --config configs/db2.2/groups_and_refs.yaml \
+  --out configs/db2.2/groups_refs_and_organisms.yaml
+```
 
 ## Run a data set curation
 
