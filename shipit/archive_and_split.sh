@@ -18,6 +18,15 @@ usage() {
   exit 2
 }
 
+
+# -------- url_prefix (optional with sensible defaults) --------
+# Priority: arg > $URL_PREFIX > hardcoded default
+if [[ -z "${url_prefix}" ]]; then
+  url_prefix="${URL_PREFIX:-https://opr.bnitm.de/vimop_db/files}"
+fi
+# Strip any trailing slash to avoid '//' in generated URLs
+url_prefix="${url_prefix%/}"
+
 [[ -n "$datadir" && -n "$db_name" && -n "$output_dir" ]] || usage
 
 if [[ ! -d "$datadir" ]]; then
@@ -36,11 +45,6 @@ esac
 fn_config_yaml="${datadir}/${db_name}.yaml"
 if [[ ! -f "$fn_config_yaml" ]]; then
   echo "ERROR: Expected YAML config not found: ${fn_config_yaml}" >&2
-  exit 1
-fi
-
-if [[ -z "${url_prefix}" ]]; then
-  echo "ERROR: url_prefix not provided (4th arg) and URL_PREFIX env var not set." >&2
   exit 1
 fi
 
@@ -111,17 +115,16 @@ cd "$split_dir"
 checksum_zipped="$(sha256sum "$fname_zipped" | awk '{print $1}')"
 
 {
-  echo "${db_name}:"
-  echo "  version: '${version}'"
-  echo "  checksum_directory: '${checksum_whole_directory}'"
-  echo "  checksum_zipped: '${checksum_zipped}'"
-  echo "  files:"
+  echo "version: '${version}'"
+  echo "checksum_directory: '${checksum_whole_directory}'"
+  echo "checksum_zipped: '${checksum_zipped}'"
+  echo "files:"
   for fn in ${split_prefix}*; do
     [[ -f "$fn" ]] || { echo "ERROR: No split parts found with prefix '${split_prefix}'." >&2; exit 1; }
     checksum_part="$(sha256sum "$fn" | awk '{print $1}')"
-    echo "  - name: '${fn}'"
-    echo "    url: '${url_prefix}/${fn}'"
-    echo "    checksum: '${checksum_part}'"
+    echo "- name: '${fn}'"
+    echo "  url: '${url_prefix}/${fn}'"
+    echo "  checksum: '${checksum_part}'"
   done
 } > "$fname_file_config"
 
