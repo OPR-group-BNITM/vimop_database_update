@@ -4,11 +4,7 @@
 import argparse
 import sys
 from typing import Any, Dict
-try:
-    import yaml
-except ImportError:
-    sys.stderr.write('PyYAML is required. Install with: pip install pyyaml\n')
-    sys.exit(1)
+import yaml
 
 
 def load_yaml(path: str) -> Any:

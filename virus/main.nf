@@ -223,11 +223,11 @@ workflow {
         sequences_per_group | map {label, fasta -> [fasta, "sequences", "${label}.all.fasta"]},
         oriented_refs.write_this,
         oriented_seqs.write_this,
-        clustered | map { label, fasta -> [fasta, "db", "${label}.fasta"] },
-        fasta_all | map { fasta -> [fasta, "db", "ALL.fasta"] },
-        family_filters | map { fasta -> [fasta, "db", null] },
-        blast_db  | map { blast_dir -> [blast_dir, "db", "blast_db"] },
-        output_config | map { config -> [config, "db", "virus.yaml"] }
+        clustered | map { label, fasta -> [fasta, "virus", "${label}.fasta"] },
+        fasta_all | map { fasta -> [fasta, "virus", "ALL.fasta"] },
+        family_filters | map { fasta -> [fasta, "virus", null] },
+        blast_db  | map { blast_dir -> [blast_dir, "virus", "blast_db"] },
+        output_config | map { config -> [config, "virus", "virus.yaml"] }
     )
     | output
 }
