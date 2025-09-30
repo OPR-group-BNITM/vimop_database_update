@@ -59,10 +59,10 @@ def fetch_organism_names(taxon_id):
     records = Entrez.read(handle)
     handle.close()
 
-    return [
+    return sorted([
         str(record["ScientificName"])
         for record in records
-    ]
+    ])
 
 
 def main():

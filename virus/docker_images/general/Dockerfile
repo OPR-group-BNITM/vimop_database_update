@@ -1,5 +1,5 @@
-# Start from a base image that includes Miniconda
-FROM continuumio/miniconda3
+# Start from a base image that includes Miniconda and nextflow
+FROM oprgroup/nextflow_conda:1.0.0
 
 # Set the working directory
 WORKDIR /app
