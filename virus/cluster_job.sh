@@ -7,6 +7,9 @@
 #SBATCH --mail-user=nils.petersen@bnitm.de
 #SBATCH --job-name=db_build
 
+# Load conda’s shell functions (works in non-interactive shells)
+source "$(/opt/conda/bin/conda info --base)/etc/profile.d/conda.sh"
+
 workflow_dir=/data2/le-petersen/shared_data/db_different_versions/VimopDatabaseUpdate/virus
 cd $workflow_dir
 config_path=configs/db2.2/db2.2.config
