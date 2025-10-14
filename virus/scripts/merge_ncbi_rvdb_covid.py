@@ -49,7 +49,7 @@ def main():
 
         with gzip_open(args.rvdb) as f_rvdb:
             for record in SeqIO.parse(f_rvdb, 'fasta'):
-                descr_split = record.id.split('|')
+                descr_split = record.description.split('|')
                 if len(descr_split) < 5:
                     continue
                 seqid = descr_split[2]
