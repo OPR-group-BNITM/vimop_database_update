@@ -11,4 +11,5 @@ Replace `path/to/db` with the directory of you new data base, select the type of
 ## Assemble configs for a new data base version
 
 To create a whole data base, we need a download config combining the information about the three sub data bases.
-To merge them run `python merge_config.py --virus path/to/download/configs/virus.v1.0.files.yaml --contaminants path/to/download/configs/virus.v1.0.files.yaml --centrifuge path/to/download/configs/centrifuge.v1.0.files.yaml --output vimop_db.1.0.yaml`. Replace the version numbers with the correct version numbers.
+To merge them run `python merge_config.py --virus path/to/download/configs/virus.v1.0.files.yaml --contaminants path/to/download/configs/virus.v1.0.files.yaml --centrifuge path/to/download/configs/centrifuge.v1.0.files.yaml --output vimop_db.1.0.yaml`.
+Replace the version numbers with the correct version numbers.

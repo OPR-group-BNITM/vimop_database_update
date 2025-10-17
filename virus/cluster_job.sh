@@ -12,5 +12,5 @@ source "$(/opt/conda/bin/conda info --base)/etc/profile.d/conda.sh"
 
 workflow_dir=/data2/le-petersen/shared_data/db_different_versions/VimopDatabaseUpdate/virus
 cd $workflow_dir
-config_path=configs/db2.2/db2.2.config
+config_path=configs/db2.3/db2.3.config
 nextflow main.nf -c $config_path -profile conda
