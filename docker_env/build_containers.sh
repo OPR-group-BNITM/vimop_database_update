@@ -4,13 +4,17 @@
 
 set -euo pipefail
 
-set -x
+prefix=vimop_db_update
+images=(nextflow ncbi_datasets)
+if [[ $# -gt 0 ]]
+then
+  images=("$@")
+fi
 
-images=(dbupdate)
-
-for image in "${images[@]}"
+for img in "${images[@]}"
 do
-    version=$(cat $image/version.txt)
+    image="${prefix}_${img}"
+    version=$(cat ${img}/version.txt)
 
     container="$image"
     container_dir="${HOME}/containers/${container}"
@@ -19,7 +23,7 @@ do
     docker rm -f $container 2>/dev/null || true
     rm -rf $container_dir
 
-    docker build --no-cache -t $image:$version $image/
+    docker build --no-cache -t $image:$version $img/
 
     mkdir -p "${HOME}/run"
     mkdir -p $rootfs_dir
