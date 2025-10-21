@@ -3,7 +3,7 @@
 set -euo pipefail
 
 job_name=build_centrifuge_index
-container=vimop_db_update_ncbi_datasets
+container=vimop_db_update_centrifuge
 
 this_script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 source "${this_script_dir}/../env.sh"

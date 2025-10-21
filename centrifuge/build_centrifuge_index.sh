@@ -21,18 +21,18 @@ cd $index_build_dir
 
 refseq_taxons=(
     "archaea"
-    #"bacteria"
-    #"human"
-    #"mouse"
+    "bacteria"
+    "human"
+    "mouse"
 )
 
-fname_fasta_merged=merged.fasta.gz
+fname_fasta_merged=merged.fasta
 fname_seqid_to_taxid_merged=seqid2taxid.tsv
 
 for taxon in "${refseq_taxons[@]}"
 do
     fname_fasta="${VIMOP_DB_UPDATE_OUTPUT_REFSEQ_DATA}/${taxon}.fasta.gz"
-    cat $fname_fasta >> $fname_fasta_merged
+    gunzip -c $fname_fasta >> $fname_fasta_merged
     fname_seqid_to_taxid="${VIMOP_DB_UPDATE_OUTPUT_REFSEQ_DATA}/${taxon}.seqid2taxid.tsv"
     cat $fname_seqid_to_taxid >> $fname_seqid_to_taxid_merged
 done
@@ -41,7 +41,7 @@ fname_seqid_to_taxid_virus="${VIMOP_DB_UPDATE_VIRUS_TAXONDATA_DIR}/virus.seqid2t
 fname_fasta_virus="${VIMOP_DB_UPDATE_VIRUS_ALL_FILE}"
 
 cat $fname_seqid_to_taxid_virus >> $fname_seqid_to_taxid_merged
-gzip -c $fname_fasta_virus >> $fname_fasta_merged
+cat $fname_fasta_virus >> $fname_fasta_merged
 
 
 cp "${VIMOP_DB_UPDATE_VIRUS_TAXONDATA_DIR}/virus_taxids.txt" "virus_taxids.txt"
@@ -72,4 +72,4 @@ mv taxonomy.tab taxonomy/taxonomy.tab
 
 rm images.dmp
 rm $fname_seqid_to_taxid_merged
-rm $fname_seqid_to_taxid_merged
+rm $fname_fasta_merged
