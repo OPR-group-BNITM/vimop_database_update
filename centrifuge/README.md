@@ -6,14 +6,14 @@ To build a new index build the virus data base first (see `virus` directory of t
 Then run
 
 ```
-./slurmrun_rs_setup.sh
+./slurmrun_1_rs_setup.sh
 ```
 
 to get refseq sequences for bacteria, archaea and eukaryotes (only human and mouse).
 Subsequently run
 
 ```
-./slurmrun_assign_virus_taxids.sh
+./slurmrun_2_assign_virus_taxids.sh
 ```
 
 to assign taxIDs to all virus sequences.
@@ -22,5 +22,5 @@ Hence, make sure to update the version and path in `env.sh`.
 Finally run
 
 ```
-./slurmrun_build_centrifuge_index.sh
+./slurmrun_3_build_centrifuge_index.sh
 ```

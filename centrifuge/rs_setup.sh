@@ -8,16 +8,16 @@ set -euo pipefail
 set -x
 
 source "$(/opt/conda/bin/conda info --base)/etc/profile.d/conda.sh"
-conda activate env
+conda activate datasets
 
 outdir=${VIMOP_DB_UPDATE_OUTPUT_REFSEQ_DATA}
 
-#rm -rf $outdir
+rm -rf $outdir
 mkdir -p $outdir
 cd $outdir
 
 taxa=(
-    #"archaea 2157"
+    "archaea 2157"
     "bacteria 2"
     "human 9606"  # homo sapiens
     "mouse 10090"  # mus musculus

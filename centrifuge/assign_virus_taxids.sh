@@ -7,7 +7,7 @@ set -euo pipefail
 set -x
 
 source "$(/opt/conda/bin/conda info --base)/etc/profile.d/conda.sh"
-conda activate env
+conda activate datasets
 
 n_threads=4
 script_dir="$VIMOP_DB_UPDATE_SRC/centrifuge"

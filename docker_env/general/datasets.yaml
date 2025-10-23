@@ -1,4 +1,4 @@
-name: env
+name: datasets
 channels:
   - bioconda
   - conda-forge

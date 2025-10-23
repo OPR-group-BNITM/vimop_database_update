@@ -7,7 +7,7 @@ set -euo pipefail
 set -x
 
 source "$(/opt/conda/bin/conda info --base)/etc/profile.d/conda.sh"
-conda activate env
+conda activate centrifuge
 
 index_build_dir="${VIMOP_DB_UPDATE_OUTPUT_DIR}/centrifuge/centrifuge"
 

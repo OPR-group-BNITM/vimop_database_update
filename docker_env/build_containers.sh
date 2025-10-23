@@ -5,7 +5,7 @@
 set -euo pipefail
 
 prefix=vimop_db_update
-images=(nextflow ncbi_datasets)
+images=(general)
 if [[ $# -gt 0 ]]
 then
   images=("$@")
@@ -13,22 +13,22 @@ fi
 
 for img in "${images[@]}"
 do
-    image="${prefix}_${img}"
-    version=$(cat ${img}/version.txt)
+  image="${prefix}_${img}"
+  version=$(cat ${img}/version.txt)
 
-    container="$image"
-    container_dir="${HOME}/containers/${container}"
-    rootfs_dir="${container_dir}/rootfs"
+  container="$image"
+  container_dir="${HOME}/containers/${container}"
+  rootfs_dir="${container_dir}/rootfs"
 
-    docker rm -f $container 2>/dev/null || true
-    rm -rf $container_dir
+  docker rm -f $container 2>/dev/null || true
+  rm -rf $container_dir
 
-    docker build --no-cache -t $image:$version $img/
+  docker build --no-cache -t $image:$version $img/
 
-    mkdir -p "${HOME}/run"
-    mkdir -p $rootfs_dir
+  mkdir -p "${HOME}/run"
+  mkdir -p $rootfs_dir
 
-    docker export $(docker create --name ${container} "${image}:${version}") | tar -C ${rootfs_dir} -xvf -
+  docker export $(docker create --name ${container} "${image}:${version}") | tar -C ${rootfs_dir} -xvf -
 
-    /opt/gaia-tools/bin/helper/generate-config -hostname "${container}" -path ${container_dir}
+  /opt/gaia-tools/bin/helper/generate-config -hostname "${container}" -path ${container_dir}
 done

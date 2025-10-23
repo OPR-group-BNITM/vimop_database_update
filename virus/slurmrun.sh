@@ -2,8 +2,8 @@
 
 set -euo pipefail
 
-job_name=build_centrifuge_index
-container=vimop_db_update_centrifuge
+job_name=build_virus_db
+container=vimop_db_update_general
 
 this_script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 source "${this_script_dir}/../env.sh"
