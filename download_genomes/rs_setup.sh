@@ -10,17 +10,24 @@ set -x
 source "$(/opt/conda/bin/conda info --base)/etc/profile.d/conda.sh"
 conda activate datasets
 
-outdir=${VIMOP_DB_UPDATE_OUTPUT_REFSEQ_DATA}
+outdir="${VIMUPDATE_GENOMES}/refseq"
 
-rm -rf $outdir
+if [[ -e "${VIMUPDATE_GENOMES}/refseq" ]]
+then
+    echo "${VIMUPDATE_GENOMES}/refseq exists, refusing to download data"
+    exit 1
+fi
+
 mkdir -p $outdir
 cd $outdir
 
 taxa=(
-    "archaea 2157"
+    #"archaea 2157"
     "bacteria 2"
-    "human 9606"  # homo sapiens
-    "mouse 10090"  # mus musculus
+    "homo_sapiens 9606"  # homo sapiens
+    "mus_musculus 10090"  # mus musculus
+    "mastomys_natalensis 10112"
+    "aedes_aegypti 7159"
 )
 
 for tax in "${taxa[@]}"
@@ -46,7 +53,7 @@ do
     unzip -q ${taxon}_refseq.zip -d "${taxon}_pkg"
     datasets rehydrate --directory "${taxon}_pkg"
 
-    python ${VIMOP_DB_UPDATE_SRC}/centrifuge/merge_refseq_seqs.py \
+    python ${VIMUPDATE_SRC}/download_genomes/merge_refseq_seqs.py \
         --sequence-directory "${taxon}_pkg/ncbi_dataset/data" \
         --assembly-to-tax "${taxon}_tax.tsv" \
         --kingdom-taxid "$taxid" \

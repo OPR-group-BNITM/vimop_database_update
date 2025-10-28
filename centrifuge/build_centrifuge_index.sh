@@ -9,7 +9,7 @@ set -x
 source "$(/opt/conda/bin/conda info --base)/etc/profile.d/conda.sh"
 conda activate centrifuge
 
-index_build_dir="${VIMOP_DB_UPDATE_OUTPUT_DIR}/centrifuge/centrifuge"
+index_build_dir="${VIMUPDATE_CENTRIFUGE}/centrifuge"
 
 if [[ -d $index_build_dir ]]
 then
@@ -22,9 +22,10 @@ cd $index_build_dir
 refseq_taxons=(
     "archaea"
     "bacteria"
-    "human"
-    "mouse"
+    "homo_sapiens"
+    "mus_musculus"
 )
+# TODO: add aedes aegypti?
 
 fname_fasta_merged=merged.fasta
 fname_seqid_to_taxid_merged=seqid2taxid.tsv
@@ -37,27 +38,23 @@ do
     cat $fname_seqid_to_taxid >> $fname_seqid_to_taxid_merged
 done
 
-fname_seqid_to_taxid_virus="${VIMOP_DB_UPDATE_VIRUS_TAXONDATA_DIR}/virus.seqid2taxid.tsv"
-fname_fasta_virus="${VIMOP_DB_UPDATE_VIRUS_ALL_FILE}"
+cat "$VIMUPDATE_GENOMES/merged_ncbi_rvdb/viruses.seqid2taxid.tsv" >> $fname_seqid_to_taxid_merged
+cat "${VIMOP_DB_UPDATE_VIRUS_ALL_FILE}" >> $fname_fasta_merged
 
-cat $fname_seqid_to_taxid_virus >> $fname_seqid_to_taxid_merged
-cat $fname_fasta_virus >> $fname_fasta_merged
-
-
-cp "${VIMOP_DB_UPDATE_VIRUS_TAXONDATA_DIR}/virus_taxids.txt" "virus_taxids.txt"
+cp "${VIMUPDATE_GENOMES}/ncbi_virus/virus_taxids.txt" "virus_taxids.txt"
 ktUpdateTaxonomy.sh .
 
 centrifuge-build \
     -p 8 \
     --conversion-table $fname_seqid_to_taxid_merged \
-    --taxonomy-tree "${VIMOP_DB_UPDATE_VIRUS_TAXONDATA_DIR}/taxonkit/nodes.dmp" \
-    --name-table "${VIMOP_DB_UPDATE_VIRUS_TAXONDATA_DIR}/taxonkit/names.dmp" \
+    --taxonomy-tree "${VIMUPDATE_TAXONKIT}/nodes.dmp" \
+    --name-table "${VIMUPDATE_TAXONKIT}/names.dmp" \
     $fname_fasta_merged \
     all
 
 {
-    echo "version: ${VIMOP_DB_UPDATE_CENTRIFUGEDB_VERSION}"
-    echo "description: \"${VIMOP_DB_UPDATE_CENTRIFUGEDB_DESCRIPTION}\""
+    echo "version: ${VIMUPDATE_CENTRIFUGEDB_VERSION}"
+    echo "description: \"${VIMUPDATE_CENTRIFUGEDB_DESCRIPTION}\""
     echo "virus_taxid_file: virus_taxids.txt"
     echo "index_name: all"
     echo "files:"
