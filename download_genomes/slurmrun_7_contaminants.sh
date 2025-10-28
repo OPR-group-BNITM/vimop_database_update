@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-job_name=download_virus_sequences
+job_name=contaminants
 container=vimop_db_update_general
 
 this_script_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
