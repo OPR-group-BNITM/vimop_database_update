@@ -118,6 +118,6 @@ FNR==1 {
 
 VIRUS_TABLE_NOCOVID="$OUT_DIR/viruses.nocovid.tsv"
 
-awk -F"\t" ' $8 != 2697049 { print $0 }' "$VIRUS_TABLE_MERGED" > "$VIRUS_TABLE_NOCOVID"
+awk -F"\t" -v covid_taxid="$VIMUPDATE_COVID_TAXID" ' $2 != covid_taxid { print $0 }' "$VIRUS_TABLE_MERGED" > "$VIRUS_TABLE_NOCOVID"
 
 echo "Done. TSV: $VIRUS_TABLE_NOCOVID (No covid) and $VIRUS_TABLE_MERGED (including covid)"
