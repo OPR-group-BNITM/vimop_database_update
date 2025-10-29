@@ -11,6 +11,7 @@ workflow_dir="${VIMUPDATE_SRC}/virus"
 cd $workflow_dir
 
 fname_taxa_config="$VIMUPDATE_VIRUS/groups_refs_and_organisms.yaml"
+fname_fasta="${VIMUPDATE_GENOMES}/merged_ncbi_rvdb_virus/virus.fasta"
 
 mkdir -p "$VIMUPDATE_VIRUS"
 
@@ -22,13 +23,17 @@ python scripts/fetch_organisms_for_taxids.py \
     --config "configs/groups_and_refs.yaml" \
     --out $fname_taxa_config
 
+python scripts/assert_references_exist.py \
+    --taxgroups $fname_taxa_config \
+    --fasta $fname_fasta
+
 conda deactivate
 
 
 nextflow main.nf \
     --taxa_config $fname_taxa_config \
-    --remove_set configs/remove.txt \
-    --fasta_sequences "${VIMUPDATE_GENOMES}/merged_ncbi_rvdb_virus/virus.fasta" \
+    --remove_set $workflow_dir/configs/remove.txt \
+    --fasta_sequences $fname_fasta \
     --out_dir "$VIMUPDATE_VIRUS" \
     --output_version "$VIMUPDATE_VIRUSDB_VERSION" \
     --output_description "$VIMUPDATE_VIRUSDB_DESCRIPTION" \

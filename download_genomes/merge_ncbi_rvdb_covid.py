@@ -22,6 +22,8 @@ def gzip_open(fname):
 
 def read_taxinfo(fname):
     acc2tax = {}
+    acc2fam = {}
+    acc2spec = {}
     with open(fname, 'r') as f:
         for line in f:
             if not line.strip() or line.strip().startswith('accession'):  # skip header/empty
@@ -29,9 +31,13 @@ def read_taxinfo(fname):
             cols = line.rstrip('\n').split('\t')
             acc = cols[0].strip()
             tax = cols[1].strip()
+            family = cols[4].strip()
+            species = cols[6].strip()
             if acc and tax:
                 acc2tax[acc] = tax
-    return acc2tax
+                acc2fam[acc] = family
+                acc2spec[acc] = species
+    return acc2tax, acc2fam, acc2spec
 
 
 def main():
@@ -52,7 +58,7 @@ def main():
     covid_taxid = args.covid_taxid
     viruses_taxid = args.virus_taxid
 
-    taxids = read_taxinfo(args.taxinfo)
+    taxids, acc2families, acc2species = read_taxinfo(args.taxinfo)
 
     with open(args.fasta_out, 'w') as f_fasta, open(args.seqid_to_taxid_out, 'w') as f_seqidtotaxid:
 
@@ -93,8 +99,15 @@ def main():
 
         with gzip_open(args.ncbi) as f_ncbi:
             for ncbi_record in SeqIO.parse(f_ncbi, 'fasta'):
-                SeqIO.write(ncbi_record, f_fasta, 'fasta')
                 taxid = taxids.get(ncbi_record.id, viruses_taxid)
+                fam = acc2families.get(ncbi_record.id, '')
+                species = acc2species.get(ncbi_record.id, '')
+                new_record = SeqRecord(
+                    seq=ncbi_record.seq,
+                    id=ncbi_record.id,
+                    description=f'|{ncbi_record.description}|{fam}|{species}'
+                )
+                SeqIO.write(new_record, f_fasta, 'fasta')
                 f_seqidtotaxid.write(f'{ncbi_record.id}\t{taxid}\n')
 
 

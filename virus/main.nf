@@ -143,15 +143,12 @@ def createFastaDict(List<String> filePaths) {
 }
 
 
-// TODO: add download of organism names to the tax ids
-
-
 workflow {
 
     config_channel = Channel.of(params.taxa_config)
 
     sequences_per_group = config_channel
-    | map { fasta -> [fasta, params.fasta_sequences] }
+    | map { taxa_conf -> [taxa_conf, params.fasta_sequences] }
     | get_curation_sequences
     | flatten  // Ensure individual files are passed
     | map { file -> 
