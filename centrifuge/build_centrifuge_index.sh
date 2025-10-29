@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH -c 8 # number of cores
-#SBATCH --mem 100000 # memory pool for all cores
+#SBATCH -c 16 # number of cores
+#SBATCH --mem 128000 # memory pool for all cores
 #SBATCH --mail-type=ALL
 
 set -euo pipefail
@@ -73,3 +73,6 @@ mv taxonomy.tab taxonomy/taxonomy.tab
 rm images.dmp
 rm $fname_seqid_to_taxid_merged
 rm $fname_fasta_merged
+
+cd ..
+mv centrifuge "${VIMUPDATE_DB}/centrifuge"
