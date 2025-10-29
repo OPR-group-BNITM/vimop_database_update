@@ -9,6 +9,17 @@ set -x
 source "$(/opt/conda/bin/conda info --base)/etc/profile.d/conda.sh"
 conda activate datasets
 
+# Force EDirect away from curl
+export EDIRECT_PREFER_CURL=0
+export EDIRECT_PREFER_WGET=1
+
+# Silence locale warnings
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
+export LANGUAGE=en_US:en
+
+export NCBI_EMAIL=$VIMUPDATE_MAIL
+
 fname_genbank_tsv="${VIMUPDATE_SRC}/host/reagent/sequences.tsv"
 fname_refseq_tsv="${VIMUPDATE_SRC}/host/reagent/assemblies.tsv"
 

@@ -12,22 +12,16 @@ conda activate datasets
 
 outdir="${VIMUPDATE_GENOMES}/refseq"
 
-if [[ -e "${VIMUPDATE_GENOMES}/refseq" ]]
-then
-    echo "${VIMUPDATE_GENOMES}/refseq exists, refusing to download data"
-    exit 1
-fi
-
 mkdir -p $outdir
 cd $outdir
 
 taxa=(
-    #"archaea 2157"
-    "bacteria 2"
-    "homo_sapiens 9606"  # homo sapiens
-    "mus_musculus 10090"  # mus musculus
-    "mastomys_natalensis 10112"
-    "aedes_aegypti 7159"
+    "archaea 2157 refseq"
+    "bacteria 2 refseq"
+    "homo_sapiens 9606 refseq"
+    "mus_musculus 10090 refseq"
+    "mastomys_natalensis 10112 genbank"
+    "aedes_aegypti 7159 refseq"
 )
 
 for tax in "${taxa[@]}"
@@ -35,9 +29,16 @@ do
     set -- $tax   # split
     taxon=$1
     taxid=$2
+    database=$3
+
+    if [[ -e "${taxon}_tax.tsv" ]]
+    then
+        echo "${taxon}_tax.tsv exists, exiting" >&2
+        exit 1
+    fi
 
     datasets summary genome taxon "$taxid" \
-        --reference --assembly-source refseq --as-json-lines \
+        --reference --assembly-source "$database" --as-json-lines \
         | dataformat tsv genome --fields accession,organism-tax-id,organism-name \
         > "${taxon}_tax.tsv"
 
@@ -45,7 +46,7 @@ do
 
     datasets download genome accession \
         --inputfile "${taxon}_reference_acc.txt" \
-        --assembly-source refseq \
+        --assembly-source "$database" \
         --dehydrated \
         --include genome \
         --filename "${taxon}_refseq.zip"

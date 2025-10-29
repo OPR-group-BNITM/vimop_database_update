@@ -10,7 +10,7 @@ conda activate datasets
 
 mkdir -p "${VIMUPDATE_GENOMES}/merged_ncbi_rvdb_virus"
 
-python ${VIMUPDATE_SRC}/download_genomes/merge_refseq_seqs.py \
+python ${VIMUPDATE_SRC}/download_genomes/merge_ncbi_rvdb_covid.py \
     --email "$VIMUPDATE_MAIL" \
     --virus-taxid "$VIMUPDATE_VIRUS_TAXID" \
     --covid-taxid "$VIMUPDATE_COVID_TAXID" \
