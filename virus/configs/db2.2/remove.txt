@@ -1,9 +1,0 @@
-# Patent related "Flavivirus FSME" sequences are removed as they are falsely detected for zika virus samples
-MP120077.1
-MP120078.1
-MP120079.1
-MP120080.1
-MP120081.1
-A02208.1
-A02209.1
-A02210.1

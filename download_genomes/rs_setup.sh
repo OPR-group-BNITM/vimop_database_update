@@ -16,12 +16,12 @@ mkdir -p $outdir
 cd $outdir
 
 taxa=(
-    #"archaea 2157 refseq reference"
+    #"archaea 2157 refseq all"
     "bacteria 2 refseq type"
-    #"homo_sapiens 9606 refseq reference"
-    #"mus_musculus 10090 refseq reference"
-    #"mastomys_natalensis 10112 genbank reference"
-    #"aedes_aegypti 7159 refseq reference"
+    #"homo_sapiens 9606 refseq all"
+    #"mus_musculus 10090 refseq all"
+    #"mastomys_natalensis 10112 genbank all"
+    #"aedes_aegypti 7159 refseq all"
 )
 
 for tax in "${taxa[@]}"
@@ -42,15 +42,14 @@ do
     if [[ $subset_flat == "type" ]]
     then
         flags="--from-type"
-    elif [[ $subset_flat == "reference" ]]
+    elif [[ $subset_flat != "all" ]]
     then
-        flags="--reference"
-    else
         echo "Invalid subset choice ${subset_flat}" >&2
     fi
 
     datasets summary genome taxon "$taxid" \
         --assembly-source "$database" --as-json-lines $flags \
+        --reference \
         | dataformat tsv genome --fields accession,organism-tax-id,organism-name \
         > "${taxon}_tax.tsv"
 
