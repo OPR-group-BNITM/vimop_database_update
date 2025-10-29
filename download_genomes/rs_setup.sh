@@ -10,18 +10,18 @@ set -x
 source "$(/opt/conda/bin/conda info --base)/etc/profile.d/conda.sh"
 conda activate datasets
 
-outdir="${VIMUPDATE_GENOMES}/refseq"
+outdir="${VIMUPDATE_GENOMES}/refseq_2"
 
 mkdir -p $outdir
 cd $outdir
 
 taxa=(
-    "archaea 2157 refseq"
-    "bacteria 2 refseq"
-    "homo_sapiens 9606 refseq"
-    "mus_musculus 10090 refseq"
-    "mastomys_natalensis 10112 genbank"
-    "aedes_aegypti 7159 refseq"
+    #"archaea 2157 refseq reference"
+    "bacteria 2 refseq type"
+    #"homo_sapiens 9606 refseq reference"
+    #"mus_musculus 10090 refseq reference"
+    #"mastomys_natalensis 10112 genbank reference"
+    #"aedes_aegypti 7159 refseq reference"
 )
 
 for tax in "${taxa[@]}"
@@ -30,6 +30,7 @@ do
     taxon=$1
     taxid=$2
     database=$3
+    subset_flat=$4
 
     if [[ -e "${taxon}_tax.tsv" ]]
     then
@@ -37,8 +38,19 @@ do
         exit 1
     fi
 
+    flags=""
+    if [[ $subset_flat == "type" ]]
+    then
+        flags="--from-type"
+    elif [[ $subset_flat == "reference" ]]
+    then
+        flags="--reference"
+    else
+        echo "Invalid subset choice ${subset_flat}" >&2
+    fi
+
     datasets summary genome taxon "$taxid" \
-        --reference --assembly-source "$database" --as-json-lines \
+        --assembly-source "$database" --as-json-lines $flags \
         | dataformat tsv genome --fields accession,organism-tax-id,organism-name \
         > "${taxon}_tax.tsv"
 
