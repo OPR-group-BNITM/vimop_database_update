@@ -3,7 +3,7 @@
 # basic settings
 export VIMUPDATE_MAIL="nils.petersen@bnitm.de"
 export VIMUPDATE_SRC="/data/home/nils.petersen/dev/VimopDatabaseUpdate"
-export VIMUPDATE_BASEDIR="/data/home/nils.petersen/data/vimop_db_update/"
+export VIMUPDATE_BASEDIR="/data/home/nils.petersen/data/vimop_db_update"
 
 # output sub-directories
 export VIMUPDATE_SLURM="${VIMUPDATE_BASEDIR}/slurm"

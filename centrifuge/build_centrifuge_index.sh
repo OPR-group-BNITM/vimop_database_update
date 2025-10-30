@@ -41,7 +41,7 @@ do
     cat $fname_seqid_to_taxid >> $fname_seqid_to_taxid_merged
 done
 
-cat "${VIMUPDATE_GENOMES}/merged_ncbi_rvdb/viruses.seqid2taxid.tsv" >> $fname_seqid_to_taxid_merged
+cat "${VIMUPDATE_GENOMES}/merged_ncbi_rvdb_virus/virus.seqid2taxid.map" >> $fname_seqid_to_taxid_merged
 cat "${VIMUPDATE_DB}/virus/ALL.fasta" >> $fname_fasta_merged
 
 cp "${VIMUPDATE_GENOMES}/ncbi_virus/virus_taxids.txt" "virus_taxids.txt"
