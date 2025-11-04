@@ -21,13 +21,13 @@ def main():
     with open(args.assembly_to_tax) as f_in:
 
         # check the header validity
-        head_assembly_id, head_tax_id, head_organism = next(f_in).strip().split('\t')
+        head_assembly_id, head_tax_id, head_organism, *_ = next(f_in).strip().split('\t')
         assert head_assembly_id == 'Assembly Accession'
         assert head_tax_id == 'Organism Taxonomic ID' 
         assert head_organism == 'Organism Name'
 
         for line in f_in:
-            assembly_id, taxid, _ = line.split('\t')  # not using organism
+            assembly_id, taxid, *_ = line.split('\t')  # not using organism-name,assminfo-level,assminfo-refseq-category
             assembly_to_tax[assembly_id] = taxid
 
     path_fasta_out = Path(args.prefix + '.fasta.gz')

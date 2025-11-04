@@ -27,6 +27,9 @@ export VIMUPDATE_CENTRIFUGEDB_DESCRIPTION="Centrifuge index with virus Genbank s
 export VIMUPDATE_CONTAMINANTSDB_VERSION="1.2"
 export VIMUPDATE_CONTAMINANTSDB_DESCRIPTION="Human, mouse, mastomys, aedes aegypti and contaminant filter set"
 
+export VIMUPDB_VERSION="1.4"
+export VIMUPDB_DESCRIPTION="ViMOP_Bucket"
+
 # Taxonomy
 export VIMUPDATE_COVID_REFSEQ="NC_045512.2"
 export VIMUPDATE_VIRUS_TAXID="10239"

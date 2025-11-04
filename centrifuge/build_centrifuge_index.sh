@@ -36,13 +36,13 @@ fname_seqid_to_taxid_merged=seqid2taxid.tsv
 for taxon in "${refseq_taxons[@]}"
 do
     fname_fasta="${VIMUPDATE_GENOMES}/refseq/${taxon}.fasta.gz"
-    gunzip -c $fname_fasta >> $fname_fasta_merged
+    gunzip -c $fname_fasta | dustmasker -outfmt fasta -hard_masking >> $fname_fasta_merged
     fname_seqid_to_taxid="${VIMUPDATE_GENOMES}/refseq/${taxon}.seqid2taxid.tsv"
     cat $fname_seqid_to_taxid >> $fname_seqid_to_taxid_merged
 done
 
 cat "${VIMUPDATE_GENOMES}/merged_ncbi_rvdb_virus/virus.seqid2taxid.map" >> $fname_seqid_to_taxid_merged
-cat "${VIMUPDATE_DB}/virus/ALL.fasta" >> $fname_fasta_merged
+cat "${VIMUPDATE_DB}/virus/ALL.fasta" | dustmasker -outfmt fasta -hard_masking >> $fname_fasta_merged
 
 cp "${VIMUPDATE_GENOMES}/ncbi_virus/virus_taxids.txt" "virus_taxids.txt"
 ktUpdateTaxonomy.sh .

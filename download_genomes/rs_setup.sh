@@ -10,18 +10,20 @@ set -x
 source "$(/opt/conda/bin/conda info --base)/etc/profile.d/conda.sh"
 conda activate datasets
 
-outdir="${VIMUPDATE_GENOMES}/refseq_2"
+outdir="${VIMUPDATE_GENOMES}/refseq"
 
 mkdir -p $outdir
 cd $outdir
 
+all_levels="complete,chromosome,contig,scaffold"
+
 taxa=(
-    #"archaea 2157 refseq all"
-    "bacteria 2 refseq type"
-    #"homo_sapiens 9606 refseq all"
-    #"mus_musculus 10090 refseq all"
-    #"mastomys_natalensis 10112 genbank all"
-    #"aedes_aegypti 7159 refseq all"
+    "archaea 2157 refseq ${all_levels}"
+    "homo_sapiens 9606 refseq ${all_levels}"
+    "mus_musculus 10090 refseq ${all_levels}"
+    "mastomys_natalensis 10112 genbank ${all_levels}"
+    "aedes_aegypti 7159 refseq ${all_levels}"
+    "bacteria 2 refseq complete"
 )
 
 for tax in "${taxa[@]}"
@@ -30,7 +32,7 @@ do
     taxon=$1
     taxid=$2
     database=$3
-    subset_flat=$4
+    assembly_level=$4
 
     if [[ -e "${taxon}_tax.tsv" ]]
     then
@@ -38,19 +40,12 @@ do
         exit 1
     fi
 
-    flags=""
-    if [[ $subset_flat == "type" ]]
-    then
-        flags="--from-type"
-    elif [[ $subset_flat != "all" ]]
-    then
-        echo "Invalid subset choice ${subset_flat}" >&2
-    fi
-
     datasets summary genome taxon "$taxid" \
-        --assembly-source "$database" --as-json-lines $flags \
+        --assembly-source "$database" \
+        --assembly-level $assembly_level \
         --reference \
-        | dataformat tsv genome --fields accession,organism-tax-id,organism-name \
+        --as-json-lines \
+        | dataformat tsv genome --fields accession,organism-tax-id,organism-name,assminfo-level,assminfo-refseq-category \
         > "${taxon}_tax.tsv"
 
     awk '{print $1}' "${taxon}_tax.tsv" | tail -n+2 > "${taxon}_reference_acc.txt"
@@ -65,7 +60,7 @@ do
     unzip -q ${taxon}_refseq.zip -d "${taxon}_pkg"
     datasets rehydrate --directory "${taxon}_pkg"
 
-    python ${VIMUPDATE_SRC}/download_genomes/merge_refseq_seqs.py \
+    python "${VIMUPDATE_SRC}/download_genomes/merge_refseq_seqs.py" \
         --sequence-directory "${taxon}_pkg/ncbi_dataset/data" \
         --assembly-to-tax "${taxon}_tax.tsv" \
         --kingdom-taxid "$taxid" \
