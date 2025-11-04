@@ -1,20 +1,14 @@
 # ViMOP database setup
 
-This repository contains scripts and documentation on how to setup automatically setup the OPR ViMOP database.
-The datatabase has three independent compentents
+This repository contains scripts and documentation on how to automatically create an updated OPR ViMOP database.
+The scripts
 
-- the virus reference genomes
-- the centifuge index
-- the host genomes
+- download all required sequences from NCBI GenBank and RefSeq (`download_genomes`)
+- filter the virus genomes to build the virus reference dataset (`virus`)
+- build the centrifuge index (`centrifuge`)
+- collect the host genomes (`host`)
+- create zipped packages to make the database downloadable (`shipit`)
 
-This pipeline will build a new data base based on the most recent genomes available, which will be downloaded automatically.
-
-## Downloading the data
-
-First, sequence data need to be downloaded,
-All scripts to download the necessary sequences are found in the directory `download_genomes`.
-
-## Building the data base components
-
-The three component are build with the scripts found in `virus`, `centrifuge` and `host` respectively.
-Building the centrifuge index requires to build the virus reference data set first.
+The scripts are made to run on our slurm system.
+Before running them, build a docker container with the script `docker_env/build_containers.sh`.
+Then send the job to the hpc using `./slurmrun_build_vimop_database.sh`.
