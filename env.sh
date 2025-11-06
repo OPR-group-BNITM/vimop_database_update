@@ -16,6 +16,7 @@ export VIMUPDATE_DB="${VIMUPDATE_BASEDIR}/db"
 # URLs
 export VIMUPDATE_TAXDUMP_URL="ftp://ftp.ncbi.nih.gov/pub/taxonomy/taxdump.tar.gz"
 export VIMUPDATE_RVDB_URL="https://rvdb.dbi.udel.edu/download/C-RVDBvCurrent.fasta.gz"
+# set export VIMUPDATE_FILESHARE_PREFIX="USER@SERVER:/path/to/files" in your own .bashrc
 
 # Output DB versions and descriptions
 export VIMUPDATE_VIRUSDB_VERSION="2.4"
@@ -27,8 +28,8 @@ export VIMUPDATE_CENTRIFUGEDB_DESCRIPTION="Centrifuge index with virus Genbank s
 export VIMUPDATE_CONTAMINANTSDB_VERSION="1.2"
 export VIMUPDATE_CONTAMINANTSDB_DESCRIPTION="Human, mouse, mastomys, aedes aegypti and contaminant filter set"
 
-export VIMUPDB_VERSION="1.4"
-export VIMUPDB_DESCRIPTION="ViMOP_Bucket"
+export VIMUPDATE_DB_VERSION="1.4"
+export VIMUPDATE_DB_DESCRIPTION="ViMOP_Bucket"
 
 # Taxonomy
 export VIMUPDATE_COVID_REFSEQ="NC_045512.2"
