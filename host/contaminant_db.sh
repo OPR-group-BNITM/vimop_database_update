@@ -36,7 +36,7 @@ cp "$fname_contaminants" "$fname_contaminants_out"
     echo "  mouse: \"${fname_mus_musculus_out}\""
     echo "  mastomys: \"${fname_mastomys_natalensis_out}\""
     echo "  aedes_aegypti: \"${fname_aedes_aegypti_out}\""
-    echo "  reagents: \"${fname_contaminants_out}\""
+    echo "  reagent: \"${fname_contaminants_out}\""
     echo "version: \"${VIMUPDATE_CONTAMINANTSDB_VERSION}\""
     echo "description: \"${VIMUPDATE_CONTAMINANTSDB_DESCRIPTION}\""
 } > contaminants.yaml

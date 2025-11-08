@@ -63,7 +63,7 @@ centrifuge-build \
     echo "files:"
     for f in all.*.cf
     do
-        echo "- \$f"
+        echo "- $f"
     done
 } > centrifuge.yaml
 
