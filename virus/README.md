@@ -15,42 +15,7 @@ The workflow to create a new data base version requires several steps.
 
 ## Dowload virus genomes
 
-Read the following to learn how to download and merge data from RVDB and NCBI virus.
-
-### Download RVDB
-
-Go to the [RVDB-website](https://rvdb.dbi.udel.edu/).
-Download the latest Unclustered DB data set and save it in `data/input_genomes/U-RVDBvX.fasta.gz` where you replace X with the version number (e.g. 30.0).
-
-### Download NCBI virus genomes without Covid
-
-Open this [NCBI virus link](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/virus?SeqType_s=Nucleotide&VirusLineage_ss=Viruses,%20taxid:10239&VirusLineage_ss=taxid:NOT%202697049). It's all viruses with covid excluded. Click the following
-
-- Download All Results
-- Nucleotide
-- Donwload All Records
-- Build Custom
-  - Accession
-  - GenBankTitle
-  - Accession
-  - Species
-- Download
-
-Save this as `data/input_genomes/ncbi_nocovid_YYYYMMDD` and replace date in the format year, month, data (e.g. 20251029 for the 29th octobre 2025).
-
-### Merge the NCBI and RVDB-Covid data
-
-Run the script
-```
-python scripts/merge_ncbi_rvdb_covid.py \
---email user@host.de \
---rvdb data/input_genomes/C-RVDBv30.0.fasta.gz \
---ncbi data/input_genomes/ncbi_nocovid_20250922.fasta \
---output data/input_genomes/ncbi_nocovid_20250922_crvdbv30.0_covid.fasta
-```
-Replace the email with yours and set the versions in the fasta filenames according to what you have downloaded. 
-It will merge the NCBI genomes with the covid genomes from RVDB and the Covid reference genome.
-The Covid reference genome is downloaded from NCBI using Entrez, that is why you have to add your email adress.  
+Use the scripts in `download_genomes` to download the genomes.
 
 ## Create the configs
 
