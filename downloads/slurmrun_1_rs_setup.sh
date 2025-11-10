@@ -11,12 +11,6 @@ jobscript="${this_script_dir}/${job_name}.sh"
 
 mkdir -p "${VIMUPDATE_SLURM}"
 
-# if [[ -e "${VIMUPDATE_GENOMES}/refseq" ]]
-# then
-#     echo "${VIMUPDATE_GENOMES}/refseq exists, refusing to start a job"
-#     exit 1
-# fi
-
 sbatch \
     --container=$HOME/containers/${container} \
     --job-name=$job_name \
