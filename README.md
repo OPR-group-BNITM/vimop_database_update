@@ -32,3 +32,6 @@ Send the jobs to the slurm system with
 ```
 
 ## Support
+
+This repository is built for our team to create the database and it is shared for transparency and reproducability.
+However, if you want to use these scripts on your system and need help, please feel free to contact us here!
