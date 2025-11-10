@@ -40,7 +40,6 @@ submit_job() {
     sbatch \
       --parsable \
       --container="$HOME/containers/${container}" \
-      --container-security=seccomp=unconfined \
       --job-name="$job_name" \
       -o "${VIMUPDATE_SLURM}/slurm.${job_name}.%N.%j.out" \
       -e "${VIMUPDATE_SLURM}/slurm.${job_name}.%N.%j.err" \

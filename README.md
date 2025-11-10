@@ -20,7 +20,7 @@ Before running them, build a docker container with the script `docker_env/build_
 Before building a database, open env.sh and set all the versions and paths required.
 Additionally, set the 
 ```bash
-set export VIMUPDATE_FILESHARE_PREFIX="USER@SERVER:/path/to/files" 
+export VIMUPDATE_FILESHARE_PREFIX="USER@SERVER:/path/to/files" 
 ```
 in your own .bashrc to upload the database to the distribution server.
 
