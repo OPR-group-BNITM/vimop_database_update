@@ -3,7 +3,7 @@
 This repository contains scripts and documentation on how to automatically create an updated OPR ViMOP database.
 The scripts
 
-- download all required sequences from NCBI GenBank and RefSeq (`download_genomes`)
+- download all required sequences from NCBI GenBank and RefSeq (`downloads`)
 - filter the virus genomes to build the virus reference dataset (`virus`)
 - build the centrifuge index (`centrifuge`)
 - collect the host genomes (`host`)
