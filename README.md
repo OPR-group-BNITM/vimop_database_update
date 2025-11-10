@@ -3,7 +3,7 @@
 This repository contains scripts and documentation on how to automatically create an updated database for our pipeline [ViMOP](https://github.com/OPR-group-BNITM/vimop).
 The scripts
 
-- download all required sequences from NCBI GenBank and RefSeq (`downloads`)
+- download all required sequences from NCBI GenBank and RefSeq (`download_genomes`)
 - filter the virus genomes to build the virus reference dataset (`virus`)
 - build the centrifuge index (`centrifuge`)
 - collect the host genomes (`host`)
