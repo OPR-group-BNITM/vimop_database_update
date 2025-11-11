@@ -31,6 +31,11 @@ Send the jobs to the slurm system with
 ./slurmrun_all.sh
 ```
 
+## Build the data base locally (not in a slurm system)
+
+Instead of building a container, only build the image (`docker_env/build_image.sh`).
+Then run `./run_in_docker.sh`.
+
 ## Support
 
 This repository is built for our team to create the database and it is shared for transparency and reproducability.
