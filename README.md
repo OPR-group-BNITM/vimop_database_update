@@ -13,7 +13,7 @@ The scripts are made to run on our slurm system.
 
 ## Build docker container
 
-Before running them, build a docker container with the script `docker_env/build_containers.sh`.
+Before running them, build a docker container with the script `build_containers.sh` in `docker_env`.
 
 ## Set versions and paths
 
@@ -33,7 +33,7 @@ Send the jobs to the slurm system with
 
 ## Build the data base locally (not in a slurm system)
 
-Instead of building a container, only build the image (`docker_env/build_image.sh`).
+Instead of building a container, only build the image (`build_image.sh` in `docker_env`).
 Then run `./run_in_docker.sh`.
 
 ## Support
