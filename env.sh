@@ -2,7 +2,7 @@
 
 # basic settings
 export VIMUPDATE_MAIL="nils.petersen@bnitm.de"
-export VIMUPDATE_SRC="/data/home/nils.petersen/dev/VimopDatabaseUpdate"
+export VIMUPDATE_SRC="/data/home/nils.petersen/dev/vimop_database_update"
 
 export VIMUPDATE_DB_VERSION="1.5"
 export VIMUPDATE_DB_DESCRIPTION="ViMOP_Bucket"
