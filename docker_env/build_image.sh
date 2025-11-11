@@ -18,6 +18,6 @@ do
     version=$(cat ${img}/version.txt)
     
     echo $img:$version
-    docker build --no-cache -t oprgroup/${img}:$version $img/
+    docker build --no-cache -t oprgroup/${prefix}_${img}:$version $img/
     echo ""
 done
