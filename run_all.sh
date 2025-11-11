@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 tasks=(
     "rs_setup download_genomes"
     "virus_taxinfo download_genomes"
@@ -13,6 +15,8 @@ tasks=(
     "build_centrifuge_index centrifuge"
     "ship shipit"
 )
+
+source env.sh
 
 for task in "${tasks[@]}"
 do
