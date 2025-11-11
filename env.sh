@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
 # basic settings
-export VIMUPDATE_MAIL="nils.petersen@bnitm.de"
-export VIMUPDATE_SRC="/data/home/nils.petersen/dev/vimop_database_update"
+export VIMUPDATE_MAIL=""  # TODO: fill
+export VIMUPDATE_SRC=""   # TODO: fill
 
 export VIMUPDATE_DB_VERSION="1.5"
 export VIMUPDATE_DB_DESCRIPTION="ViMOP_Bucket"
 
-export VIMUPDATE_BASEDIR="/data/home/nils.petersen/data/vimop_db_update/v${VIMUPDATE_DB_VERSION}"
+export VIMUPDATE_BASEDIR="/data/v${VIMUPDATE_DB_VERSION}"  # TODO: change!
 
 # Output DB versions and descriptions
 export VIMUPDATE_VIRUSDB_VERSION="2.5"
