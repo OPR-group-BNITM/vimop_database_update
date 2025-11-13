@@ -12,5 +12,5 @@ dependencies:
   - entrez-direct=24.0
   - pyyaml=6.0.2
   - xz=5.8.1
-  - wget>=1.21
-  
+  - wget=1.25.0
+  - curl=8.17.0
