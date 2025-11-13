@@ -39,5 +39,5 @@ nextflow main.nf \
     --output_description "$VIMUPDATE_VIRUSDB_DESCRIPTION" \
     -profile conda
 
-
+mkdir -p "${VIMUPDATE_DB}"
 mv "${VIMUPDATE_VIRUS}/virus" "${VIMUPDATE_DB}/virus"
